@@ -78,6 +78,15 @@ async function handleStats(request, env) {
             sum { visits }
             dimensions { clientRequestPath }
           }
+          topCountries: httpRequestsAdaptiveGroups(
+            filter: { AND: [{ datetime_geq: $since, datetime_leq: $until }, { requestSource: "eyeball" }] }
+            limit: 10
+            orderBy: [count_DESC]
+          ) {
+            count
+            sum { visits }
+            dimensions { clientCountryName }
+          }
         }
       }
     }
@@ -122,6 +131,11 @@ async function handleStats(request, env) {
     requests: p.count,
     visits: p.sum.visits,
   }));
+  const topCountries = (zone?.topCountries || []).map((c) => ({
+    country: c.dimensions.clientCountryName,
+    requests: c.count,
+    visits: c.sum.visits,
+  }));
 
   return json(
     {
@@ -129,6 +143,7 @@ async function handleStats(request, env) {
       requests: totals?.count || 0,
       visits: totals?.sum?.visits || 0,
       topPages,
+      topCountries,
       generatedAt: now.toISOString(),
     },
     200,
