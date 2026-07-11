@@ -8,7 +8,8 @@
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function init() {
-    const hero = document.querySelector(".hero, .subhero");
+    // Interactive effects belong exclusively to the landing-page hero.
+    const hero = document.querySelector(".hero");
     if (!hero) return;
 
     const img = hero.querySelector("picture img") || hero.querySelector(":scope > img") || hero.querySelector("img");
@@ -76,7 +77,7 @@
       }
 
       ctx.clearRect(0, 0, W, H);
-      draw(ctx, dt, now, () => ({ W, H, mx, my }));
+      draw(ctx, dt, now, () => ({ W, H, mx, my, scrollShift }));
 
       requestAnimationFrame(tick);
     }
@@ -169,9 +170,16 @@
 
     // ================= TV-glow variant (gaming room scene) =================
     function buildTvGlow() {
-      // TV screen position is approximated as a region of the frame - tuned
-      // for the gaming-room hero image (screen roughly center-left, upper half).
-      const screen = { xPct: 0.40, yPct: 0.34, wPct: 0.42, hPct: 0.30 };
+      // TV-glass corners measured in the original 1536 x 1024 source image.
+      // These are converted through the same object-fit: cover crop and
+      // scale(1.06) transform used by the hero image on every frame.
+      const source = { width: 1536, height: 1024 };
+      const screen = [
+        { x: 408,  y: 149 }, // top-left
+        { x: 1248, y: 96  }, // top-right
+        { x: 1246, y: 630 }, // bottom-right
+        { x: 409,  y: 612 }  // bottom-left
+      ];
       let flicker = 0.7;
       let flickerTarget = 0.7;
       let nextFlickerChange = 0;
@@ -180,7 +188,7 @@
       let breathe = 0;
 
       return function (ctx, dt, now, dims) {
-        const { W, H } = dims();
+        const { W, H, mx, my, scrollShift } = dims();
 
         // Screen flicker: subtle random-walk toward new brightness targets,
         // mimicking scene changes on a TV rather than a strobe.
@@ -190,9 +198,27 @@
         }
         flicker += (flickerTarget - flicker) * Math.min(dt * 4, 1);
 
-        const cx = W * (screen.xPct + screen.wPct / 2);
-        const cy = H * (screen.yPct + screen.hPct / 2);
-        const rx = W * screen.wPct * 0.75;
+        const coverScale = Math.max(W / source.width, H / source.height);
+        const renderedWidth = source.width * coverScale;
+        const renderedHeight = source.height * coverScale;
+        const offsetX = (W - renderedWidth) / 2;
+        const offsetY = (H - renderedHeight) / 2;
+        const heroScale = 1.06;
+        const points = screen.map((point) => {
+          const baseX = offsetX + point.x * coverScale;
+          const baseY = offsetY + point.y * coverScale;
+          return {
+            x: W / 2 + (baseX - W / 2) * heroScale + mx,
+            y: H / 2 + (baseY - H / 2) * heroScale + my + scrollShift
+          };
+        });
+        const left = Math.min(...points.map((point) => point.x));
+        const right = Math.max(...points.map((point) => point.x));
+        const top = Math.min(...points.map((point) => point.y));
+        const bottom = Math.max(...points.map((point) => point.y));
+        const cx = (left + right) / 2;
+        const cy = (top + bottom) / 2;
+        const rx = (right - left) * 0.75;
 
         // Cool screen glow spilling into the room
         const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, rx * 2.1);
@@ -202,13 +228,23 @@
         ctx.fillStyle = glow;
         ctx.fillRect(0, 0, W, H);
 
-        // Faint scanline shimmer directly over the screen area for a "live" feel
+        // Feather the live-screen light inside the TV glass. Drawing a hard
+        // clipped fill makes the effect read as a flashing polygon; an inset,
+        // blurred fill lets it blend naturally into the pixels of the screen.
+        const featheredPoints = points.map((point) => ({
+          x: point.x + (cx - point.x) * 0.022,
+          y: point.y + (cy - point.y) * 0.032
+        }));
         ctx.save();
+        ctx.filter = "blur(18px)";
         ctx.beginPath();
-        ctx.rect(W * screen.xPct, H * screen.yPct, W * screen.wPct, H * screen.hPct);
-        ctx.clip();
-        ctx.fillStyle = `rgba(180, 210, 255, ${0.05 * flicker})`;
-        ctx.fillRect(W * screen.xPct, H * screen.yPct, W * screen.wPct, H * screen.hPct);
+        ctx.moveTo(featheredPoints[0].x, featheredPoints[0].y);
+        for (let i = 1; i < featheredPoints.length; i++) {
+          ctx.lineTo(featheredPoints[i].x, featheredPoints[i].y);
+        }
+        ctx.closePath();
+        ctx.fillStyle = `rgba(180, 210, 255, ${0.042 * flicker})`;
+        ctx.fill();
         ctx.restore();
 
         // Warm ambient shelf-light breathing, lower corners of the frame

@@ -10,7 +10,7 @@
 
   const subhero = document.querySelector(".subhero");
   if (!subhero) return;
-  const img = subhero.querySelector("img");
+  const img = subhero.querySelector(":scope > img");
   if (!img) return;
 
   const pick = SUBHERO_IMAGES[Math.floor(Math.random() * SUBHERO_IMAGES.length)];
