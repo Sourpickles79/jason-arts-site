@@ -40,7 +40,8 @@
 
   <main>
     <section class="subhero">
-      <img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts">
+      <img data-src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts">
+      <noscript><img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts" class="subhero-noscript-fallback"></noscript>
       <script>
         (function () {
           const SUBHERO_IMAGES = [
@@ -50,7 +51,7 @@
           ];
           const subhero = document.currentScript.closest(".subhero");
           if (!subhero) return;
-          const img = subhero.querySelector("img");
+          const img = subhero.querySelector("img[data-src]");
           if (!img) return;
           const pick = SUBHERO_IMAGES[Math.floor(Math.random() * SUBHERO_IMAGES.length)];
           img.src = pick.src;
