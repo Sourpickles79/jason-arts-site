@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found | Jason Arts</title>
+  <meta name="description" content="This page doesn't exist. Find your way back to Jason Arts' portfolio, books, and channels.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="portfolio.html">View Portfolio <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="subhero">
+      <img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">404</p>
+        <h1>This page wandered off.</h1>
+        <p class="intro">Whatever you were looking for isn't here — but here's where you probably meant to go.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="channel-split">
+        <a class="channel-panel" href="portfolio.html">
+          <img src="assets/images/hero-kitchen-living.webp" alt="Portfolio">
+          <div class="panel-body">
+            <span class="category">3D Work</span>
+            <h2>Portfolio</h2>
+            <p>Architectural and product visualization.</p>
+            <span class="enter">View Portfolio -&gt;</span>
+          </div>
+        </a>
+        <a class="channel-panel" href="blog.html">
+          <img src="assets/images/orb-thumb.webp" alt="Blog">
+          <div class="panel-body">
+            <span class="category">Blog</span>
+            <h2>Latest Posts</h2>
+            <p>AI filmmaking, music, and creative tips.</p>
+            <span class="enter">Read the Blog -&gt;</span>
+          </div>
+        </a>
+        <a class="channel-panel" href="books.html">
+          <img src="assets/images/cover-ispy-corgo-pawsome.webp" alt="Books">
+          <div class="panel-body">
+            <span class="category">Books</span>
+            <h2>Corgi Books</h2>
+            <p>Coloring books and puzzle books on Amazon.</p>
+            <span class="enter">See Books -&gt;</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/subhero-variants.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

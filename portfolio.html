@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Portfolio | Architectural & Product Visualization by Jason Arts</title>
+  <meta name="description" content="Browse Jason Arts' 3D portfolio: photorealistic interior and exterior architectural renders, e-commerce product visualization, community planning graphics, and personal 3D art.">
+  <meta name="keywords" content="3D portfolio, architectural rendering portfolio, product visualization examples, interior rendering, exterior rendering, 3D artist portfolio, e-commerce 3D renders, community planning visuals">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://jasonarts.com/portfolio.html">
+  <meta property="og:title" content="3D Portfolio | Architectural & Product Visualization by Jason Arts">
+  <meta property="og:description" content="Photorealistic interior and exterior architectural renders, e-commerce product visualization, and personal 3D art.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jasonarts.com/portfolio.html">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/hero-kitchen-living.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3D Portfolio | Architectural & Product Visualization by Jason Arts">
+  <meta name="twitter:description" content="Photorealistic interior and exterior architectural renders, e-commerce product visualization, and personal 3D art.">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/hero-kitchen-living.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="https://www.artstation.com/jasonartsjohnson" target="_blank" rel="noopener">ArtStation <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="subhero">
+      <img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Commercial 3D craft with world-building range.</h1>
+        <p class="intro">A focused gallery of interiors, product visualization, architecture, gaming setups, and planning graphics.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="filter-bar" aria-label="Portfolio filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="Architecture">Architecture</button>
+        <button class="filter" data-filter="Product Visualization">Products</button>
+        <button class="filter" data-filter="Planning">Planning</button>
+        <button class="filter" data-filter="3D Art">3D Art</button>
+        <button class="filter filter-video" data-filter="__videos__">▶ Videos</button>
+        <button class="filter filter-modeled" data-filter="__modeled__">◆ Modeling</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/subhero-variants.js"></script>
+  <script src="assets/data/content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | AI Filmmaking, Music & Creative Tips by Jason Arts</title>
+  <meta name="description" content="Behind-the-scenes posts from Jason Arts on AI filmmaking, AI music, animated shorts like The Orb Story, and 3D/creative tips.">
+  <meta name="keywords" content="AI filmmaking blog, AI music blog, animated short film blog, 3ds Max tips, AI tips, Jason Arts blog, The Orb Story behind the scenes">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://jasonarts.com/blog.html">
+  <meta property="og:title" content="Blog | AI Filmmaking, Music & Creative Tips by Jason Arts">
+  <meta property="og:description" content="Behind-the-scenes posts on AI filmmaking, AI music, animated shorts, and 3D/creative tips.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jasonarts.com/blog.html">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/hero-mountain.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | AI Filmmaking, Music & Creative Tips by Jason Arts">
+  <meta name="twitter:description" content="Behind-the-scenes posts on AI filmmaking, AI music, animated shorts, and 3D/creative tips.">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/hero-mountain.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="portfolio.html">View Portfolio <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="subhero">
+      <img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Blog</p>
+        <h1>Notes on AI, music, and world-building.</h1>
+        <p class="intro">Behind-the-scenes posts on AI filmmaking, AI music, animated shorts like The Orb Story, and creative tips.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="blog-grid" id="blogGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/subhero-variants.js"></script>
+  <script src="assets/data/content.js"></script>
+  <script>
+    function formatDate(value) {
+      const d = new Date(value + "T00:00:00");
+      if (isNaN(d)) return value;
+      return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    }
+    function renderBlog() {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const posts = (window.SITE_CONTENT && window.SITE_CONTENT.blogPosts) || [];
+      const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+      const grid = document.getElementById("blogGrid");
+      if (!sorted.length) {
+        grid.innerHTML = `<p class="notice">No posts yet — check back soon.</p>`;
+        return;
+      }
+      grid.innerHTML = sorted.map(post => `
+        <a class="blog-card" href="${post.url}">
+          <img src="${post.cover}" alt="${post.title}" loading="lazy">
+          <div class="blog-card-body">
+            <div class="blog-meta"><span>${post.category}</span><span class="dot">&middot;</span><span>${formatDate(post.date)}</span></div>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+          </div>
+        </a>
+      `).join("");
+    }
+    renderBlog();
+  </script>
+</body>
+</html>
