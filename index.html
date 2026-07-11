@@ -68,7 +68,23 @@
         <source srcset="assets/images/hero-mountain.webp" media="(min-width: 760px)">
         <img src="assets/images/hero-mountain.webp" alt="Cinematic mountain world used as Jason Arts portfolio hero art">
       </picture>
-      <script src="assets/js/hero-variants.js"></script>
+      <script>
+        (function () {
+          const HERO_VARIANTS = [
+            { image: "assets/images/hero-mountain.webp", alt: "Cinematic mountain world used as Jason Arts portfolio hero art", effect: "rain" },
+            { image: "assets/images/hero-gaming-tv.webp", alt: "Cinematic gaming room with glowing TV, used as Jason Arts portfolio hero art", effect: "tv-glow" },
+            { image: "assets/images/hero-dusk-house.webp", alt: "Warm dusk exterior house render used as Jason Arts portfolio hero art", effect: "dusk-glow" }
+          ];
+          const hero = document.currentScript.closest(".hero");
+          if (!hero) return;
+          const variant = HERO_VARIANTS[Math.floor(Math.random() * HERO_VARIANTS.length)];
+          const img = hero.querySelector("picture img") || hero.querySelector("img");
+          const source = hero.querySelector("picture source");
+          if (img) { img.src = variant.image; img.alt = variant.alt; }
+          if (source) { source.srcset = variant.image; }
+          hero.dataset.heroEffect = variant.effect;
+        })();
+      </script>
       <script src="assets/js/hero-fx.js"></script>
       <div class="hero-shade"></div>
       <div class="hero-content">
