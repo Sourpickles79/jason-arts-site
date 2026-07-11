@@ -631,6 +631,15 @@
   ],
   "blogPosts": [
     {
+      "slug": "whats-new-in-midjourney-v81",
+      "title": "What's New in Midjourney V8.1",
+      "excerpt": "Midjourney's V8.1 just became the default model - here's what actually changed and what's worth trying first.",
+      "category": "AI Tips",
+      "cover": "assets/images/mid-journey-8.1.webp",
+      "date": "2026-07-11",
+      "url": "blog-whats-new-in-midjourney-v81.html"
+    },
+    {
       "slug": "ai-tools-behind-the-orb-story",
       "title": "The AI Tools Behind The Orb Story",
       "excerpt": "A behind-the-scenes look at the actual AI pipeline I use to build The Orb Story - from concept art to motion to sound.",
