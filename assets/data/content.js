@@ -7,7 +7,7 @@ window.SITE_CONTENT = {
     "resumeUrl": "#",
     "metrics": [
       {
-        "value": "10+",
+        "value": "20+",
         "label": "years of experience"
       },
       {
@@ -177,7 +177,7 @@ window.SITE_CONTENT = {
       "description": "Commercial fireplace media console rendered with warm glow and lifestyle staging."
     },
     {
-      "title": "Gaming Console \u2014 Alt View",
+      "title": "Gaming Console — Alt View",
       "category": "Product Visualization",
       "image": "assets/images/pro-gaming-console-alt.webp",
       "description": "Additional angle on entertainment furniture with color lighting and screen glow."
@@ -189,7 +189,7 @@ window.SITE_CONTENT = {
       "description": "Glass-front curio cabinet rendered with display lighting and material detail."
     },
     {
-      "title": "Cooper Media Credenza \u2014 Alt View",
+      "title": "Cooper Media Credenza — Alt View",
       "category": "Product Visualization",
       "image": "assets/images/pro-cooper-credenza-alt.webp",
       "description": "Alternate angle on the Cooper credenza with lifestyle atmosphere."
@@ -253,26 +253,26 @@ window.SITE_CONTENT = {
       "modeled": true
     },
     {
-      "title": "Ashby Cabinet Bed \u2014 Detail",
+      "title": "Ashby Cabinet Bed — Detail",
       "category": "Product Visualization",
       "image": "assets/images/pro-ashby-cabinet-bed-detail.webp",
       "description": "Detail render highlighting the storage mechanism of the Ashby cabinet bed."
     },
     {
-      "title": "Ashby Cabinet Bed \u2014 Open",
+      "title": "Ashby Cabinet Bed — Open",
       "category": "Product Visualization",
       "image": "assets/images/pro-ashby-cabinet-bed-open.webp",
       "description": "Ashby cabinet bed shown open with bedding staged for lifestyle context."
     },
     {
-      "title": "Sheldon Mobile Computer Desk \u2014 Detail",
+      "title": "Sheldon Mobile Computer Desk — Detail",
       "category": "Product Visualization",
       "image": "assets/images/pro-sheldon-desk-detail.webp",
       "description": "Detail render of the Sheldon mobile computer desk's hardware and finish.",
       "modeled": true
     },
     {
-      "title": "Sheldon Mobile Computer Desk \u2014 Open",
+      "title": "Sheldon Mobile Computer Desk — Open",
       "category": "Product Visualization",
       "image": "assets/images/pro-sheldon-desk-open.webp",
       "description": "Sheldon mobile computer desk shown open and in use.",
@@ -321,19 +321,19 @@ window.SITE_CONTENT = {
       "description": "Personal desk design concept rendered for a custom layout."
     },
     {
-      "title": "Turret Garage \u2014 Study 1",
+      "title": "Turret Garage — Study 1",
       "category": "Architecture",
       "image": "assets/images/personal-turret-garage-01.webp",
       "description": "Personal architectural exterior study of a turret-style garage."
     },
     {
-      "title": "Turret Garage \u2014 Study 2",
+      "title": "Turret Garage — Study 2",
       "category": "Architecture",
       "image": "assets/images/personal-turret-garage-02.webp",
       "description": "Personal architectural exterior study of a turret-style garage."
     },
     {
-      "title": "Turret Garage \u2014 Study 3",
+      "title": "Turret Garage — Study 3",
       "category": "Architecture",
       "image": "assets/images/personal-turret-garage-03.webp",
       "description": "Personal architectural exterior study of a turret-style garage."
@@ -370,61 +370,61 @@ window.SITE_CONTENT = {
       "description": "Residential bedroom interior visualization with warm, balanced lighting."
     },
     {
-      "title": "Genesis Desk \u2014 Alt View",
+      "title": "Genesis Desk — Alt View",
       "category": "Product Visualization",
       "image": "assets/images/genesis-desk-alt.webp",
       "description": "Alternate angle on the Genesis gaming desk with color-forward lifestyle staging."
     },
     {
-      "title": "Savannah Collection \u2014 Rear View",
+      "title": "Savannah Collection — Rear View",
       "category": "Architecture",
       "image": "assets/images/savannah-back.webp",
       "description": "Rear exterior elevation from the Savannah residential collection."
     },
     {
-      "title": "4500 60\" 2-Door Cabinet \u2014 Animation",
+      "title": "4500 60\" 2-Door Cabinet — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-4500-60-2-door-cabinet-animation.jpg",
       "video": "assets/videos/4500-60-2-door-cabinet-animation.mp4",
       "description": "Animated product turntable render with sound design for a 60-inch 2-door cabinet."
     },
     {
-      "title": "Monarch Hill Poppy 3-Drawer Dresser \u2014 Animation",
+      "title": "Monarch Hill Poppy 3-Drawer Dresser — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-6827321com-monarch-hill-poppy-3-drawer-dresser-animation.jpg",
       "video": "assets/videos/6827321com-monarch-hill-poppy-3-drawer-dresser-animation.mp4",
       "description": "Animated product render for the Monarch Hill Poppy 3-drawer dresser."
     },
     {
-      "title": "Monarch Hill Poppy Kids Desk \u2014 Animation",
+      "title": "Monarch Hill Poppy Kids Desk — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-6829321com-monarch-hill-poppy-kids-desk-animation.jpg",
       "video": "assets/videos/6829321com-monarch-hill-poppy-kids-desk-animation.mp4",
       "description": "Animated product render for the Monarch Hill Poppy kids desk."
     },
     {
-      "title": "4-Door Storage Cabinet \u2014 Animation",
+      "title": "4-Door Storage Cabinet — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-7224412wcom-4-door-storage-cabinet-animation.jpg",
       "video": "assets/videos/7224412wcom-4-door-storage-cabinet-animation.mp4",
       "description": "Animated product turntable render for a 4-door storage cabinet."
     },
     {
-      "title": "Queen Murphy Bed \u2014 Animation",
+      "title": "Queen Murphy Bed — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-8368222com-queen-murphy-bed-animation.jpg",
       "video": "assets/videos/8368222com-queen-murphy-bed-animation.mp4",
       "description": "Animated product render showing a queen Murphy bed opening and closing."
     },
     {
-      "title": "Kingdom Heights \u2014 Flythrough",
+      "title": "Kingdom Heights — Flythrough",
       "category": "Planning",
       "image": "assets/images/poster-flythrough-03.jpg",
       "video": "assets/videos/flythrough-03.mp4",
       "description": "Community flythrough animation built for planning and marketing presentation."
     },
     {
-      "title": "Kingdom Heights \u2014 Site Plan",
+      "title": "Kingdom Heights — Site Plan",
       "category": "Planning",
       "image": "assets/images/kingdom-heights-site-map.webp",
       "description": "Illustrated community site plan built for clarity and presentation."
@@ -444,7 +444,7 @@ window.SITE_CONTENT = {
       "modeled": true
     },
     {
-      "title": "Black Wood Cane Back Chair \u2014 Detail",
+      "title": "Black Wood Cane Back Chair — Detail",
       "category": "Product Visualization",
       "image": "assets/images/pro-black-wood-cane-back-chair-detail.webp",
       "description": "Close-up detail render highlighting the cane weave construction and finish.",
@@ -458,14 +458,14 @@ window.SITE_CONTENT = {
       "modeled": true
     },
     {
-      "title": "Baby Relax Huntington \u2014 Detail 1",
+      "title": "Baby Relax Huntington — Detail 1",
       "category": "Product Visualization",
       "image": "assets/images/pro-baby-relax-huntington-detail-1.webp",
       "description": "Detail render of the Huntington glider's cushion and arm construction.",
       "modeled": true
     },
     {
-      "title": "Baby Relax Huntington \u2014 Detail 2",
+      "title": "Baby Relax Huntington — Detail 2",
       "category": "Product Visualization",
       "image": "assets/images/pro-baby-relax-huntington-detail-2.webp",
       "description": "Detail render of the Huntington ottoman's glider mechanism and base.",
@@ -482,7 +482,7 @@ window.SITE_CONTENT = {
       "age": "Ages 3-7",
       "pages": "Book 1 of 2: The Adventures of Corgo",
       "format": "Kindle Edition & Paperback",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 7,
       "buyUrl": "https://www.amazon.com/Spy-Corgo-Pawsome-Adventure-Treasures-ebook/dp/B0CXX3B2XN"
     },
@@ -495,7 +495,7 @@ window.SITE_CONTENT = {
       "age": "Ages 3-7",
       "pages": "Book 2 of 2: The Adventures of Corgo",
       "format": "Kindle Edition & Paperback",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 2,
       "buyUrl": "https://www.amazon.com/Spy-Corgo-Search-Find-Explorers-ebook/dp/B0DJTXL96Q"
     },
@@ -508,7 +508,7 @@ window.SITE_CONTENT = {
       "age": "Teens & Adults",
       "pages": "Paperback",
       "format": "Coloring Book",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 1,
       "buyUrl": "https://www.amazon.com/Dazzling-Dachshunds-Delightful-Coloring-Collection/dp/B0CW2231JW"
     },
@@ -534,7 +534,7 @@ window.SITE_CONTENT = {
       "age": "Teens & Adults",
       "pages": "48 pages",
       "format": "Paperback",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 2,
       "buyUrl": "https://www.amazon.com/Whisker-Wonderland-Creativity-Whimsical-Adventures/dp/B0CWHDC5B9"
     },
@@ -560,7 +560,7 @@ window.SITE_CONTENT = {
       "age": "Teens & Adults",
       "pages": "Paperback",
       "format": "Coloring Book",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 6,
       "buyUrl": "https://www.amazon.com/Tranquil-Corgi-Patterns-Whimsical-Adventures/dp/B0CSZB8B9C"
     },
@@ -599,7 +599,7 @@ window.SITE_CONTENT = {
       "age": "Adults",
       "pages": "Hardcover & Paperback",
       "format": "Puzzle Book",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 1,
       "buyUrl": "https://www.amazon.com/Variety-Puzzle-Book-Adults-Relaxation/dp/B0CR2VXDQR"
     }
@@ -611,7 +611,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/orb-thumb.webp",
       "url": "https://www.youtube.com/channel/UCkhYfwqh5-iq7z4yEAvUYjw",
       "date": "2026-06-20",
-      "description": "Cinematic animated shorts exploring mystery, atmosphere, and world-building."
+      "description": "A new animated short channel built around story, atmosphere, and world-building. Replace this entry with your latest upload."
     },
     {
       "title": "Sleep Zen",
@@ -619,7 +619,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/sleepzen-thumb.webp",
       "url": "https://www.youtube.com/channel/UCccuNXRd1dJkBvxIFXrgFuw",
       "date": "2026-06-05",
-      "description": "Long-form calming scenes and ambient rooms created for sleep, focus, and quiet time."
+      "description": "Long-form calming scenes, ambient rooms, and restful environments. Replace this entry with your latest upload."
     },
     {
       "title": "Original Music",
@@ -627,10 +627,19 @@ window.SITE_CONTENT = {
       "image": "assets/images/music-band-thumb.webp",
       "url": "https://www.youtube.com/@JasonArtsRecords",
       "date": "2026-05-18",
-      "description": "Original songs and visual releases shaped by cinematic atmosphere and storytelling."
+      "description": "Original tracks and visual music experiences. Replace this entry with your latest upload."
     }
   ],
   "blogPosts": [
+    {
+      "slug": "seedream-50-the-ai-image-model-that-changes-how-we-prompt",
+      "title": "Seedream 5.0: The AI Image Model That Changes How We Prompt",
+      "excerpt": "Seedream 5.0 isn't just another image generator. Its reasoning-first approach, stronger reference handling, and editing capabilities could change how artists build images from concept to final render.",
+      "category": "AI Tips",
+      "cover": "assets/images/seedream-5-cover.webp",
+      "date": "2026-07-12",
+      "url": "blog-seedream-50-the-ai-image-model-that-changes-how-we-prompt.html"
+    },
     {
       "slug": "whats-new-in-midjourney-v81",
       "title": "What's New in Midjourney V8.1",
