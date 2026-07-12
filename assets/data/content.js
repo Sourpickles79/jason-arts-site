@@ -632,6 +632,28 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "how-i-made-sarah-ai-music-video",
+      "title": "How I Made the AI Music Video for “Sarah” by Dirty It Dies",
+      "excerpt": "A behind-the-scenes look at how I turned “Sarah” by Dirty It Dies into an emotional AI music video using visual storytelling, character consistency, motion, and editing.",
+      "category": "AI Music",
+      "cover": "assets/images/sarah-ai-music-video-cover.webp",
+      "date": "2026-07-20",
+      "publishAt": "2026-07-20T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-how-i-made-sarah-ai-music-video.html",
+      "seo": {
+        "title": "How I Made the AI Music Video for “Sarah”",
+        "description": "Go behind the scenes of “Sarah” by Dirty It Dies and see how AI imagery, animation, character design, and editing shaped the music video.",
+        "targetKeyword": "AI music video",
+        "secondaryKeywords": [
+          "- how to make an AI music video"
+        ],
+        "coverAlt": "Close-up of the lead singer from the “Sarah” AI music video standing on a rain-soaked city street at night.",
+        "socialTitle": "How I Made the AI Music Video for “Sarah”",
+        "socialDescription": "Behind the scenes of the character design, nighttime visuals, band performance, AI animation, and editing used to create “Sarah.”"
+      }
+    },
+    {
       "slug": "how-i-built-jasonartscom-with-claude-without-losing-my-own-style",
       "title": "How I Built JasonArts.com with Claude Without Losing My Own Style",
       "excerpt": "I used Claude to help build JasonArts.com, but the real challenge was making sure the finished site still felt like my work instead of another generic AI template.",
