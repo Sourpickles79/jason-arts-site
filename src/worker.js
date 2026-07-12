@@ -63,14 +63,14 @@ async function handleStats(request, env) {
       viewer {
         zones(filter: { zoneTag: $zoneTag }) {
           totals: httpRequestsAdaptiveGroups(
-            filter: { AND: [{ datetime_geq: $since, datetime_leq: $until }, { requestSource: "eyeball" }] }
+            filter: { AND: [{ datetime_geq: $since, datetime_lt: $until }, { requestSource: "eyeball" }] }
             limit: 1
           ) {
             count
             sum { visits }
           }
           topPages: httpRequestsAdaptiveGroups(
-            filter: { AND: [{ datetime_geq: $since, datetime_leq: $until }, { requestSource: "eyeball" }] }
+            filter: { AND: [{ datetime_geq: $since, datetime_lt: $until }, { requestSource: "eyeball" }] }
             limit: 10
             orderBy: [count_DESC]
           ) {
@@ -79,7 +79,7 @@ async function handleStats(request, env) {
             dimensions { clientRequestPath }
           }
           topCountries: httpRequestsAdaptiveGroups(
-            filter: { AND: [{ datetime_geq: $since, datetime_leq: $until }, { requestSource: "eyeball" }] }
+            filter: { AND: [{ datetime_geq: $since, datetime_lt: $until }, { requestSource: "eyeball" }] }
             limit: 10
             orderBy: [count_DESC]
           ) {
@@ -92,6 +92,83 @@ async function handleStats(request, env) {
     }
   `;
 
+  // Cloudflare Free allows a maximum 24-hour window for this dataset.
+  // Split longer ranges into daily requests, then combine them here.
+  const dayMs = 24 * 60 * 60 * 1000;
+  const intervals = [];
+  for (let start = since.getTime(); start < now.getTime(); start += dayMs) {
+    intervals.push({
+      since: new Date(start),
+      until: new Date(Math.min(start + dayMs, now.getTime())),
+    });
+  }
+
+  const settled = await Promise.allSettled(
+    intervals.map((interval) =>
+      fetchStatsWindow(env, query, interval).then((zone) => ({ zone, interval }))
+    )
+  );
+  const loaded = settled.filter((result) => result.status === "fulfilled").map((result) => result.value);
+  const failed = settled.filter((result) => result.status === "rejected");
+
+  if (!loaded.length) {
+    return json(
+      { error: failed[0]?.reason?.message || "Cloudflare Analytics returned no available windows." },
+      502,
+      corsHeaders
+    );
+  }
+
+  let requests = 0;
+  let visits = 0;
+  let loadedMs = 0;
+  const pages = new Map();
+  const countries = new Map();
+
+  for (const { zone, interval } of loaded) {
+    const totals = zone?.totals?.[0];
+    requests += totals?.count || 0;
+    visits += totals?.sum?.visits || 0;
+    loadedMs += interval.until.getTime() - interval.since.getTime();
+
+    for (const page of zone?.topPages || []) {
+      const key = page.dimensions.clientRequestPath || "/";
+      const current = pages.get(key) || { path: key, requests: 0, visits: 0 };
+      current.requests += page.count || 0;
+      current.visits += page.sum?.visits || 0;
+      pages.set(key, current);
+    }
+    for (const country of zone?.topCountries || []) {
+      const key = country.dimensions.clientCountryName || "Unknown";
+      const current = countries.get(key) || { country: key, requests: 0, visits: 0 };
+      current.requests += country.count || 0;
+      current.visits += country.sum?.visits || 0;
+      countries.set(key, current);
+    }
+  }
+
+  const topPages = [...pages.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
+  const topCountries = [...countries.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
+  const loadedDays = Math.round((loadedMs / dayMs) * 10) / 10;
+
+  return json(
+    {
+      range,
+      requests,
+      visits,
+      topPages,
+      topCountries,
+      partial: failed.length > 0,
+      requestedDays: hours / 24,
+      loadedDays,
+      generatedAt: now.toISOString(),
+    },
+    200,
+    corsHeaders
+  );
+}
+
+async function fetchStatsWindow(env, query, interval) {
   let resp;
   try {
     resp = await fetch("https://api.cloudflare.com/client/v4/graphql", {
@@ -104,51 +181,19 @@ async function handleStats(request, env) {
         query,
         variables: {
           zoneTag: env.CF_ZONE_ID,
-          since: since.toISOString(),
-          until: now.toISOString(),
+          since: interval.since.toISOString(),
+          until: interval.until.toISOString(),
         },
       }),
     });
-  } catch (e) {
-    return json({ error: `Fetch to Cloudflare API failed: ${e.message}` }, 502, corsHeaders);
+  } catch (error) {
+    throw new Error(`Fetch to Cloudflare API failed: ${error.message}`);
   }
 
-  if (!resp.ok) {
-    const bodyText = await resp.text();
-    return json({ error: `Cloudflare API error: ${resp.status}`, detail: bodyText.slice(0, 500) }, 502, corsHeaders);
-  }
-
+  if (!resp.ok) throw new Error(`Cloudflare API error: ${resp.status}`);
   const data = await resp.json();
-
-  if (data.errors) {
-    return json({ error: data.errors[0]?.message || "Unknown GraphQL error" }, 502, corsHeaders);
-  }
-
-  const zone = data?.data?.viewer?.zones?.[0];
-  const totals = zone?.totals?.[0];
-  const topPages = (zone?.topPages || []).map((p) => ({
-    path: p.dimensions.clientRequestPath,
-    requests: p.count,
-    visits: p.sum.visits,
-  }));
-  const topCountries = (zone?.topCountries || []).map((c) => ({
-    country: c.dimensions.clientCountryName,
-    requests: c.count,
-    visits: c.sum.visits,
-  }));
-
-  return json(
-    {
-      range,
-      requests: totals?.count || 0,
-      visits: totals?.sum?.visits || 0,
-      topPages,
-      topCountries,
-      generatedAt: now.toISOString(),
-    },
-    200,
-    corsHeaders
-  );
+  if (data.errors) throw new Error(data.errors[0]?.message || "Unknown GraphQL error");
+  return data?.data?.viewer?.zones?.[0] || {};
 }
 
 function json(obj, status, extraHeaders) {
