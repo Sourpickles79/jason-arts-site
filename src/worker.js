@@ -27,6 +27,10 @@ export default {
       return handleStats(request, env);
     }
 
+    if (url.pathname === "/sitemap.xml" && request.method === "GET") {
+      return handleSitemap(request, env);
+    }
+
     if (/^\/blog-[^/]+\.html$/i.test(url.pathname) && (request.method === "GET" || request.method === "HEAD")) {
       return handleBlogPost(request, env);
     }
@@ -62,6 +66,47 @@ async function handleBlogPost(request, env) {
   headers.delete("Content-Length");
   headers.delete("Content-Encoding");
   return new Response(request.method === "HEAD" ? null : html, { status: asset.status, headers });
+}
+
+async function handleSitemap(request, env) {
+  const sitemapResponse = await env.ASSETS.fetch(request);
+  if (!sitemapResponse.ok) return sitemapResponse;
+  let sitemap = await sitemapResponse.text();
+
+  try {
+    const dataUrl = new URL("/assets/data/content.js", request.url);
+    const dataResponse = await env.ASSETS.fetch(new Request(dataUrl));
+    const source = await dataResponse.text();
+    const jsonText = source.replace(/^\s*window\.SITE_CONTENT\s*=\s*/, "").replace(/;\s*$/, "");
+    const content = JSON.parse(jsonText);
+    const now = Date.now();
+    const livePosts = (content.blogPosts || []).filter((post) => {
+      if (post.status === "draft") return false;
+      if (!post.publishAt) return true;
+      const release = Date.parse(post.publishAt);
+      return Number.isFinite(release) && release <= now;
+    });
+
+    const additions = livePosts.filter((post) => post.url && !sitemap.includes(`https://jasonarts.com/${post.url}`)).map((post) => {
+      const parsedRelease = post.publishAt ? Date.parse(post.publishAt) : NaN;
+      const lastmodValue = post.date || (Number.isFinite(parsedRelease) ? new Date(parsedRelease).toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10));
+      const lastmod = escapeXml(lastmodValue);
+      return `  <url>\n    <loc>https://jasonarts.com/${escapeXml(post.url)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`;
+    }).join("\n");
+
+    if (additions) sitemap = sitemap.replace("</urlset>", `${additions}\n</urlset>`);
+  } catch (error) {
+    console.warn("Serving the static sitemap because blog data could not be parsed:", error.message);
+  }
+
+  return new Response(sitemap, {
+    status: 200,
+    headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=300" }
+  });
+}
+
+function escapeXml(value) {
+  return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 }
 
 async function handleStats(request, env) {
