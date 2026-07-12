@@ -7,7 +7,7 @@ window.SITE_CONTENT = {
     "resumeUrl": "#",
     "metrics": [
       {
-        "value": "20+",
+        "value": "10+",
         "label": "years of experience"
       },
       {
@@ -611,7 +611,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/orb-thumb.webp",
       "url": "https://www.youtube.com/channel/UCkhYfwqh5-iq7z4yEAvUYjw",
       "date": "2026-06-20",
-      "description": "A new animated short channel built around story, atmosphere, and world-building. Replace this entry with your latest upload."
+      "description": "Cinematic animated shorts exploring mystery, atmosphere, and world-building."
     },
     {
       "title": "Sleep Zen",
@@ -619,7 +619,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/sleepzen-thumb.webp",
       "url": "https://www.youtube.com/channel/UCccuNXRd1dJkBvxIFXrgFuw",
       "date": "2026-06-05",
-      "description": "Long-form calming scenes, ambient rooms, and restful environments. Replace this entry with your latest upload."
+      "description": "Long-form calming scenes and ambient rooms created for sleep, focus, and quiet time."
     },
     {
       "title": "Original Music",
@@ -627,7 +627,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/music-band-thumb.webp",
       "url": "https://www.youtube.com/@JasonArtsRecords",
       "date": "2026-05-18",
-      "description": "Original tracks and visual music experiences. Replace this entry with your latest upload."
+      "description": "Original songs and visual releases shaped by cinematic atmosphere and storytelling."
     }
   ],
   "blogPosts": [
