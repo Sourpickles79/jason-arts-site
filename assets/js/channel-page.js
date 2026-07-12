@@ -86,7 +86,7 @@ function injectVideoStructuredData(videos, channelTitle) {
   // JS-rendered content) reflects what's actually newest right now.
   const desc = document.querySelector('meta[name="description"]');
   if (desc && videos[0]) {
-    desc.setAttribute("content", `${channelTitle}: newest upload "${videos[0].title}" and more, newest first.`);
+    desc.setAttribute("content", `${channelTitle}: recent release "${videos[0].title}" and more from the channel.`);
   }
 }
 
@@ -117,14 +117,14 @@ async function renderChannelPage(channelKey) {
 
   if (noticeEl) {
     noticeEl.textContent = isLive
-      ? "Live from YouTube — updates automatically."
-      : "Manual list — add a YouTube Data API key in content.js for live, automatic updates.";
+      ? `Showing the ${Math.min(videos.length, 12)} most recent releases from YouTube.`
+      : "A featured selection from the channel.";
   }
 
   if (listEl) {
     listEl.innerHTML = videos.length
       ? videos.map(videoFeatureRow).join("")
-      : `<p class="notice">No videos listed yet. Add entries to the "videos" array in content.js, or connect a YouTube Data API key for a live feed.</p>`;
+      : `<p class="notice">No releases are available here yet. Visit the channel on YouTube to explore more.</p>`;
   }
 
   injectVideoStructuredData(videos, document.title.split(" | ")[0]);
