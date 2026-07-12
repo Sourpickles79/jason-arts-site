@@ -7,7 +7,7 @@ window.SITE_CONTENT = {
     "resumeUrl": "#",
     "metrics": [
       {
-        "value": "10+",
+        "value": "20+",
         "label": "years of experience"
       },
       {
@@ -33,7 +33,7 @@ window.SITE_CONTENT = {
     "youtubeOrbId": "UCkhYfwqh5-iq7z4yEAvUYjw",
     "amazonStore": "https://www.amazon.com/stores/Jason-Arts-Johnson/author/B0CVW3PXGW?ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=03cdfd36-a8eb-487a-addf-548214bb01b7",
     "artstation": "https://www.artstation.com/jasonartsjohnson",
-    "linkedin": "#",
+    "linkedin": "https://www.linkedin.com/in/jason-johnson-5511793/",
     "instagram": "#",
     "youtubeApiKey": "AIzaSyBi8KpU5N_q-otcR5Z2F0rY4-SyOzARNvs"
   },
@@ -346,9 +346,10 @@ window.SITE_CONTENT = {
     },
     {
       "title": "Violin Study",
-      "category": "3D Art",
+      "category": "Modeling",
       "image": "assets/images/personal-violin.webp",
-      "description": "Personal 3D modeling and rendering study outside of furniture and architecture work."
+      "description": "Personal violin modeling and rendering study demonstrating detailed hard-surface and organic asset work.",
+      "modeled": true
     },
     {
       "title": "Abigail Kids Desk",
