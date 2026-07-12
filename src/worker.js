@@ -87,6 +87,15 @@ async function handleStats(request, env) {
             sum { visits }
             dimensions { clientCountryName }
           }
+          series: httpRequestsAdaptiveGroups(
+            filter: { AND: [{ datetime_geq: $since, datetime_lt: $until }, { requestSource: "eyeball" }] }
+            limit: 1000
+            orderBy: [datetimeHour_ASC]
+          ) {
+            count
+            sum { visits }
+            dimensions { datetimeHour }
+          }
         }
       }
     }
@@ -124,6 +133,7 @@ async function handleStats(request, env) {
   let loadedMs = 0;
   const pages = new Map();
   const countries = new Map();
+  const activity = new Map();
 
   for (const { zone, interval } of loaded) {
     const totals = zone?.totals?.[0];
@@ -145,10 +155,18 @@ async function handleStats(request, env) {
       current.visits += country.sum?.visits || 0;
       countries.set(key, current);
     }
+    for (const point of zone?.series || []) {
+      const key = point.dimensions.datetimeHour;
+      const current = activity.get(key) || { time: key, requests: 0, visits: 0 };
+      current.requests += point.count || 0;
+      current.visits += point.sum?.visits || 0;
+      activity.set(key, current);
+    }
   }
 
   const topPages = [...pages.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
   const topCountries = [...countries.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
+  const series = [...activity.values()].sort((a, b) => new Date(a.time) - new Date(b.time));
   const loadedDays = Math.round((loadedMs / dayMs) * 10) / 10;
 
   return json(
@@ -158,6 +176,7 @@ async function handleStats(request, env) {
       visits,
       topPages,
       topCountries,
+      series,
       partial: failed.length > 0,
       requestedDays: hours / 24,
       loadedDays,
