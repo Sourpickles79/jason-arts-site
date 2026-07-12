@@ -632,6 +632,28 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "how-i-built-jasonartscom-with-claude-without-losing-my-own-style",
+      "title": "How I Built JasonArts.com with Claude Without Losing My Own Style",
+      "excerpt": "I used Claude to help build JasonArts.com, but the real challenge was making sure the finished site still felt like my work instead of another generic AI template.",
+      "category": "AI Tips",
+      "cover": "assets/images/building-jasonarts-with-claude-cover.webp",
+      "date": "2026-07-12",
+      "publishAt": "2026-07-12T17:35:13.427Z",
+      "status": "published",
+      "url": "blog-how-i-built-jasonartscom-with-claude-without-losing-my-own-style.html"
+    },
+    {
+      "slug": "seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade",
+      "title": "Seedance 2.5 Is a Bigger Deal Than Another AI Video Upgrade",
+      "excerpt": "Seedance 2.5 targets longer clips, stronger reference control, and easier revisions—the exact improvements AI filmmakers actually need.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/seedance-2-5-cover.webp",
+      "date": "2026-07-14",
+      "publishAt": "2026-07-14T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade.html"
+    },
+    {
       "slug": "seedream-50-the-ai-image-model-that-changes-how-we-prompt",
       "title": "Seedream 5.0: The AI Image Model That Changes How We Prompt",
       "excerpt": "Seedream 5.0 isn't just another image generator. Its reasoning-first approach, stronger reference handling, and editing capabilities could change how artists build images from concept to final render.",
