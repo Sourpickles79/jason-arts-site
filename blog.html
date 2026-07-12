@@ -87,7 +87,18 @@
     function renderBlog() {
       document.getElementById("year").textContent = new Date().getFullYear();
       const posts = (window.SITE_CONTENT && window.SITE_CONTENT.blogPosts) || [];
-      const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+      const now = Date.now();
+      const livePosts = posts.filter(post => {
+        if (post.status === "draft") return false;
+        if (!post.publishAt) return true;
+        const release = Date.parse(post.publishAt);
+        return !isNaN(release) && release <= now;
+      });
+      const sorted = [...livePosts].sort((a, b) => {
+        const bTime = Date.parse(b.publishAt || `${b.date}T00:00:00`) || 0;
+        const aTime = Date.parse(a.publishAt || `${a.date}T00:00:00`) || 0;
+        return bTime - aTime;
+      });
       const grid = document.getElementById("blogGrid");
       if (!sorted.length) {
         grid.innerHTML = `<p class="notice">No posts yet — check back soon.</p>`;
