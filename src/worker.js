@@ -27,10 +27,42 @@ export default {
       return handleStats(request, env);
     }
 
+    if (/^\/blog-[^/]+\.html$/i.test(url.pathname) && (request.method === "GET" || request.method === "HEAD")) {
+      return handleBlogPost(request, env);
+    }
+
     // Not an API route - serve the normal static site.
     return env.ASSETS.fetch(request);
   },
 };
+
+async function handleBlogPost(request, env) {
+  const asset = await env.ASSETS.fetch(request);
+  if (!asset.ok) return asset;
+
+  const html = await asset.text();
+  const status = html.match(/<meta\s+name=["']publish-status["']\s+content=["']([^"']*)["']/i)?.[1];
+  const publishAt = html.match(/<meta\s+name=["']publish-at["']\s+content=["']([^"']*)["']/i)?.[1];
+  const releaseTime = publishAt ? Date.parse(publishAt) : NaN;
+  const isFuture = Number.isFinite(releaseTime) && releaseTime > Date.now();
+  const invalidSchedule = status === "scheduled" && !Number.isFinite(releaseTime);
+
+  if (status === "draft" || isFuture || invalidSchedule) {
+    const notFoundUrl = new URL("/404.html", request.url);
+    const notFound = await env.ASSETS.fetch(new Request(notFoundUrl, { method: request.method }));
+    const headers = new Headers(notFound.headers);
+    headers.set("Cache-Control", "no-store, max-age=0");
+    headers.set("X-Robots-Tag", "noindex, nofollow");
+    headers.delete("Content-Length");
+    headers.delete("Content-Encoding");
+    return new Response(request.method === "HEAD" ? null : notFound.body, { status: 404, headers });
+  }
+
+  const headers = new Headers(asset.headers);
+  headers.delete("Content-Length");
+  headers.delete("Content-Encoding");
+  return new Response(request.method === "HEAD" ? null : html, { status: asset.status, headers });
+}
 
 async function handleStats(request, env) {
   const corsHeaders = {
