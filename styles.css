@@ -871,27 +871,31 @@ h3 { font-size: 26px; }
     flex-wrap: wrap;
   }
   .nav {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
     grid-column: auto;
     order: 3;
     width: 100%;
-    justify-content: flex-start;
-    overflow-x: auto;
+    justify-content: center;
+    overflow-x: visible;
+    white-space: normal;
     padding-top: 8px;
-    gap: 18px;
+    gap: 8px 18px;
   }
   .pill { display: none; }
   .hero {
     min-height: 100svh;
-    padding-top: 132px;
+    padding-top: 164px;
     padding-bottom: 260px;
   }
   .subhero {
     min-height: 68vh;
-    padding-top: 130px;
+    padding-top: 160px;
   }
   .metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     bottom: 24px;
+    border-right: 1px solid var(--line);
   }
   .hero-continuation {
     margin-top: 0;
@@ -974,6 +978,7 @@ h3 { font-size: 26px; }
 
 @media (max-width: 520px) {
   h1 { font-size: 46px; }
+  .nav { column-gap: 12px; }
   .hero-actions .button {
     width: 100%;
   }
