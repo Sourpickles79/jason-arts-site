@@ -31,6 +31,10 @@ export default {
       return handleSitemap(request, env);
     }
 
+    if (url.pathname === "/feed.xml" && (request.method === "GET" || request.method === "HEAD")) {
+      return handleFeed(request, env);
+    }
+
     if (/^\/blog-[^/]+\.html$/i.test(url.pathname) && (request.method === "GET" || request.method === "HEAD")) {
       return handleBlogPost(request, env);
     }
@@ -107,6 +111,76 @@ async function handleSitemap(request, env) {
 
 function escapeXml(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+}
+
+async function handleFeed(request, env) {
+  try {
+    const dataUrl = new URL("/assets/data/content.js", request.url);
+    const dataResponse = await env.ASSETS.fetch(new Request(dataUrl));
+    if (!dataResponse.ok) throw new Error("Blog data is unavailable.");
+
+    const source = await dataResponse.text();
+    const jsonText = source.replace(/^\s*window\.SITE_CONTENT\s*=\s*/, "").replace(/;\s*$/, "");
+    const content = JSON.parse(jsonText);
+    const now = Date.now();
+    const livePosts = (content.blogPosts || []).filter((post) => {
+      if (post.status === "draft" || !post.url) return false;
+      if (!post.publishAt) return true;
+      const release = Date.parse(post.publishAt);
+      return Number.isFinite(release) && release <= now;
+    }).sort((a, b) => {
+      const bTime = Date.parse(b.publishAt || `${b.date || "1970-01-01"}T00:00:00`) || 0;
+      const aTime = Date.parse(a.publishAt || `${a.date || "1970-01-01"}T00:00:00`) || 0;
+      return bTime - aTime;
+    }).slice(0, 30);
+
+    const itemXml = livePosts.map((post) => {
+      const postUrl = new URL(`/${post.url}`, request.url).href;
+      const parsedDate = Date.parse(post.publishAt || `${post.date || "1970-01-01"}T09:00:00-05:00`);
+      const pubDate = new Date(Number.isFinite(parsedDate) ? parsedDate : 0).toUTCString();
+      return `    <item>
+      <title>${escapeXml(post.title || "Untitled post")}</title>
+      <link>${escapeXml(postUrl)}</link>
+      <guid isPermaLink="true">${escapeXml(postUrl)}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <category>${escapeXml(post.category || "Jason Arts")}</category>
+      <description>${escapeXml(post.excerpt || "")}</description>
+    </item>`;
+    }).join("\n");
+
+    const newestDate = livePosts[0]
+      ? Date.parse(livePosts[0].publishAt || `${livePosts[0].date || "1970-01-01"}T09:00:00-05:00`)
+      : now;
+    const lastBuildDate = new Date(Number.isFinite(newestDate) ? newestDate : now).toUTCString();
+    const origin = new URL(request.url).origin;
+    const feed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jason Arts Blog</title>
+    <link>${escapeXml(`${origin}/blog.html`)}</link>
+    <description>Behind-the-scenes posts on AI filmmaking, AI music, animated shorts, 3D art, books, and creative production by Jason Arts.</description>
+    <language>en-us</language>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <atom:link href="${escapeXml(`${origin}/feed.xml`)}" rel="self" type="application/rss+xml" />
+    <ttl>60</ttl>
+${itemXml}
+  </channel>
+</rss>`;
+
+    return new Response(request.method === "HEAD" ? null : feed, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/rss+xml; charset=utf-8",
+        "Cache-Control": "public, max-age=300",
+        "X-Content-Type-Options": "nosniff"
+      }
+    });
+  } catch (error) {
+    return new Response("RSS feed is temporarily unavailable.", {
+      status: 503,
+      headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" }
+    });
+  }
 }
 
 async function handleStats(request, env) {
