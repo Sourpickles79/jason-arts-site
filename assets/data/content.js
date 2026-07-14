@@ -177,7 +177,7 @@ window.SITE_CONTENT = {
       "description": "Commercial fireplace media console rendered with warm glow and lifestyle staging."
     },
     {
-      "title": "Gaming Console \u2014 Alt View",
+      "title": "Gaming Console — Alt View",
       "category": "Product Visualization",
       "image": "assets/images/pro-gaming-console-alt.webp",
       "description": "Additional angle on entertainment furniture with color lighting and screen glow."
@@ -189,7 +189,7 @@ window.SITE_CONTENT = {
       "description": "Glass-front curio cabinet rendered with display lighting and material detail."
     },
     {
-      "title": "Cooper Media Credenza \u2014 Alt View",
+      "title": "Cooper Media Credenza — Alt View",
       "category": "Product Visualization",
       "image": "assets/images/pro-cooper-credenza-alt.webp",
       "description": "Alternate angle on the Cooper credenza with lifestyle atmosphere."
@@ -253,26 +253,26 @@ window.SITE_CONTENT = {
       "modeled": true
     },
     {
-      "title": "Ashby Cabinet Bed \u2014 Detail",
+      "title": "Ashby Cabinet Bed — Detail",
       "category": "Product Visualization",
       "image": "assets/images/pro-ashby-cabinet-bed-detail.webp",
       "description": "Detail render highlighting the storage mechanism of the Ashby cabinet bed."
     },
     {
-      "title": "Ashby Cabinet Bed \u2014 Open",
+      "title": "Ashby Cabinet Bed — Open",
       "category": "Product Visualization",
       "image": "assets/images/pro-ashby-cabinet-bed-open.webp",
       "description": "Ashby cabinet bed shown open with bedding staged for lifestyle context."
     },
     {
-      "title": "Sheldon Mobile Computer Desk \u2014 Detail",
+      "title": "Sheldon Mobile Computer Desk — Detail",
       "category": "Product Visualization",
       "image": "assets/images/pro-sheldon-desk-detail.webp",
       "description": "Detail render of the Sheldon mobile computer desk's hardware and finish.",
       "modeled": true
     },
     {
-      "title": "Sheldon Mobile Computer Desk \u2014 Open",
+      "title": "Sheldon Mobile Computer Desk — Open",
       "category": "Product Visualization",
       "image": "assets/images/pro-sheldon-desk-open.webp",
       "description": "Sheldon mobile computer desk shown open and in use.",
@@ -321,19 +321,19 @@ window.SITE_CONTENT = {
       "description": "Personal desk design concept rendered for a custom layout."
     },
     {
-      "title": "Turret Garage \u2014 Study 1",
+      "title": "Turret Garage — Study 1",
       "category": "Architecture",
       "image": "assets/images/personal-turret-garage-01.webp",
       "description": "Personal architectural exterior study of a turret-style garage."
     },
     {
-      "title": "Turret Garage \u2014 Study 2",
+      "title": "Turret Garage — Study 2",
       "category": "Architecture",
       "image": "assets/images/personal-turret-garage-02.webp",
       "description": "Personal architectural exterior study of a turret-style garage."
     },
     {
-      "title": "Turret Garage \u2014 Study 3",
+      "title": "Turret Garage — Study 3",
       "category": "Architecture",
       "image": "assets/images/personal-turret-garage-03.webp",
       "description": "Personal architectural exterior study of a turret-style garage."
@@ -370,61 +370,61 @@ window.SITE_CONTENT = {
       "description": "Residential bedroom interior visualization with warm, balanced lighting."
     },
     {
-      "title": "Genesis Desk \u2014 Alt View",
+      "title": "Genesis Desk — Alt View",
       "category": "Product Visualization",
       "image": "assets/images/genesis-desk-alt.webp",
       "description": "Alternate angle on the Genesis gaming desk with color-forward lifestyle staging."
     },
     {
-      "title": "Savannah Collection \u2014 Rear View",
+      "title": "Savannah Collection — Rear View",
       "category": "Architecture",
       "image": "assets/images/savannah-back.webp",
       "description": "Rear exterior elevation from the Savannah residential collection."
     },
     {
-      "title": "4500 60\" 2-Door Cabinet \u2014 Animation",
+      "title": "4500 60\" 2-Door Cabinet — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-4500-60-2-door-cabinet-animation.jpg",
       "video": "assets/videos/4500-60-2-door-cabinet-animation.mp4",
       "description": "Animated product turntable render with sound design for a 60-inch 2-door cabinet."
     },
     {
-      "title": "Monarch Hill Poppy 3-Drawer Dresser \u2014 Animation",
+      "title": "Monarch Hill Poppy 3-Drawer Dresser — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-6827321com-monarch-hill-poppy-3-drawer-dresser-animation.jpg",
       "video": "assets/videos/6827321com-monarch-hill-poppy-3-drawer-dresser-animation.mp4",
       "description": "Animated product render for the Monarch Hill Poppy 3-drawer dresser."
     },
     {
-      "title": "Monarch Hill Poppy Kids Desk \u2014 Animation",
+      "title": "Monarch Hill Poppy Kids Desk — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-6829321com-monarch-hill-poppy-kids-desk-animation.jpg",
       "video": "assets/videos/6829321com-monarch-hill-poppy-kids-desk-animation.mp4",
       "description": "Animated product render for the Monarch Hill Poppy kids desk."
     },
     {
-      "title": "4-Door Storage Cabinet \u2014 Animation",
+      "title": "4-Door Storage Cabinet — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-7224412wcom-4-door-storage-cabinet-animation.jpg",
       "video": "assets/videos/7224412wcom-4-door-storage-cabinet-animation.mp4",
       "description": "Animated product turntable render for a 4-door storage cabinet."
     },
     {
-      "title": "Queen Murphy Bed \u2014 Animation",
+      "title": "Queen Murphy Bed — Animation",
       "category": "Product Visualization",
       "image": "assets/images/poster-8368222com-queen-murphy-bed-animation.jpg",
       "video": "assets/videos/8368222com-queen-murphy-bed-animation.mp4",
       "description": "Animated product render showing a queen Murphy bed opening and closing."
     },
     {
-      "title": "Kingdom Heights \u2014 Flythrough",
+      "title": "Kingdom Heights — Flythrough",
       "category": "Planning",
       "image": "assets/images/poster-flythrough-03.jpg",
       "video": "assets/videos/flythrough-03.mp4",
       "description": "Community flythrough animation built for planning and marketing presentation."
     },
     {
-      "title": "Kingdom Heights \u2014 Site Plan",
+      "title": "Kingdom Heights — Site Plan",
       "category": "Planning",
       "image": "assets/images/kingdom-heights-site-map.webp",
       "description": "Illustrated community site plan built for clarity and presentation."
@@ -444,7 +444,7 @@ window.SITE_CONTENT = {
       "modeled": true
     },
     {
-      "title": "Black Wood Cane Back Chair \u2014 Detail",
+      "title": "Black Wood Cane Back Chair — Detail",
       "category": "Product Visualization",
       "image": "assets/images/pro-black-wood-cane-back-chair-detail.webp",
       "description": "Close-up detail render highlighting the cane weave construction and finish.",
@@ -458,14 +458,14 @@ window.SITE_CONTENT = {
       "modeled": true
     },
     {
-      "title": "Baby Relax Huntington \u2014 Detail 1",
+      "title": "Baby Relax Huntington — Detail 1",
       "category": "Product Visualization",
       "image": "assets/images/pro-baby-relax-huntington-detail-1.webp",
       "description": "Detail render of the Huntington glider's cushion and arm construction.",
       "modeled": true
     },
     {
-      "title": "Baby Relax Huntington \u2014 Detail 2",
+      "title": "Baby Relax Huntington — Detail 2",
       "category": "Product Visualization",
       "image": "assets/images/pro-baby-relax-huntington-detail-2.webp",
       "description": "Detail render of the Huntington ottoman's glider mechanism and base.",
@@ -632,9 +632,31 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "rush-without-neil-peart-fort-worth-2026",
+      "title": "Rush Came Back Without Neil, but He Was Everywhere",
+      "excerpt": "Rush returned to the stage without Neil Peart behind the drums, but through the music, his voice, and the love in the room, it felt like he was everywhere.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/rush-came-back-without-neil.webp",
+      "date": "2026-07-14",
+      "publishAt": "2026-07-14T13:29:52.048Z",
+      "status": "published",
+      "url": "blog-rush-without-neil-peart-fort-worth-2026.html",
+      "seo": {
+        "title": "Rush Without Neil Peart: A Night I Won’t Forget",
+        "description": "A personal reflection on seeing Rush without Neil Peart in Fort Worth, honoring his legacy, Anika Nilles and an unforgettable 2026 setlist.",
+        "targetKeyword": "Rush without Neil Peart",
+        "secondaryKeywords": [
+          "- Rush Fifty Something Tour"
+        ],
+        "coverAlt": "Geddy Lee and Alex Lifeson perform beneath blue stage lights while Anika Nilles plays drums behind them.",
+        "socialTitle": "Rush Came Back Without Neil, but He Was Everywhere",
+        "socialDescription": "Seeing Rush return without Neil Peart was joyful, difficult and unforgettable. This is what the music, the tributes and that night meant to me."
+      }
+    },
+    {
       "slug": "how-i-made-sarah-ai-music-video",
-      "title": "How I Made the AI Music Video for \u201cSarah\u201d by Dirty It Dies",
-      "excerpt": "A behind-the-scenes look at how I turned \u201cSarah\u201d by Dirty It Dies into an emotional AI music video using visual storytelling, character consistency, motion, and editing.",
+      "title": "How I Made the AI Music Video for “Sarah” by Dirty It Dies",
+      "excerpt": "A behind-the-scenes look at how I turned “Sarah” by Dirty It Dies into an emotional AI music video using visual storytelling, character consistency, motion, and editing.",
       "category": "AI Music",
       "cover": "assets/images/sarah-ai-music-video-cover.webp",
       "date": "2026-07-20",
@@ -642,15 +664,15 @@ window.SITE_CONTENT = {
       "status": "scheduled",
       "url": "blog-how-i-made-sarah-ai-music-video.html",
       "seo": {
-        "title": "How I Made the AI Music Video for \u201cSarah\u201d",
-        "description": "Go behind the scenes of \u201cSarah\u201d by Dirty It Dies and see how AI imagery, animation, character design, and editing shaped the music video.",
+        "title": "How I Made the AI Music Video for “Sarah”",
+        "description": "Go behind the scenes of “Sarah” by Dirty It Dies and see how AI imagery, animation, character design, and editing shaped the music video.",
         "targetKeyword": "AI music video",
         "secondaryKeywords": [
           "- how to make an AI music video"
         ],
-        "coverAlt": "Close-up of the lead singer from the \u201cSarah\u201d AI music video standing on a rain-soaked city street at night.",
-        "socialTitle": "How I Made the AI Music Video for \u201cSarah\u201d",
-        "socialDescription": "Behind the scenes of the character design, nighttime visuals, band performance, AI animation, and editing used to create \u201cSarah.\u201d"
+        "coverAlt": "Close-up of the lead singer from the “Sarah” AI music video standing on a rain-soaked city street at night.",
+        "socialTitle": "How I Made the AI Music Video for “Sarah”",
+        "socialDescription": "Behind the scenes of the character design, nighttime visuals, band performance, AI animation, and editing used to create “Sarah.”"
       }
     },
     {
@@ -667,7 +689,7 @@ window.SITE_CONTENT = {
     {
       "slug": "seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade",
       "title": "Seedance 2.5 Is a Bigger Deal Than Another AI Video Upgrade",
-      "excerpt": "Seedance 2.5 targets longer clips, stronger reference control, and easier revisions\u2014the exact improvements AI filmmakers actually need.",
+      "excerpt": "Seedance 2.5 targets longer clips, stronger reference control, and easier revisions—the exact improvements AI filmmakers actually need.",
       "category": "AI Video / Shorts",
       "cover": "assets/images/seedance-2-5-cover.webp",
       "date": "2026-07-14",
