@@ -12,5 +12,19 @@
       "/sitemap.xml",
       "/blog-*.html"
     ]
-  }
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BLOG_LIKES",
+        "class_name": "BlogLikeCounter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1-blog-likes",
+      "new_sqlite_classes": ["BlogLikeCounter"]
+    }
+  ]
 }
