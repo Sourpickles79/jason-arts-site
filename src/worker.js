@@ -41,7 +41,7 @@ export default {
       return handleFeed(request, env);
     }
 
-    if (/^\/blog-[^/]+\.html$/i.test(url.pathname) && (request.method === "GET" || request.method === "HEAD")) {
+    if (/^\/blog-[^/]+(?:\.html)?\/?$/i.test(url.pathname) && (request.method === "GET" || request.method === "HEAD")) {
       return handleBlogPost(request, env);
     }
 
