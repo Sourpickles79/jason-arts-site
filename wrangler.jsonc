@@ -10,7 +10,7 @@
       "/api/*",
       "/feed.xml",
       "/sitemap.xml",
-      "/blog-*.html"
+      "/blog-*"
     ]
   },
   "durable_objects": {
