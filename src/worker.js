@@ -1,3 +1,5 @@
+import { DurableObject } from "cloudflare:workers";
+
 // Worker entry point for jason-arts-site.
 //
 // This runs on EVERY request. For "/api/*" paths it handles them directly
@@ -25,6 +27,10 @@ export default {
 
     if (url.pathname === "/api/stats") {
       return handleStats(request, env);
+    }
+
+    if (url.pathname === "/api/likes") {
+      return handleLikes(request, env);
     }
 
     if (url.pathname === "/sitemap.xml" && request.method === "GET") {
@@ -66,10 +72,119 @@ async function handleBlogPost(request, env) {
     return new Response(request.method === "HEAD" ? null : notFound.body, { status: 404, headers });
   }
 
+  const enhancedHtml = injectBlogActions(html);
   const headers = new Headers(asset.headers);
   headers.delete("Content-Length");
   headers.delete("Content-Encoding");
-  return new Response(request.method === "HEAD" ? null : html, { status: asset.status, headers });
+  return new Response(request.method === "HEAD" ? null : enhancedHtml, { status: asset.status, headers });
+}
+
+function injectBlogActions(html) {
+  if (html.includes("data-blog-actions")) return html;
+  const actions = `
+      <section class="blog-actions" data-blog-actions aria-label="Like and share this article">
+        <div class="blog-reaction">
+          <button class="blog-like-button" type="button" aria-pressed="false">
+            <span class="blog-like-heart" aria-hidden="true">♥</span>
+            <span class="blog-like-label">Like this article</span>
+            <span class="blog-like-count" data-like-count aria-label="Like count">—</span>
+          </button>
+          <span class="blog-like-status" data-like-status role="status" aria-live="polite"></span>
+        </div>
+        <div class="blog-share-group" aria-label="Share this article">
+          <span class="blog-share-label">Share</span>
+          <a class="blog-share-button" data-share="facebook" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">Facebook</a>
+          <a class="blog-share-button" data-share="x" target="_blank" rel="noopener noreferrer" aria-label="Share on X">X</a>
+          <a class="blog-share-button" data-share="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">LinkedIn</a>
+          <a class="blog-share-button" data-share="pinterest" target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest">Pinterest</a>
+          <a class="blog-share-button" data-share="email" aria-label="Share by email">Email</a>
+          <button class="blog-share-button" data-share="copy" type="button">Copy link</button>
+          <button class="blog-share-button blog-native-share" data-share="native" type="button" hidden>Share…</button>
+        </div>
+      </section>`;
+
+  let enhanced = html.replace(/<\/article>/i, `</article>${actions}`);
+  if (enhanced === html) enhanced = html.replace(/<div class="post-cta"/i, `${actions}\n      <div class="post-cta"`);
+  if (!enhanced.includes("assets/js/blog-actions.js")) {
+    enhanced = enhanced.replace(/<\/body>/i, `  <script src="assets/js/blog-actions.js" defer><\/script>\n</body>`);
+  }
+  return enhanced;
+}
+
+async function handleLikes(request, env) {
+  const url = new URL(request.url);
+  const slug = (url.searchParams.get("slug") || "").trim().toLowerCase();
+  if (!/^[a-z0-9][a-z0-9-]{2,119}$/.test(slug)) {
+    return json({ error: "Invalid article identifier." }, 400, { "Cache-Control": "no-store" });
+  }
+  if (request.method !== "GET" && request.method !== "POST") {
+    return json({ error: "Method not allowed." }, 405, { "Allow": "GET, POST", "Cache-Control": "no-store" });
+  }
+  if (!env.BLOG_LIKES) {
+    return json({ error: "Like storage is not configured." }, 503, { "Cache-Control": "no-store" });
+  }
+
+  if (request.method === "POST") {
+    const origin = request.headers.get("Origin");
+    if (origin) {
+      try {
+        if (new URL(origin).origin !== url.origin) return json({ error: "Origin not allowed." }, 403, { "Cache-Control": "no-store" });
+      } catch {
+        return json({ error: "Origin not allowed." }, 403, { "Cache-Control": "no-store" });
+      }
+    }
+  }
+
+  const id = env.BLOG_LIKES.idFromName(slug);
+  const stub = env.BLOG_LIKES.get(id);
+  const clientId = (url.searchParams.get("client") || "").trim();
+  const safeClientId = /^[a-zA-Z0-9_-]{16,80}$/.test(clientId) ? clientId : "";
+  const body = request.method === "POST" ? await request.text() : "";
+  const response = await stub.fetch(new Request(`https://likes.internal/${slug}${safeClientId ? `?client=${encodeURIComponent(safeClientId)}` : ""}`, {
+    method: request.method,
+    headers: { "Content-Type": "application/json" },
+    body: request.method === "POST" ? body : undefined
+  }));
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", "no-store");
+  headers.set("X-Content-Type-Options", "nosniff");
+  return new Response(response.body, { status: response.status, headers });
+}
+
+export class BlogLikeCounter extends DurableObject {
+  constructor(ctx, env) {
+    super(ctx, env);
+  }
+
+  async fetch(request) {
+    const count = (await this.ctx.storage.get("count")) || 0;
+    if (request.method === "GET") {
+      const clientId = new URL(request.url).searchParams.get("client") || "";
+      const liked = /^[a-zA-Z0-9_-]{16,80}$/.test(clientId)
+        ? Boolean(await this.ctx.storage.get(`liked:${clientId}`))
+        : false;
+      return Response.json({ count, liked });
+    }
+
+    let clientId = "";
+    try {
+      const body = await request.json();
+      clientId = String(body.clientId || "").trim();
+    } catch {
+      return Response.json({ error: "Invalid request." }, { status: 400 });
+    }
+    if (!/^[a-zA-Z0-9_-]{16,80}$/.test(clientId)) {
+      return Response.json({ error: "Invalid client identifier." }, { status: 400 });
+    }
+
+    const likedKey = `liked:${clientId}`;
+    const alreadyLiked = Boolean(await this.ctx.storage.get(likedKey));
+    if (alreadyLiked) return Response.json({ count, liked: true });
+
+    const nextCount = count + 1;
+    await this.ctx.storage.put({ count: nextCount, [likedKey]: true });
+    return Response.json({ count: nextCount, liked: true });
+  }
 }
 
 async function handleSitemap(request, env) {
