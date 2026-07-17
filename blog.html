@@ -84,9 +84,14 @@
   <script src="assets/data/content.js"></script>
   <script>
     function formatDate(value) {
-      const d = new Date(value + "T00:00:00");
+      const dateOnly = String(value || "").match(/^(\d{4}-\d{2}-\d{2})/);
+      const d = new Date(dateOnly ? `${dateOnly[1]}T00:00:00` : value);
       if (isNaN(d)) return value;
       return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    }
+
+    function getPostDisplayDate(post) {
+      return formatDate(post.publishAt || post.date);
     }
     function renderBlog() {
       document.getElementById("year").textContent = new Date().getFullYear();
@@ -112,7 +117,7 @@
         <a class="blog-card" href="${post.url}">
           <img src="${post.cover}" alt="${post.title}" loading="lazy">
           <div class="blog-card-body">
-            <div class="blog-meta"><span>${post.category}</span><span class="dot">&middot;</span><span>${formatDate(post.date)}</span></div>
+            <div class="blog-meta"><span>${post.category}</span><span class="dot">&middot;</span><span>${getPostDisplayDate(post)}</span></div>
             <h3>${post.title}</h3>
             <p>${post.excerpt}</p>
           </div>
