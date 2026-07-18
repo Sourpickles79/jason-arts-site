@@ -7,7 +7,7 @@ window.SITE_CONTENT = {
     "resumeUrl": "#",
     "metrics": [
       {
-        "value": "20+",
+        "value": "10+",
         "label": "years of experience"
       },
       {
@@ -365,7 +365,7 @@ window.SITE_CONTENT = {
     },
     {
       "title": "Clementine Bedroom",
-      "category": "Architecture",
+      "category": "Product Visualization",
       "image": "assets/images/clementine-bedroom.webp",
       "description": "Residential bedroom interior visualization with warm, balanced lighting."
     },
@@ -500,12 +500,6 @@ window.SITE_CONTENT = {
       "category": "Architecture",
       "image": "assets/images/arch-san-diego-residence.webp",
       "description": "Bright Southern California exterior with warm stucco, tile roofing, contemporary planting, and crisp daylight."
-    },
-    {
-      "title": "Residential Exterior Study",
-      "category": "Architecture",
-      "image": "assets/images/arch-residential-exterior-study.webp",
-      "description": "Suburban home visualization combining brick, stone, siding, landscaping, and a polished marketing composition."
     },
     {
       "title": "Destin Custom Home",
