@@ -470,6 +470,168 @@ window.SITE_CONTENT = {
       "image": "assets/images/pro-baby-relax-huntington-detail-2.webp",
       "description": "Detail render of the Huntington ottoman's glider mechanism and base.",
       "modeled": true
+    },
+  {
+      "title": "Appalachian Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-appalachian-residence.webp",
+      "description": "Detailed residential exterior visualization with layered stone, timber accents, landscaping, and natural daylight."
+    },
+    {
+      "title": "Asheville Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-asheville-residence.webp",
+      "description": "Marketing-ready home elevation balancing masonry, timber detailing, planting, and a clean front approach."
+    },
+    {
+      "title": "Lexington Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-lexington-residence.webp",
+      "description": "High-resolution residential rendering focused on material contrast, architectural detail, and curb appeal."
+    },
+    {
+      "title": "Building AB — Aerial Study",
+      "category": "Architecture",
+      "image": "assets/images/arch-building-ab-aerial.webp",
+      "description": "Elevated multifamily visualization communicating building massing, circulation, parking, and rooftop organization."
+    },
+    {
+      "title": "San Diego Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-san-diego-residence.webp",
+      "description": "Bright Southern California exterior with warm stucco, tile roofing, contemporary planting, and crisp daylight."
+    },
+    {
+      "title": "Residential Exterior Study",
+      "category": "Architecture",
+      "image": "assets/images/arch-residential-exterior-study.webp",
+      "description": "Suburban home visualization combining brick, stone, siding, landscaping, and a polished marketing composition."
+    },
+    {
+      "title": "Destin Custom Home",
+      "category": "Architecture",
+      "image": "assets/images/arch-destin-custom-home.webp",
+      "description": "Coastal residential rendering with layered porches, detailed trim, tropical planting, and an inviting street view."
+    },
+    {
+      "title": "Parkland Clubhouse — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-parkland-clubhouse-front.webp",
+      "description": "Resort clubhouse arrival view with a landscaped roundabout, clear entry sequence, and hospitality-focused presentation."
+    },
+    {
+      "title": "Parkland Clubhouse — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-parkland-clubhouse-rear.webp",
+      "description": "Waterfront clubhouse and pool visualization designed to communicate the full amenity experience."
+    },
+    {
+      "title": "Ibiza Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-ibiza-residence.webp",
+      "description": "Contemporary Mediterranean residence with a strong central approach, balanced massing, and refined landscaping."
+    },
+    {
+      "title": "Inland Southern California — Plan A",
+      "category": "Architecture",
+      "image": "assets/images/arch-inland-socal-plan-a.webp",
+      "description": "Clean production elevation for a single-story Southern California home with warm materials and approachable planting."
+    },
+    {
+      "title": "Inland Southern California — Plan B",
+      "category": "Architecture",
+      "image": "assets/images/arch-inland-socal-plan-b.webp",
+      "description": "Residential marketing render emphasizing a clear facade, stone entry feature, and bright neighborhood setting."
+    },
+    {
+      "title": "Inland Southern California — Plan C",
+      "category": "Architecture",
+      "image": "assets/images/arch-inland-socal-plan-c.webp",
+      "description": "Alternate home elevation with restrained materials, welcoming landscaping, and presentation-ready lighting."
+    },
+    {
+      "title": "Keystone 1401F Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-keystone-1401f-residence.webp",
+      "description": "Expansive stone residence rendered with close attention to roof forms, masonry, fenestration, and site context."
+    },
+    {
+      "title": "Antigua Cove — Dusk",
+      "category": "Architecture",
+      "image": "assets/images/arch-antigua-cove-dusk.webp",
+      "description": "Coastal home visualized at dusk with illuminated interiors, soft landscape lighting, and a calm tropical atmosphere."
+    },
+    {
+      "title": "Lot 119 — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-rear.webp",
+      "description": "Rear residential visualization highlighting the pool terrace, outdoor living area, and architectural relationship to the yard."
+    },
+    {
+      "title": "Lot 119 — Aerial",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-aerial.webp",
+      "description": "Elevated property view showing the complete home, landscape plan, pool, and surrounding site in one composition."
+    },
+    {
+      "title": "Lot 119 — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-front.webp",
+      "description": "Front elevation visualization with refined stucco, warm wood garage doors, tropical planting, and layered massing."
+    },
+    {
+      "title": "Cypress Key Clubhouse — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-cypress-key-clubhouse-rear.webp",
+      "description": "Community clubhouse rear view centered on the pool deck, resident amenities, and indoor-outdoor connection."
+    },
+    {
+      "title": "Ridgecrest Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-ridgecrest-residence.webp",
+      "description": "Large residential exterior with richly varied masonry, complex rooflines, detailed planting, and a grounded natural setting."
+    },
+    {
+      "title": "Salado Residence — Personal Study",
+      "category": "Architecture",
+      "image": "assets/images/personal-salado-residence.webp",
+      "description": "Personal architectural visualization study exploring a compact brick residence, dramatic sky, and warm evening light."
+    },
+    {
+      "title": "Northern California Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-northern-california-residence.webp",
+      "description": "Production exterior rendering with a clean two-story facade, mature landscaping, and a restrained material palette."
+    },
+    {
+      "title": "Stoneybrook Vista Clubhouse — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-stoneybrook-vista-front.webp",
+      "description": "Community clubhouse arrival view with layered roof forms, tropical landscaping, and a clear hospitality entrance."
+    },
+    {
+      "title": "Stoneybrook Vista Clubhouse — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-stoneybrook-vista-rear.webp",
+      "description": "Wide amenity rendering presenting the clubhouse, resort pool, shaded seating, and surrounding landscape as one destination."
+    },
+    {
+      "title": "Middle River Clubhouse — Left View",
+      "category": "Architecture",
+      "image": "assets/images/arch-middle-river-clubhouse-left.webp",
+      "description": "Modern waterfront clubhouse visualized from the left approach with terraces, landscape, and reflective water."
+    },
+    {
+      "title": "Middle River Clubhouse — Rear View",
+      "category": "Architecture",
+      "image": "assets/images/arch-middle-river-clubhouse-rear.webp",
+      "description": "Poolside rear view emphasizing the clubhouse glazing, outdoor seating, water edge, and contemporary geometry."
+    },
+    {
+      "title": "Middle River Clubhouse — Right View",
+      "category": "Architecture",
+      "image": "assets/images/arch-middle-river-clubhouse-right.webp",
+      "description": "Right-side arrival view presenting the modern clubhouse facade, materials, access, and surrounding site design."
     }
   ],
   "books": [
