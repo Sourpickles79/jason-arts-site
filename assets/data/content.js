@@ -471,7 +471,7 @@ window.SITE_CONTENT = {
       "description": "Detail render of the Huntington ottoman's glider mechanism and base.",
       "modeled": true
     },
-  {
+    {
       "title": "Appalachian Residence",
       "category": "Architecture",
       "image": "assets/images/arch-appalachian-residence.webp",
@@ -787,6 +787,78 @@ window.SITE_CONTENT = {
     }
   ],
   "blogPosts": [
+    {
+      "slug": "kling-3-multi-shot-video-workflow",
+      "title": "Kling 3.0 Multi-Shot: Build a Scene, Not Just One Cool Clip",
+      "excerpt": "Kling 3.0 can generate a complete multi-shot sequence in one pass, but the best results still come from planning the scene like an editor instead of writing one enormous prompt.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/kling-3-multi-shot-scene-workflow.webp",
+      "date": "2026-07-31",
+      "publishAt": "2026-07-31T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-kling-3-multi-shot-video-workflow.html",
+      "seo": {
+        "title": "Kling 3.0 Multi-Shot: A Practical Scene Workflow",
+        "description": "Learn a practical Kling 3.0 multi-shot workflow for planning shots, maintaining character consistency, controlling timing and building complete AI video scenes.",
+        "targetKeyword": "Kling 3.0 multi-shot",
+        "secondaryKeywords": [
+          "Kling AI video workflow",
+          "Kling Custom Multi-Shot",
+          "AI video storytelling"
+        ],
+        "coverAlt": "A cinematic storyboard interface showing four connected shots generated as one Kling 3.0 multi-shot video scene.",
+        "socialTitle": "Kling 3.0 Can Build a Scene—But You Still Have to Direct It",
+        "socialDescription": "Kling 3.0 can generate multi-shot AI video with controlled timing, consistent Elements and native audio. Here is how I would structure a scene that actually tells a story."
+      }
+    },
+    {
+      "slug": "ai-concept-art-for-3d-modeling",
+      "title": "AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference",
+      "excerpt": "AI can generate a great-looking concept in seconds, but turning that image into a believable 3D model requires knowing what to trust, what to rebuild and what to ignore.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/ai-concept-art-to-3d-reference.webp",
+      "date": "2026-07-24",
+      "publishAt": "2026-07-24T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-ai-concept-art-for-3d-modeling.html",
+      "seo": {
+        "title": "AI Concept Art for 3D Modeling: A Practical Workflow",
+        "description": "Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.",
+        "targetKeyword": "AI concept art for 3D modeling",
+        "secondaryKeywords": [
+          "AI reference images for 3D",
+          "AI-assisted 3D workflow",
+          "modeling from AI concept art"
+        ],
+        "coverAlt": "A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model.",
+        "socialTitle": "AI Concept Art Looks Great—Until You Try to Model It",
+        "socialDescription": "AI can create a convincing design in seconds, but it rarely creates a reliable blueprint. Here is how I turn generated concepts into usable 3D reference."
+      }
+    },
+    {
+      "slug": "3ds-max-2027-updates-that-matter",
+      "title": "3ds Max 2027: The Updates That Actually Matter to Working Artists",
+      "excerpt": "3ds Max 2027 adds several useful modeling and workflow improvements, but a handful of features stand out as the ones working artists will actually notice.",
+      "category": "3D / Max Tips",
+      "date": "2026-07-27",
+      "publishAt": "2026-07-27T16:04:32.991Z",
+      "status": "published",
+      "cover": "assets/images/3ds-max-2027-practical-updates.webp",
+      "url": "blog-3ds-max-2027-updates-that-matter.html",
+      "seo": {
+        "title": "3ds Max 2027: Updates That Matter to Artists",
+        "description": "A working artist’s look at 3ds Max 2027, including Smart Bevel, spline improvements, performance gains, color management and upgrade advice.",
+        "targetKeyword": "3ds Max 2027",
+        "secondaryKeywords": [
+          "3ds Max 2027 new features",
+          "3ds Max Smart Bevel",
+          "3ds Max upgrade guide"
+        ],
+        "coverAlt": "A 3ds Max modeling workspace displaying a hard-surface object with rounded Boolean intersections created using Smart Bevel.",
+        "socialTitle": "3ds Max 2027: Which New Features Actually Matter?",
+        "socialDescription": "3ds Max 2027 adds Smart Bevel, better spline tools and several practical workflow improvements. Here are the changes working artists should actually care about."
+      }
+    },
     {
       "slug": "rush-without-neil-peart-fort-worth-2026",
       "title": "Rush Came Back Without Neil, but He Was Everywhere",
