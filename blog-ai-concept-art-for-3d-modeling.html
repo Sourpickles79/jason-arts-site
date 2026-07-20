@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Concept Art for 3D Modeling: A Practical Workflow | Jason Arts Blog</title>
+  <meta name="description" content="Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.">
+  <meta name="author" content="Jason Arts">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="publish-status" content="scheduled">
+  <meta name="publish-at" content="2026-07-24T14:00:00.000Z">
+  <link rel="canonical" href="https://jasonarts.com/blog-ai-concept-art-for-3d-modeling.html">
+  <link rel="alternate" type="application/rss+xml" title="Jason Arts Blog RSS Feed" href="https://jasonarts.com/feed.xml">
+  <meta property="article:published_time" content="2026-07-24T14:00:00.000Z">
+  <meta property="article:section" content="3D / Max Tips">
+  <meta property="og:title" content="AI Concept Art Looks Great—Until You Try to Model It">
+  <meta property="og:description" content="AI can create a convincing design in seconds, but it rarely creates a reliable blueprint. Here is how I turn generated concepts into usable 3D reference.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jasonarts.com/blog-ai-concept-art-for-3d-modeling.html">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/ai-concept-art-to-3d-reference.webp">
+  <meta property="og:image:alt" content="A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Concept Art Looks Great—Until You Try to Model It">
+  <meta name="twitter:description" content="AI can create a convincing design in seconds, but it rarely creates a reliable blueprint. Here is how I turn generated concepts into usable 3D reference.">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/ai-concept-art-to-3d-reference.webp">
+  <meta name="twitter:image:alt" content="A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://jasonarts.com/blog-ai-concept-art-for-3d-modeling.html#article",
+      "headline": "AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference",
+      "description": "Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.",
+      "image": [
+        "https://jasonarts.com/assets/images/ai-concept-art-to-3d-reference.webp"
+      ],
+      "datePublished": "2026-07-24T14:00:00.000Z",
+      "dateModified": "2026-07-24T14:00:00.000Z",
+      "articleSection": "3D / Max Tips",
+      "keywords": [
+        "AI concept art for 3D modeling",
+        "AI reference images for 3D",
+        "AI-assisted 3D workflow",
+        "modeling from AI concept art"
+      ],
+      "wordCount": 2913,
+      "timeRequired": "PT14M",
+      "author": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/about.html",
+        "sameAs": "https://www.linkedin.com/in/jason-johnson-5511793/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/"
+      },
+      "mainEntityOfPage": "https://jasonarts.com/blog-ai-concept-art-for-3d-modeling.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jasonarts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://jasonarts.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference",
+          "item": "https://jasonarts.com/blog-ai-concept-art-for-3d-modeling.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="portfolio.html">View Portfolio <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:140px;">
+      <div class="post-header">
+        <div class="blog-meta">
+          <span>3D / Max Tips</span><span class="dot">&middot;</span><span>2026-07-24</span>
+        </div>
+        <h1>AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference</h1>
+      </div>
+
+      <div class="post-cover"><img src="assets/images/ai-concept-art-to-3d-reference.webp" alt="A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model."></div>
+
+      <article class="post-body">
+        <p>AI-generated concept art has become incredibly useful for exploring ideas quickly.</p>
+
+        <p>I can describe a piece of furniture, a room, a prop or an entire environment and get something visually interesting before I have opened 3ds Max. That makes it easier to test proportions, materials, lighting directions and overall design language without spending hours modeling every idea.</p>
+
+        <p>The problem begins when a beautiful concept image gets treated like an accurate blueprint.</p>
+
+        <p>It usually is not one.</p>
+
+        <p>A generated image can look completely believable while hiding impossible construction, mismatched perspective, inconsistent dimensions and details that change depending on where you look. The image may sell the idea perfectly while providing almost no reliable information about how the object actually works.</p>
+
+        <p>That does not make it useless.</p>
+
+        <p>It means the image needs to be interpreted rather than copied.</p>
+
+        <p>This is the workflow I use to turn AI concept art into practical 3D reference without letting the mistakes in the image become mistakes in the model.</p>
+
+        <h2>Treat the image as design intent</h2>
+
+        <p>The first thing I decide is what the concept image is actually telling me.</p>
+
+        <p>Usually, the most useful information is not a precise measurement or a tiny decorative detail. It is the larger design intent.</p>
+
+        <p>That might include:</p>
+
+        <p>- The overall silhouette
+- The visual weight of the object
+- The relationship between major forms
+- The material combination
+- The color palette
+- The mood of the lighting
+- The intended camera angle
+- The era or design style
+- The feature that makes the design recognizable</p>
+
+        <p>Those elements are often strong enough to guide a model.</p>
+
+        <p>The exact location of a seam, the number of supports under a table or the way two parts connect may be much less reliable.</p>
+
+        <p>I try to identify the three or four decisions that make the image worth modeling in the first place.</p>
+
+        <p>Everything else is negotiable.</p>
+
+        <p>A chair concept might have a great curved back, an unusual leg profile and a strong combination of wood and upholstery. Those are the ideas I want to preserve.</p>
+
+        <p>If the seat somehow floats three inches above the frame with no visible support, that is not a sacred part of the design. That is the AI politely asking me to solve the engineering problem.</p>
+
+        <h2>Build a reference pack instead of relying on one image</h2>
+
+        <p>One attractive three-quarter view is not enough reference for a complete model.</p>
+
+        <p>Before modeling, I try to create a small reference pack around the concept.</p>
+
+        <p>Current image-generation tools can generate new images, edit existing images and use image inputs as part of an iterative process. That makes it possible to ask for additional views or variations based on the original concept.</p>
+
+        <p>I might request:</p>
+
+        <p>- A straight front view
+- A side view
+- A rear view
+- A higher camera angle
+- A close-up of the construction
+- A simplified version with neutral lighting
+- A version without the background
+- A material breakdown
+- A rough exploded view</p>
+
+        <p>The important thing is that I do not assume those new views will agree with one another.</p>
+
+        <p>AI-generated turnarounds frequently redesign the object between views. A leg changes thickness. A cushion gains another seam. The rear construction suddenly becomes something completely different.</p>
+
+        <p>The additional images are still useful because they provide options.</p>
+
+        <p>I compare them and decide which solution makes the most sense for the final object.</p>
+
+        <img src="assets/images/ai-concept-reference-pack.webp" alt="A reference board showing front, side, rear and three-quarter concept views of the same modern furniture design">
+
+        <h2>Make the reference boring before you model from it</h2>
+
+        <p>Dramatic concept art is excellent for selling an idea.</p>
+
+        <p>It is not always excellent for studying geometry.</p>
+
+        <p>Heavy depth of field, extreme perspective, fog, rim lighting and strong reflections can hide the actual shapes. Dark materials may blend into the background, and bright highlights can make a flat surface appear curved.</p>
+
+        <p>I often create or request a more boring version of the image before modeling.</p>
+
+        <p>That usually means:</p>
+
+        <p>- Neutral studio lighting
+- A plain background
+- Minimal depth of field
+- Reduced reflections
+- A longer camera lens
+- Clear separation between materials
+- No motion blur or atmospheric effects</p>
+
+        <p>The boring version may not look as impressive, but it exposes the design.</p>
+
+        <p>This is similar to turning off the beauty lighting in a 3D scene and checking the model with a plain gray material. Once the distractions disappear, the weak areas become much easier to see.</p>
+
+        <p>A dramatic render can convince your eye that everything works.</p>
+
+        <p>A neutral reference makes the geometry defend itself.</p>
+
+        <h2>Establish one believable measurement</h2>
+
+        <p>AI concept images rarely provide dependable scale.</p>
+
+        <p>Without at least one known dimension, it is easy to build something that looks correct in the viewport but feels strangely wrong when placed into a real environment.</p>
+
+        <p>I begin by choosing one believable measurement.</p>
+
+        <p>For furniture, that might be:</p>
+
+        <p>- Seat height
+- Overall table height
+- Mattress width
+- Counter height
+- Door height
+- Cushion thickness
+- Hardware diameter</p>
+
+        <p>Once that dimension is established, I use it to estimate the rest of the object.</p>
+
+        <p>Human scale is extremely useful here.</p>
+
+        <p>A lounge chair may look elegant in an isolated image, but if its seat is only twelve inches from the floor and the back is four feet wide, it may become less of a chair and more of an expensive wooden trap.</p>
+
+        <p>I also compare the concept against real products with a similar purpose.</p>
+
+        <p>I am not looking for something to copy. I am checking whether the proportions fall within a believable range.</p>
+
+        <p>A design can be unusual without ignoring basic ergonomics.</p>
+
+        <h2>Separate silhouette, structure and surface detail</h2>
+
+        <p>One of the easiest ways to overcomplicate a model is to treat every visible detail as equally important.</p>
+
+        <p>I break the concept into three levels.</p>
+
+        <p>The first level is the silhouette.</p>
+
+        <p>This includes the largest shapes and the outer profile. If the model is completely black against a white background, does it still resemble the concept?</p>
+
+        <p>The second level is the structure.</p>
+
+        <p>This includes the major parts and how they connect. For furniture, that might be the frame, legs, seat, back, arms and support system.</p>
+
+        <p>The third level is surface detail.</p>
+
+        <p>This includes seams, grooves, fasteners, wrinkles, stitching, bevels and material texture.</p>
+
+        <p>I work through those levels in order.</p>
+
+        <p>If the silhouette is wrong, detailed stitching will not rescue the model.</p>
+
+        <p>If the structure makes no sense, a beautiful material will only make the nonsense more expensive-looking.</p>
+
+        <h2>Match the camera before judging the model</h2>
+
+        <p>Sometimes the model is not wrong.</p>
+
+        <p>The camera is wrong.</p>
+
+        <p>AI images often use a camera position or field of view that is difficult to estimate by eye. A wide lens can exaggerate the front of an object, while a longer lens compresses depth and makes the design appear flatter.</p>
+
+        <p>3ds Max includes tools for using an image as a viewport background. Its Perspective Match utility can also use vanishing lines in the image to help orient a Free Camera and align the scene perspective with the reference.</p>
+
+        <p>This works best when the image contains clear horizontal and vertical lines.</p>
+
+        <p>Architecture, cabinetry, tables and other hard-surface objects are usually easier to match than soft organic shapes.</p>
+
+        <p>Even when I do not use Perspective Match directly, I spend time comparing:</p>
+
+        <p>- Horizon height
+- Vertical convergence
+- Field of view
+- Camera elevation
+- Distance from the object
+- Rotation of the object relative to the camera</p>
+
+        <p>I try not to reshape the model repeatedly until I have checked the camera.</p>
+
+        <p>Changing geometry to compensate for a bad camera match is a wonderful way to create a model that looks correct from one angle and bizarre from every other angle.</p>
+
+        <h2>Block everything with simple primitives</h2>
+
+        <p>My first version of the object is usually ugly.</p>
+
+        <p>That is intentional.</p>
+
+        <p>I begin with boxes, cylinders, planes and very simple splines. The goal is to solve proportion before topology.</p>
+
+        <p>At this stage, I want to answer basic questions:</p>
+
+        <p>- Is the object the correct height and width?
+- Do the major masses feel balanced?
+- Is the center of gravity believable?
+- Does the silhouette match?
+- Is there enough physical space for the parts to connect?
+- Does it work from more than one camera angle?</p>
+
+        <p>I avoid detailed bevels, support loops and complicated modifier stacks until the blockout feels right.</p>
+
+        <p>The blockout also makes contradictions in the concept easier to spot.</p>
+
+        <p>A shape that appeared elegant in the generated image might intersect another part once it exists in three dimensions. A support may need to move. A curved surface may require more thickness than the concept suggests.</p>
+
+        <p>That is not the model failing to match the reference.</p>
+
+        <p>That is the model revealing information the reference never contained.</p>
+
+        <img src="assets/images/ai-concept-to-3d-blockout.webp" alt="A three-stage comparison showing an AI furniture concept, a simple 3D blockout and a refined production model">
+
+        <h2>Decide how the object is actually built</h2>
+
+        <p>AI is very good at suggesting the appearance of construction.</p>
+
+        <p>It is less reliable at designing construction that would survive gravity, manufacturing or one enthusiastic person sitting on it.</p>
+
+        <p>Once the blockout works visually, I start asking practical questions.</p>
+
+        <p>For furniture, those questions might include:</p>
+
+        <p>- Where are the joints?
+- What supports the seat?
+- How are the legs attached?
+- Can the upholstery actually be installed?
+- Is there enough material around the hardware?
+- Could this shape be cut, bent, molded or machined?
+- Would the object tip over?
+- Are the thin areas strong enough?</p>
+
+        <p>The final model does not always need to be manufactured.</p>
+
+        <p>Still, believable construction improves the design.</p>
+
+        <p>Viewers may not consciously identify why an impossible object feels wrong. They simply feel that something is off.</p>
+
+        <p>Adding a logical support, seam or connection can make a fantasy design feel much more convincing without changing its overall appearance.</p>
+
+        <h2>Watch for repeated AI mistakes</h2>
+
+        <p>Certain problems appear often enough that I actively look for them.</p>
+
+        <h2>Details that change direction</h2>
+
+        <p>A groove may begin horizontally and quietly become vertical. Stitching may wander into a shape that could not be sewn. Wood grain may rotate halfway across the same board.</p>
+
+        <p>I decide on a clear direction and rebuild the detail consistently.</p>
+
+        <h2>Parts that merge together</h2>
+
+        <p>Two materials may blend into each other without a seam, gap or construction break.</p>
+
+        <p>In the model, I decide whether they are separate objects, a molded transition or simply a mistake to remove.</p>
+
+        <h2>Uneven repetition</h2>
+
+        <p>Buttons, slats, vents and panels may appear regularly spaced until the AI reaches an awkward corner and begins improvising.</p>
+
+        <p>I rebuild repeated elements with arrays, spacing tools or procedural methods.</p>
+
+        <h2>Unsupported shapes</h2>
+
+        <p>Floating shelves, impossible cantilevers and paper-thin structural parts are common.</p>
+
+        <p>I either add support or deliberately redesign the form as a stylized object.</p>
+
+        <h2>Reflection disguised as geometry</h2>
+
+        <p>A strong highlight may look like a bevel, groove or raised panel.</p>
+
+        <p>I compare multiple images and test the shape with neutral lighting before modeling it permanently.</p>
+
+        <h2>Symmetry that is almost symmetrical</h2>
+
+        <p>AI often creates an object that looks symmetrical at first glance but contains small differences from side to side.</p>
+
+        <p>Sometimes those differences are interesting.</p>
+
+        <p>Most of the time, they are visual static.</p>
+
+        <p>I choose whether the design is meant to be symmetrical and build it intentionally.</p>
+
+        <h2>Do not model the lighting into the geometry</h2>
+
+        <p>This one is easy to do.</p>
+
+        <p>A concept image may have a bright band along an edge, a dark area beneath a surface or a soft gradient across a panel. Those lighting effects can make the object appear to have more curvature than it really does.</p>
+
+        <p>Before adding geometry, I ask whether the shape would still exist under flat lighting.</p>
+
+        <p>A bright edge may simply need a small bevel.</p>
+
+        <p>A dark recess may be ambient occlusion rather than a deep groove.</p>
+
+        <p>A soft bulge may be a reflection from a large light source.</p>
+
+        <p>This is another reason to generate or create a neutral reference image.</p>
+
+        <p>It helps separate the object from the presentation of the object.</p>
+
+        <h2>Use the concept to guide materials, not define them</h2>
+
+        <p>AI-generated materials are often visually persuasive but physically vague.</p>
+
+        <p>The image may show something halfway between painted wood, ceramic and brushed plastic. Fabric may have the scale of carpet in one area and fine upholstery in another.</p>
+
+        <p>I translate the material into something I could actually build in a renderer.</p>
+
+        <p>Instead of trying to duplicate every pixel, I define:</p>
+
+        <p>- Base material type
+- Roughness range
+- Reflection strength
+- Surface scale
+- Grain direction
+- Edge behavior
+- Variation amount
+- Wear level</p>
+
+        <p>I also look at real material references.</p>
+
+        <p>If the concept suggests walnut, I study walnut. If it suggests boucle fabric, brushed aluminum or molded fiberglass, I find real examples and use those to guide the shader.</p>
+
+        <p>The AI image gives me the artistic direction.</p>
+
+        <p>Reality gives me the material behavior.</p>
+
+        <h2>Keep a list of unresolved decisions</h2>
+
+        <p>When a concept contains contradictions, I do not try to solve all of them inside my head.</p>
+
+        <p>I write them down.</p>
+
+        <p>A short uncertainty list might look like this:</p>
+
+        <p>- Rear leg connection is unclear
+- Arm thickness changes between views
+- Seat appears too thin for the cushion depth
+- Back panel needs a believable mounting method
+- Metal finish could be brushed aluminum or dark steel
+- Front view and side view disagree on width</p>
+
+        <p>That list becomes a design checklist.</p>
+
+        <p>As I model, I resolve each item deliberately instead of unconsciously choosing whatever is easiest in the moment.</p>
+
+        <p>This is especially helpful when working with a client or art director.</p>
+
+        <p>The questions can be discussed before the model becomes detailed and expensive to change.</p>
+
+        <h2>Generate variations after the blockout exists</h2>
+
+        <p>AI concept generation does not have to end when modeling begins.</p>
+
+        <p>Once I have a basic blockout, I can render it from the intended camera angle and use that render as an image input for further exploration.</p>
+
+        <p>At that point, the image generator is working from geometry that already has consistent proportion and perspective.</p>
+
+        <p>I might use it to explore:</p>
+
+        <p>- Different materials
+- Alternate colors
+- Upholstery patterns
+- Hardware finishes
+- Lighting directions
+- Environmental styling
+- Decorative details
+- Surface wear
+- Background concepts</p>
+
+        <p>This is where the workflow becomes much more controlled.</p>
+
+        <p>The 3D model handles structure, scale and camera consistency.</p>
+
+        <p>The image generator handles rapid visual variation.</p>
+
+        <p>Each tool is doing the part it is best at.</p>
+
+        <h2>Where AI concept art is genuinely useful</h2>
+
+        <p>Despite all the warnings in this article, I use AI concept images because they are extremely useful.</p>
+
+        <p>They are especially good for:</p>
+
+        <p>- Exploring many directions quickly
+- Breaking out of familiar design habits
+- Testing unusual material combinations
+- Establishing mood
+- Creating a visual starting point
+- Communicating rough ideas
+- Filling gaps in a reference board
+- Trying ideas that may not justify a full model yet</p>
+
+        <p>The mistake is not using AI concept art.</p>
+
+        <p>The mistake is expecting it to contain information it was never designed to provide.</p>
+
+        <p>A concept image can answer, “What could this feel like?”</p>
+
+        <p>It may not answer, “How wide is this part, how does it connect and what focal length created this view?”</p>
+
+        <p>Those answers still require an artist.</p>
+
+        <h2>My practical workflow</h2>
+
+        <p>My full process usually looks like this:</p>
+
+        <p>1. Generate or choose the strongest concept image.
+2. Identify the silhouette, design language and major features worth preserving.
+3. Create additional views and neutral-lighting variations.
+4. Gather real-world references for scale, construction and materials.
+5. Establish one reliable measurement.
+6. Set up the primary reference as a viewport background.
+7. Match the camera or approximate its perspective.
+8. Build a simple blockout using primitives.
+9. Check the design from multiple views.
+10. Resolve impossible construction and conflicting details.
+11. Refine the geometry.
+12. Build physically believable materials using real references.
+13. Render the blockout or model back into AI tools for controlled visual variations.
+14. Make the final artistic decisions myself.</p>
+
+        <p>That last step matters.</p>
+
+        <p>AI can provide options at an absurd speed.</p>
+
+        <p>It cannot decide which option belongs in the project unless I give it that responsibility.</p>
+
+        <p>And I do not want to give it that responsibility.</p>
+
+        <h2>The artist still has to solve the object</h2>
+
+        <p>AI concept art has not removed the need for 3D artists.</p>
+
+        <p>It has changed the starting point.</p>
+
+        <p>Instead of beginning with a blank page, I can begin with several possible directions. That can save time, create unexpected ideas and make early exploration much more enjoyable.</p>
+
+        <p>But the image is still only the beginning.</p>
+
+        <p>Someone has to decide what the object is, how large it is, how it is constructed, how the camera sees it and which details are worth keeping.</p>
+
+        <p>Someone has to recognize when the image is lying.</p>
+
+        <p>That is where experience becomes more valuable, not less.</p>
+
+        <p>The best results come from treating AI as a fast concept partner and 3D as the system that turns the concept into something coherent.</p>
+
+        <p>Use the generated image for inspiration.</p>
+
+        <p>Use real reference for truth.</p>
+
+        <p>Use the model to make the two agree.</p>
+
+        <p>More practical AI and 3D workflow articles are available on the [JasonArts blog](https://www.jasonarts.com/blog).</p>
+
+        <h2>Sources</h2>
+
+        <p>OpenAI — Creating Images with ChatGPT:
+https://openai.com/academy/image-generation/</p>
+
+        <p>OpenAI — Image Generation API Guide:
+https://developers.openai.com/api/docs/guides/image-generation</p>
+
+        <p>Autodesk — 3ds Max Viewport Background Panel:
+https://help.autodesk.com/cloudhelp/2026/ENU/3DSMax-Customizing/files/GUID-D1419AE6-1CDE-44FC-8D46-E77F8F4DD2D0.htm</p>
+
+        <p>Autodesk — Perspective Match Utility:
+https://help.autodesk.com/cloudhelp/2024/ENU/3DSMax-Rendering/files/GUID-CA74469E-9320-4801-B3F0-B4E00461689C.htm</p>
+      </article>
+
+      <div class="post-cta">
+        <p><strong>Explore more:</strong> <a href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">JasonArts Blog</a> · <a href="https://www.jasonarts.com/" target="_blank" rel="noopener">JasonArts Home</a></p>
+        <p><strong>References:</strong> <a href="https://openai.com/academy/image-generation/" target="_blank" rel="noopener">OpenAI: Creating Images with ChatGPT</a> · <a href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noopener">OpenAI: Image Generation API Guide</a> · <a href="https://help.autodesk.com/cloudhelp/2026/ENU/3DSMax-Customizing/files/GUID-D1419AE6-1CDE-44FC-8D46-E77F8F4DD2D0.htm" target="_blank" rel="noopener">Autodesk: 3ds Max Viewport Background Panel</a> · <a href="https://help.autodesk.com/cloudhelp/2024/ENU/3DSMax-Rendering/files/GUID-CA74469E-9320-4801-B3F0-B4E00461689C.htm" target="_blank" rel="noopener">Autodesk: Perspective Match Utility</a></p>
+      </div>
+
+      <div class="post-cta">
+        <p>Explore more practical AI and 3D workflows built around real production experience.</p>
+        <a class="button primary" href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">Explore More Articles</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/header.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

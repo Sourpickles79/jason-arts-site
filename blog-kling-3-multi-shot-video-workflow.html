@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kling 3.0 Multi-Shot: A Practical Scene Workflow | Jason Arts Blog</title>
+  <meta name="description" content="Learn a practical Kling 3.0 multi-shot workflow for planning shots, maintaining character consistency, controlling timing and building complete AI video scenes.">
+  <meta name="author" content="Jason Arts">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="publish-status" content="scheduled">
+  <meta name="publish-at" content="2026-07-31T14:00:00.000Z">
+  <link rel="canonical" href="https://jasonarts.com/blog-kling-3-multi-shot-video-workflow.html">
+  <link rel="alternate" type="application/rss+xml" title="Jason Arts Blog RSS Feed" href="https://jasonarts.com/feed.xml">
+  <meta property="article:published_time" content="2026-07-31T14:00:00.000Z">
+  <meta property="article:section" content="AI Video / Shorts">
+  <meta property="og:title" content="Kling 3.0 Can Build a Scene—But You Still Have to Direct It">
+  <meta property="og:description" content="Kling 3.0 can generate multi-shot AI video with controlled timing, consistent Elements and native audio. Here is how I would structure a scene that actually tells a story.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jasonarts.com/blog-kling-3-multi-shot-video-workflow.html">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/kling-3-multi-shot-scene-workflow.webp">
+  <meta property="og:image:alt" content="A cinematic storyboard interface showing four connected shots generated as one Kling 3.0 multi-shot video scene.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kling 3.0 Can Build a Scene—But You Still Have to Direct It">
+  <meta name="twitter:description" content="Kling 3.0 can generate multi-shot AI video with controlled timing, consistent Elements and native audio. Here is how I would structure a scene that actually tells a story.">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/kling-3-multi-shot-scene-workflow.webp">
+  <meta name="twitter:image:alt" content="A cinematic storyboard interface showing four connected shots generated as one Kling 3.0 multi-shot video scene.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://jasonarts.com/blog-kling-3-multi-shot-video-workflow.html#article",
+      "headline": "Kling 3.0 Multi-Shot: Build a Scene, Not Just One Cool Clip",
+      "description": "Learn a practical Kling 3.0 multi-shot workflow for planning shots, maintaining character consistency, controlling timing and building complete AI video scenes.",
+      "image": [
+        "https://jasonarts.com/assets/images/kling-3-multi-shot-scene-workflow.webp"
+      ],
+      "datePublished": "2026-07-31T14:00:00.000Z",
+      "dateModified": "2026-07-31T14:00:00.000Z",
+      "articleSection": "AI Video / Shorts",
+      "keywords": [
+        "Kling 3.0 multi-shot",
+        "Kling AI video workflow",
+        "Kling Custom Multi-Shot",
+        "AI video storytelling"
+      ],
+      "wordCount": 3204,
+      "timeRequired": "PT15M",
+      "author": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/about.html",
+        "sameAs": "https://www.linkedin.com/in/jason-johnson-5511793/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/"
+      },
+      "mainEntityOfPage": "https://jasonarts.com/blog-kling-3-multi-shot-video-workflow.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jasonarts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://jasonarts.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kling 3.0 Multi-Shot: Build a Scene, Not Just One Cool Clip",
+          "item": "https://jasonarts.com/blog-kling-3-multi-shot-video-workflow.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="portfolio.html">View Portfolio <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:140px;">
+      <div class="post-header">
+        <div class="blog-meta">
+          <span>AI Video / Shorts</span><span class="dot">&middot;</span><span>2026-07-31</span>
+        </div>
+        <h1>Kling 3.0 Multi-Shot: Build a Scene, Not Just One Cool Clip</h1>
+      </div>
+
+      <div class="post-cover"><img src="assets/images/kling-3-multi-shot-scene-workflow.webp" alt="A cinematic storyboard interface showing four connected shots generated as one Kling 3.0 multi-shot video scene."></div>
+
+      <article class="post-body">
+        <p>AI video generators have become very good at producing one impressive shot.</p>
+
+        <p>A character walks through a smoky hallway. A spaceship passes over a city. A product rotates beneath dramatic lighting. Everything looks cinematic for several seconds, and then the clip ends.</p>
+
+        <p>That is useful, but it is not the same as telling a story.</p>
+
+        <p>A real scene usually needs coverage. It needs a wide shot to establish the location, a medium shot to show the action, a close-up to reveal emotion and a cutaway that gives the editor somewhere to go.</p>
+
+        <p>Kling VIDEO 3.0 is interesting because it begins addressing that larger problem.</p>
+
+        <p>Its Multi-Shot feature can automatically plan transitions, framing and camera-angle changes from a prompt. Its Custom Multi-Shot mode gives creators more direct control over individual shots and their durations. Kling also supports generations up to 15 seconds, native audio and Element references intended to keep characters, objects and environments more consistent across a sequence.</p>
+
+        <p>That is a much bigger creative opportunity than simply generating a longer clip.</p>
+
+        <p>It also introduces a new way to make a mess.</p>
+
+        <p>If every shot, action, camera movement, sound effect and line of dialogue gets thrown into one giant paragraph, the model still has to guess which details matter most. A multi-shot generator is not a replacement for planning.</p>
+
+        <p>It is a reason to plan more clearly.</p>
+
+        <h2>Multi-shot does not automatically mean good coverage</h2>
+
+        <p>Turning on Multi-Shot allows Kling 3.0 to interpret the prompt as a scene rather than one continuous camera take.</p>
+
+        <p>In the standard Multi-Shot mode, the model can decide where cuts should happen and how the framing should change. That is useful when the scene is simple and I am comfortable giving the model some freedom.</p>
+
+        <p>Custom Multi-Shot is more useful when the sequence already has a clear structure.</p>
+
+        <p>Instead of asking for “a cinematic scene,” I can describe individual shots and assign time to each one.</p>
+
+        <p>That distinction matters.</p>
+
+        <p>A cinematic-looking image is mostly about visual quality.</p>
+
+        <p>A cinematic sequence is about the relationship between shots.</p>
+
+        <p>The first shot creates context. The second changes the information. The third creates a reaction or payoff. If every shot communicates the same thing from a slightly different angle, the sequence may look expensive while accomplishing almost nothing.</p>
+
+        <p>Before opening Kling, I ask a very basic question:</p>
+
+        <p>What changes during this scene?</p>
+
+        <p>If the answer is “nothing,” I probably do not need multiple shots.</p>
+
+        <h2>Start with one simple story beat</h2>
+
+        <p>Fifteen seconds is longer than many AI video generations, but it is still not a feature film.</p>
+
+        <p>Trying to include an introduction, conflict, emotional reversal, explosion, chase scene and thoughtful conclusion inside one generation is how you end up with visual soup.</p>
+
+        <p>I plan one story beat.</p>
+
+        <p>For example:</p>
+
+        <p>- A detective notices a clue.
+- A musician walks onto an empty stage.
+- A character opens a mysterious package.
+- A product transforms from its closed state to its working state.
+- Two people exchange a short line of dialogue.
+- A spaceship emerges from cloud cover.
+- A creature realizes it is being watched.</p>
+
+        <p>Each of those contains a small change.</p>
+
+        <p>The detective begins without the information and ends with it.</p>
+
+        <p>The musician begins backstage and ends in front of the audience.</p>
+
+        <p>The product begins inactive and ends in use.</p>
+
+        <p>That is enough structure to support several shots without cramming an entire screenplay into 15 seconds.</p>
+
+        <h2>Write the scene before writing the shots</h2>
+
+        <p>Before creating a shot list, I write one plain sentence describing the complete scene.</p>
+
+        <p>For example:</p>
+
+        <p>“A tired astronaut enters an abandoned greenhouse, notices one living flower beneath a broken lamp and kneels beside it in disbelief.”</p>
+
+        <p>That sentence contains:</p>
+
+        <p>- A character
+- A location
+- An action
+- A discovery
+- An emotional response</p>
+
+        <p>Now I can divide the idea into coverage.</p>
+
+        <p>Shot 1 establishes the greenhouse.</p>
+
+        <p>Shot 2 follows the astronaut entering.</p>
+
+        <p>Shot 3 reveals the flower.</p>
+
+        <p>Shot 4 shows the astronaut’s reaction.</p>
+
+        <p>The shots exist to communicate the sentence.</p>
+
+        <p>They are not random opportunities to request another camera move.</p>
+
+        <img src="assets/images/kling-3-multi-shot-storyboard-workflow.webp" alt="A four-panel storyboard showing an establishing shot, character entrance, object reveal and emotional close-up for a Kling 3.0 scene">
+
+        <h2>Give every shot a job</h2>
+
+        <p>When I build a Custom Multi-Shot sequence, every shot should answer a different question.</p>
+
+        <h2>The establishing shot</h2>
+
+        <p>Where are we?</p>
+
+        <p>This is usually the widest shot. It introduces the environment, scale, time of day and basic relationship between the subject and the location.</p>
+
+        <p>It does not need to last long.</p>
+
+        <p>A one- or two-second establishing shot may be enough for a short sequence.</p>
+
+        <h2>The action shot</h2>
+
+        <p>What is happening?</p>
+
+        <p>This might be a medium shot, tracking shot or over-the-shoulder view. It should show the action clearly instead of hiding it beneath a camera trick.</p>
+
+        <h2>The detail or reveal</h2>
+
+        <p>What should the audience notice?</p>
+
+        <p>A close-up of an object, hand, expression or environmental detail can direct attention toward the information that changes the scene.</p>
+
+        <h2>The reaction or payoff</h2>
+
+        <p>Why did the moment matter?</p>
+
+        <p>A reaction shot gives emotional meaning to the action. Without it, the sequence may show an event but never communicate how anyone feels about it.</p>
+
+        <p>Not every sequence requires these exact four shots.</p>
+
+        <p>The principle is what matters: each cut should reveal new information.</p>
+
+        <h2>Budget the 15 seconds before prompting</h2>
+
+        <p>Kling VIDEO 3.0 supports flexible duration up to 15 seconds, and Custom Multi-Shot allows duration to be described at the shot level.</p>
+
+        <p>I treat those seconds like a budget.</p>
+
+        <p>A simple sequence might look like this:</p>
+
+        <p>- Shot 1: 3 seconds
+- Shot 2: 4 seconds
+- Shot 3: 3 seconds
+- Shot 4: 5 seconds</p>
+
+        <p>That totals 15 seconds.</p>
+
+        <p>The final shot gets more time because it contains the emotional payoff.</p>
+
+        <p>Another scene might need five faster shots. A conversation may need longer reaction shots. An action sequence might benefit from short cuts but still require enough time for the movement to read.</p>
+
+        <p>The model cannot make every shot feel spacious if I assign too much action to too little time.</p>
+
+        <p>“Character enters, crosses the room, opens a box, reacts, turns toward the camera and runs away” is not a three-second shot.</p>
+
+        <p>It is a request for motion blur and regret.</p>
+
+        <h2>Keep the visual rules outside the shot list</h2>
+
+        <p>I separate the scene’s global rules from the instructions for each shot.</p>
+
+        <p>The global section defines what should remain consistent:</p>
+
+        <p>- Character appearance
+- Wardrobe
+- Environment
+- Time of day
+- Lighting style
+- Color palette
+- Lens character
+- Visual medium
+- Audio atmosphere
+- Overall mood</p>
+
+        <p>The shot list then describes only what changes.</p>
+
+        <p>Here is a simplified structure:</p>
+
+        <p>“Dark cinematic science-fiction drama. The same tired female astronaut appears throughout, wearing a worn white pressure suit with orange shoulder markings and a scratched clear helmet. Abandoned glass greenhouse at night, overgrown plants, cold blue moonlight mixed with flickering amber emergency lights. Realistic photography, restrained camera movement, consistent character and environment.”</p>
+
+        <p>Then the shots:</p>
+
+        <p>“Shot 1 (3s): Wide establishing shot of the abandoned greenhouse as the astronaut enters through a damaged airlock.</p>
+
+        <p>Shot 2 (4s): Medium tracking shot from behind as she walks between dead plants and notices a weak warm light ahead.</p>
+
+        <p>Shot 3 (3s): Close-up of a single living flower beneath a broken lamp, moving slightly in the air.</p>
+
+        <p>Shot 4 (5s): Close-up of the astronaut kneeling beside the flower. Her expression shifts from exhaustion to disbelief and quiet hope.”</p>
+
+        <p>The global description creates continuity.</p>
+
+        <p>The shot descriptions create progression.</p>
+
+        <img src="assets/images/kling-3-custom-multi-shot-prompt.webp" alt="A clean visual breakdown of a Kling 3.0 prompt with global scene rules above four timed shot descriptions">
+
+        <h2>Use Elements for the things that cannot drift</h2>
+
+        <p>The more shots a sequence contains, the more opportunities there are for the subject to change.</p>
+
+        <p>A jacket gains a collar. A prop changes size. A room rearranges itself. A character’s face starts the scene as one person and ends it looking like that person’s suspiciously well-rested cousin.</p>
+
+        <p>Kling’s Element system is designed to help anchor important characters, objects and scenes.</p>
+
+        <p>The official VIDEO 3.0 guides describe support for image, multi-image and video-based Element references. The Omni model also supports combining several reference types and using character Elements across changing shots and camera angles.</p>
+
+        <p>I would prioritize Elements for anything the viewer will track across the sequence:</p>
+
+        <p>- The main character
+- A hero product
+- A specific vehicle
+- A creature
+- A recognizable prop
+- A recurring room or location
+- A costume with important details</p>
+
+        <p>Not every background object needs its own reference.</p>
+
+        <p>Trying to lock every coffee cup, wall panel and distant plant may create more complexity than value.</p>
+
+        <p>The goal is to protect the visual anchors of the scene.</p>
+
+        <h2>Build better character references</h2>
+
+        <p>A single front-facing portrait does not contain enough information for every camera angle.</p>
+
+        <p>For recurring characters, I prefer a small reference set:</p>
+
+        <p>- Front view
+- Three-quarter view
+- Side view
+- Full-body image
+- Neutral expression
+- One image showing the costume clearly</p>
+
+        <p>Kling VIDEO 3.0 also supports creating character Elements from uploaded video, and the official guide recommends footage containing multiple viewing angles.</p>
+
+        <p>That makes sense.</p>
+
+        <p>The model has fewer hidden details to invent when the reference already shows the character from several sides.</p>
+
+        <p>For a project with repeated characters, I would spend more time preparing the Element than endlessly repairing identity drift later.</p>
+
+        <p>Consistency begins before video generation.</p>
+
+        <h2>Avoid unnecessary camera gymnastics</h2>
+
+        <p>Multi-shot scenes do not require every shot to contain a dramatic camera move.</p>
+
+        <p>A locked wide shot followed by a simple close-up may tell the story better than a drone orbit, crash zoom, handheld push-in and barrel roll competing inside 15 seconds.</p>
+
+        <p>I keep camera instructions readable:</p>
+
+        <p>- Static wide shot
+- Slow push-in
+- Gentle tracking shot
+- Over-the-shoulder shot
+- Low-angle medium shot
+- Close-up
+- Slow pan
+- Subtle handheld movement</p>
+
+        <p>The camera should support the information in the shot.</p>
+
+        <p>If the audience needs to study an object, the camera should not be performing parkour.</p>
+
+        <p>If the moment is emotional, a quiet close-up may be stronger than a sweeping crane move.</p>
+
+        <p>Cinematic does not mean constantly moving.</p>
+
+        <p>Sometimes cinematic means knowing when to sit still.</p>
+
+        <h2>Do not duplicate the same action across shots</h2>
+
+        <p>A common multi-shot mistake is describing the complete action in every shot.</p>
+
+        <p>For example:</p>
+
+        <p>“Shot 1: The man opens the door and enters.</p>
+
+        <p>Shot 2: Close-up as the man opens the door and enters.</p>
+
+        <p>Shot 3: Side view of the man opening the door and entering.”</p>
+
+        <p>That may cause the action to restart after every cut.</p>
+
+        <p>Instead, treat each shot as the next piece of time:</p>
+
+        <p>“Shot 1: Wide shot. The man approaches the locked workshop door.</p>
+
+        <p>Shot 2: Close-up. His gloved hand inserts an old brass key and turns it.</p>
+
+        <p>Shot 3: Interior medium shot. The door opens and he steps into the dark workshop.”</p>
+
+        <p>The action progresses.</p>
+
+        <p>The sequence does not repeatedly respawn the character outside the door like a confused video-game checkpoint.</p>
+
+        <h2>Native audio should be planned with the picture</h2>
+
+        <p>Kling VIDEO 3.0 can generate native audio alongside the visuals.</p>
+
+        <p>That can include dialogue, ambient sound and scene-specific effects. The official guide also describes more precise control over which character is speaking in multi-character scenes.</p>
+
+        <p>Audio is not something I would bolt onto the end of the prompt as an afterthought.</p>
+
+        <p>I include an audio plan with the scene:</p>
+
+        <p>- Background atmosphere
+- Important sound effects
+- Dialogue
+- Voice tone
+- Moments that should remain quiet
+- Music, if appropriate</p>
+
+        <p>For the greenhouse example:</p>
+
+        <p>“Audio: low electrical hum, distant metal creaks, soft footsteps on broken glass and a faint airflow through the greenhouse. No music. In the final shot, the astronaut whispers, ‘How are you still alive?’”</p>
+
+        <p>That is enough.</p>
+
+        <p>I would not request orchestral music, thunder, radio chatter, alarms, breathing, six sound effects and a speech unless the scene genuinely needs them.</p>
+
+        <p>Sound competes for attention just like visuals do.</p>
+
+        <h2>Dialogue needs room to breathe</h2>
+
+        <p>A 15-second sequence cannot comfortably contain a page of dialogue.</p>
+
+        <p>Even when a model can generate the words, the pacing may feel rushed and the visual action may become secondary.</p>
+
+        <p>I keep spoken lines short.</p>
+
+        <p>One or two sentences are usually enough for a scene this length.</p>
+
+        <p>I also assign the dialogue to a specific shot and character:</p>
+
+        <p>“Shot 3 (4s): Close-up of Maya looking toward Daniel. Maya says softly, ‘You knew this would happen.’”</p>
+
+        <p>That is clearer than placing several lines at the bottom of the prompt and hoping the model decides who owns them.</p>
+
+        <p>For conversations, classic coverage still works:</p>
+
+        <p>- Two-shot
+- Close-up of speaker one
+- Close-up of speaker two
+- Reaction shot
+- Return to two-shot</p>
+
+        <p>The technology is new.</p>
+
+        <p>The grammar of editing is not.</p>
+
+        <h2>Automatic Multi-Shot is useful for discovery</h2>
+
+        <p>Custom Multi-Shot offers more control, but I would not ignore the automatic mode.</p>
+
+        <p>Automatic Multi-Shot can be useful during exploration.</p>
+
+        <p>I can provide the complete scene and see how Kling interprets the coverage. Sometimes the model may choose a framing or transition I had not considered.</p>
+
+        <p>That result can become a rough moving storyboard.</p>
+
+        <p>I can then identify what worked and rebuild the idea with Custom Multi-Shot instructions.</p>
+
+        <p>My process would be:</p>
+
+        <p>1. Generate an automatic Multi-Shot version.
+2. Study the selected coverage.
+3. Identify the strongest shot or transition.
+4. Rewrite the scene as a controlled shot list.
+5. Generate a Custom Multi-Shot version.
+6. Compare the storytelling, not merely the image quality.</p>
+
+        <p>The automatic version becomes a collaborator.</p>
+
+        <p>The custom version becomes the directed take.</p>
+
+        <h2>One generation is still not the final edit</h2>
+
+        <p>Kling describes Multi-Shot as a way to create a structured sequence in one generation.</p>
+
+        <p>That does not mean I would drop the result directly into a finished project.</p>
+
+        <p>I would still inspect:</p>
+
+        <p>- Continuity between shots
+- Character identity
+- Eyelines
+- Screen direction
+- Action timing
+- Audio transitions
+- Dialogue sync
+- Unwanted jump cuts
+- Repeated frames
+- Background changes
+- The exact frame where each cut occurs</p>
+
+        <p>Then I would take the result into an editor.</p>
+
+        <p>A few frames trimmed from a shot can completely change the pacing. A different audio transition can make a cut feel intentional. A reaction held half a second longer can turn a confusing moment into a clear one.</p>
+
+        <p>AI can generate the footage.</p>
+
+        <p>Editing decides whether the footage communicates.</p>
+
+        <h2>Screen direction still matters</h2>
+
+        <p>When a character moves from left to right in one shot, cutting to a shot where that character suddenly moves right to left can make the action feel reversed.</p>
+
+        <p>Traditional filmmaking calls this screen direction.</p>
+
+        <p>AI generators may not consistently preserve it unless the prompt gives clear spatial information.</p>
+
+        <p>I use phrases such as:</p>
+
+        <p>- The character continues moving from left to right
+- Camera remains on the same side of the action
+- She looks toward screen left
+- The vehicle exits frame right
+- Reverse angle from behind the second character
+- Maintain consistent eyelines</p>
+
+        <p>These details may sound fussy.</p>
+
+        <p>They are less fussy than watching a character appear to teleport across an imaginary line because both shots looked individually cool.</p>
+
+        <h2>Use one hero sequence, then build around it</h2>
+
+        <p>For a music video, short film or project like The Orb, I would not expect a single 15-second generation to create the complete finished scene.</p>
+
+        <p>I would use Multi-Shot to generate one coherent unit.</p>
+
+        <p>That unit might be:</p>
+
+        <p>- A character entering a location
+- A short conversation
+- A reveal
+- A transformation
+- A memory fragment
+- A product demonstration
+- A miniature action beat</p>
+
+        <p>Then I would build surrounding clips separately.</p>
+
+        <p>The multi-shot generation becomes the backbone of the moment. Additional close-ups, inserts, environmental shots and reaction shots can be created afterward and used to improve the edit.</p>
+
+        <p>This keeps the workflow modular.</p>
+
+        <p>If one generated section fails, the entire sequence does not need to be rebuilt.</p>
+
+        <h2>A reusable Custom Multi-Shot template</h2>
+
+        <p>This is the basic structure I would use:</p>
+
+        <p>“STYLE AND CONTINUITY:</p>
+
+        <p>[Visual style]. The same [character or subject description] remains consistent throughout. [Location description]. [Time of day and lighting]. [Color palette]. [Camera and lens character]. Maintain consistent wardrobe, props, environment and screen direction.</p>
+
+        <p>SHOT 1 ([duration]):</p>
+
+        <p>[Shot size and angle]. [Subject action]. [Camera movement]. [Important environmental information].</p>
+
+        <p>SHOT 2 ([duration]):</p>
+
+        <p>[Shot size and angle]. [Next action or new information]. [Camera movement]. Maintain continuity from the previous shot.</p>
+
+        <p>SHOT 3 ([duration]):</p>
+
+        <p>[Detail, reveal or dialogue]. [Specific speaker and voice tone if needed]. [Relevant sound].</p>
+
+        <p>SHOT 4 ([duration]):</p>
+
+        <p>[Reaction or payoff]. [Final camera framing]. End on [specific visual state].</p>
+
+        <p>AUDIO:</p>
+
+        <p>[Ambient sound]. [Important effects]. [Dialogue with speaker attribution]. [Music direction or no music].</p>
+
+        <p>AVOID:</p>
+
+        <p>No extra characters, no wardrobe changes, no duplicated actions, no text overlays, no changes to the main environment.”</p>
+
+        <p>The template is not magic.</p>
+
+        <p>Its purpose is to separate different kinds of information so the prompt is easier to interpret and easier for me to revise.</p>
+
+        <h2>My practical Kling 3.0 workflow</h2>
+
+        <p>My complete workflow would look like this:</p>
+
+        <p>1. Define one story beat that can fit inside 15 seconds.
+2. Write the complete scene in one plain sentence.
+3. Identify the character, object and environment references that must remain consistent.
+4. Create or select strong Elements for those subjects.
+5. Decide whether the first attempt should use automatic Multi-Shot or Custom Multi-Shot.
+6. Break the scene into shots that reveal different information.
+7. Assign a realistic duration to each shot.
+8. Put global visual rules above the shot list.
+9. Describe action as a continuous progression instead of restarting it after each cut.
+10. Keep camera movement simple and motivated.
+11. Add a restrained audio plan.
+12. Attribute dialogue to a specific character and shot.
+13. Generate the sequence.
+14. Evaluate storytelling, continuity and pacing separately from visual quality.
+15. Revise only the weak shots or instructions.
+16. Bring the result into an editor.
+17. Trim the cuts, repair audio transitions and add supporting footage.
+18. Stop calling it “finished in one click” because the editor can hear you lying.</p>
+
+        <h2>The real upgrade is scene structure</h2>
+
+        <p>The most important part of Kling VIDEO 3.0 is not that it can fit several camera angles into one generation.</p>
+
+        <p>The important part is that AI video is beginning to understand scene structure.</p>
+
+        <p>That moves the workflow closer to filmmaking and farther away from generating isolated visual tricks.</p>
+
+        <p>The model can plan shots, maintain referenced Elements, generate native audio and give creators more control over timing.</p>
+
+        <p>The artist still has to decide what the scene is about.</p>
+
+        <p>We still need to choose where the audience looks, when information is revealed, how long a reaction should last and whether a cut improves the story.</p>
+
+        <p>Multi-Shot does not eliminate directing.</p>
+
+        <p>It finally gives us something more interesting to direct.</p>
+
+        <p>More AI video workflows and production articles are available on the [JasonArts blog](https://www.jasonarts.com/blog).</p>
+
+        <h2>Sources</h2>
+
+        <p>Kling AI — VIDEO 3.0 Model User Guide:
+https://kling.ai/quickstart/klingai-video-3-model-user-guide</p>
+
+        <p>Kling AI — VIDEO 3.0 Omni Model User Guide:
+https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide</p>
+
+        <p>Kling AI — Motion Control User Guide:
+https://kling.ai/quickstart/motion-control-user-guide</p>
+
+        <p>Kling AI — Creative Platform:
+https://kling.ai/</p>
+      </article>
+
+      <div class="post-cta">
+        <p><strong>Explore more:</strong> <a href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">JasonArts Blog</a> · <a href="https://www.jasonarts.com/" target="_blank" rel="noopener">JasonArts Home</a></p>
+        <p><strong>References:</strong> <a href="https://kling.ai/quickstart/klingai-video-3-model-user-guide" target="_blank" rel="noopener">Kling AI: VIDEO 3.0 Model User Guide</a> · <a href="https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide" target="_blank" rel="noopener">Kling AI: VIDEO 3.0 Omni Model User Guide</a> · <a href="https://kling.ai/quickstart/motion-control-user-guide" target="_blank" rel="noopener">Kling AI: Motion Control User Guide</a></p>
+      </div>
+
+      <div class="post-cta">
+        <p>Explore more practical AI video workflows focused on storytelling, consistency and real production—not just generating another flashy clip.</p>
+        <a class="button primary" href="https://www.jasonarts.com/orb" target="_blank" rel="noopener">Check out Ai short The Orb</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/header.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
