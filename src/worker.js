@@ -33,6 +33,14 @@ export default {
       return handleLikes(request, env);
     }
 
+    if (url.pathname === "/api/downloads") {
+      return handleDownloads(request, env);
+    }
+
+    if (url.pathname === "/download/polyregularizer") {
+      return handleDownloadRedirect(request, env);
+    }
+
     if (url.pathname === "/sitemap.xml" && request.method === "GET") {
       return handleSitemap(request, env);
     }
@@ -151,12 +159,73 @@ async function handleLikes(request, env) {
   return new Response(response.body, { status: response.status, headers });
 }
 
+const DOWNLOADS = {
+  polyregularizer: "/assets/downloads/JasonArts_PolyRegularizer_2026_v1_0_RELEASE.zip",
+};
+
+function getDownloadApp(request) {
+  const app = (new URL(request.url).searchParams.get("app") || "").trim().toLowerCase();
+  return Object.hasOwn(DOWNLOADS, app) ? app : "";
+}
+
+async function getDownloadCounter(env, app) {
+  if (!env.BLOG_LIKES) return null;
+  const id = env.BLOG_LIKES.idFromName(`download:${app}`);
+  return env.BLOG_LIKES.get(id);
+}
+
+async function handleDownloads(request, env) {
+  if (request.method !== "GET") {
+    return json({ error: "Method not allowed." }, 405, { "Allow": "GET", "Cache-Control": "no-store" });
+  }
+  const app = getDownloadApp(request);
+  if (!app) return json({ error: "Unknown download." }, 404, { "Cache-Control": "no-store" });
+  const counter = await getDownloadCounter(env, app);
+  if (!counter) return json({ error: "Download counter is not configured." }, 503, { "Cache-Control": "no-store" });
+
+  const response = await counter.fetch(new Request(`https://likes.internal/download/${app}`));
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", "no-store");
+  headers.set("X-Content-Type-Options", "nosniff");
+  return new Response(response.body, { status: response.status, headers });
+}
+
+async function handleDownloadRedirect(request, env) {
+  const app = "polyregularizer";
+  const assetPath = DOWNLOADS[app];
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    return new Response("Method not allowed.", { status: 405, headers: { "Allow": "GET, HEAD", "Cache-Control": "no-store" } });
+  }
+
+  // Count navigation requests only. A HEAD request can be used by a browser or
+  // crawler to inspect the link without recording a download.
+  if (request.method === "GET") {
+    const counter = await getDownloadCounter(env, app);
+    if (counter) {
+      await counter.fetch(new Request(`https://likes.internal/download/${app}`, { method: "POST" }));
+    }
+  }
+
+  const destination = new URL(assetPath, request.url);
+  return Response.redirect(destination.href, 302);
+}
+
 export class BlogLikeCounter extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
   }
 
   async fetch(request) {
+    const url = new URL(request.url);
+    if (url.pathname.startsWith("/download/")) {
+      const count = (await this.ctx.storage.get("count")) || 0;
+      if (request.method === "GET") return Response.json({ count });
+      if (request.method !== "POST") return Response.json({ error: "Method not allowed." }, { status: 405 });
+      const nextCount = count + 1;
+      await this.ctx.storage.put("count", nextCount);
+      return Response.json({ count: nextCount });
+    }
+
     const count = (await this.ctx.storage.get("count")) || 0;
     if (request.method === "GET") {
       const clientId = new URL(request.url).searchParams.get("client") || "";
