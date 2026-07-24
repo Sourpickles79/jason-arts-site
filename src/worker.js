@@ -37,7 +37,7 @@ export default {
       return handleDownloads(request, env);
     }
 
-    if (url.pathname === "/download/polyregularizer") {
+    if (url.pathname === "/api/download/polyregularizer" || url.pathname === "/download/polyregularizer") {
       return handleDownloadRedirect(request, env);
     }
 
@@ -187,6 +187,7 @@ async function handleDownloads(request, env) {
   const headers = new Headers(response.headers);
   headers.set("Cache-Control", "no-store");
   headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("Access-Control-Allow-Origin", "*");
   return new Response(response.body, { status: response.status, headers });
 }
 
