@@ -3,14 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apps | Jason Arts</title>
-  <meta name="description" content="Apps from Jason Arts are coming soon.">
-  <meta name="robots" content="noindex, follow">
+  <title>PolyRegularizer for 3ds Max | Jason Arts Apps</title>
+  <meta name="description" content="Download JasonArts PolyRegularizer, a modern polygon flattening and boundary-regularizing tool designed to work across 3ds Max versions.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://jasonarts.com/apps.html">
+  <meta property="og:title" content="PolyRegularizer for 3ds Max | Jason Arts">
+  <meta property="og:description" content="Flatten polygons, regularize boundaries, or do both with one focused 3ds Max modeling tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jasonarts.com/apps.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/images/favicon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .apps-hero .hero-content { max-width: 1050px; }
+    .apps-hero h1 { max-width: 900px; }
+    .app-section { padding: clamp(64px, 8vw, 120px) clamp(24px, 6vw, 96px); }
+    .app-shell { max-width: 1280px; margin: 0 auto; }
+    .app-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap: clamp(36px, 6vw, 88px);
+      align-items: center;
+      padding: clamp(28px, 5vw, 72px);
+      border: 1px solid rgba(216, 144, 60, .28);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(42, 204, 189, .12), transparent 34%),
+        linear-gradient(145deg, rgba(18, 27, 34, .98), rgba(7, 12, 15, .98));
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .28);
+    }
+    .app-kicker { color: #43d2c0; letter-spacing: .16em; text-transform: uppercase; font-size: .78rem; font-weight: 800; }
+    .app-copy h2 { margin: 12px 0 18px; font-size: clamp(2.25rem, 5vw, 4.8rem); line-height: .94; }
+    .app-lead { max-width: 760px; color: #d3ccc2; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.7; }
+    .app-origin { margin: 22px 0 0; color: #aaa39a; line-height: 1.65; }
+    .app-origin a { color: #e09a3e; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .app-badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0; }
+    .app-badge { padding: 9px 13px; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; color: #d8d3cc; background: rgba(255,255,255,.035); font-size: .82rem; }
+    .app-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .app-meta { margin-top: 16px; color: #85898c; font-size: .75rem; overflow-wrap: anywhere; }
+    .tool-window {
+      width: min(100%, 420px);
+      justify-self: center;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 16px;
+      background: #262b2e;
+      box-shadow: 0 32px 70px rgba(0,0,0,.42);
+      color: #f0f0f0;
+    }
+    .tool-title { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 15px; border-bottom: 1px solid #42484c; font-weight: 700; }
+    .tool-controls { display: grid; gap: 12px; padding-top: 18px; }
+    .strength-row { display: flex; justify-content: space-between; align-items: center; color: #cbd0d2; font-size: .88rem; }
+    .strength-value { padding: 5px 9px; min-width: 54px; text-align: center; background: #171a1c; border: 1px solid #545b5f; border-radius: 4px; }
+    .tool-check { color: #abb1b4; font-size: .84rem; }
+    .tool-button { padding: 12px 14px; border: 1px solid #5d666a; border-radius: 5px; background: linear-gradient(#454c50, #32373a); font-weight: 700; font-size: .84rem; }
+    .tool-button.primary-tool { border-color: #d8903c; box-shadow: inset 3px 0 #d8903c; }
+    .tool-note { color: #90979a; font-size: .73rem; line-height: 1.45; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+    .feature { padding: 24px; border: 1px solid rgba(255,255,255,.09); border-radius: 16px; background: rgba(255,255,255,.025); }
+    .feature strong { display: block; color: #f5f1eb; margin-bottom: 8px; }
+    .feature p { margin: 0; color: #a9a39b; line-height: 1.55; font-size: .9rem; }
+    .install-panel { max-width: 900px; margin: 64px auto 0; padding: 30px; border-left: 3px solid #43d2c0; background: rgba(255,255,255,.025); }
+    .install-panel h3 { margin-top: 0; }
+    .install-panel ol { margin-bottom: 0; color: #bbb5ad; line-height: 1.75; }
+    @media (max-width: 900px) {
+      .app-card { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .tool-window { justify-self: start; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "JasonArts PolyRegularizer",
+    "softwareVersion": "1.0",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Windows",
+    "description": "A polygon flattening and boundary-regularizing tool for Autodesk 3ds Max.",
+    "downloadUrl": "https://jasonarts.com/assets/downloads/JasonArts_PolyRegularizer_2026_v1_0_RELEASE.zip",
+    "author": { "@type": "Person", "name": "Jason Arts" }
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -30,12 +105,68 @@
   </header>
 
   <main>
-    <section class="subhero">
+    <section class="subhero apps-hero">
       <img src="assets/images/hero-gaming-tv.webp" alt="Cinematic gaming room by Jason Arts">
       <div class="hero-shade"></div>
       <div class="hero-content">
-        <p class="eyebrow">Apps</p>
-        <h1>Coming Soon.</h1>
+        <p class="eyebrow">Jason Arts Apps</p>
+        <h1>Small tools. Faster creative work.</h1>
+        <p class="intro">Focused utilities built from real production needs.</p>
+      </div>
+    </section>
+
+    <section class="app-section">
+      <div class="app-shell">
+        <article class="app-card">
+          <div class="app-copy">
+            <p class="app-kicker">3ds Max Modeling Tool · Version 1.0</p>
+            <h2>PolyRegularizer</h2>
+            <p class="app-lead">Flatten selected polygons, regularize their boundary, or combine both operations in one controlled pass. Adjustable strength and automatic boundary discovery make cleanup faster without turning a focused task into a complicated workflow.</p>
+            <p class="app-origin">Inspired by Garp's original <a href="https://www.scriptspot.com/3ds-max/scripts/loop-regularizer" target="_blank" rel="noopener">Loop Regularizer v1.1 on ScriptSpot</a>, a respected modeling script that had not been updated since 2011. PolyRegularizer carries that useful idea forward with compatibility across 3ds Max versions and an expanded polygon-based workflow.</p>
+
+            <div class="app-badges" aria-label="PolyRegularizer details">
+              <span class="app-badge">3ds Max</span>
+              <span class="app-badge">Editable Poly</span>
+              <span class="app-badge">Adjustable Strength</span>
+              <span class="app-badge">Undo Safe</span>
+              <span class="app-badge">MZP + MacroScript</span>
+            </div>
+
+            <div class="app-actions">
+              <a class="button primary" href="assets/downloads/JasonArts_PolyRegularizer_2026_v1_0_RELEASE.zip" download>Download PolyRegularizer</a>
+              <a class="button secondary" href="https://www.scriptspot.com/3ds-max/scripts/loop-regularizer" target="_blank" rel="noopener">View the Original</a>
+            </div>
+            <p class="app-meta">Version 1.0 · ZIP package · 9.6 KB<br>SHA-256: 49B052972E730ACC6636442B9E8D84210E9C6A919DEE6D818FA6B290D20CFF06</p>
+          </div>
+
+          <div class="tool-window" role="img" aria-label="Preview of the PolyRegularizer tool interface">
+            <div class="tool-title"><span>JasonArts Poly Regularizer</span><span aria-hidden="true">×</span></div>
+            <div class="tool-controls">
+              <div class="strength-row"><span>Strength:</span><span class="strength-value">100.0</span></div>
+              <div class="tool-check">□ Close after run</div>
+              <div class="tool-button primary-tool">1&nbsp;&nbsp; Flatten + Regularize Boundary</div>
+              <div class="tool-button">2&nbsp;&nbsp; Regularize Boundary Only</div>
+              <div class="tool-button">3&nbsp;&nbsp; Flatten Selected Polys Only</div>
+              <div class="tool-note">Select polygons first. Boundary is found from the polygon selection.</div>
+            </div>
+          </div>
+        </article>
+
+        <div class="feature-grid" aria-label="PolyRegularizer features">
+          <div class="feature"><strong>Three focused operations</strong><p>Flatten and regularize together, regularize only the polygon boundary, or flatten the selected polygons without changing the boundary.</p></div>
+          <div class="feature"><strong>Controlled results</strong><p>Dial the operation from 0–100 strength, use a single Editable Poly selection, and keep the entire change inside one undo step.</p></div>
+          <div class="feature"><strong>Flexible installation</strong><p>Use the drag-and-drop MZP installer, install the toolbar macro manually, or inspect and run the included readable MaxScript source.</p></div>
+        </div>
+
+        <section class="install-panel" aria-labelledby="install-title">
+          <h3 id="install-title">Quick installation</h3>
+          <ol>
+            <li>Download and extract the release ZIP.</li>
+            <li>Drag the included <strong>.mzp</strong> file into a 3ds Max viewport, or copy the <strong>.mcr</strong> file into your userMacros folder.</li>
+            <li>Open Customize User Interface → Toolbars, select <strong>JasonArts Tools</strong>, and add Poly Regularizer to a toolbar.</li>
+            <li>Use a collapsed Editable Poly, enter Polygon sub-object mode, select polygons, and run the tool.</li>
+          </ol>
+        </section>
       </div>
     </section>
   </main>
