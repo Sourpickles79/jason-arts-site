@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corgo Web Game: Bringing a Character Into Play | Jason Arts Blog</title>
+  <meta name="description" content="Go behind the scenes of the Corgo web game and see how character art, hidden-object design and browser gameplay came together on JasonArts.com.">
+  <meta name="author" content="Jason Arts">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="publish-status" content="scheduled">
+  <meta name="publish-at" content="2026-07-31T14:00:00.000Z">
+  <link rel="canonical" href="https://jasonarts.com/blog-corgo-web-game-behind-the-scenes.html">
+  <link rel="alternate" type="application/rss+xml" title="Jason Arts Blog RSS Feed" href="https://jasonarts.com/feed.xml">
+  <meta property="article:published_time" content="2026-07-31T14:00:00.000Z">
+  <meta property="article:section" content="Behind the Scenes">
+  <meta property="og:title" content="From Book to Browser: How the Corgo Web Game Came Together">
+  <meta property="og:description" content="Corgo is now live as a browser game on JasonArts.com. Here is the behind-the-scenes story of turning an illustrated character into a playful hidden-object experience.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jasonarts.com/blog-corgo-web-game-behind-the-scenes.html">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/corgo-web-game-behind-the-scenes.webp">
+  <meta property="og:image:alt" content="A colorful Corgo hidden-object browser game scene with playful artwork, target items and a clean interface.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="From Book to Browser: How the Corgo Web Game Came Together">
+  <meta name="twitter:description" content="Corgo is now live as a browser game on JasonArts.com. Here is the behind-the-scenes story of turning an illustrated character into a playful hidden-object experience.">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/corgo-web-game-behind-the-scenes.webp">
+  <meta name="twitter:image:alt" content="A colorful Corgo hidden-object browser game scene with playful artwork, target items and a clean interface.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://jasonarts.com/blog-corgo-web-game-behind-the-scenes.html#article",
+      "headline": "From Book to Browser: Bringing Corgo to Life as a Web Game",
+      "description": "Go behind the scenes of the Corgo web game and see how character art, hidden-object design and browser gameplay came together on JasonArts.com.",
+      "image": [
+        "https://jasonarts.com/assets/images/corgo-web-game-behind-the-scenes.webp"
+      ],
+      "datePublished": "2026-07-31T14:00:00.000Z",
+      "dateModified": "2026-07-31T14:00:00.000Z",
+      "articleSection": "Behind the Scenes",
+      "keywords": [
+        "Corgo web game",
+        "hidden-object browser game",
+        "Corgo JasonArts",
+        "behind the scenes game design"
+      ],
+      "wordCount": 2118,
+      "timeRequired": "PT10M",
+      "author": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/about.html",
+        "sameAs": "https://www.linkedin.com/in/jason-johnson-5511793/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/"
+      },
+      "mainEntityOfPage": "https://jasonarts.com/blog-corgo-web-game-behind-the-scenes.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jasonarts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://jasonarts.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "From Book to Browser: Bringing Corgo to Life as a Web Game",
+          "item": "https://jasonarts.com/blog-corgo-web-game-behind-the-scenes.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="portfolio.html">View Portfolio <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:140px;">
+      <div class="post-header">
+        <div class="blog-meta">
+          <span>Behind the Scenes</span><span class="dot">&middot;</span><span>2026-07-31</span>
+        </div>
+        <h1>From Book to Browser: Bringing Corgo to Life as a Web Game</h1>
+      </div>
+
+      <div class="post-cover"><img src="assets/images/corgo-web-game-behind-the-scenes.webp" alt="A colorful Corgo hidden-object browser game scene with playful artwork, target items and a clean interface."></div>
+
+      <article class="post-body">
+        <p>Corgo has officially made the jump from illustrated character to playable browser game.</p>
+
+        <p>That sounds neat in one sentence.</p>
+
+        <p>In practice, it meant taking a cute, static world and figuring out how to turn it into something people could actually interact with without losing the charm that made it work in the first place.</p>
+
+        <p>A Corgo web game sounds simple on paper. Hide some objects, add a timer, make the scenes fun, done. Very “look at me, I have invented Where’s Waldo with short legs.”</p>
+
+        <p>But as soon as I started treating it like a real project, the important questions showed up.</p>
+
+        <p>What art style should it use?</p>
+
+        <p>How busy can a scene get before it becomes frustrating instead of fun?</p>
+
+        <p>How hidden should the items be?</p>
+
+        <p>How do you make the world feel playful without making it unreadable?</p>
+
+        <p>And maybe most important: how do you keep Corgo feeling like Corgo when the character is no longer sitting inside a book illustration and is now part of a game people are actively scanning and clicking through?</p>
+
+        <p>That is the part I wanted this article to cover.</p>
+
+        <h2>The Corgo web game started with the art style</h2>
+
+        <p>Before the game mechanics mattered, the visual style had to make sense.</p>
+
+        <p>Corgo already had a personality and a world around him. The browser game could not suddenly look like a random stock puzzle app that happened to have a corgi dropped into it at the last minute.</p>
+
+        <p>I wanted the game to feel bright, friendly and immediately readable.</p>
+
+        <p>That pushed the look toward a classic search-and-find style:</p>
+
+        <p>- Chunky shapes
+- Clear silhouettes
+- Bright color
+- Playful clutter
+- Layered scenes
+- Strong separation between objects
+- Enough detail to feel rich
+- Not so much detail that the image turns into visual soup</p>
+
+        <p>That balance matters more than people think.</p>
+
+        <p>If a hidden-object game is too empty, it feels boring. If it is too dense, it stops being fun and becomes an eye exam with grass.</p>
+
+        <p>Corgo also needed to remain instantly recognizable in every scene. Same general shape language. Same visual charm. Same simple, lovable little potato-dog energy.</p>
+
+        <p>That consistency was important because the game is not just about finding random objects. It is also about spending time in Corgo’s world.</p>
+
+        <h2>Hidden-object games live or die on scene design</h2>
+
+        <p>A search game is not really about the interface first.</p>
+
+        <p>It is about the scenes.</p>
+
+        <p>That was one of the biggest lessons in building this.</p>
+
+        <p>Every level needs to work as an image before it works as a game.</p>
+
+        <p>The scene has to be attractive enough that someone wants to look at it, but structured enough that the player can actually search it. That means foreground, midground and background all matter. The eye needs places to travel.</p>
+
+        <p>I wanted the environments to feel like storybook worlds rather than flat puzzle boards.</p>
+
+        <p>So each scene needed:</p>
+
+        <p>- A clear setting
+- Distinct landmarks
+- Visual depth
+- Areas of clutter
+- Areas of rest
+- Good color separation
+- Enough objects to keep searching interesting</p>
+
+        <p>At the same time, the game needed objects that were hidden but still fair.</p>
+
+        <p>That is the whole trick.</p>
+
+        <p>Really hidden is fun.</p>
+
+        <p>Impossible is not fun.</p>
+
+        <p>There is a tiny design line between “aha, there it is” and “this game is messing with me and I am one missed click away from becoming a villain.”</p>
+
+        <p>Good scene design lives right on that line.</p>
+
+        <img src="assets/images/corgo-game-scene-design.webp" alt="A colorful hidden-object game environment showing layered foreground, midground and background areas designed for playful searching">
+
+        <h2>The hardest part was hiding objects without breaking the art</h2>
+
+        <p>This sounds obvious now, but hidden objects cannot feel pasted in.</p>
+
+        <p>If the target item looks like it was awkwardly dropped into the scene five minutes before launch, the illusion dies immediately.</p>
+
+        <p>The best hidden-object scenes make the targets feel like they belong there.</p>
+
+        <p>That meant the objects needed to match the scene style, scale and lighting. They had to sit naturally in the world while still being findable. A toy should feel like it belongs on the grass. A sock should feel believable near a house or path. A bone should not feel like it was teleported in by an intern with poor judgment.</p>
+
+        <p>This became a game of visual camouflage.</p>
+
+        <p>Not the “make it invisible” kind.</p>
+
+        <p>The “make it belong just enough” kind.</p>
+
+        <p>Sometimes that meant overlapping shapes. Sometimes it meant placing an item near similar colors. Sometimes it meant tucking an object partly behind something else. Sometimes it meant using the edges of the environment in a smarter way.</p>
+
+        <p>Every object had to earn its hiding spot.</p>
+
+        <h2>The browser format changed the design decisions</h2>
+
+        <p>Designing for a browser game changes things compared with a print image or a static illustration.</p>
+
+        <p>In a book image, the only job is to look good and support the page.</p>
+
+        <p>In a browser game, the image has to support gameplay, scale correctly, load cleanly and remain readable across different screen sizes.</p>
+
+        <p>That changes composition.</p>
+
+        <p>A scene that looks great as a big illustration may not read as clearly inside a browser window. Tiny details can disappear. Some hiding places become too difficult. Important shapes can get lost once the image is resized.</p>
+
+        <p>So part of building the Corgo web game was thinking less like an illustrator and more like a game designer.</p>
+
+        <p>I had to ask:</p>
+
+        <p>- Will this scene still read on a smaller display?
+- Are the targets visually distinct enough?
+- Is the clickable search area fair?
+- Does the level still work if the player is moving quickly?
+- Is the environment helping the game, or only helping the image?</p>
+
+        <p>The browser forces honesty.</p>
+
+        <p>A pretty scene is not enough.</p>
+
+        <p>The scene has to play well.</p>
+
+        <h2>UI matters more than people expect</h2>
+
+        <p>The art gets the attention first, but the user interface quietly decides whether the game feels polished.</p>
+
+        <p>The timer, score, hints and found-object list all affect the experience.</p>
+
+        <p>For Corgo, I wanted the UI to support the world instead of looking like generic app chrome slapped on top of it. It needed to feel friendly and readable without stealing too much space from the image itself.</p>
+
+        <p>That means:</p>
+
+        <p>- Clear object names
+- Easy-to-read status elements
+- Visual feedback when something is found
+- A timer that creates energy without panic
+- Penalties that feel fair
+- Enough guidance for new players
+- A layout that does not crush the artwork</p>
+
+        <p>One of the fun parts of this project is that it sits somewhere between illustration, level design and interface design. It is not fully one thing or the other.</p>
+
+        <p>That weird middle space is honestly part of the appeal.</p>
+
+        <h2>Randomization helps the game last longer</h2>
+
+        <p>A hidden-object game can look great once and still become predictable quickly.</p>
+
+        <p>That is why replay value matters.</p>
+
+        <p>One of the smart design choices in Corgo was treating the object list as something that can vary from round to round instead of making every playthrough identical.</p>
+
+        <p>That way, the same scene can stay useful longer.</p>
+
+        <p>Players are not simply memorizing a list.</p>
+
+        <p>They are re-searching the world.</p>
+
+        <p>That makes the level feel more alive and gives the art more mileage. It also helps justify the effort that goes into building a good scene in the first place. If the environment only works once, it burns out fast.</p>
+
+        <p>If it can support several different target combinations, it becomes much more flexible.</p>
+
+        <h2>There is a sweet spot between cute and challenging</h2>
+
+        <p>Corgo is obviously playful.</p>
+
+        <p>That is part of the brand, part of the personality and part of what makes the project fun.</p>
+
+        <p>But a game still needs challenge.</p>
+
+        <p>If everything is too easy, the player is finished in two minutes and forgets about it.</p>
+
+        <p>If everything is too hard, the charm of the art does not save it.</p>
+
+        <p>So the goal was to keep the game welcoming while still making the search satisfying.</p>
+
+        <p>That usually means mixing difficulty levels inside the same scene.</p>
+
+        <p>Some objects should be found quickly.</p>
+
+        <p>Some should take a bit longer.</p>
+
+        <p>A few should make the player scan the image and grin when they finally notice them.</p>
+
+        <p>That mix creates rhythm.</p>
+
+        <p>A scene where every object has the same difficulty feels flat. A scene with better pacing feels more playful because the player keeps bouncing between little wins and slightly harder discoveries.</p>
+
+        <img src="assets/images/corgo-game-ui-and-targets.webp" alt="A browser hidden-object game interface showing a Corgo scene, target list, timer and playful feedback elements">
+
+        <h2>Turning a character into a game changes the relationship</h2>
+
+        <p>This was one of the parts I found most interesting.</p>
+
+        <p>When a character exists in an image, you look at them.</p>
+
+        <p>When a character exists in a game, you interact with their world.</p>
+
+        <p>That is a different relationship.</p>
+
+        <p>Corgo is no longer only something to observe. The player is now participating inside that little universe, searching through it, noticing details, recognizing repeated visual ideas and learning how that world behaves.</p>
+
+        <p>That changes how the character feels.</p>
+
+        <p>It makes Corgo more than an illustration.</p>
+
+        <p>It makes the project feel like a place.</p>
+
+        <p>That is the part I really like.</p>
+
+        <p>The browser game is not replacing the illustrated side of Corgo. It is extending it.</p>
+
+        <p>It lets the world breathe in a different format.</p>
+
+        <h2>Making something “simple” is rarely simple</h2>
+
+        <p>On the surface, a browser hidden-object game sounds like one of those ideas people summarize in ten cheerful seconds.</p>
+
+        <p>“Just make cute scenes and hide some stuff!”</p>
+
+        <p>Sure.</p>
+
+        <p>And “just make a movie” is also technically a sentence.</p>
+
+        <p>The reality is that simple-looking projects are often full of invisible decisions.</p>
+
+        <p>Where should the player’s eye go first?</p>
+
+        <p>How many objects are too many?</p>
+
+        <p>How much clutter is helpful?</p>
+
+        <p>How much is chaos?</p>
+
+        <p>Should the score reward speed more than accuracy?</p>
+
+        <p>How punishing should missed clicks be?</p>
+
+        <p>How should the scenes escalate?</p>
+
+        <p>What makes one environment distinct from the next?</p>
+
+        <p>What makes the project feel cohesive instead of random?</p>
+
+        <p>Those are the kinds of questions that shape the final result even if the player never notices them directly.</p>
+
+        <p>Honestly, that is usually a good sign.</p>
+
+        <p>When creative work feels effortless, it usually means someone did the hard part in the background.</p>
+
+        <h2>Why I wanted Corgo on the website</h2>
+
+        <p>Part of the reason for building the game was simple: I wanted something on JasonArts.com that people could actually play.</p>
+
+        <p>Not just read.</p>
+
+        <p>Not just scroll past.</p>
+
+        <p>Not just glance at and move on from.</p>
+
+        <p>Interact with.</p>
+
+        <p>That is valuable for a personal creative site.</p>
+
+        <p>It gives the site more personality, gives visitors something memorable and lets one of my original characters exist in a more playful way.</p>
+
+        <p>It also helps show that my creative work is not limited to one lane.</p>
+
+        <p>I love 3D. I love visual storytelling. I love AI tools. I love building worlds. A browser game sits at a fun intersection of all that—art, design, interactivity and character work rolled together.</p>
+
+        <p>And honestly, it is just fun.</p>
+
+        <p>Sometimes that should be enough reason to make a thing.</p>
+
+        <h2>What I like most about the finished result</h2>
+
+        <p>The part I like most is that the Corgo web game still feels like Corgo.</p>
+
+        <p>That was the real test.</p>
+
+        <p>It would have been easy to make something technically functional that lost the warmth of the character along the way. Instead, the game keeps the playful identity while adding something new: participation.</p>
+
+        <p>The player is no longer outside the picture.</p>
+
+        <p>They are inside the search.</p>
+
+        <p>That is a cool transition for a character project.</p>
+
+        <p>And it opens the door to more.</p>
+
+        <p>More scenes. More ideas. More little worlds. Maybe more interactive projects later. Maybe other ways to let illustrated characters step beyond the page.</p>
+
+        <p>That possibility is one of the best parts of building something like this.</p>
+
+        <h2>From static art to a playable world</h2>
+
+        <p>The Corgo web game reminded me that creative projects get more interesting when they are allowed to evolve.</p>
+
+        <p>A character does not have to stay in one format forever.</p>
+
+        <p>An illustration can become a level.</p>
+
+        <p>A page can become a scene.</p>
+
+        <p>A cute idea can become a playable world.</p>
+
+        <p>That evolution is what made this project exciting for me.</p>
+
+        <p>Corgo began as a visual concept and a storytelling character.</p>
+
+        <p>Now there is also a browser game where people can step into that world and spend time there.</p>
+
+        <p>That is a satisfying leap.</p>
+
+        <p>And honestly, seeing a little corgi project grow legs and run around the website feels extremely on-brand.</p>
+
+        <p>More creative projects, characters and behind-the-scenes articles are available on the [JasonArts blog](https://www.jasonarts.com/blog).</p>
+
+        <h2>Sources</h2>
+
+        <p>JasonArts Home:
+https://www.jasonarts.com/</p>
+
+        <p>JasonArts Blog:
+https://www.jasonarts.com/blog</p>
+      </article>
+
+      <div class="post-cta">
+        <p><strong>Explore more:</strong> <a href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">JasonArts Blog</a> · <a href="https://www.jasonarts.com/" target="_blank" rel="noopener">JasonArts Home</a></p>
+        <p><strong>References:</strong> <a href="https://www.jasonarts.com/" target="_blank" rel="noopener">JasonArts Home</a> · <a href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">JasonArts Blog</a></p>
+      </div>
+
+      <div class="post-cta">
+        <p>Explore more creative projects and behind-the-scenes articles from JasonArts.</p>
+        <a class="button primary" href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">Explore the Blog</a> <a class="button secondary" href="https://www.jasonarts.com/apps" target="_blank" rel="noopener" style="margin-left:10px;">Play the Game</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/header.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
