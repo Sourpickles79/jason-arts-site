@@ -37,8 +37,16 @@ export default {
       return handleDownloads(request, env);
     }
 
+    if (url.pathname === "/api/plays") {
+      return handlePlays(request, env);
+    }
+
     if (url.pathname === "/api/download/polyregularizer" || url.pathname === "/download/polyregularizer") {
       return handleDownloadRedirect(request, env);
+    }
+
+    if (url.pathname === "/api/play/corgo" || url.pathname === "/play/corgo") {
+      return handlePlayRedirect(request, env);
     }
 
     if (url.pathname === "/sitemap.xml" && request.method === "GET") {
@@ -163,9 +171,26 @@ const DOWNLOADS = {
   polyregularizer: "/assets/downloads/JasonArts_PolyRegularizer_2026_v1_0_RELEASE.zip",
 };
 
+// Browser games. Same idea as DOWNLOADS: "/play/<app>" records a click and then
+// redirects to where the game actually lives.
+const PLAYS = {
+  corgo: "/corgo/",
+};
+
 function getDownloadApp(request) {
   const app = (new URL(request.url).searchParams.get("app") || "").trim().toLowerCase();
   return Object.hasOwn(DOWNLOADS, app) ? app : "";
+}
+
+function getPlayApp(request) {
+  const app = (new URL(request.url).searchParams.get("app") || "").trim().toLowerCase();
+  return Object.hasOwn(PLAYS, app) ? app : "";
+}
+
+async function getPlayCounter(env, app) {
+  if (!env.BLOG_LIKES) return null;
+  const id = env.BLOG_LIKES.idFromName(`play:${app}`);
+  return env.BLOG_LIKES.get(id);
 }
 
 async function getDownloadCounter(env, app) {
@@ -189,6 +214,42 @@ async function handleDownloads(request, env) {
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Access-Control-Allow-Origin", "*");
   return new Response(response.body, { status: response.status, headers });
+}
+
+async function handlePlays(request, env) {
+  if (request.method !== "GET") {
+    return json({ error: "Method not allowed." }, 405, { "Allow": "GET", "Cache-Control": "no-store" });
+  }
+  const app = getPlayApp(request);
+  if (!app) return json({ error: "Unknown game." }, 404, { "Cache-Control": "no-store" });
+  const counter = await getPlayCounter(env, app);
+  if (!counter) return json({ error: "Play counter is not configured." }, 503, { "Cache-Control": "no-store" });
+
+  const response = await counter.fetch(new Request(`https://likes.internal/play/${app}`));
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", "no-store");
+  headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("Access-Control-Allow-Origin", "*");
+  return new Response(response.body, { status: response.status, headers });
+}
+
+async function handlePlayRedirect(request, env) {
+  const app = "corgo";
+  const assetPath = PLAYS[app];
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    return new Response("Method not allowed.", { status: 405, headers: { "Allow": "GET, HEAD", "Cache-Control": "no-store" } });
+  }
+
+  // Count navigation requests only, the same way downloads are counted.
+  if (request.method === "GET") {
+    const counter = await getPlayCounter(env, app);
+    if (counter) {
+      await counter.fetch(new Request(`https://likes.internal/play/${app}`, { method: "POST" }));
+    }
+  }
+
+  const destination = new URL(assetPath, request.url);
+  return Response.redirect(destination.href, 302);
 }
 
 async function handleDownloadRedirect(request, env) {
@@ -218,7 +279,7 @@ export class BlogLikeCounter extends DurableObject {
 
   async fetch(request) {
     const url = new URL(request.url);
-    if (url.pathname.startsWith("/download/")) {
+    if (url.pathname.startsWith("/download/") || url.pathname.startsWith("/play/")) {
       const count = (await this.ctx.storage.get("count")) || 0;
       if (request.method === "GET") return Response.json({ count });
       if (request.method !== "POST") return Response.json({ error: "Method not allowed." }, { status: 405 });
