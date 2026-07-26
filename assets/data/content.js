@@ -788,6 +788,30 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "corgo-web-game-behind-the-scenes",
+      "title": "From Book to Browser: Bringing Corgo to Life as a Web Game",
+      "excerpt": "Corgo started as an illustrated character, but turning that world into a playable browser experience meant rethinking the art, the layouts and how kids actually search inside a scene.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/corgo-web-game-behind-the-scenes.webp",
+      "date": "2026-07-31",
+      "publishAt": "2026-07-31T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-corgo-web-game-behind-the-scenes.html",
+      "seo": {
+        "title": "Corgo Web Game: Bringing a Character Into Play",
+        "description": "Go behind the scenes of the Corgo web game and see how character art, hidden-object design and browser gameplay came together on JasonArts.com.",
+        "targetKeyword": "Corgo web game",
+        "secondaryKeywords": [
+          "hidden-object browser game",
+          "Corgo JasonArts",
+          "behind the scenes game design"
+        ],
+        "coverAlt": "A colorful Corgo hidden-object browser game scene with playful artwork, target items and a clean interface.",
+        "socialTitle": "From Book to Browser: How the Corgo Web Game Came Together",
+        "socialDescription": "Corgo is now live as a browser game on JasonArts.com. Here is the behind-the-scenes story of turning an illustrated character into a playful hidden-object experience."
+      }
+    },
+    {
       "slug": "why-davinci-resolve-is-useful",
       "title": "Why DaVinci Resolve Is One of the Most Useful Creative Tools You Can Learn",
       "excerpt": "DaVinci Resolve combines editing, color, visual effects, motion graphics, audio and delivery in one application, making it useful for nearly any kind of video project.",
