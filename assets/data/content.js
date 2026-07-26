@@ -788,6 +788,54 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "why-davinci-resolve-is-useful",
+      "title": "Why DaVinci Resolve Is One of the Most Useful Creative Tools You Can Learn",
+      "excerpt": "DaVinci Resolve combines editing, color, visual effects, motion graphics, audio and delivery in one application, making it useful for nearly any kind of video project.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/davinci-resolve-all-in-one-creative-tool.webp",
+      "date": "2026-08-10",
+      "publishAt": "2026-08-10T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-why-davinci-resolve-is-useful.html",
+      "seo": {
+        "title": "Why DaVinci Resolve Is Useful for Creative Work",
+        "description": "Learn why DaVinci Resolve is useful for editing, color grading, visual effects, audio production and complete creative video workflows.",
+        "targetKeyword": "why DaVinci Resolve is useful",
+        "secondaryKeywords": [
+          "DaVinci Resolve benefits",
+          "DaVinci Resolve for beginners",
+          "all-in-one video editing software"
+        ],
+        "coverAlt": "A DaVinci Resolve workspace displaying video editing, color grading, visual effects and audio-mixing tools.",
+        "socialTitle": "Why DaVinci Resolve Is Worth Learning",
+        "socialDescription": "Editing, color, visual effects, audio and delivery all live inside DaVinci Resolve. Here is why it remains such a useful tool for creative video work."
+      }
+    },
+    {
+      "slug": "suno-stem-separation-mixing-workflow",
+      "title": "Suno Stem Separation: Can You Actually Mix an AI Song Properly Now?",
+      "excerpt": "Suno’s updated stem separation gives producers far more control, but getting a genuinely better mix still requires knowing which split mode to use and what the exported tracks really contain.",
+      "category": "AI Music",
+      "cover": "assets/images/suno-stem-separation-mixing-workflow.webp",
+      "date": "2026-08-03",
+      "publishAt": "2026-08-03T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-suno-stem-separation-mixing-workflow.html",
+      "seo": {
+        "title": "Suno Stem Separation: A Practical Mixing Workflow",
+        "description": "Learn how Suno stem separation works, which split mode to choose and how to rebuild vocals, drums, bass and instruments into a stronger mix.",
+        "targetKeyword": "Suno stem separation",
+        "secondaryKeywords": [
+          "Suno Advanced Split",
+          "mixing Suno stems",
+          "AI music stem separation"
+        ],
+        "coverAlt": "A digital audio workstation displaying separated Suno vocal, drum, bass, guitar and keyboard stems beside a finished stereo mix.",
+        "socialTitle": "Can You Actually Mix a Suno Song Properly Now?",
+        "socialDescription": "Suno’s updated stem tools can split a song into vocals, drums, bass and specific instruments. Here is how I would turn those parts into a stronger final mix."
+      }
+    },
+    {
       "slug": "kling-3-multi-shot-video-workflow",
       "title": "Kling 3.0 Multi-Shot: Build a Scene, Not Just One Cool Clip",
       "excerpt": "Kling 3.0 can generate a complete multi-shot sequence in one pass, but the best results still come from planning the scene like an editor instead of writing one enormous prompt.",
