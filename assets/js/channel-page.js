@@ -37,18 +37,46 @@ function videoFeatureRow(video, index) {
 }
 
 async function fetchLiveVideos(channelId, apiKey, tag) {
-  const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&order=date&maxResults=12&type=video`;
+  // YouTube's search endpoint mixes standard uploads and Shorts. Pull extra
+  // candidates, request their durations, and keep only videos longer than the
+  // current three-minute Shorts limit before showing the newest 12.
+  const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&order=date&maxResults=25&type=video`;
   const response = await fetch(url);
   if (!response.ok) throw new Error("YouTube API request failed");
   const data = await response.json();
-  return (data.items || []).map(item => ({
-    title: item.snippet.title,
-    channel: tag,
-    image: item.snippet.thumbnails?.high?.url || item.snippet.thumbnails?.default?.url,
-    url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
-    date: item.snippet.publishedAt,
-    description: item.snippet.description || ""
-  }));
+  const items = (data.items || []).filter(item => item.id?.videoId);
+  if (!items.length) return [];
+
+  const ids = items.map(item => item.id.videoId).join(",");
+  const detailsUrl = `https://www.googleapis.com/youtube/v3/videos?key=${apiKey}&id=${ids}&part=contentDetails`;
+  const detailsResponse = await fetch(detailsUrl);
+  if (!detailsResponse.ok) throw new Error("YouTube video details request failed");
+  const details = await detailsResponse.json();
+  const durationById = new Map((details.items || []).map(item => [
+    item.id,
+    isoDurationToSeconds(item.contentDetails?.duration)
+  ]));
+
+  return items
+    .filter(item => (durationById.get(item.id.videoId) || 0) > 180)
+    .slice(0, 12)
+    .map(item => ({
+      title: item.snippet.title,
+      channel: tag,
+      image: item.snippet.thumbnails?.high?.url || item.snippet.thumbnails?.default?.url,
+      url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+      date: item.snippet.publishedAt,
+      description: item.snippet.description || ""
+    }));
+}
+
+function isoDurationToSeconds(value) {
+  const match = String(value || "").match(/^P(?:(\d+)D)?T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
+  if (!match) return 0;
+  return Number(match[1] || 0) * 86400
+    + Number(match[2] || 0) * 3600
+    + Number(match[3] || 0) * 60
+    + Number(match[4] || 0);
 }
 
 function manualVideos(data, tag) {
@@ -117,7 +145,7 @@ async function renderChannelPage(channelKey) {
 
   if (noticeEl) {
     noticeEl.textContent = isLive
-      ? `Showing the ${Math.min(videos.length, 12)} most recent releases from YouTube.`
+      ? `Showing the ${Math.min(videos.length, 12)} most recent full-length releases from YouTube.`
       : "A featured selection from the channel.";
   }
 
