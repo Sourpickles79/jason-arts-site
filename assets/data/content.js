@@ -793,8 +793,8 @@ window.SITE_CONTENT = {
       "excerpt": "Corgo started as an illustrated character, but turning that world into a playable browser experience meant rethinking the art, the layouts and how kids actually search inside a scene.",
       "category": "Behind the Scenes",
       "cover": "assets/images/corgo-web-game-behind-the-scenes.webp",
-      "date": "2026-07-31",
-      "publishAt": "2026-07-31T14:00:00.000Z",
+      "date": "2026-08-17",
+      "publishAt": "2026-08-17T14:00:00.000Z",
       "status": "scheduled",
       "url": "blog-corgo-web-game-behind-the-scenes.html",
       "seo": {
