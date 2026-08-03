@@ -1010,6 +1010,15 @@ h3 { font-size: 26px; }
   background:
     linear-gradient(180deg, transparent 4%, rgba(5,8,10,.28) 46%, rgba(5,8,10,.97) 100%),
     var(--concept-bg, linear-gradient(135deg, #26333a, #10171b));
+  color: inherit;
+  text-decoration: none;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.concept-card:hover,
+.concept-card:focus-visible {
+  transform: translateY(-5px);
+  border-color: rgba(216,144,60,.6);
+  box-shadow: 0 18px 48px rgba(0,0,0,.28);
 }
 .concept-card:nth-child(1) { --concept-bg: linear-gradient(135deg, #5a241d, #d47b35 45%, #1a1010); }
 .concept-card:nth-child(2) { --concept-bg: linear-gradient(135deg, #20352d, #7d5a32 52%, #141617); }
@@ -1028,6 +1037,15 @@ h3 { font-size: 26px; }
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.concept-card__action {
+  margin-top: 18px;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
   text-transform: uppercase;
 }
 .process-grid {
