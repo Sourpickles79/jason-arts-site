@@ -587,8 +587,8 @@ async function handleStats(request, env) {
 
   const topPages = [...pages.values()]
     .filter((page) => isHumanFacingPagePath(page.path))
-    .sort((a, b) => (b.visits - a.visits) || (b.requests - a.requests))
-    .slice(0, 12);
+    .sort((a, b) => (b.requests - a.requests) || (b.visits - a.visits))
+    .slice(0, 25);
   const topCountries = [...countries.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
   const series = [...activity.values()].sort((a, b) => new Date(a.time) - new Date(b.time));
   const loadedDays = Math.round((loadedMs / dayMs) * 10) / 10;
