@@ -429,28 +429,26 @@ ${itemXml}
   }
 }
 
-function isHumanFacingPagePath(rawPath) {
-  const path = String(rawPath || "/").split("?")[0].toLowerCase();
-  if (path === "/") return true;
+function canonicalSitePagePath(rawPath) {
+  let path = String(rawPath || "/").split("?")[0].toLowerCase();
+  try { path = decodeURIComponent(path); } catch (_) {}
+  path = path.replace(/\/{2,}/g, "/").replace(/\/+$/, "") || "/";
+  path = path.replace(/\/index\.html?$/i, "") || "/";
+  path = path.replace(/\.html?$/i, "") || "/";
 
-  // These are infrastructure, data, downloadable assets, or automated probes—not pages a visitor reads.
-  if (
-    path.startsWith("/assets/") ||
-    path.startsWith("/cdn-cgi/") ||
-    path.startsWith("/api/") ||
-    path.startsWith("/.well-known/") ||
-    path.includes("/.git") ||
-    path.includes("/.env") ||
-    path.includes("/wp-") ||
-    path.includes("wordpress")
-  ) return false;
+  if (path === "/index") return "/";
 
-  if (/\.(?:css|js|mjs|json|xml|txt|map|ico|png|jpe?g|webp|gif|svg|avif|woff2?|ttf|eot|zip|pdf|mp3|mp4|webm|php|asp|aspx|cgi)$/i.test(path)) {
-    return /\.html?$/i.test(path);
-  }
+  const sitePages = new Set([
+    "/", "/about", "/ai", "/apps", "/blog", "/books", "/channels",
+    "/cozy", "/creative-services", "/game", "/music", "/orb", "/portfolio"
+  ]);
+  if (sitePages.has(path)) return path;
 
-  // Extensionless routes and directory indexes are valid public pages on this site.
-  return true;
+  if (/^\/blog-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(path)) return path;
+  if (/^\/demos\/(?:bookstore|home-renovation|law-office|pizzeria)(?:\/(?:events?|projects?|practice-areas|menu))?$/.test(path)) return path;
+  if (path === "/corgo") return path;
+
+  return null;
 }
 
 async function handleStats(request, env) {
@@ -492,7 +490,7 @@ async function handleStats(request, env) {
           }
           topPages: httpRequestsAdaptiveGroups(
             filter: { AND: [{ datetime_geq: $since, datetime_lt: $until }, { requestSource: "eyeball" }] }
-            limit: 100
+            limit: 1000
             orderBy: [count_DESC]
           ) {
             count
@@ -563,7 +561,8 @@ async function handleStats(request, env) {
     loadedMs += interval.until.getTime() - interval.since.getTime();
 
     for (const page of zone?.topPages || []) {
-      const key = page.dimensions.clientRequestPath || "/";
+      const key = canonicalSitePagePath(page.dimensions.clientRequestPath || "/");
+      if (!key) continue;
       const current = pages.get(key) || { path: key, requests: 0, visits: 0 };
       current.requests += page.count || 0;
       current.visits += page.sum?.visits || 0;
@@ -585,10 +584,14 @@ async function handleStats(request, env) {
     }
   }
 
-  const topPages = [...pages.values()]
-    .filter((page) => isHumanFacingPagePath(page.path))
+  const cleanPages = [...pages.values()];
+  const topPages = cleanPages
     .sort((a, b) => (b.requests - a.requests) || (b.visits - a.visits))
-    .slice(0, 25);
+    .slice(0, 15);
+  const entryPages = cleanPages
+    .filter((page) => page.visits > 0)
+    .sort((a, b) => (b.visits - a.visits) || (b.requests - a.requests))
+    .slice(0, 10);
   const topCountries = [...countries.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
   const series = [...activity.values()].sort((a, b) => new Date(a.time) - new Date(b.time));
   const loadedDays = Math.round((loadedMs / dayMs) * 10) / 10;
@@ -599,6 +602,7 @@ async function handleStats(request, env) {
       requests,
       visits,
       topPages,
+      entryPages,
       topCountries,
       series,
       partial: failed.length > 0,
