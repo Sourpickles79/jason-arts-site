@@ -429,6 +429,30 @@ ${itemXml}
   }
 }
 
+function isHumanFacingPagePath(rawPath) {
+  const path = String(rawPath || "/").split("?")[0].toLowerCase();
+  if (path === "/") return true;
+
+  // These are infrastructure, data, downloadable assets, or automated probes—not pages a visitor reads.
+  if (
+    path.startsWith("/assets/") ||
+    path.startsWith("/cdn-cgi/") ||
+    path.startsWith("/api/") ||
+    path.startsWith("/.well-known/") ||
+    path.includes("/.git") ||
+    path.includes("/.env") ||
+    path.includes("/wp-") ||
+    path.includes("wordpress")
+  ) return false;
+
+  if (/\.(?:css|js|mjs|json|xml|txt|map|ico|png|jpe?g|webp|gif|svg|avif|woff2?|ttf|eot|zip|pdf|mp3|mp4|webm|php|asp|aspx|cgi)$/i.test(path)) {
+    return /\.html?$/i.test(path);
+  }
+
+  // Extensionless routes and directory indexes are valid public pages on this site.
+  return true;
+}
+
 async function handleStats(request, env) {
   const corsHeaders = {
     "Access-Control-Allow-Origin": "*",
@@ -468,7 +492,7 @@ async function handleStats(request, env) {
           }
           topPages: httpRequestsAdaptiveGroups(
             filter: { AND: [{ datetime_geq: $since, datetime_lt: $until }, { requestSource: "eyeball" }] }
-            limit: 10
+            limit: 100
             orderBy: [count_DESC]
           ) {
             count
@@ -561,7 +585,10 @@ async function handleStats(request, env) {
     }
   }
 
-  const topPages = [...pages.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
+  const topPages = [...pages.values()]
+    .filter((page) => isHumanFacingPagePath(page.path))
+    .sort((a, b) => (b.visits - a.visits) || (b.requests - a.requests))
+    .slice(0, 12);
   const topCountries = [...countries.values()].sort((a, b) => b.requests - a.requests).slice(0, 10);
   const series = [...activity.values()].sort((a, b) => new Date(a.time) - new Date(b.time));
   const loadedDays = Math.round((loadedMs / dayMs) * 10) / 10;
