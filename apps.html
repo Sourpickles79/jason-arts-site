@@ -181,8 +181,8 @@
             </div>
 
             <div class="app-actions">
-              <a class="button primary" href="api/play/corgo">Play Now</a>
-              <a class="button secondary" href="api/play/corgo" target="_blank" rel="noopener">Open in New Tab</a>
+              <a class="button primary" href="corgo/" data-intent-kind="play" data-intent-app="corgo">Play Now</a>
+              <a class="button secondary" href="corgo/" target="_blank" rel="noopener" data-intent-kind="play" data-intent-app="corgo">Open in New Tab</a>
             </div>
             <p class="app-meta">Free · Plays in your browser · No install required</p>
           </div>
@@ -215,7 +215,7 @@
             </div>
 
             <div class="app-actions">
-              <a class="button primary" href="api/download/polyregularizer">Download PolyRegularizer</a>
+              <a class="button primary" href="assets/downloads/JasonArts_PolyRegularizer_2026_v1_0_RELEASE.zip" download data-intent-kind="download" data-intent-app="polyregularizer">Download PolyRegularizer</a>
               <a class="button secondary" href="https://www.scriptspot.com/3ds-max/scripts/loop-regularizer" target="_blank" rel="noopener">View the Original</a>
             </div>
             <p class="app-meta">Version 1.0 · ZIP package · 9.6 KB</p>
@@ -252,6 +252,29 @@
   </footer>
 
   <script src="assets/js/header.js"></script>
+  <script>
+    // Count one real, trusted button press per browser per day. The link itself
+    // goes straight to the game or ZIP, so crawlers following a URL cannot add to this counter.
+    document.querySelectorAll("[data-intent-kind][data-intent-app]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        if (!event.isTrusted) return;
+        const kind = link.dataset.intentKind;
+        const app = link.dataset.intentApp;
+        const storageKey = `ja-intent-v1:${kind}:${app}`;
+        const now = Date.now();
+        const previous = Number(localStorage.getItem(storageKey) || 0);
+        if (previous && now - previous < 24 * 60 * 60 * 1000) return;
+
+        const endpoint = `/api/intent?${new URLSearchParams({ kind, app })}`;
+        const payload = new Blob(["1"], { type: "text/plain" });
+        const sent = navigator.sendBeacon && navigator.sendBeacon(endpoint, payload);
+        if (!sent) {
+          fetch(endpoint, { method: "POST", body: "1", keepalive: true, credentials: "same-origin" }).catch(() => {});
+        }
+        localStorage.setItem(storageKey, String(now));
+      });
+    });
+  </script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
