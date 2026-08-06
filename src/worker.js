@@ -41,6 +41,10 @@ export default {
       return handlePlays(request, env);
     }
 
+    if (url.pathname === "/api/intent") {
+      return handleIntent(request, env);
+    }
+
     if (url.pathname === "/api/download/polyregularizer" || url.pathname === "/download/polyregularizer") {
       return handleDownloadRedirect(request, env);
     }
@@ -233,19 +237,61 @@ async function handlePlays(request, env) {
   return new Response(response.body, { status: response.status, headers });
 }
 
+function getIntent(request) {
+  const url = new URL(request.url);
+  const kind = (url.searchParams.get("kind") || "").trim().toLowerCase();
+  const app = (url.searchParams.get("app") || "").trim().toLowerCase();
+  if (kind === "download" && Object.hasOwn(DOWNLOADS, app)) return { kind, app };
+  if (kind === "play" && Object.hasOwn(PLAYS, app)) return { kind, app };
+  return null;
+}
+
+async function getIntentCounter(env, kind, app) {
+  if (!env.BLOG_LIKES) return null;
+  // A new counter name deliberately starts a clean, post-deployment baseline.
+  const id = env.BLOG_LIKES.idFromName(`intent-v1:${kind}:${app}`);
+  return env.BLOG_LIKES.get(id);
+}
+
+async function handleIntent(request, env) {
+  if (request.method !== "GET" && request.method !== "POST") {
+    return json({ error: "Method not allowed." }, 405, { "Allow": "GET, POST", "Cache-Control": "no-store" });
+  }
+  const intent = getIntent(request);
+  if (!intent) return json({ error: "Unknown action." }, 404, { "Cache-Control": "no-store" });
+  const counter = await getIntentCounter(env, intent.kind, intent.app);
+  if (!counter) return json({ error: "Intent counter is not configured." }, 503, { "Cache-Control": "no-store" });
+
+  if (request.method === "POST") {
+    const origin = request.headers.get("Origin");
+    const fetchSite = request.headers.get("Sec-Fetch-Site");
+    if (!origin || fetchSite === "cross-site" || fetchSite === "none") {
+      return json({ error: "Browser interaction required." }, 403, { "Cache-Control": "no-store" });
+    }
+    try {
+      if (new URL(origin).origin !== new URL(request.url).origin) {
+        return json({ error: "Origin not allowed." }, 403, { "Cache-Control": "no-store" });
+      }
+    } catch {
+      return json({ error: "Origin not allowed." }, 403, { "Cache-Control": "no-store" });
+    }
+  }
+
+  const response = await counter.fetch(new Request(`https://likes.internal/intent/${intent.kind}/${intent.app}`, {
+    method: request.method
+  }));
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", "no-store");
+  headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("Access-Control-Allow-Origin", "*");
+  return new Response(response.body, { status: response.status, headers });
+}
+
 async function handlePlayRedirect(request, env) {
   const app = "corgo";
   const assetPath = PLAYS[app];
   if (request.method !== "GET" && request.method !== "HEAD") {
     return new Response("Method not allowed.", { status: 405, headers: { "Allow": "GET, HEAD", "Cache-Control": "no-store" } });
-  }
-
-  // Count navigation requests only, the same way downloads are counted.
-  if (request.method === "GET") {
-    const counter = await getPlayCounter(env, app);
-    if (counter) {
-      await counter.fetch(new Request(`https://likes.internal/play/${app}`, { method: "POST" }));
-    }
   }
 
   const destination = new URL(assetPath, request.url);
@@ -259,15 +305,6 @@ async function handleDownloadRedirect(request, env) {
     return new Response("Method not allowed.", { status: 405, headers: { "Allow": "GET, HEAD", "Cache-Control": "no-store" } });
   }
 
-  // Count navigation requests only. A HEAD request can be used by a browser or
-  // crawler to inspect the link without recording a download.
-  if (request.method === "GET") {
-    const counter = await getDownloadCounter(env, app);
-    if (counter) {
-      await counter.fetch(new Request(`https://likes.internal/download/${app}`, { method: "POST" }));
-    }
-  }
-
   const destination = new URL(assetPath, request.url);
   return Response.redirect(destination.href, 302);
 }
@@ -279,7 +316,7 @@ export class BlogLikeCounter extends DurableObject {
 
   async fetch(request) {
     const url = new URL(request.url);
-    if (url.pathname.startsWith("/download/") || url.pathname.startsWith("/play/")) {
+    if (url.pathname.startsWith("/download/") || url.pathname.startsWith("/play/") || url.pathname.startsWith("/intent/")) {
       const count = (await this.ctx.storage.get("count")) || 0;
       if (request.method === "GET") return Response.json({ count });
       if (request.method !== "POST") return Response.json({ error: "Method not allowed." }, { status: 405 });
