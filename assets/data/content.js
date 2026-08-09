@@ -788,6 +788,78 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "ai-building-worlds-siggraph-2026",
+      "title": "AI Is Learning to Build Worlds, Not Just Pictures",
+      "excerpt": "SIGGRAPH 2026 showed how world models, neural rendering, physics simulation and AI agents are moving generative AI toward interactive 3D environments.",
+      "category": "Singularity",
+      "cover": "assets/images/ai-building-worlds-siggraph-2026.webp",
+      "date": "2026-08-09",
+      "publishAt": "2026-08-09T14:45:40.750Z",
+      "status": "published",
+      "url": "blog-ai-building-worlds-siggraph-2026.html",
+      "seo": {
+        "title": "AI Is Learning to Build Worlds, Not Just Pictures",
+        "description": "SIGGRAPH 2026 showed how AI world models, neural rendering, physics simulation and 3D agents are creating interactive digital environments.",
+        "targetKeyword": "AI world models",
+        "secondaryKeywords": [
+          "SIGGRAPH 2026 AI",
+          "physics-aware AI worlds",
+          "NVIDIA world simulation"
+        ],
+        "coverAlt": "An explorer overlooking an AI-generated 3D world surrounded by simulation and world-model interface elements.",
+        "socialTitle": "AI Is Learning to Build Worlds That Actually Behave",
+        "socialDescription": "SIGGRAPH 2026 showed AI moving beyond images into physics-aware environments, neural rendering and agents that work inside 3D tools."
+      }
+    },
+    {
+      "slug": "elevenmusic-vocals-consistent-ai-singer",
+      "title": "ElevenMusic Vocals: Can an AI Artist Finally Sound Consistent?",
+      "excerpt": "ElevenMusic Vocals lets creators reuse the same singing voice across multiple songs, while References can guide the style and sound of an entire project.",
+      "category": "AI Music",
+      "cover": "assets/images/elevenmusic-vocals-consistent-ai-singer.webp",
+      "date": "2026-08-09",
+      "publishAt": "2026-08-09T14:43:37.615Z",
+      "status": "published",
+      "url": "blog-elevenmusic-vocals-consistent-ai-singer.html",
+      "seo": {
+        "title": "ElevenMusic Vocals: Build a Consistent AI Singer",
+        "description": "ElevenMusic Vocals and References help creators maintain the same AI singer and musical identity across multiple songs and complete projects.",
+        "targetKeyword": "ElevenMusic Vocals",
+        "secondaryKeywords": [
+          "consistent AI singer",
+          "ElevenMusic References",
+          "AI music identity"
+        ],
+        "coverAlt": "A singer recording beside an ElevenMusic interface showing a saved vocal identity and reference track.",
+        "socialTitle": "Can ElevenMusic Finally Keep the Same Singer?",
+        "socialDescription": "ElevenMusic Vocals can reuse one AI singer across multiple songs, while References helps keep the surrounding musical style consistent."
+      }
+    },
+    {
+      "slug": "substance-painter-12-1-less-baking-cleanup",
+      "title": "Substance Painter 12.1: Less Baking Cleanup, Better Materials",
+      "excerpt": "Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that target some of the most tedious parts of texturing.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/substance-painter-12-1-less-baking-cleanup.webp",
+      "date": "2026-08-20",
+      "publishAt": "2026-08-20T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-substance-painter-12-1-less-baking-cleanup.html",
+      "seo": {
+        "title": "Substance Painter 12.1: Less Baking Cleanup",
+        "description": "Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that simplify texturing workflows.",
+        "targetKeyword": "Substance Painter 12.1",
+        "secondaryKeywords": [
+          "Substance Painter OpenPBR",
+          "Painter Auto Rebake",
+          "Skew Map Painting"
+        ],
+        "coverAlt": "A weathered hard-surface model displayed beside Substance Painter 12.1 material and baking controls.",
+        "socialTitle": "Substance Painter 12.1 Fixes Some Very Real Workflow Problems",
+        "socialDescription": "OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV make Painter 12.1 a practical update for production artists."
+      }
+    },
+    {
       "slug": "corgo-web-game-behind-the-scenes",
       "title": "From Book to Browser: Bringing Corgo to Life as a Web Game",
       "excerpt": "Corgo started as an illustrated character, but turning that world into a playable browser experience meant rethinking the art, the layouts and how kids actually search inside a scene.",
