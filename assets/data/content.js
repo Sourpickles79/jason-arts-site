@@ -788,6 +788,30 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "gpt-5-6-for-creators",
+      "title": "GPT-5.6 for Creators: The Interesting Part Isn't the Benchmark Score",
+      "excerpt": "GPT-5.6 puts more emphasis on design judgment, computer use and end-to-end project work, which may matter to creators more than another chart full of benchmark numbers.",
+      "category": "AI Tips",
+      "cover": "assets/images/gpt-5-6-for-creators.webp",
+      "date": "2026-09-07",
+      "publishAt": "2026-09-07T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-gpt-5-6-for-creators.html",
+      "seo": {
+        "title": "GPT-5.6 for Creators: What Actually Matters",
+        "description": "GPT-5.6 for creators brings stronger design judgment, computer use and end-to-end workflows that matter more than another benchmark score.",
+        "targetKeyword": "GPT-5.6 for creators",
+        "secondaryKeywords": [
+          "GPT-5.6 design",
+          "GPT-5.6 computer use",
+          "AI creative workflows"
+        ],
+        "coverAlt": "An AI creative workspace showing GPT-5.6 moving from planning through design, visual inspection and final refinement.",
+        "socialTitle": "GPT-5.6 Is More Interesting When You Stop Looking at the Benchmarks",
+        "socialDescription": "Better design judgment, visual inspection and end-to-end tool use are the GPT-5.6 improvements creative professionals should actually watch."
+      }
+    },
+    {
       "slug": "google-flow-ai-creative-studio",
       "title": "Google Flow Is Becoming an AI Creative Studio, Not Just a Video Generator",
       "excerpt": "Google Flow now combines video, images, an AI creative agent and custom-built tools inside one workspace, pushing AI filmmaking beyond simple clip generation.",
