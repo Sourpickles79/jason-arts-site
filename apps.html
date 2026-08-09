@@ -7,18 +7,18 @@
   <meta name="description" content="AI Video Studio Agent is an upcoming desktop production workspace for AI filmmakers and visual storytellers. Plan storyboards, characters, shots, media, prompt guides, and music in one project hub.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.jasonarts.com/apps.html">
-  <meta property="og:title" content="AI Video Studio Agent — Coming Soon | Jason Arts">
-  <meta property="og:description" content="An upcoming desktop production workspace for AI filmmaking: storyboards, characters, media, prompts, music, and project organization in one place.">
+  <meta property="og:title" content="AI Video Studio Agent | Jason Arts">
+  <meta property="og:description" content="Your film. One workspace. Plan storyboards, characters, media, prompts, and music in a focused desktop production hub for AI filmmaking.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jasonarts.com/apps.html">
-  <meta property="og:image" content="https://www.jasonarts.com/assets/images/ai-video-studio-agent-storyboard-polished.webp">
-  <meta property="og:image:width" content="1906">
-  <meta property="og:image:height" content="1132">
-  <meta property="og:image:alt" content="AI Video Studio Agent storyboard workspace for an AI filmmaking project">
+  <meta property="og:image" content="https://www.jasonarts.com/assets/images/ai-video-studio-agent-promo-v2.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Video Studio Agent cinematic production workspace">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Video Studio Agent — Coming Soon | Jason Arts">
-  <meta name="twitter:description" content="An upcoming desktop production workspace for AI filmmaking, visual storytelling, prompts, media, and music.">
-  <meta name="twitter:image" content="https://www.jasonarts.com/assets/images/ai-video-studio-agent-storyboard-polished.webp">
+  <meta name="twitter:title" content="AI Video Studio Agent | Jason Arts">
+  <meta name="twitter:description" content="Your film. One workspace. A focused desktop production hub for AI filmmakers and visual storytellers.">
+  <meta name="twitter:image" content="https://www.jasonarts.com/assets/images/ai-video-studio-agent-promo-v2.webp">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/images/favicon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -42,33 +42,16 @@
       box-shadow: 0 30px 90px rgba(0, 0, 0, .28);
     }
     .app-card + .feature-grid { margin-bottom: clamp(56px, 8vw, 104px); }
-    .studio-coming-soon { margin-bottom: clamp(56px, 8vw, 104px); }
-    .studio-card {
-      overflow: hidden;
-      border: 1px solid rgba(114, 101, 255, .44);
-      border-radius: 28px;
+    .app-card--studio {
+      border-color: rgba(67, 210, 192, .3);
       background:
-        radial-gradient(circle at 88% 8%, rgba(45, 209, 222, .2), transparent 30%),
-        radial-gradient(circle at 8% 88%, rgba(145, 77, 255, .18), transparent 36%),
-        linear-gradient(145deg, #111638, #080b21 60%, #0d1d35);
-      box-shadow: 0 32px 90px rgba(2, 5, 30, .52);
+        radial-gradient(circle at 92% 8%, rgba(67, 210, 192, .1), transparent 32%),
+        linear-gradient(145deg, rgba(18, 27, 34, .98), rgba(7, 12, 15, .98));
     }
-    .studio-card-top { display: grid; grid-template-columns: minmax(0, .9fr) minmax(380px, 1.1fr); align-items: center; gap: clamp(28px, 5vw, 72px); padding: clamp(28px, 5vw, 72px); }
-    .studio-copy h2 { max-width: 650px; margin: 12px 0 18px; color: #f6f4ff; font-size: clamp(2.5rem, 5.4vw, 5.1rem); line-height: .93; }
-    .studio-kicker { margin: 0; color: #68e6ef; letter-spacing: .16em; text-transform: uppercase; font-size: .78rem; font-weight: 800; }
-    .studio-copy .app-lead { color: #d8d9ef; }
-    .studio-status { display: inline-flex; align-items: center; gap: 8px; margin: 24px 0 0; color: #d9c8ff; font-size: .82rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
-    .studio-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #42dfad; box-shadow: 0 0 16px #42dfad; }
-    .studio-actions { margin-top: 28px; }
-    .studio-actions .button.primary { background: linear-gradient(100deg, #35d6df, #8054ef); border-color: #5e75ee; }
-    .studio-visual { margin: 0; overflow: hidden; border: 1px solid rgba(180, 190, 255, .28); border-radius: 18px; background: #060820; box-shadow: 0 28px 58px rgba(0, 0, 0, .42); }
-    .studio-visual img { display: block; width: 100%; height: auto; }
-    .studio-visual figcaption { padding: 12px 16px; color: #aeb3d4; font-size: .75rem; line-height: 1.45; }
-    .studio-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border-top: 1px solid rgba(180, 190, 255, .18); background: rgba(180, 190, 255, .18); }
-    .studio-gallery figure { position: relative; min-width: 0; margin: 0; overflow: hidden; background: #090d29; }
-    .studio-gallery img { display: block; width: 100%; aspect-ratio: 1.68; object-fit: cover; transition: transform .45s ease; }
-    .studio-gallery figure:hover img { transform: scale(1.035); }
-    .studio-gallery figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 32px 16px 14px; background: linear-gradient(transparent, rgba(4, 6, 24, .92)); color: #f5f3ff; font-size: .78rem; font-weight: 700; }
+    .app-card--studio .app-visual { border-color: rgba(67, 210, 192, .25); }
+    .app-card--studio .app-visual img { aspect-ratio: 1200 / 630; object-fit: cover; }
+    .app-status { display: inline-flex; align-items: center; gap: 8px; }
+    .app-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #43d2c0; box-shadow: 0 0 12px rgba(67, 210, 192, .8); }
     .app-kicker { color: #43d2c0; letter-spacing: .16em; text-transform: uppercase; font-size: .78rem; font-weight: 800; }
     .app-copy h2 { margin: 12px 0 18px; font-size: clamp(2.25rem, 5vw, 4.8rem); line-height: .94; }
     .app-lead { max-width: 760px; color: #d3ccc2; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.7; }
@@ -115,11 +98,9 @@
     .install-panel ol { margin-bottom: 0; color: #bbb5ad; line-height: 1.75; }
     @media (max-width: 900px) {
       .app-card { grid-template-columns: 1fr; }
-      .studio-card-top { grid-template-columns: 1fr; }
       .feature-grid { grid-template-columns: 1fr; }
       .tool-window { justify-self: start; }
     }
-    @media (max-width: 640px) { .studio-gallery { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
   {
@@ -152,7 +133,7 @@
     "operatingSystem": "Windows",
     "description": "An upcoming desktop production workspace for AI filmmakers and visual storytellers. Organize storyboards, scripts, characters, locations, media, prompt guides, prompts, and music in one project hub.",
     "url": "https://www.jasonarts.com/apps.html",
-    "image": "https://www.jasonarts.com/assets/images/ai-video-studio-agent-storyboard-polished.webp",
+    "image": "https://www.jasonarts.com/assets/images/ai-video-studio-agent-promo-v2.webp",
     "featureList": "Storyboards, character references, media organization, prompt vault, prompt guides, music planning, and project synchronization",
     "author": { "@type": "Person", "name": "Jason Johnson", "url": "https://www.jasonarts.com/about.html" }
   }
@@ -203,53 +184,44 @@
       <div class="hero-content">
         <p class="eyebrow">Jason Arts Apps</p>
         <h1>Apps &amp; Games</h1>
-        <p class="intro">A free browser game and a focused 3ds Max modeling tool, both built from real production needs.</p>
+        <p class="intro">Original tools for filmmaking, play, and 3D production—each built around a real creative need.</p>
       </div>
     </section>
 
     <section class="app-section">
       <div class="app-shell">
-        <section class="studio-coming-soon" aria-labelledby="studio-agent-title">
-          <article class="studio-card">
-            <div class="studio-card-top">
-              <div class="studio-copy">
-                <p class="studio-kicker">Coming soon · desktop production workspace</p>
-                <h2 id="studio-agent-title">AI Video Studio Agent</h2>
-                <p class="app-lead">A focused home base for AI filmmaking and visual storytelling. Build an entire project in one connected workspace: storyboards, scripts, character references, locations, shot media, prompt guides, music, and reusable prompt libraries.</p>
-                <p class="app-origin">Made for creators developing AI short films, music videos, cinematic sequences, and ambitious visual worlds—without losing the details that make a project feel consistent from the first idea to the final cut.</p>
-                <p class="studio-status">In active development · coming for sale soon</p>
-                <div class="app-badges" aria-label="AI Video Studio Agent features">
-                  <span class="app-badge">Storyboards &amp; Scripts</span>
-                  <span class="app-badge">Character &amp; Location References</span>
-                  <span class="app-badge">Shot Media Organization</span>
-                  <span class="app-badge">Prompt Vault</span>
-                  <span class="app-badge">Music Planning</span>
-                </div>
-                <div class="app-actions studio-actions">
-                  <a class="button primary" href="index.html#contact">Ask about early access</a>
-                </div>
-              </div>
-              <figure class="studio-visual">
-                <img src="assets/images/ai-video-studio-agent-storyboard-polished.webp" width="1627" height="967" alt="AI Video Studio Agent showing a storyboard workspace for a cinematic AI film project">
-                <figcaption>Build a production from acts and storyboards through the shots that bring it to life.</figcaption>
-              </figure>
+        <article class="app-card app-card--studio" aria-labelledby="studio-agent-title">
+          <div class="app-copy">
+            <p class="app-kicker">Desktop Production Workspace · In Development</p>
+            <h2 id="studio-agent-title">AI Video Studio Agent</h2>
+            <p class="app-lead">One organized home for an AI film from first idea to final cut. Plan the story, keep characters and locations consistent, manage every shot, and save the prompts and music decisions that shape the finished piece.</p>
+            <p class="app-origin">Built from the real workflow behind AI short films, music videos, and cinematic visual stories—so the creative work stays connected instead of disappearing across folders, notes, and disconnected tools.</p>
+
+            <div class="app-badges" aria-label="AI Video Studio Agent details">
+              <span class="app-badge">Storyboards &amp; Scripts</span>
+              <span class="app-badge">Characters &amp; Locations</span>
+              <span class="app-badge">Media &amp; Music</span>
+              <span class="app-badge">Prompt Builder</span>
+              <span class="app-badge">Prompt Vault</span>
             </div>
-            <div class="studio-gallery" aria-label="AI Video Studio Agent preview screens">
-              <figure>
-                <img src="assets/images/ai-video-studio-agent-characters-polished.webp" width="1622" height="970" alt="AI Video Studio Agent character reference workspace with visual character sheets">
-                <figcaption>Keep character references connected to the project.</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/images/ai-video-studio-agent-media-polished.webp" width="1625" height="968" alt="AI Video Studio Agent media workspace for shot clips and reference images">
-                <figcaption>Organize shot clips, finals, and visual references.</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/images/ai-video-studio-agent-prompt-vault-polished.webp" width="1627" height="967" alt="AI Video Studio Agent prompt vault with reusable AI image and video prompts">
-                <figcaption>Save reusable prompts, styles, and creative recipes.</figcaption>
-              </figure>
+
+            <div class="app-actions">
+              <a class="button primary" href="index.html#contact">Ask About Early Access</a>
             </div>
-          </article>
-        </section>
+            <p class="app-meta app-status">In active development · Windows release planned</p>
+          </div>
+
+          <figure class="app-visual">
+            <img src="assets/images/ai-video-studio-agent-promo-v2.webp" width="1200" height="630" alt="AI Video Studio Agent presented as a cinematic storyboard and character production workspace">
+            <figcaption>Your film, one workspace—from story structure and continuity to the media behind every shot.</figcaption>
+          </figure>
+        </article>
+
+        <div class="feature-grid" aria-label="AI Video Studio Agent features">
+          <div class="feature"><strong>Shape the whole story</strong><p>Build acts, scenes, scripts, and storyboard cards in one production view, with every shot tied back to the larger narrative.</p></div>
+          <div class="feature"><strong>Protect visual continuity</strong><p>Keep character sheets, locations, references, and prompt guides beside the project so the world stays recognizable from shot to shot.</p></div>
+          <div class="feature"><strong>Bring every asset home</strong><p>Organize clips, final renders, images, music, reusable prompts, and production notes without losing the thread of the film.</p></div>
+        </div>
 
         <article class="app-card">
           <div class="app-copy">
