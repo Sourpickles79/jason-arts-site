@@ -788,14 +788,38 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "vray-vantage-3ds-max-realtime-viewport",
+      "title": "V-Ray + Vantage Inside 3ds Max: Real-Time Rendering Without Leaving Your Scene",
+      "excerpt": "Chaos Vantage can now run directly inside the V-Ray viewport in 3ds Max, giving artists a fully ray-traced real-time view while they build, light and animate.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/vray-vantage-3ds-max-realtime-viewport.webp",
+      "date": "2026-08-27",
+      "publishAt": "2026-08-09T15:10:24.957Z",
+      "status": "scheduled",
+      "url": "blog-vray-vantage-3ds-max-realtime-viewport.html",
+      "seo": {
+        "title": "V-Ray Vantage Inside 3ds Max: Real-Time Rendering",
+        "description": "See how V-Ray Vantage in 3ds Max brings real-time ray-traced lighting, materials and animation previews directly into the viewport.",
+        "targetKeyword": "V-Ray Vantage in 3ds Max",
+        "secondaryKeywords": [
+          "V-Ray real-time rendering",
+          "Chaos Vantage 3ds Max",
+          "V-Ray viewport rendering"
+        ],
+        "coverAlt": "A 3ds Max architectural scene displayed with real-time ray-traced V-Ray and Chaos Vantage rendering inside the viewport.",
+        "socialTitle": "V-Ray Just Made the 3ds Max Viewport Much More Interesting",
+        "socialDescription": "Chaos Vantage now runs directly inside the V-Ray viewport in 3ds Max, giving artists real-time ray-traced feedback while they build, light and animate."
+      }
+    },
+    {
       "slug": "ai-building-worlds-siggraph-2026",
       "title": "AI Is Learning to Build Worlds, Not Just Pictures",
       "excerpt": "SIGGRAPH 2026 showed how world models, neural rendering, physics simulation and AI agents are moving generative AI toward interactive 3D environments.",
       "category": "Singularity",
       "cover": "assets/images/ai-building-worlds-siggraph-2026.webp",
-      "date": "2026-08-09",
+      "date": "2026-08-20",
       "publishAt": "2026-08-09T14:45:40.750Z",
-      "status": "published",
+      "status": "scheduled",
       "url": "blog-ai-building-worlds-siggraph-2026.html",
       "seo": {
         "title": "AI Is Learning to Build Worlds, Not Just Pictures",
