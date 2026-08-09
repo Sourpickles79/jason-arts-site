@@ -788,6 +788,54 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "google-flow-ai-creative-studio",
+      "title": "Google Flow Is Becoming an AI Creative Studio, Not Just a Video Generator",
+      "excerpt": "Google Flow now combines video, images, an AI creative agent and custom-built tools inside one workspace, pushing AI filmmaking beyond simple clip generation.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/google-flow-ai-creative-studio.webp",
+      "date": "2026-09-04",
+      "publishAt": "2026-09-04T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-google-flow-ai-creative-studio.html",
+      "seo": {
+        "title": "Google Flow Is Becoming an AI Creative Studio",
+        "description": "Google Flow now combines AI video, project-aware agents, multimodal creation and custom Flow Tools in a growing AI creative studio.",
+        "targetKeyword": "Google Flow AI creative studio",
+        "secondaryKeywords": [
+          "Google Flow Tools",
+          "Google Flow agent",
+          "AI filmmaking workflow"
+        ],
+        "coverAlt": "A cinematic Google Flow workspace combining video shots, reference images, an AI agent and customizable creative tools.",
+        "socialTitle": "Google Flow Is Turning Into Something Much Bigger Than a Video Generator",
+        "socialDescription": "Agents, custom tools, multimodal creation and better asset management are turning Google Flow into an AI-native production workspace."
+      }
+    },
+    {
+      "slug": "3ds-max-2027-visualization-tools",
+      "title": "3ds Max 2027: The New Tools Visualization Artists Will Actually Use",
+      "excerpt": "3ds Max 2027 adds Smart Bevel, better spline tools, Noise Plus and several workflow improvements that are much more useful than the usual feature-list marketing suggests.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/3ds-max-2027-visualization-tools.webp",
+      "date": "2026-08-15",
+      "publishAt": "2026-08-15T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-3ds-max-2027-visualization-tools.html",
+      "seo": {
+        "title": "3ds Max 2027: Best New Tools for Visualization",
+        "description": "See which 3ds Max 2027 features matter for visualization artists, including Smart Bevel, Noise Plus, spline improvements and Autodesk Assistant.",
+        "targetKeyword": "3ds Max 2027",
+        "secondaryKeywords": [
+          "3ds Max Smart Bevel",
+          "3ds Max Noise Plus",
+          "3ds Max visualization tools"
+        ],
+        "coverAlt": "A professional hard-surface model beside a 3ds Max 2027 interface highlighting Smart Bevel and new modeling tools.",
+        "socialTitle": "3ds Max 2027: The New Tools I'll Actually Use",
+        "socialDescription": "Smart Bevel gets the attention, but several smaller 3ds Max 2027 upgrades could make everyday visualization work noticeably faster."
+      }
+    },
+    {
       "slug": "vray-vantage-3ds-max-realtime-viewport",
       "title": "V-Ray + Vantage Inside 3ds Max: Real-Time Rendering Without Leaving Your Scene",
       "excerpt": "Chaos Vantage can now run directly inside the V-Ray viewport in 3ds Max, giving artists a fully ray-traced real-time view while they build, light and animate.",
