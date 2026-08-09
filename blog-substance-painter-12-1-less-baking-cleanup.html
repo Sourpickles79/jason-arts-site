@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Substance Painter 12.1: Less Baking Cleanup | Jason Arts Blog</title>
+  <meta name="description" content="Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that simplify texturing workflows.">
+  <meta name="author" content="Jason Arts">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="publish-status" content="scheduled">
+  <meta name="publish-at" content="2026-08-20T14:00:00.000Z">
+  <link rel="canonical" href="https://jasonarts.com/blog-substance-painter-12-1-less-baking-cleanup.html">
+  <link rel="alternate" type="application/rss+xml" title="Jason Arts Blog RSS Feed" href="https://jasonarts.com/feed.xml">
+  <meta property="article:published_time" content="2026-08-20T14:00:00.000Z">
+  <meta property="article:section" content="3D / Max Tips">
+  <meta property="og:title" content="Substance Painter 12.1 Fixes Some Very Real Workflow Problems">
+  <meta property="og:description" content="OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV make Painter 12.1 a practical update for production artists.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jasonarts.com/blog-substance-painter-12-1-less-baking-cleanup.html">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/substance-painter-12-1-less-baking-cleanup.webp">
+  <meta property="og:image:alt" content="A weathered hard-surface model displayed beside Substance Painter 12.1 material and baking controls.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Substance Painter 12.1 Fixes Some Very Real Workflow Problems">
+  <meta name="twitter:description" content="OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV make Painter 12.1 a practical update for production artists.">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/substance-painter-12-1-less-baking-cleanup.webp">
+  <meta name="twitter:image:alt" content="A weathered hard-surface model displayed beside Substance Painter 12.1 material and baking controls.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://jasonarts.com/blog-substance-painter-12-1-less-baking-cleanup.html#article",
+      "headline": "Substance Painter 12.1: Less Baking Cleanup, Better Materials",
+      "description": "Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that simplify texturing workflows.",
+      "image": [
+        "https://jasonarts.com/assets/images/substance-painter-12-1-less-baking-cleanup.webp"
+      ],
+      "datePublished": "2026-08-20T14:00:00.000Z",
+      "dateModified": "2026-08-20T14:00:00.000Z",
+      "articleSection": "3D / Max Tips",
+      "keywords": [
+        "Substance Painter 12.1",
+        "Substance Painter OpenPBR",
+        "Painter Auto Rebake",
+        "Skew Map Painting"
+      ],
+      "wordCount": 1243,
+      "timeRequired": "PT6M",
+      "author": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/about.html",
+        "sameAs": "https://www.linkedin.com/in/jason-johnson-5511793/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jason Arts",
+        "url": "https://jasonarts.com/"
+      },
+      "mainEntityOfPage": "https://jasonarts.com/blog-substance-painter-12-1-less-baking-cleanup.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jasonarts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://jasonarts.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Substance Painter 12.1: Less Baking Cleanup, Better Materials",
+          "item": "https://jasonarts.com/blog-substance-painter-12-1-less-baking-cleanup.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jason Arts home"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="ai.html">AI</a>
+      <a href="blog.html">Blog</a>
+      <a href="channels.html">Channels</a>
+      <a href="books.html">Books</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="pill" href="portfolio.html">View Portfolio <span aria-hidden="true">-&gt;</span></a>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:140px;">
+      <div class="post-header">
+        <div class="blog-meta">
+          <span>3D / Max Tips</span><span class="dot">&middot;</span><span>2026-08-20</span>
+        </div>
+        <h1>Substance Painter 12.1: Less Baking Cleanup, Better Materials</h1>
+      </div>
+
+      <div class="post-cover"><img src="assets/images/substance-painter-12-1-less-baking-cleanup.webp" alt="A weathered hard-surface model displayed beside Substance Painter 12.1 material and baking controls."></div>
+
+      <article class="post-body">
+        <p>Substance 3D Painter 12.1 focuses on something working artists usually appreciate more than a flashy demo: removing repetitive cleanup.</p>
+
+        <p>The update adds support for OpenPBR, introduces Skew Map Painting, expands the baking workflow with Auto Rebake and adds a new hard-surface mode for automatic UV unwrapping.</p>
+
+        <p>None of these features suddenly replaces good modeling, thoughtful UV work or careful material design.</p>
+
+        <p>They do attack several familiar problems that can slow down an otherwise straightforward texturing job.</p>
+
+        <h2>Why this update matters</h2>
+
+        <p>Texture painting often becomes difficult before the painting even begins.</p>
+
+        <p>A hard-surface model may contain angled details that bake poorly. A revised mesh may require another full bake. Automatically generated UVs may waste space or orient shells awkwardly. Materials may need to move between applications that interpret shader properties differently.</p>
+
+        <p>Every one of those issues can be solved manually.</p>
+
+        <p>The problem is how often they need to be solved.</p>
+
+        <p>Painter 12.1 appears aimed at making that preparation and correction stage less stubborn.</p>
+
+        <h2>OpenPBR creates a more portable material foundation</h2>
+
+        <p>OpenPBR is an open material model developed to improve compatibility between tools and renderers.</p>
+
+        <p>Painter 12.1 adds initial support for the OpenPBR material definition, including a dedicated shader and relevant channels.</p>
+
+        <p>The practical benefit is consistency.</p>
+
+        <p>A material created in one application should require fewer interpretive gymnastics when it moves into another part of the pipeline. That matters for artists working across Painter, rendering software, real-time engines and other content-creation tools.</p>
+
+        <p>OpenPBR will not make every renderer produce an identical image automatically. Lighting, color management, implementation details and renderer-specific features still matter.</p>
+
+        <p>It does create a more standardized description of what the material is supposed to be.</p>
+
+        <p>For product visualization, furniture work and digital assets that may be reused in several destinations, that is a useful direction.</p>
+
+        <img src="assets/images/substance-painter-openpbr-skew-map.webp" alt="Substance Painter material previews beside an angled hard-surface asset being corrected with an OpenPBR workflow and Skew Map Painting">
+
+        <h2>Skew Map Painting fixes directional baking errors</h2>
+
+        <p>Skewing happens when baked details appear stretched or pulled because the projection direction does not suit the surface.</p>
+
+        <p>This often becomes visible around angled panels, chamfers, mechanical cuts and other hard-surface details.</p>
+
+        <p>Traditionally, correcting that may involve changing the low-poly mesh, adjusting the cage, editing vertex normals or rebuilding the bake setup.</p>
+
+        <p>Painter 12.1 allows artists to paint a skew-correction map directly inside the baking workflow.</p>
+
+        <p>That means the projection direction can be corrected locally using a painting process instead of forcing a larger modeling change.</p>
+
+        <p>This is especially useful when most of the bake is already good.</p>
+
+        <p>Rebuilding an entire asset because one small panel projects badly is the 3D equivalent of replacing a kitchen because one cabinet door sticks.</p>
+
+        <p>Local correction is the better tool.</p>
+
+        <p>Adobe also includes helper behavior such as edge protection to make the correction process easier around important boundaries.</p>
+
+        <h2>Auto Rebake should make iteration less painful</h2>
+
+        <p>Auto Rebake updates baked maps as relevant settings or skew corrections change.</p>
+
+        <p>The useful part is that Painter is designed to limit the rebake to affected UV areas when possible rather than recalculating everything.</p>
+
+        <p>That can make experimentation much faster.</p>
+
+        <p>An artist can paint a skew correction, see the affected area update and continue working without repeatedly opening the baking window and launching another complete bake.</p>
+
+        <p>This matters most on assets with larger texture sets or expensive baking operations.</p>
+
+        <p>A small prop may rebake quickly enough that the old process is only mildly annoying.</p>
+
+        <p>A complicated mechanical asset with several maps and texture sets can turn repeated rebaking into a coffee-based lifestyle.</p>
+
+        <p>Auto Rebake does not remove the need to inspect the result.</p>
+
+        <p>It reduces the friction between identifying a problem and testing a correction.</p>
+
+        <h2>Hard-surface Auto UV targets mechanical assets</h2>
+
+        <p>Painter already includes automatic UV tools, but version 12.1 introduces a mode aimed specifically at hard-surface geometry.</p>
+
+        <p>Adobe describes this mode as producing orthographically aligned layouts for mechanical assets.</p>
+
+        <p>That means shells should be oriented more logically for objects built from straight edges, manufactured panels and mechanical forms.</p>
+
+        <p>Clean orientation helps with:</p>
+
+        <p>- Directional materials
+- Wear generators
+- Brushed finishes
+- Decals
+- Pattern alignment
+- Manual painting
+- Efficient packing</p>
+
+        <p>Automatic UVs are not the correct answer for every production asset.</p>
+
+        <p>Hero products, carefully art-directed furniture and objects with strict texel-density or seam requirements may still benefit from deliberate manual UV work.</p>
+
+        <p>The new mode could be extremely useful for quick assets, background objects, kitbash parts, prototypes and projects where speed matters more than handcrafted UV perfection.</p>
+
+        <h2>The new features work best together</h2>
+
+        <p>The strongest part of the update is not any single feature.</p>
+
+        <p>It is how the features support the same workflow.</p>
+
+        <p>Hard-surface Auto UV prepares a mechanical asset more quickly.</p>
+
+        <p>Skew Map Painting corrects problem projections.</p>
+
+        <p>Auto Rebake updates those corrections without restarting the entire process.</p>
+
+        <p>OpenPBR gives the finished material a more standardized foundation for moving through the pipeline.</p>
+
+        <p>Together, they address preparation, baking, correction and delivery.</p>
+
+        <p>That is more valuable than adding one isolated tool that looks impressive but lives alone in a menu.</p>
+
+        <img src="assets/images/substance-painter-auto-rebake-auto-uv.webp" alt="A hard-surface model progressing through automatic UV layout, localized rebaking and a finished textured result">
+
+        <h2>Where product artists may notice the biggest improvement</h2>
+
+        <p>Furniture and product visualization assets often contain:</p>
+
+        <p>- Repeated manufactured parts
+- Tight bevels
+- Hardware
+- Routed panels
+- Metal brackets
+- Plastic components
+- Directional wood grain
+- Decals and labels</p>
+
+        <p>Those are exactly the kinds of assets where baking errors and UV orientation become visible quickly.</p>
+
+        <p>A wood grain running diagonally across a straight panel immediately looks wrong. A decal stretching across an angled surface looks wrong. A baked screw detail that smears into the surrounding surface looks wrong.</p>
+
+        <p>Painter 12.1 gives artists more ways to fix those issues without jumping backward through the entire pipeline.</p>
+
+        <h2>Should you upgrade immediately?</h2>
+
+        <p>The update is useful enough to test, especially for artists who regularly bake hard-surface assets.</p>
+
+        <p>I would still avoid moving an active production project without checking:</p>
+
+        <p>- Plugin compatibility
+- Export presets
+- Custom shaders
+- Existing project behavior
+- OpenPBR support in downstream tools
+- GPU and operating-system requirements</p>
+
+        <p>Painter 12.1 also raises the minimum supported macOS version to macOS 13 Ventura.</p>
+
+        <p>The safest approach is to install the update, copy a real project and test the complete export pipeline before committing important work.</p>
+
+        <h2>My practical takeaway</h2>
+
+        <p>Substance Painter 12.1 is not trying to reinvent texture painting.</p>
+
+        <p>It is trying to make several irritating parts of texture painting require fewer steps.</p>
+
+        <p>That is a good kind of update.</p>
+
+        <p>OpenPBR supports a more consistent material pipeline. Skew Map Painting gives artists a direct way to repair projection problems. Auto Rebake makes those corrections faster to test, while hard-surface Auto UV provides a better automatic starting point for mechanical assets.</p>
+
+        <p>The feature I expect artists to appreciate most depends on their workflow.</p>
+
+        <p>For someone baking complicated hard-surface models, Skew Map Painting and Auto Rebake may be the stars.</p>
+
+        <p>For someone processing many secondary assets, the hard-surface Auto UV mode may save more time over the course of a project.</p>
+
+        <p>Either way, Painter 12.1 looks focused on practical production problems instead of adding another shiny button whose main purpose is appearing in a trailer.</p>
+
+        <p>More 3D production articles are available on the [JasonArts blog](https://www.jasonarts.com/blog).</p>
+
+        <h2>Sources</h2>
+
+        <p>Adobe Substance 3D Painter 12.1 Release Notes:
+https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/release-notes/version-12-1</p>
+
+        <p>Adobe Substance 3D Painter Skew Correction Documentation:
+https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/skew-correction</p>
+
+        <p>Adobe Substance 3D 2026 Product Announcement:
+https://blog.adobe.com/en/publish/2026/07/21/adobe-substance-3d-unveils-new-innovations-deliver-faster-workflows-openpbr-everywhere-digital-twins-scale</p>
+      </article>
+
+      <div class="post-cta">
+        <p><strong>Explore more:</strong> <a href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">JasonArts Blog</a> · <a href="https://www.jasonarts.com/" target="_blank" rel="noopener">JasonArts Home</a></p>
+        <p><strong>References:</strong> <a href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/release-notes/version-12-1" target="_blank" rel="noopener">Adobe: Painter 12.1 Release Notes</a> · <a href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/skew-correction" target="_blank" rel="noopener">Adobe: Skew Correction Documentation</a></p>
+      </div>
+
+      <div class="post-cta">
+        <p>Explore more practical 3D tools, workflows and production lessons from JasonArts.</p>
+        <a class="button primary" href="https://www.jasonarts.com/blog" target="_blank" rel="noopener">Explore More 3D Articles</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/images/jason-arts-logo.jpg" alt="" aria-hidden="true"><small>Jason Arts</small></div>
+    <p>© <span id="year"></span> Jason Arts. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/header.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
