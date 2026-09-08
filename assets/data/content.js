@@ -788,6 +788,54 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "claude-fable-5-1-long-horizon-ai",
+      "title": "Claude Fable 5.1: The Long-Haul AI Model Creators Should Watch",
+      "excerpt": "Claude Fable 5.1 focuses on long-running projects, stronger writing, careful problem-solving, and lower agentic costs instead of simply winning the first prompt.",
+      "category": "Singularity",
+      "cover": "assets/images/claude-fable-5-1-long-horizon-work.webp",
+      "date": "2026-09-12",
+      "publishAt": "2026-09-12T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-claude-fable-5-1-long-horizon-ai.html",
+      "seo": {
+        "title": "Claude Fable 5.1: The Long-Haul AI Model",
+        "description": "Claude Fable 5.1 brings stronger long-running reasoning, clearer writing, and lower agentic costs. Here is what creators should know.",
+        "targetKeyword": "Claude Fable 5.1",
+        "secondaryKeywords": [
+          "Anthropic Fable 5.1",
+          "long-horizon AI",
+          "agentic AI model"
+        ],
+        "coverAlt": "A dark creative workstation displays a long project timeline connected by glowing checkpoints.",
+        "socialTitle": "Claude Fable 5.1 Is Built for the Messy Middle of Creative Work",
+        "socialDescription": "Fable 5.1 promises stronger long-term reasoning, clearer writing, and fewer lost instructions during complicated creative projects."
+      }
+    },
+    {
+      "slug": "gpt-6-astra-creative-work",
+      "title": "GPT-6 Astra: What It Actually Changes for Creative Work",
+      "excerpt": "GPT-6 Astra promises stronger computer use, visual judgment, and long-term project awareness—but its real value may be helping creators finish complicated work.",
+      "category": "Singularity",
+      "cover": "assets/images/gpt-6-astra-creative-workflow.webp",
+      "date": "2026-09-09",
+      "publishAt": "2026-09-09T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "blog-gpt-6-astra-creative-work.html",
+      "seo": {
+        "title": "GPT-6 Astra: What It Changes for Creative Work",
+        "description": "GPT-6 Astra combines computer use, visual judgment, and project continuity. Here is what the new AI model could mean for working creators.",
+        "targetKeyword": "GPT-6 Astra",
+        "secondaryKeywords": [
+          "GPT-6 creative workflow",
+          "OpenAI Astra",
+          "AI for creative work"
+        ],
+        "coverAlt": "A 3D artist works at a digital production workstation connected to a glowing AI visualization.",
+        "socialTitle": "GPT-6 Astra Could Change How Creators Finish Projects",
+        "socialDescription": "Astra is not just a smarter chatbot. Its computer use, visual judgment, and project memory could make it a serious creative-production assistant."
+      }
+    },
+    {
       "slug": "gpt-5-6-for-creators",
       "title": "GPT-5.6 for Creators: The Interesting Part Isn't the Benchmark Score",
       "excerpt": "GPT-5.6 puts more emphasis on design judgment, computer use and end-to-end project work, which may matter to creators more than another chart full of benchmark numbers.",
