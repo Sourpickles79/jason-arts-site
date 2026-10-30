@@ -479,10 +479,10 @@
       "cover": "assets/images/cover-ispy-corgo-pawsome.webp",
       "accent": "#f4b24d",
       "description": "Follow Corgo the Corgi through 37 pages of vivid search-and-find scenes, from the zoo to outer space to the Wild West. Built for ages 3-6 to sharpen observation skills and spark imagination. Book 1 of The Adventures of Corgo.",
-      "age": "Ages 3-7",
+      "age": "Ages 3-6",
       "pages": "Book 1 of 2: The Adventures of Corgo",
       "format": "Kindle Edition & Paperback",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 7,
       "buyUrl": "https://www.amazon.com/Spy-Corgo-Pawsome-Adventure-Treasures-ebook/dp/B0CXX3B2XN"
     },
@@ -492,10 +492,10 @@
       "cover": "assets/images/cover-ispy-corgo-toy-hunt.webp",
       "accent": "#7fb15d",
       "description": "Book 2 of The Adventures of Corgo. Join Corgo from his cozy home to the bustling park on a search-and-find toy hunt built for young explorers ages 3-6.",
-      "age": "Ages 3-7",
+      "age": "Ages 3-6",
       "pages": "Book 2 of 2: The Adventures of Corgo",
       "format": "Kindle Edition & Paperback",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 2,
       "buyUrl": "https://www.amazon.com/Spy-Corgo-Search-Find-Explorers-ebook/dp/B0DJTXL96Q"
     },
@@ -508,7 +508,7 @@
       "age": "Teens & Adults",
       "pages": "Paperback",
       "format": "Coloring Book",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 1,
       "buyUrl": "https://www.amazon.com/Dazzling-Dachshunds-Delightful-Coloring-Collection/dp/B0CW2231JW"
     },
@@ -534,7 +534,7 @@
       "age": "Teens & Adults",
       "pages": "48 pages",
       "format": "Paperback",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 2,
       "buyUrl": "https://www.amazon.com/Whisker-Wonderland-Creativity-Whimsical-Adventures/dp/B0CWHDC5B9"
     },
@@ -560,7 +560,7 @@
       "age": "Teens & Adults",
       "pages": "Paperback",
       "format": "Coloring Book",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 6,
       "buyUrl": "https://www.amazon.com/Tranquil-Corgi-Patterns-Whimsical-Adventures/dp/B0CSZB8B9C"
     },
@@ -599,7 +599,7 @@
       "age": "Adults",
       "pages": "Hardcover & Paperback",
       "format": "Puzzle Book",
-      "rating": 5.0,
+      "rating": 5,
       "reviewCount": 1,
       "buyUrl": "https://www.amazon.com/Variety-Puzzle-Book-Adults-Relaxation/dp/B0CR2VXDQR"
     }

@@ -45,8 +45,16 @@ export function destinationFor(value) {
       const path = pagePath(u.pathname);
       return path ? `Site: ${path}` : null;
     }
-    if (/(^|\.)youtu\.be$|(^|\.)youtube\.com$/.test(host)) return 'YouTube';
-    if (/(^|\.)amazon\.[a-z.]+$|^amzn\.to$/.test(host)) return 'Amazon / books';
+    if (/(^|\.)youtu\.be$|(^|\.)youtube\.com$/.test(host)) {
+      const id = host === 'youtu.be' ? u.pathname.slice(1) : u.searchParams.get('v') || (u.pathname.match(/^\/(?:shorts|embed)\/([\w-]{11})$/) || [])[1];
+      if (/^[a-zA-Z0-9_-]{11}$/.test(id || '')) return `YouTube video: ${id}`;
+      const channel = (u.pathname.match(/^\/(channel\/UC[\w-]{22}|@[a-zA-Z0-9_.-]{1,80})\/?$/) || [])[1];
+      return channel ? `YouTube channel: ${channel}` : 'YouTube';
+    }
+    if (/(^|\.)amazon\.[a-z.]+$|^amzn\.to$/.test(host)) {
+      const asin = (u.pathname.match(/\/(?:dp|gp\/product)\/([a-zA-Z0-9]{10})(?:\/|$)/) || [])[1];
+      return asin ? `Book: ${asin.toUpperCase()}` : 'Amazon / books';
+    }
     if (/(^|\.)spotify\.com$/.test(host)) return 'Spotify';
     if (/(^|\.)(artstation\.com|linkedin\.com|instagram\.com|facebook\.com|x\.com|twitter\.com)$/.test(host)) return `Social: ${host}`;
     return 'Other external link';
@@ -80,7 +88,8 @@ export async function handleAudience(request, env) {
   if (!body || typeof body !== 'object' || Array.isArray(body)) return reply({ error: 'Invalid event.' }, 400);
   const page = pagePath(body.page);
   const event = body.event;
-  if (!page || !['view', 'engaged', 'click'].includes(event) || typeof body.id !== 'string' || !/^[a-zA-Z0-9_-]{16,80}$/.test(body.id)) return reply({ error: 'Invalid event.' }, 400);
+  if (!page || !['view', 'engaged', 'click', 'lead'].includes(event) || typeof body.id !== 'string' || !/^[a-zA-Z0-9_-]{16,80}$/.test(body.id)) return reply({ error: 'Invalid event.' }, 400);
+  if (event === 'lead' && (page !== '/' || body.target !== 'contact-form')) return reply({ error: 'Invalid contact event.' }, 400);
   const target = event === 'click' ? destinationFor(body.target) : '';
   if (event === 'click' && !target) return reply({ error: 'Invalid destination.' }, 400);
   const ua = request.headers.get('User-Agent') || '';

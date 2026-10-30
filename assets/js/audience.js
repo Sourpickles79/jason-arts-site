@@ -50,10 +50,19 @@
     try { u = new URL(a.href, location.href); } catch (_) { return; }
     if (!['https:', 'http:', 'mailto:'].includes(u.protocol)) return;
     if (u.protocol !== 'mailto:' && /^(www\.)?jasonarts\.com$/.test(u.hostname) && u.pathname === location.pathname && u.hash !== '#contact') return;
-    const target = u.protocol === 'mailto:' ? 'mailto:contact' : u.origin + u.pathname + (u.hash === '#contact' ? '#contact' : '');
+    // Retain only a public YouTube video identifier, never arbitrary query data.
+    const videoId = /^(www\.|m\.)?youtube\.com$/.test(u.hostname) && u.pathname === '/watch' ? u.searchParams.get('v') : '';
+    const target = u.protocol === 'mailto:' ? 'mailto:contact' : u.origin + u.pathname + (/^[a-zA-Z0-9_-]{11}$/.test(videoId || '') ? '?v=' + videoId : '') + (u.hash === '#contact' ? '#contact' : '');
     if (sentTargets.has(target) || sentTargets.size >= 10) return;
     sentTargets.add(target); send('click', target);
   }, { capture: true });
+  let contactConfirmed = false;
+  // Dispatched by the existing form handler only after Formspree returns success.
+  addEventListener('ja-contact-success', () => {
+    if (path !== '/' || !viewed || contactConfirmed) return;
+    contactConfirmed = true;
+    send('lead', 'contact-form');
+  });
   const timer = setInterval(checkEngaged, 1000);
   addEventListener('pagehide', () => clearInterval(timer), { once: true });
   view();

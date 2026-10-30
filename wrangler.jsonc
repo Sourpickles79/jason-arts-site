@@ -13,7 +13,27 @@
       "/blog-*",
       "/blog",
       "/blog.html",
-      "/blog/"
+      "/blog/",
+      "/",
+      "/index.html",
+      "/portfolio",
+      "/portfolio.html",
+      "/portfolio/",
+      "/books",
+      "/books.html",
+      "/books/",
+      "/ai",
+      "/ai.html",
+      "/ai/",
+      "/music",
+      "/music.html",
+      "/music/",
+      "/cozy",
+      "/cozy.html",
+      "/cozy/",
+      "/orb",
+      "/orb.html",
+      "/orb/"
     ]
   },
   "durable_objects": {

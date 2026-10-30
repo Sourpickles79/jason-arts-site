@@ -1,6 +1,8 @@
 import { DurableObject } from "cloudflare:workers";
 import { handleAudience, audienceStore } from "./audience.js";
 import { handleBlogIndex, handleSearchSitemap, canonicalSiteUrl } from "./seo.js";
+import { handleShowcase } from "./showcase.js";
+import { handleChannelApi, handleChannelPage } from "./channel-feeds.js";
 
 // Worker entry point for jason-arts-site.
 //
@@ -26,6 +28,13 @@ const RANGE_HOURS = {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    if (url.pathname === "/api/channel-videos") return handleChannelApi(request, env);
+    if (request.method === "GET" || request.method === "HEAD") {
+      const page = url.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "").replace(/\/$/, "") || "/";
+      if (["/", "/portfolio", "/books", "/ai"].includes(page)) return handleShowcase(request, env);
+      if (["/music", "/cozy", "/orb"].includes(page)) return handleChannelPage(request, env, page.slice(1));
+    }
 
     if (url.pathname === "/blog" || url.pathname === "/blog.html" || url.pathname === "/blog/") {
       if (request.method === "GET" || request.method === "HEAD") return handleBlogIndex(request, env);
