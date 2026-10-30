@@ -1,5 +1,6 @@
 import { DurableObject } from "cloudflare:workers";
 import { handleAudience, audienceStore } from "./audience.js";
+import { handleBlogIndex, handleSearchSitemap, canonicalSiteUrl } from "./seo.js";
 
 // Worker entry point for jason-arts-site.
 //
@@ -25,6 +26,10 @@ const RANGE_HOURS = {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    if (url.pathname === "/blog" || url.pathname === "/blog.html" || url.pathname === "/blog/") {
+      if (request.method === "GET" || request.method === "HEAD") return handleBlogIndex(request, env);
+    }
 
     if (url.pathname === "/api/audience") return handleAudience(request, env);
 
@@ -56,8 +61,8 @@ export default {
       return handlePlayRedirect(request, env);
     }
 
-    if (url.pathname === "/sitemap.xml" && request.method === "GET") {
-      return handleSitemap(request, env);
+    if (url.pathname === "/sitemap.xml" && (request.method === "GET" || request.method === "HEAD")) {
+      return handleSearchSitemap(request, env);
     }
 
     if (url.pathname === "/feed.xml" && (request.method === "GET" || request.method === "HEAD")) {
@@ -359,43 +364,6 @@ export class BlogLikeCounter extends DurableObject {
   }
 }
 
-async function handleSitemap(request, env) {
-  const sitemapResponse = await env.ASSETS.fetch(request);
-  if (!sitemapResponse.ok) return sitemapResponse;
-  let sitemap = await sitemapResponse.text();
-
-  try {
-    const dataUrl = new URL("/assets/data/content.js", request.url);
-    const dataResponse = await env.ASSETS.fetch(new Request(dataUrl));
-    const source = await dataResponse.text();
-    const jsonText = source.replace(/^\s*window\.SITE_CONTENT\s*=\s*/, "").replace(/;\s*$/, "");
-    const content = JSON.parse(jsonText);
-    const now = Date.now();
-    const livePosts = (content.blogPosts || []).filter((post) => {
-      if (post.status === "draft") return false;
-      if (!post.publishAt) return true;
-      const release = Date.parse(post.publishAt);
-      return Number.isFinite(release) && release <= now;
-    });
-
-    const additions = livePosts.filter((post) => post.url && !sitemap.includes(`https://jasonarts.com/${post.url}`)).map((post) => {
-      const parsedRelease = post.publishAt ? Date.parse(post.publishAt) : NaN;
-      const lastmodValue = post.date || (Number.isFinite(parsedRelease) ? new Date(parsedRelease).toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10));
-      const lastmod = escapeXml(lastmodValue);
-      return `  <url>\n    <loc>https://jasonarts.com/${escapeXml(post.url)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`;
-    }).join("\n");
-
-    if (additions) sitemap = sitemap.replace("</urlset>", `${additions}\n</urlset>`);
-  } catch (error) {
-    console.warn("Serving the static sitemap because blog data could not be parsed:", error.message);
-  }
-
-  return new Response(sitemap, {
-    status: 200,
-    headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=300" }
-  });
-}
-
 function escapeXml(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 }
@@ -422,7 +390,7 @@ async function handleFeed(request, env) {
     }).slice(0, 30);
 
     const itemXml = livePosts.map((post) => {
-      const postUrl = new URL(`/${post.url}`, request.url).href;
+      const postUrl = canonicalSiteUrl(post.url);
       const parsedDate = Date.parse(post.publishAt || `${post.date || "1970-01-01"}T09:00:00-05:00`);
       const pubDate = new Date(Number.isFinite(parsedDate) ? parsedDate : 0).toUTCString();
       return `    <item>
@@ -439,12 +407,12 @@ async function handleFeed(request, env) {
       ? Date.parse(livePosts[0].publishAt || `${livePosts[0].date || "1970-01-01"}T09:00:00-05:00`)
       : now;
     const lastBuildDate = new Date(Number.isFinite(newestDate) ? newestDate : now).toUTCString();
-    const origin = new URL(request.url).origin;
+    const origin = "https://jasonarts.com";
     const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jason Arts Blog</title>
-    <link>${escapeXml(`${origin}/blog.html`)}</link>
+    <link>${escapeXml(`${origin}/blog`)}</link>
     <description>Behind-the-scenes posts on AI filmmaking, AI music, animated shorts, 3D art, books, and creative production by Jason Arts.</description>
     <language>en-us</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>

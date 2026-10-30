@@ -796,7 +796,7 @@ window.SITE_CONTENT = {
       "date": "2026-09-12",
       "publishAt": "2026-09-12T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-claude-fable-5-1-long-horizon-ai.html",
+      "url": "/blog-claude-fable-5-1-long-horizon-ai",
       "seo": {
         "title": "Claude Fable 5.1: The Long-Haul AI Model",
         "description": "Claude Fable 5.1 brings stronger long-running reasoning, clearer writing, and lower agentic costs. Here is what creators should know.",
@@ -820,7 +820,7 @@ window.SITE_CONTENT = {
       "date": "2026-09-09",
       "publishAt": "2026-09-09T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-gpt-6-astra-creative-work.html",
+      "url": "/blog-gpt-6-astra-creative-work",
       "seo": {
         "title": "GPT-6 Astra: What It Changes for Creative Work",
         "description": "GPT-6 Astra combines computer use, visual judgment, and project continuity. Here is what the new AI model could mean for working creators.",
@@ -844,7 +844,7 @@ window.SITE_CONTENT = {
       "date": "2026-09-07",
       "publishAt": "2026-09-07T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-gpt-5-6-for-creators.html",
+      "url": "/blog-gpt-5-6-for-creators",
       "seo": {
         "title": "GPT-5.6 for Creators: What Actually Matters",
         "description": "GPT-5.6 for creators brings stronger design judgment, computer use and end-to-end workflows that matter more than another benchmark score.",
@@ -868,7 +868,7 @@ window.SITE_CONTENT = {
       "date": "2026-09-04",
       "publishAt": "2026-09-04T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-google-flow-ai-creative-studio.html",
+      "url": "/blog-google-flow-ai-creative-studio",
       "seo": {
         "title": "Google Flow Is Becoming an AI Creative Studio",
         "description": "Google Flow now combines AI video, project-aware agents, multimodal creation and custom Flow Tools in a growing AI creative studio.",
@@ -892,7 +892,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-15",
       "publishAt": "2026-08-15T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-3ds-max-2027-visualization-tools.html",
+      "url": "/blog-3ds-max-2027-visualization-tools",
       "seo": {
         "title": "3ds Max 2027: Best New Tools for Visualization",
         "description": "See which 3ds Max 2027 features matter for visualization artists, including Smart Bevel, Noise Plus, spline improvements and Autodesk Assistant.",
@@ -916,7 +916,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-14",
       "publishAt": "2026-08-14T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-vray-vantage-3ds-max-realtime-viewport.html",
+      "url": "/blog-vray-vantage-3ds-max-realtime-viewport",
       "seo": {
         "title": "V-Ray Vantage Inside 3ds Max: Real-Time Rendering",
         "description": "See how V-Ray Vantage in 3ds Max brings real-time ray-traced lighting, materials and animation previews directly into the viewport.",
@@ -940,7 +940,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-24",
       "publishAt": "2026-08-24T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-ai-building-worlds-siggraph-2026.html",
+      "url": "/blog-ai-building-worlds-siggraph-2026",
       "seo": {
         "title": "AI Is Learning to Build Worlds, Not Just Pictures",
         "description": "SIGGRAPH 2026 showed how AI world models, neural rendering, physics simulation and 3D agents are creating interactive digital environments.",
@@ -964,7 +964,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-27",
       "publishAt": "2026-08-27T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-elevenmusic-vocals-consistent-ai-singer.html",
+      "url": "/blog-elevenmusic-vocals-consistent-ai-singer",
       "seo": {
         "title": "ElevenMusic Vocals: Build a Consistent AI Singer",
         "description": "ElevenMusic Vocals and References help creators maintain the same AI singer and musical identity across multiple songs and complete projects.",
@@ -988,7 +988,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-20",
       "publishAt": "2026-08-20T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-substance-painter-12-1-less-baking-cleanup.html",
+      "url": "/blog-substance-painter-12-1-less-baking-cleanup",
       "seo": {
         "title": "Substance Painter 12.1: Less Baking Cleanup",
         "description": "Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that simplify texturing workflows.",
@@ -1012,7 +1012,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-17",
       "publishAt": "2026-08-17T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-corgo-web-game-behind-the-scenes.html",
+      "url": "/blog-corgo-web-game-behind-the-scenes",
       "seo": {
         "title": "Corgo Web Game: Bringing a Character Into Play",
         "description": "Go behind the scenes of the Corgo web game and see how character art, hidden-object design and browser gameplay came together on JasonArts.com.",
@@ -1036,7 +1036,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-10",
       "publishAt": "2026-08-10T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-why-davinci-resolve-is-useful.html",
+      "url": "/blog-why-davinci-resolve-is-useful",
       "seo": {
         "title": "Why DaVinci Resolve Is Useful for Creative Work",
         "description": "Learn why DaVinci Resolve is useful for editing, color grading, visual effects, audio production and complete creative video workflows.",
@@ -1060,7 +1060,7 @@ window.SITE_CONTENT = {
       "date": "2026-08-03",
       "publishAt": "2026-08-03T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-suno-stem-separation-mixing-workflow.html",
+      "url": "/blog-suno-stem-separation-mixing-workflow",
       "seo": {
         "title": "Suno Stem Separation: A Practical Mixing Workflow",
         "description": "Learn how Suno stem separation works, which split mode to choose and how to rebuild vocals, drums, bass and instruments into a stronger mix.",
@@ -1084,7 +1084,7 @@ window.SITE_CONTENT = {
       "date": "2026-07-31",
       "publishAt": "2026-07-31T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-kling-3-multi-shot-video-workflow.html",
+      "url": "/blog-kling-3-multi-shot-video-workflow",
       "seo": {
         "title": "Kling 3.0 Multi-Shot: A Practical Scene Workflow",
         "description": "Learn a practical Kling 3.0 multi-shot workflow for planning shots, maintaining character consistency, controlling timing and building complete AI video scenes.",
@@ -1108,7 +1108,7 @@ window.SITE_CONTENT = {
       "date": "2026-07-24",
       "publishAt": "2026-07-24T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-ai-concept-art-for-3d-modeling.html",
+      "url": "/blog-ai-concept-art-for-3d-modeling",
       "seo": {
         "title": "AI Concept Art for 3D Modeling: A Practical Workflow",
         "description": "Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.",
@@ -1132,7 +1132,7 @@ window.SITE_CONTENT = {
       "publishAt": "2026-07-27T16:04:32.991Z",
       "status": "published",
       "cover": "assets/images/3ds-max-2027-practical-updates.webp",
-      "url": "blog-3ds-max-2027-updates-that-matter.html",
+      "url": "/blog-3ds-max-2027-updates-that-matter",
       "seo": {
         "title": "3ds Max 2027: Updates That Matter to Artists",
         "description": "A working artist’s look at 3ds Max 2027, including Smart Bevel, spline improvements, performance gains, color management and upgrade advice.",
@@ -1156,7 +1156,7 @@ window.SITE_CONTENT = {
       "date": "2026-07-14",
       "publishAt": "2026-07-14T13:29:52.048Z",
       "status": "published",
-      "url": "blog-rush-without-neil-peart-fort-worth-2026.html",
+      "url": "/blog-rush-without-neil-peart-fort-worth-2026",
       "seo": {
         "title": "Rush Without Neil Peart: A Night I Won’t Forget",
         "description": "A personal reflection on seeing Rush without Neil Peart in Fort Worth, honoring his legacy, Anika Nilles and an unforgettable 2026 setlist.",
@@ -1178,7 +1178,7 @@ window.SITE_CONTENT = {
       "date": "2026-07-20",
       "publishAt": "2026-07-20T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-how-i-made-sarah-ai-music-video.html",
+      "url": "/blog-how-i-made-sarah-ai-music-video",
       "seo": {
         "title": "How I Made the AI Music Video for “Sarah”",
         "description": "Go behind the scenes of “Sarah” by Dirty It Dies and see how AI imagery, animation, character design, and editing shaped the music video.",
@@ -1200,7 +1200,7 @@ window.SITE_CONTENT = {
       "date": "2026-07-12",
       "publishAt": "2026-07-12T17:35:13.427Z",
       "status": "published",
-      "url": "blog-how-i-built-jasonartscom-with-claude-without-losing-my-own-style.html"
+      "url": "/blog-how-i-built-jasonartscom-with-claude-without-losing-my-own-style"
     },
     {
       "slug": "seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade",
@@ -1211,7 +1211,7 @@ window.SITE_CONTENT = {
       "date": "2026-07-14",
       "publishAt": "2026-07-14T14:00:00.000Z",
       "status": "scheduled",
-      "url": "blog-seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade.html"
+      "url": "/blog-seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade"
     },
     {
       "slug": "seedream-50-the-ai-image-model-that-changes-how-we-prompt",
@@ -1220,7 +1220,7 @@ window.SITE_CONTENT = {
       "category": "AI Tips",
       "cover": "assets/images/seedream-5-cover.webp",
       "date": "2026-07-12",
-      "url": "blog-seedream-50-the-ai-image-model-that-changes-how-we-prompt.html",
+      "url": "/blog-seedream-50-the-ai-image-model-that-changes-how-we-prompt",
       "publishAt": "2026-07-17T14:00:00.000Z"
     },
     {
@@ -1230,7 +1230,7 @@ window.SITE_CONTENT = {
       "category": "AI Tips",
       "cover": "assets/images/mid-journey-8.1.webp",
       "date": "2026-07-11",
-      "url": "blog-whats-new-in-midjourney-v81.html"
+      "url": "/blog-whats-new-in-midjourney-v81"
     },
     {
       "slug": "ai-tools-behind-the-orb-story",
@@ -1239,7 +1239,7 @@ window.SITE_CONTENT = {
       "category": "AI Tips",
       "cover": "assets/images/orb-thumb.webp",
       "date": "2026-07-10",
-      "url": "blog-ai-tools-behind-the-orb-story.html"
+      "url": "/blog-ai-tools-behind-the-orb-story"
     },
     {
       "slug": "5-suno-tricks-for-better-ai-music",
@@ -1248,7 +1248,7 @@ window.SITE_CONTENT = {
       "category": "AI Music",
       "cover": "assets/images/suno-prompt-guide.webp",
       "date": "2026-07-09",
-      "url": "blog-5-suno-tricks-for-better-ai-music.html"
+      "url": "/blog-5-suno-tricks-for-better-ai-music"
     },
     {
       "slug": "what-gpt-5-6-means-for-ai-creators",
@@ -1257,7 +1257,7 @@ window.SITE_CONTENT = {
       "category": "AI Tips",
       "cover": "assets/images/gpt56-hero.webp",
       "date": "2026-07-08",
-      "url": "blog-what-gpt-5-6-means-for-ai-creators.html"
+      "url": "/blog-what-gpt-5-6-means-for-ai-creators"
     }
   ]
 };

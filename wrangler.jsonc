@@ -10,7 +10,10 @@
       "/api/*",
       "/feed.xml",
       "/sitemap.xml",
-      "/blog-*"
+      "/blog-*",
+      "/blog",
+      "/blog.html",
+      "/blog/"
     ]
   },
   "durable_objects": {
@@ -24,7 +27,9 @@
   "migrations": [
     {
       "tag": "v1-blog-likes",
-      "new_sqlite_classes": ["BlogLikeCounter"]
+      "new_sqlite_classes": [
+        "BlogLikeCounter"
+      ]
     }
   ]
 }

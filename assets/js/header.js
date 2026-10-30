@@ -12,11 +12,11 @@
     if (!header) return;
 
     const nav = header.querySelector(".nav");
-    if (nav && !nav.querySelector('a[href="apps.html"]')) {
+    if (nav && !nav.querySelector('a[href="/apps"]')) {
       const appsLink = document.createElement("a");
-      appsLink.href = "apps.html";
+      appsLink.href = "/apps";
       appsLink.textContent = "Apps";
-      const aboutLink = nav.querySelector('a[href="about.html"]');
+      const aboutLink = nav.querySelector('a[href="/about"]');
       nav.insertBefore(appsLink, aboutLink || null);
     }
 
