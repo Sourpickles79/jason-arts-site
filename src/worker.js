@@ -1,4 +1,5 @@
 import { DurableObject } from "cloudflare:workers";
+import { handleAudience, audienceStore } from "./audience.js";
 
 // Worker entry point for jason-arts-site.
 //
@@ -24,6 +25,8 @@ const RANGE_HOURS = {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    if (url.pathname === "/api/audience") return handleAudience(request, env);
 
     if (url.pathname === "/api/stats") {
       return handleStats(request, env);
@@ -316,6 +319,7 @@ export class BlogLikeCounter extends DurableObject {
 
   async fetch(request) {
     const url = new URL(request.url);
+    if (url.hostname === "audience.internal") return audienceStore(request, this.ctx.storage, this);
     if (url.pathname.startsWith("/download/") || url.pathname.startsWith("/play/") || url.pathname.startsWith("/intent/")) {
       const count = (await this.ctx.storage.get("count")) || 0;
       if (request.method === "GET") return Response.json({ count });

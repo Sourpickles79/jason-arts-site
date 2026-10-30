@@ -1,6 +1,12 @@
 // Solidifies the fixed header background once the page is scrolled,
 // so nav text stays readable over any content (not just the hero image).
 (function () {
+  if (location.protocol === "https:" && /^(www\.)?jasonarts\.com$/.test(location.hostname)) {
+    const tracker = document.createElement("script");
+    tracker.src = "/assets/js/audience.js";
+    tracker.defer = true;
+    document.head.appendChild(tracker);
+  }
   function init() {
     const header = document.querySelector(".site-header");
     if (!header) return;
