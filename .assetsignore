@@ -2,3 +2,9 @@
 .github
 node_modules
 .DS_Store
+.wrangler
+.gitignore
+src
+wrangler.jsonc
+README.md
+ANALYTICS.md
