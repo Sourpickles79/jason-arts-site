@@ -787,6 +787,30 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "gemini-4-creative-work",
+      "title": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
+      "excerpt": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-gemini-4-creative-work.webp",
+      "date": "2026-11-19",
+      "publishAt": "2026-11-19T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-gemini-4-creative-work",
+      "seo": {
+        "title": "Gemini 4 for Creative Work: Argon, Carbon and Access",
+        "description": "A practical look at Gemini 4 for creative work, separating Argon availability from Carbon’s staged rollout and testing briefs, research and continuity.",
+        "targetKeyword": "Gemini 4",
+        "secondaryKeywords": [
+          "Gemini 4 Argon",
+          "Gemini 4 Carbon",
+          "AI creative planning"
+        ],
+        "coverAlt": "A faceted prism sends ordered beams of light across architectural sketches, a material sphere and storyboards on a creative desk.",
+        "socialTitle": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
+        "socialDescription": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects."
+      }
+    },
+    {
       "slug": "product-render-brief",
       "title": "What to Include in a Product Render Brief Before Work Starts",
       "excerpt": "Dimensions, finish references, camera goals and deliverables: the decisions that help a product visualization project start clearly and avoid guesswork.",
@@ -835,37 +859,13 @@ window.SITE_CONTENT = {
       }
     },
     {
-      "slug": "gemini-4-creative-work",
-      "title": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
-      "excerpt": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects.",
-      "category": "AI Tips",
-      "cover": "assets/images/blog-gemini-4-creative-work.webp",
-      "date": "2026-11-09",
-      "publishAt": "2026-11-09T09:00:00-06:00",
-      "status": "scheduled",
-      "url": "/blog-gemini-4-creative-work",
-      "seo": {
-        "title": "Gemini 4 for Creative Work: Argon, Carbon and Access",
-        "description": "A practical look at Gemini 4 for creative work, separating Argon availability from Carbon’s staged rollout and testing briefs, research and continuity.",
-        "targetKeyword": "Gemini 4",
-        "secondaryKeywords": [
-          "Gemini 4 Argon",
-          "Gemini 4 Carbon",
-          "AI creative planning"
-        ],
-        "coverAlt": "A faceted prism sends ordered beams of light across architectural sketches, a material sphere and storyboards on a creative desk.",
-        "socialTitle": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
-        "socialDescription": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects."
-      }
-    },
-    {
       "slug": "kling-4-filmmaking-control",
       "title": "Kling 4.0: More Control for AI Filmmaking, Not Just Longer Clips",
       "excerpt": "What Kling 4.0’s announced references, keyframes and longer generation could mean for directing coherent scenes and judging usable footage.",
       "category": "AI Video",
       "cover": "assets/images/blog-kling-4-filmmaking-control.webp",
-      "date": "2026-11-05",
-      "publishAt": "2026-11-05T09:00:00-06:00",
+      "date": "2026-11-09",
+      "publishAt": "2026-11-09T09:00:00-06:00",
       "status": "scheduled",
       "url": "/blog-kling-4-filmmaking-control",
       "seo": {
@@ -880,6 +880,30 @@ window.SITE_CONTENT = {
         "coverAlt": "A cinema camera overlooks a rainlit fantasy street with a lone figure and translucent framing guides.",
         "socialTitle": "Kling 4.0: More Control for AI Filmmaking, Not Just Longer Clips",
         "socialDescription": "What Kling 4.0’s announced references, keyframes and longer generation could mean for directing coherent scenes and judging usable footage."
+      }
+    },
+    {
+      "slug": "chatgpt-image-2-creative-work",
+      "title": "ChatGPT Image 2: Better Briefs, References and Edits",
+      "excerpt": "A practical guide to ChatGPT Image 2: clearer briefs, useful references, controlled edits, readable text and image files ready for a creative project.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-chatgpt-image-2-creative-work.webp",
+      "date": "2026-11-05",
+      "publishAt": "2026-11-05T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-chatgpt-image-2-creative-work",
+      "seo": {
+        "title": "ChatGPT Image 2: Better Briefs, References and Edits",
+        "description": "Get more from ChatGPT Image 2 with clear briefs, useful references, controlled edits and practical checks for text, composition and finished image files.",
+        "targetKeyword": "ChatGPT Image 2",
+        "secondaryKeywords": [
+          "GPT Image 2",
+          "AI image editing",
+          "ChatGPT image generation"
+        ],
+        "coverAlt": "A glowing glass greenhouse miniature filled with plants sits on a dark artist’s table beside material swatches and a teal brushstroke.",
+        "socialTitle": "ChatGPT Image 2: Better Briefs, References and Edits",
+        "socialDescription": "A practical guide to ChatGPT Image 2: clearer briefs, useful references, controlled edits, readable text and image files ready for a creative project."
       }
     },
     {
