@@ -34,8 +34,7 @@ window.SITE_CONTENT = {
     "amazonStore": "https://www.amazon.com/stores/Jason-Arts-Johnson/author/B0CVW3PXGW?ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=03cdfd36-a8eb-487a-addf-548214bb01b7",
     "artstation": "https://www.artstation.com/jasonartsjohnson",
     "linkedin": "https://www.linkedin.com/in/jason-johnson-5511793/",
-    "instagram": "#",
-    "youtubeApiKey": "AIzaSyBi8KpU5N_q-otcR5Z2F0rY4-SyOzARNvs"
+    "instagram": "#"
   },
   "portfolio": [
     {
@@ -788,6 +787,150 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "product-render-brief",
+      "title": "What to Include in a Product Render Brief Before Work Starts",
+      "excerpt": "Dimensions, finish references, camera goals and deliverables: the decisions that help a product visualization project start clearly and avoid guesswork.",
+      "category": "3D",
+      "cover": "assets/images/blog-product-render-brief.webp",
+      "date": "2026-11-16",
+      "publishAt": "2026-11-16T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-product-render-brief",
+      "seo": {
+        "title": "Product Render Brief: What to Prepare Before Work Starts",
+        "description": "Build a clear product render brief with dimensions, approved finishes, camera goals, staging references and final deliverables for 3D visualization.",
+        "targetKeyword": "product render brief",
+        "secondaryKeywords": [
+          "product visualization",
+          "furniture rendering",
+          "3D visualization brief"
+        ],
+        "coverAlt": "A walnut sideboard in a sunlit interior sits behind a measured sketch and a selection of material swatches.",
+        "socialTitle": "What to Include in a Product Render Brief Before Work Starts",
+        "socialDescription": "Dimensions, finish references, camera goals and deliverables: the decisions that help a product visualization project start clearly and avoid guesswork."
+      }
+    },
+    {
+      "slug": "ai-character-consistency",
+      "title": "AI Character Consistency: Keep the Same Person Across Shots",
+      "excerpt": "A practical reference and review process for keeping faces, wardrobe, props and scene states consistent across AI-generated film shots.",
+      "category": "AI Video",
+      "cover": "assets/images/blog-ai-character-consistency-v2.webp",
+      "date": "2026-11-12",
+      "publishAt": "2026-11-12T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-ai-character-consistency",
+      "seo": {
+        "title": "AI Character Consistency: A Practical Shot Review Guide",
+        "description": "Improve AI character consistency with approved references, clear scene states and focused shot reviews that catch changes in faces, wardrobe and props.",
+        "targetKeyword": "AI character consistency",
+        "secondaryKeywords": [
+          "AI film continuity",
+          "character reference images",
+          "AI video workflow"
+        ],
+        "coverAlt": "An original adult woman with short black hair and an orange utility jacket stands beside a cinema camera in a contemporary film studio.",
+        "socialTitle": "AI Character Consistency: Keep the Same Person Across Shots",
+        "socialDescription": "A practical reference and review process for keeping faces, wardrobe, props and scene states consistent across AI-generated film shots."
+      }
+    },
+    {
+      "slug": "gemini-4-creative-work",
+      "title": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
+      "excerpt": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-gemini-4-creative-work.webp",
+      "date": "2026-11-09",
+      "publishAt": "2026-11-09T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-gemini-4-creative-work",
+      "seo": {
+        "title": "Gemini 4 for Creative Work: Argon, Carbon and Access",
+        "description": "A practical look at Gemini 4 for creative work, separating Argon availability from Carbon’s staged rollout and testing briefs, research and continuity.",
+        "targetKeyword": "Gemini 4",
+        "secondaryKeywords": [
+          "Gemini 4 Argon",
+          "Gemini 4 Carbon",
+          "AI creative planning"
+        ],
+        "coverAlt": "A faceted prism sends ordered beams of light across architectural sketches, a material sphere and storyboards on a creative desk.",
+        "socialTitle": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
+        "socialDescription": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects."
+      }
+    },
+    {
+      "slug": "kling-4-filmmaking-control",
+      "title": "Kling 4.0: More Control for AI Filmmaking, Not Just Longer Clips",
+      "excerpt": "What Kling 4.0’s announced references, keyframes and longer generation could mean for directing coherent scenes and judging usable footage.",
+      "category": "AI Video",
+      "cover": "assets/images/blog-kling-4-filmmaking-control.webp",
+      "date": "2026-11-05",
+      "publishAt": "2026-11-05T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-kling-4-filmmaking-control",
+      "seo": {
+        "title": "Kling 4.0: References, Keyframes and Filmmaking Control",
+        "description": "Explore Kling 4.0 for AI filmmaking: references, keyframes, 30-second generation, rollout caveats and a practical way to review usable footage.",
+        "targetKeyword": "Kling 4.0",
+        "secondaryKeywords": [
+          "AI filmmaking",
+          "video keyframes",
+          "character references"
+        ],
+        "coverAlt": "A cinema camera overlooks a rainlit fantasy street with a lone figure and translucent framing guides.",
+        "socialTitle": "Kling 4.0: More Control for AI Filmmaking, Not Just Longer Clips",
+        "socialDescription": "What Kling 4.0’s announced references, keyframes and longer generation could mean for directing coherent scenes and judging usable footage."
+      }
+    },
+    {
+      "slug": "orb-story-so-far",
+      "title": "The Orb: The Story So Far — A Spoiler-Light Preview of Chapters 1–6",
+      "excerpt": "A young Traveler, an unlikely companion and a power he cannot explain: a spoiler-light introduction before the November 4 Chapters 1–6 release.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/blog-orb-story-so-far.webp",
+      "date": "2026-11-02",
+      "publishAt": "2026-11-02T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-orb-story-so-far",
+      "seo": {
+        "title": "The Orb: The Story So Far — Chapters 1–6 Preview",
+        "description": "The Orb: The Story So Far brings Chapters 1–6 together November 4. Meet the young Traveler and his horse in this spoiler-light release preview.",
+        "targetKeyword": "The Orb: The Story So Far",
+        "secondaryKeywords": [
+          "The Orb Chapters 1–6",
+          "original AI fantasy film",
+          "Jason Arts film"
+        ],
+        "coverAlt": "The young Traveler in his worn brown cloak rides his dark horse through a sunlit forest beside The Orb: The Story So Far lettering.",
+        "socialTitle": "The Orb: The Story So Far — A Spoiler-Light Preview of Chapters 1–6",
+        "socialDescription": "A young Traveler, an unlikely companion and a power he cannot explain: a spoiler-light introduction before the November 4 Chapters 1–6 release."
+      }
+    },
+    {
+      "slug": "gpt-61-terra-creative-work",
+      "title": "GPT‑6.1 Terra: What the New Release Means for Creative Work",
+      "excerpt": "A practical look at GPT‑6.1 Terra, the October 26 release, and the visual, writing and computer tasks worth testing in a creative workflow.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-gpt-61-terra-creative-work.webp",
+      "date": "2026-10-30",
+      "publishAt": "2026-10-30T18:00:00Z",
+      "status": "published",
+      "url": "/blog-gpt-61-terra-creative-work",
+      "seo": {
+        "title": "GPT‑6.1 Terra: A Practical Look for Creative Work",
+        "description": "Explore GPT‑6.1 Terra for creative work: visual reasoning, writing, computer use, access, limitations and practical tests for artists.",
+        "targetKeyword": "GPT‑6.1 Terra",
+        "secondaryKeywords": [
+          "AI creative workflow",
+          "visual reasoning",
+          "AI for 3D artists"
+        ],
+        "coverAlt": "An architectural drawing aligns with a miniature modern building on a warmly lit creative desk.",
+        "socialTitle": "GPT‑6.1 Terra: What the New Release Means for Creative Work",
+        "socialDescription": "A practical look at GPT‑6.1 Terra, the October 26 release, and the visual, writing and computer tasks worth testing in a creative workflow."
+      }
+    },
+    {
       "slug": "claude-fable-5-1-long-horizon-ai",
       "title": "Claude Fable 5.1: The Long-Haul AI Model Creators Should Watch",
       "excerpt": "Claude Fable 5.1 focuses on long-running projects, stronger writing, careful problem-solving, and lower agentic costs instead of simply winning the first prompt.",
@@ -884,51 +1027,27 @@ window.SITE_CONTENT = {
       }
     },
     {
-      "slug": "3ds-max-2027-visualization-tools",
-      "title": "3ds Max 2027: The New Tools Visualization Artists Will Actually Use",
-      "excerpt": "3ds Max 2027 adds Smart Bevel, better spline tools, Noise Plus and several workflow improvements that are much more useful than the usual feature-list marketing suggests.",
-      "category": "3D / Max Tips",
-      "cover": "assets/images/3ds-max-2027-visualization-tools.webp",
-      "date": "2026-08-15",
-      "publishAt": "2026-08-15T14:00:00.000Z",
+      "slug": "elevenmusic-vocals-consistent-ai-singer",
+      "title": "ElevenMusic Vocals: Can an AI Artist Finally Sound Consistent?",
+      "excerpt": "ElevenMusic Vocals lets creators reuse the same singing voice across multiple songs, while References can guide the style and sound of an entire project.",
+      "category": "AI Music",
+      "cover": "assets/images/elevenmusic-vocals-consistent-ai-singer.webp",
+      "date": "2026-08-27",
+      "publishAt": "2026-08-27T14:00:00.000Z",
       "status": "scheduled",
-      "url": "/blog-3ds-max-2027-visualization-tools",
+      "url": "/blog-elevenmusic-vocals-consistent-ai-singer",
       "seo": {
-        "title": "3ds Max 2027: Best New Tools for Visualization",
-        "description": "See which 3ds Max 2027 features matter for visualization artists, including Smart Bevel, Noise Plus, spline improvements and Autodesk Assistant.",
-        "targetKeyword": "3ds Max 2027",
+        "title": "ElevenMusic Vocals: Build a Consistent AI Singer",
+        "description": "ElevenMusic Vocals and References help creators maintain the same AI singer and musical identity across multiple songs and complete projects.",
+        "targetKeyword": "ElevenMusic Vocals",
         "secondaryKeywords": [
-          "3ds Max Smart Bevel",
-          "3ds Max Noise Plus",
-          "3ds Max visualization tools"
+          "consistent AI singer",
+          "ElevenMusic References",
+          "AI music identity"
         ],
-        "coverAlt": "A professional hard-surface model beside a 3ds Max 2027 interface highlighting Smart Bevel and new modeling tools.",
-        "socialTitle": "3ds Max 2027: The New Tools I'll Actually Use",
-        "socialDescription": "Smart Bevel gets the attention, but several smaller 3ds Max 2027 upgrades could make everyday visualization work noticeably faster."
-      }
-    },
-    {
-      "slug": "vray-vantage-3ds-max-realtime-viewport",
-      "title": "V-Ray + Vantage Inside 3ds Max: Real-Time Rendering Without Leaving Your Scene",
-      "excerpt": "Chaos Vantage can now run directly inside the V-Ray viewport in 3ds Max, giving artists a fully ray-traced real-time view while they build, light and animate.",
-      "category": "3D / Max Tips",
-      "cover": "assets/images/vray-vantage-3ds-max-realtime-viewport.webp",
-      "date": "2026-08-14",
-      "publishAt": "2026-08-14T14:00:00.000Z",
-      "status": "scheduled",
-      "url": "/blog-vray-vantage-3ds-max-realtime-viewport",
-      "seo": {
-        "title": "V-Ray Vantage Inside 3ds Max: Real-Time Rendering",
-        "description": "See how V-Ray Vantage in 3ds Max brings real-time ray-traced lighting, materials and animation previews directly into the viewport.",
-        "targetKeyword": "V-Ray Vantage in 3ds Max",
-        "secondaryKeywords": [
-          "V-Ray real-time rendering",
-          "Chaos Vantage 3ds Max",
-          "V-Ray viewport rendering"
-        ],
-        "coverAlt": "A 3ds Max architectural scene displayed with real-time ray-traced V-Ray and Chaos Vantage rendering inside the viewport.",
-        "socialTitle": "V-Ray Just Made the 3ds Max Viewport Much More Interesting",
-        "socialDescription": "Chaos Vantage now runs directly inside the V-Ray viewport in 3ds Max, giving artists real-time ray-traced feedback while they build, light and animate."
+        "coverAlt": "A singer recording beside an ElevenMusic interface showing a saved vocal identity and reference track.",
+        "socialTitle": "Can ElevenMusic Finally Keep the Same Singer?",
+        "socialDescription": "ElevenMusic Vocals can reuse one AI singer across multiple songs, while References helps keep the surrounding musical style consistent."
       }
     },
     {
@@ -953,30 +1072,6 @@ window.SITE_CONTENT = {
         "coverAlt": "An explorer overlooking an AI-generated 3D world surrounded by simulation and world-model interface elements.",
         "socialTitle": "AI Is Learning to Build Worlds That Actually Behave",
         "socialDescription": "SIGGRAPH 2026 showed AI moving beyond images into physics-aware environments, neural rendering and agents that work inside 3D tools."
-      }
-    },
-    {
-      "slug": "elevenmusic-vocals-consistent-ai-singer",
-      "title": "ElevenMusic Vocals: Can an AI Artist Finally Sound Consistent?",
-      "excerpt": "ElevenMusic Vocals lets creators reuse the same singing voice across multiple songs, while References can guide the style and sound of an entire project.",
-      "category": "AI Music",
-      "cover": "assets/images/elevenmusic-vocals-consistent-ai-singer.webp",
-      "date": "2026-08-27",
-      "publishAt": "2026-08-27T14:00:00.000Z",
-      "status": "scheduled",
-      "url": "/blog-elevenmusic-vocals-consistent-ai-singer",
-      "seo": {
-        "title": "ElevenMusic Vocals: Build a Consistent AI Singer",
-        "description": "ElevenMusic Vocals and References help creators maintain the same AI singer and musical identity across multiple songs and complete projects.",
-        "targetKeyword": "ElevenMusic Vocals",
-        "secondaryKeywords": [
-          "consistent AI singer",
-          "ElevenMusic References",
-          "AI music identity"
-        ],
-        "coverAlt": "A singer recording beside an ElevenMusic interface showing a saved vocal identity and reference track.",
-        "socialTitle": "Can ElevenMusic Finally Keep the Same Singer?",
-        "socialDescription": "ElevenMusic Vocals can reuse one AI singer across multiple songs, while References helps keep the surrounding musical style consistent."
       }
     },
     {
@@ -1025,6 +1120,54 @@ window.SITE_CONTENT = {
         "coverAlt": "A colorful Corgo hidden-object browser game scene with playful artwork, target items and a clean interface.",
         "socialTitle": "From Book to Browser: How the Corgo Web Game Came Together",
         "socialDescription": "Corgo is now live as a browser game on JasonArts.com. Here is the behind-the-scenes story of turning an illustrated character into a playful hidden-object experience."
+      }
+    },
+    {
+      "slug": "3ds-max-2027-visualization-tools",
+      "title": "3ds Max 2027: The New Tools Visualization Artists Will Actually Use",
+      "excerpt": "3ds Max 2027 adds Smart Bevel, better spline tools, Noise Plus and several workflow improvements that are much more useful than the usual feature-list marketing suggests.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/3ds-max-2027-visualization-tools.webp",
+      "date": "2026-08-15",
+      "publishAt": "2026-08-15T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-3ds-max-2027-visualization-tools",
+      "seo": {
+        "title": "3ds Max 2027: Best New Tools for Visualization",
+        "description": "See which 3ds Max 2027 features matter for visualization artists, including Smart Bevel, Noise Plus, spline improvements and Autodesk Assistant.",
+        "targetKeyword": "3ds Max 2027",
+        "secondaryKeywords": [
+          "3ds Max Smart Bevel",
+          "3ds Max Noise Plus",
+          "3ds Max visualization tools"
+        ],
+        "coverAlt": "A professional hard-surface model beside a 3ds Max 2027 interface highlighting Smart Bevel and new modeling tools.",
+        "socialTitle": "3ds Max 2027: The New Tools I'll Actually Use",
+        "socialDescription": "Smart Bevel gets the attention, but several smaller 3ds Max 2027 upgrades could make everyday visualization work noticeably faster."
+      }
+    },
+    {
+      "slug": "vray-vantage-3ds-max-realtime-viewport",
+      "title": "V-Ray + Vantage Inside 3ds Max: Real-Time Rendering Without Leaving Your Scene",
+      "excerpt": "Chaos Vantage can now run directly inside the V-Ray viewport in 3ds Max, giving artists a fully ray-traced real-time view while they build, light and animate.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/vray-vantage-3ds-max-realtime-viewport.webp",
+      "date": "2026-08-14",
+      "publishAt": "2026-08-14T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-vray-vantage-3ds-max-realtime-viewport",
+      "seo": {
+        "title": "V-Ray Vantage Inside 3ds Max: Real-Time Rendering",
+        "description": "See how V-Ray Vantage in 3ds Max brings real-time ray-traced lighting, materials and animation previews directly into the viewport.",
+        "targetKeyword": "V-Ray Vantage in 3ds Max",
+        "secondaryKeywords": [
+          "V-Ray real-time rendering",
+          "Chaos Vantage 3ds Max",
+          "V-Ray viewport rendering"
+        ],
+        "coverAlt": "A 3ds Max architectural scene displayed with real-time ray-traced V-Ray and Chaos Vantage rendering inside the viewport.",
+        "socialTitle": "V-Ray Just Made the 3ds Max Viewport Much More Interesting",
+        "socialDescription": "Chaos Vantage now runs directly inside the V-Ray viewport in 3ds Max, giving artists real-time ray-traced feedback while they build, light and animate."
       }
     },
     {
@@ -1100,30 +1243,6 @@ window.SITE_CONTENT = {
       }
     },
     {
-      "slug": "ai-concept-art-for-3d-modeling",
-      "title": "AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference",
-      "excerpt": "AI can generate a great-looking concept in seconds, but turning that image into a believable 3D model requires knowing what to trust, what to rebuild and what to ignore.",
-      "category": "3D / Max Tips",
-      "cover": "assets/images/ai-concept-art-to-3d-reference.webp",
-      "date": "2026-07-24",
-      "publishAt": "2026-07-24T14:00:00.000Z",
-      "status": "scheduled",
-      "url": "/blog-ai-concept-art-for-3d-modeling",
-      "seo": {
-        "title": "AI Concept Art for 3D Modeling: A Practical Workflow",
-        "description": "Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.",
-        "targetKeyword": "AI concept art for 3D modeling",
-        "secondaryKeywords": [
-          "AI reference images for 3D",
-          "AI-assisted 3D workflow",
-          "modeling from AI concept art"
-        ],
-        "coverAlt": "A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model.",
-        "socialTitle": "AI Concept Art Looks Great—Until You Try to Model It",
-        "socialDescription": "AI can create a convincing design in seconds, but it rarely creates a reliable blueprint. Here is how I turn generated concepts into usable 3D reference."
-      }
-    },
-    {
       "slug": "3ds-max-2027-updates-that-matter",
       "title": "3ds Max 2027: The Updates That Actually Matter to Working Artists",
       "excerpt": "3ds Max 2027 adds several useful modeling and workflow improvements, but a handful of features stand out as the ones working artists will actually notice.",
@@ -1148,25 +1267,27 @@ window.SITE_CONTENT = {
       }
     },
     {
-      "slug": "rush-without-neil-peart-fort-worth-2026",
-      "title": "Rush Came Back Without Neil, but He Was Everywhere",
-      "excerpt": "Rush returned to the stage without Neil Peart behind the drums, but through the music, his voice, and the love in the room, it felt like he was everywhere.",
-      "category": "Behind the Scenes",
-      "cover": "assets/images/rush-came-back-without-neil.webp",
-      "date": "2026-07-14",
-      "publishAt": "2026-07-14T13:29:52.048Z",
-      "status": "published",
-      "url": "/blog-rush-without-neil-peart-fort-worth-2026",
+      "slug": "ai-concept-art-for-3d-modeling",
+      "title": "AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference",
+      "excerpt": "AI can generate a great-looking concept in seconds, but turning that image into a believable 3D model requires knowing what to trust, what to rebuild and what to ignore.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/ai-concept-art-to-3d-reference.webp",
+      "date": "2026-07-24",
+      "publishAt": "2026-07-24T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-ai-concept-art-for-3d-modeling",
       "seo": {
-        "title": "Rush Without Neil Peart: A Night I Won’t Forget",
-        "description": "A personal reflection on seeing Rush without Neil Peart in Fort Worth, honoring his legacy, Anika Nilles and an unforgettable 2026 setlist.",
-        "targetKeyword": "Rush without Neil Peart",
+        "title": "AI Concept Art for 3D Modeling: A Practical Workflow",
+        "description": "Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.",
+        "targetKeyword": "AI concept art for 3D modeling",
         "secondaryKeywords": [
-          "- Rush Fifty Something Tour"
+          "AI reference images for 3D",
+          "AI-assisted 3D workflow",
+          "modeling from AI concept art"
         ],
-        "coverAlt": "Geddy Lee and Alex Lifeson perform beneath blue stage lights while Anika Nilles plays drums behind them.",
-        "socialTitle": "Rush Came Back Without Neil, but He Was Everywhere",
-        "socialDescription": "Seeing Rush return without Neil Peart was joyful, difficult and unforgettable. This is what the music, the tributes and that night meant to me."
+        "coverAlt": "A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model.",
+        "socialTitle": "AI Concept Art Looks Great—Until You Try to Model It",
+        "socialDescription": "AI can create a convincing design in seconds, but it rarely creates a reliable blueprint. Here is how I turn generated concepts into usable 3D reference."
       }
     },
     {
@@ -1192,15 +1313,14 @@ window.SITE_CONTENT = {
       }
     },
     {
-      "slug": "how-i-built-jasonartscom-with-claude-without-losing-my-own-style",
-      "title": "How I Built JasonArts.com with Claude Without Losing My Own Style",
-      "excerpt": "I used Claude to help build JasonArts.com, but the real challenge was making sure the finished site still felt like my work instead of another generic AI template.",
+      "slug": "seedream-50-the-ai-image-model-that-changes-how-we-prompt",
+      "title": "Seedream 5.0: The AI Image Model That Changes How We Prompt",
+      "excerpt": "Seedream 5.0 isn't just another image generator. Its reasoning-first approach, stronger reference handling, and editing capabilities could change how artists build images from concept to final render.",
       "category": "AI Tips",
-      "cover": "assets/images/building-jasonarts-with-claude-cover.webp",
+      "cover": "assets/images/seedream-5-cover.webp",
       "date": "2026-07-12",
-      "publishAt": "2026-07-12T17:35:13.427Z",
-      "status": "published",
-      "url": "/blog-how-i-built-jasonartscom-with-claude-without-losing-my-own-style"
+      "url": "/blog-seedream-50-the-ai-image-model-that-changes-how-we-prompt",
+      "publishAt": "2026-07-17T14:00:00.000Z"
     },
     {
       "slug": "seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade",
@@ -1214,14 +1334,37 @@ window.SITE_CONTENT = {
       "url": "/blog-seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade"
     },
     {
-      "slug": "seedream-50-the-ai-image-model-that-changes-how-we-prompt",
-      "title": "Seedream 5.0: The AI Image Model That Changes How We Prompt",
-      "excerpt": "Seedream 5.0 isn't just another image generator. Its reasoning-first approach, stronger reference handling, and editing capabilities could change how artists build images from concept to final render.",
+      "slug": "rush-without-neil-peart-fort-worth-2026",
+      "title": "Rush Came Back Without Neil, but He Was Everywhere",
+      "excerpt": "Rush returned to the stage without Neil Peart behind the drums, but through the music, his voice, and the love in the room, it felt like he was everywhere.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/rush-came-back-without-neil.webp",
+      "date": "2026-07-14",
+      "publishAt": "2026-07-14T13:29:52.048Z",
+      "status": "published",
+      "url": "/blog-rush-without-neil-peart-fort-worth-2026",
+      "seo": {
+        "title": "Rush Without Neil Peart: A Night I Won’t Forget",
+        "description": "A personal reflection on seeing Rush without Neil Peart in Fort Worth, honoring his legacy, Anika Nilles and an unforgettable 2026 setlist.",
+        "targetKeyword": "Rush without Neil Peart",
+        "secondaryKeywords": [
+          "- Rush Fifty Something Tour"
+        ],
+        "coverAlt": "Geddy Lee and Alex Lifeson perform beneath blue stage lights while Anika Nilles plays drums behind them.",
+        "socialTitle": "Rush Came Back Without Neil, but He Was Everywhere",
+        "socialDescription": "Seeing Rush return without Neil Peart was joyful, difficult and unforgettable. This is what the music, the tributes and that night meant to me."
+      }
+    },
+    {
+      "slug": "how-i-built-jasonartscom-with-claude-without-losing-my-own-style",
+      "title": "How I Built JasonArts.com with Claude Without Losing My Own Style",
+      "excerpt": "I used Claude to help build JasonArts.com, but the real challenge was making sure the finished site still felt like my work instead of another generic AI template.",
       "category": "AI Tips",
-      "cover": "assets/images/seedream-5-cover.webp",
+      "cover": "assets/images/building-jasonarts-with-claude-cover.webp",
       "date": "2026-07-12",
-      "url": "/blog-seedream-50-the-ai-image-model-that-changes-how-we-prompt",
-      "publishAt": "2026-07-17T14:00:00.000Z"
+      "publishAt": "2026-07-12T17:35:13.427Z",
+      "status": "published",
+      "url": "/blog-how-i-built-jasonartscom-with-claude-without-losing-my-own-style"
     },
     {
       "slug": "whats-new-in-midjourney-v81",

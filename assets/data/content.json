@@ -34,8 +34,7 @@
     "amazonStore": "https://www.amazon.com/stores/Jason-Arts-Johnson/author/B0CVW3PXGW?ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=03cdfd36-a8eb-487a-addf-548214bb01b7",
     "artstation": "https://www.artstation.com/jasonartsjohnson",
     "linkedin": "https://www.linkedin.com/in/jason-johnson-5511793/",
-    "instagram": "#",
-    "youtubeApiKey": "AIzaSyBi8KpU5N_q-otcR5Z2F0rY4-SyOzARNvs"
+    "instagram": "#"
   },
   "portfolio": [
     {
@@ -365,7 +364,7 @@
     },
     {
       "title": "Clementine Bedroom",
-      "category": "Architecture",
+      "category": "Product Visualization",
       "image": "assets/images/clementine-bedroom.webp",
       "description": "Residential bedroom interior visualization with warm, balanced lighting."
     },
@@ -470,6 +469,162 @@
       "image": "assets/images/pro-baby-relax-huntington-detail-2.webp",
       "description": "Detail render of the Huntington ottoman's glider mechanism and base.",
       "modeled": true
+    },
+    {
+      "title": "Appalachian Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-appalachian-residence.webp",
+      "description": "Detailed residential exterior visualization with layered stone, timber accents, landscaping, and natural daylight."
+    },
+    {
+      "title": "Asheville Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-asheville-residence.webp",
+      "description": "Marketing-ready home elevation balancing masonry, timber detailing, planting, and a clean front approach."
+    },
+    {
+      "title": "Lexington Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-lexington-residence.webp",
+      "description": "High-resolution residential rendering focused on material contrast, architectural detail, and curb appeal."
+    },
+    {
+      "title": "Building AB — Aerial Study",
+      "category": "Architecture",
+      "image": "assets/images/arch-building-ab-aerial.webp",
+      "description": "Elevated multifamily visualization communicating building massing, circulation, parking, and rooftop organization."
+    },
+    {
+      "title": "San Diego Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-san-diego-residence.webp",
+      "description": "Bright Southern California exterior with warm stucco, tile roofing, contemporary planting, and crisp daylight."
+    },
+    {
+      "title": "Destin Custom Home",
+      "category": "Architecture",
+      "image": "assets/images/arch-destin-custom-home.webp",
+      "description": "Coastal residential rendering with layered porches, detailed trim, tropical planting, and an inviting street view."
+    },
+    {
+      "title": "Parkland Clubhouse — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-parkland-clubhouse-front.webp",
+      "description": "Resort clubhouse arrival view with a landscaped roundabout, clear entry sequence, and hospitality-focused presentation."
+    },
+    {
+      "title": "Parkland Clubhouse — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-parkland-clubhouse-rear.webp",
+      "description": "Waterfront clubhouse and pool visualization designed to communicate the full amenity experience."
+    },
+    {
+      "title": "Ibiza Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-ibiza-residence.webp",
+      "description": "Contemporary Mediterranean residence with a strong central approach, balanced massing, and refined landscaping."
+    },
+    {
+      "title": "Inland Southern California — Plan A",
+      "category": "Architecture",
+      "image": "assets/images/arch-inland-socal-plan-a.webp",
+      "description": "Clean production elevation for a single-story Southern California home with warm materials and approachable planting."
+    },
+    {
+      "title": "Inland Southern California — Plan B",
+      "category": "Architecture",
+      "image": "assets/images/arch-inland-socal-plan-b.webp",
+      "description": "Residential marketing render emphasizing a clear facade, stone entry feature, and bright neighborhood setting."
+    },
+    {
+      "title": "Inland Southern California — Plan C",
+      "category": "Architecture",
+      "image": "assets/images/arch-inland-socal-plan-c.webp",
+      "description": "Alternate home elevation with restrained materials, welcoming landscaping, and presentation-ready lighting."
+    },
+    {
+      "title": "Keystone 1401F Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-keystone-1401f-residence.webp",
+      "description": "Expansive stone residence rendered with close attention to roof forms, masonry, fenestration, and site context."
+    },
+    {
+      "title": "Antigua Cove — Dusk",
+      "category": "Architecture",
+      "image": "assets/images/arch-antigua-cove-dusk.webp",
+      "description": "Coastal home visualized at dusk with illuminated interiors, soft landscape lighting, and a calm tropical atmosphere."
+    },
+    {
+      "title": "Lot 119 — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-rear.webp",
+      "description": "Rear residential visualization highlighting the pool terrace, outdoor living area, and architectural relationship to the yard."
+    },
+    {
+      "title": "Lot 119 — Aerial",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-aerial.webp",
+      "description": "Elevated property view showing the complete home, landscape plan, pool, and surrounding site in one composition."
+    },
+    {
+      "title": "Lot 119 — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-front.webp",
+      "description": "Front elevation visualization with refined stucco, warm wood garage doors, tropical planting, and layered massing."
+    },
+    {
+      "title": "Cypress Key Clubhouse — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-cypress-key-clubhouse-rear.webp",
+      "description": "Community clubhouse rear view centered on the pool deck, resident amenities, and indoor-outdoor connection."
+    },
+    {
+      "title": "Ridgecrest Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-ridgecrest-residence.webp",
+      "description": "Large residential exterior with richly varied masonry, complex rooflines, detailed planting, and a grounded natural setting."
+    },
+    {
+      "title": "Salado Residence — Personal Study",
+      "category": "Architecture",
+      "image": "assets/images/personal-salado-residence.webp",
+      "description": "Personal architectural visualization study exploring a compact brick residence, dramatic sky, and warm evening light."
+    },
+    {
+      "title": "Northern California Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-northern-california-residence.webp",
+      "description": "Production exterior rendering with a clean two-story facade, mature landscaping, and a restrained material palette."
+    },
+    {
+      "title": "Stoneybrook Vista Clubhouse — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-stoneybrook-vista-front.webp",
+      "description": "Community clubhouse arrival view with layered roof forms, tropical landscaping, and a clear hospitality entrance."
+    },
+    {
+      "title": "Stoneybrook Vista Clubhouse — Rear",
+      "category": "Architecture",
+      "image": "assets/images/arch-stoneybrook-vista-rear.webp",
+      "description": "Wide amenity rendering presenting the clubhouse, resort pool, shaded seating, and surrounding landscape as one destination."
+    },
+    {
+      "title": "Middle River Clubhouse — Left View",
+      "category": "Architecture",
+      "image": "assets/images/arch-middle-river-clubhouse-left.webp",
+      "description": "Modern waterfront clubhouse visualized from the left approach with terraces, landscape, and reflective water."
+    },
+    {
+      "title": "Middle River Clubhouse — Rear View",
+      "category": "Architecture",
+      "image": "assets/images/arch-middle-river-clubhouse-rear.webp",
+      "description": "Poolside rear view emphasizing the clubhouse glazing, outdoor seating, water edge, and contemporary geometry."
+    },
+    {
+      "title": "Middle River Clubhouse — Right View",
+      "category": "Architecture",
+      "image": "assets/images/arch-middle-river-clubhouse-right.webp",
+      "description": "Right-side arrival view presenting the modern clubhouse facade, materials, access, and surrounding site design."
     }
   ],
   "books": [
@@ -611,7 +766,7 @@
       "image": "assets/images/orb-thumb.webp",
       "url": "https://www.youtube.com/channel/UCkhYfwqh5-iq7z4yEAvUYjw",
       "date": "2026-06-20",
-      "description": "Cinematic animated shorts exploring mystery, atmosphere, and world-building."
+      "description": "A new animated short channel built around story, atmosphere, and world-building. Replace this entry with your latest upload."
     },
     {
       "title": "Sleep Zen",
@@ -619,7 +774,7 @@
       "image": "assets/images/sleepzen-thumb.webp",
       "url": "https://www.youtube.com/channel/UCccuNXRd1dJkBvxIFXrgFuw",
       "date": "2026-06-05",
-      "description": "Long-form calming scenes and ambient rooms created for sleep, focus, and quiet time."
+      "description": "Long-form calming scenes, ambient rooms, and restful environments. Replace this entry with your latest upload."
     },
     {
       "title": "Original Music",
@@ -627,10 +782,590 @@
       "image": "assets/images/music-band-thumb.webp",
       "url": "https://www.youtube.com/@JasonArtsRecords",
       "date": "2026-05-18",
-      "description": "Original songs and visual releases shaped by cinematic atmosphere and storytelling."
+      "description": "Original tracks and visual music experiences. Replace this entry with your latest upload."
     }
   ],
   "blogPosts": [
+    {
+      "slug": "product-render-brief",
+      "title": "What to Include in a Product Render Brief Before Work Starts",
+      "excerpt": "Dimensions, finish references, camera goals and deliverables: the decisions that help a product visualization project start clearly and avoid guesswork.",
+      "category": "3D",
+      "cover": "assets/images/blog-product-render-brief.webp",
+      "date": "2026-11-16",
+      "publishAt": "2026-11-16T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-product-render-brief",
+      "seo": {
+        "title": "Product Render Brief: What to Prepare Before Work Starts",
+        "description": "Build a clear product render brief with dimensions, approved finishes, camera goals, staging references and final deliverables for 3D visualization.",
+        "targetKeyword": "product render brief",
+        "secondaryKeywords": [
+          "product visualization",
+          "furniture rendering",
+          "3D visualization brief"
+        ],
+        "coverAlt": "A walnut sideboard in a sunlit interior sits behind a measured sketch and a selection of material swatches.",
+        "socialTitle": "What to Include in a Product Render Brief Before Work Starts",
+        "socialDescription": "Dimensions, finish references, camera goals and deliverables: the decisions that help a product visualization project start clearly and avoid guesswork."
+      }
+    },
+    {
+      "slug": "ai-character-consistency",
+      "title": "AI Character Consistency: Keep the Same Person Across Shots",
+      "excerpt": "A practical reference and review process for keeping faces, wardrobe, props and scene states consistent across AI-generated film shots.",
+      "category": "AI Video",
+      "cover": "assets/images/blog-ai-character-consistency-v2.webp",
+      "date": "2026-11-12",
+      "publishAt": "2026-11-12T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-ai-character-consistency",
+      "seo": {
+        "title": "AI Character Consistency: A Practical Shot Review Guide",
+        "description": "Improve AI character consistency with approved references, clear scene states and focused shot reviews that catch changes in faces, wardrobe and props.",
+        "targetKeyword": "AI character consistency",
+        "secondaryKeywords": [
+          "AI film continuity",
+          "character reference images",
+          "AI video workflow"
+        ],
+        "coverAlt": "An original adult woman with short black hair and an orange utility jacket stands beside a cinema camera in a contemporary film studio.",
+        "socialTitle": "AI Character Consistency: Keep the Same Person Across Shots",
+        "socialDescription": "A practical reference and review process for keeping faces, wardrobe, props and scene states consistent across AI-generated film shots."
+      }
+    },
+    {
+      "slug": "gemini-4-creative-work",
+      "title": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
+      "excerpt": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-gemini-4-creative-work.webp",
+      "date": "2026-11-09",
+      "publishAt": "2026-11-09T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-gemini-4-creative-work",
+      "seo": {
+        "title": "Gemini 4 for Creative Work: Argon, Carbon and Access",
+        "description": "A practical look at Gemini 4 for creative work, separating Argon availability from Carbon’s staged rollout and testing briefs, research and continuity.",
+        "targetKeyword": "Gemini 4",
+        "secondaryKeywords": [
+          "Gemini 4 Argon",
+          "Gemini 4 Carbon",
+          "AI creative planning"
+        ],
+        "coverAlt": "A faceted prism sends ordered beams of light across architectural sketches, a material sphere and storyboards on a creative desk.",
+        "socialTitle": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
+        "socialDescription": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects."
+      }
+    },
+    {
+      "slug": "kling-4-filmmaking-control",
+      "title": "Kling 4.0: More Control for AI Filmmaking, Not Just Longer Clips",
+      "excerpt": "What Kling 4.0’s announced references, keyframes and longer generation could mean for directing coherent scenes and judging usable footage.",
+      "category": "AI Video",
+      "cover": "assets/images/blog-kling-4-filmmaking-control.webp",
+      "date": "2026-11-05",
+      "publishAt": "2026-11-05T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-kling-4-filmmaking-control",
+      "seo": {
+        "title": "Kling 4.0: References, Keyframes and Filmmaking Control",
+        "description": "Explore Kling 4.0 for AI filmmaking: references, keyframes, 30-second generation, rollout caveats and a practical way to review usable footage.",
+        "targetKeyword": "Kling 4.0",
+        "secondaryKeywords": [
+          "AI filmmaking",
+          "video keyframes",
+          "character references"
+        ],
+        "coverAlt": "A cinema camera overlooks a rainlit fantasy street with a lone figure and translucent framing guides.",
+        "socialTitle": "Kling 4.0: More Control for AI Filmmaking, Not Just Longer Clips",
+        "socialDescription": "What Kling 4.0’s announced references, keyframes and longer generation could mean for directing coherent scenes and judging usable footage."
+      }
+    },
+    {
+      "slug": "orb-story-so-far",
+      "title": "The Orb: The Story So Far — A Spoiler-Light Preview of Chapters 1–6",
+      "excerpt": "A young Traveler, an unlikely companion and a power he cannot explain: a spoiler-light introduction before the November 4 Chapters 1–6 release.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/blog-orb-story-so-far.webp",
+      "date": "2026-11-02",
+      "publishAt": "2026-11-02T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-orb-story-so-far",
+      "seo": {
+        "title": "The Orb: The Story So Far — Chapters 1–6 Preview",
+        "description": "The Orb: The Story So Far brings Chapters 1–6 together November 4. Meet the young Traveler and his horse in this spoiler-light release preview.",
+        "targetKeyword": "The Orb: The Story So Far",
+        "secondaryKeywords": [
+          "The Orb Chapters 1–6",
+          "original AI fantasy film",
+          "Jason Arts film"
+        ],
+        "coverAlt": "The young Traveler in his worn brown cloak rides his dark horse through a sunlit forest beside The Orb: The Story So Far lettering.",
+        "socialTitle": "The Orb: The Story So Far — A Spoiler-Light Preview of Chapters 1–6",
+        "socialDescription": "A young Traveler, an unlikely companion and a power he cannot explain: a spoiler-light introduction before the November 4 Chapters 1–6 release."
+      }
+    },
+    {
+      "slug": "gpt-61-terra-creative-work",
+      "title": "GPT‑6.1 Terra: What the New Release Means for Creative Work",
+      "excerpt": "A practical look at GPT‑6.1 Terra, the October 26 release, and the visual, writing and computer tasks worth testing in a creative workflow.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-gpt-61-terra-creative-work.webp",
+      "date": "2026-10-30",
+      "publishAt": "2026-10-30T18:00:00Z",
+      "status": "published",
+      "url": "/blog-gpt-61-terra-creative-work",
+      "seo": {
+        "title": "GPT‑6.1 Terra: A Practical Look for Creative Work",
+        "description": "Explore GPT‑6.1 Terra for creative work: visual reasoning, writing, computer use, access, limitations and practical tests for artists.",
+        "targetKeyword": "GPT‑6.1 Terra",
+        "secondaryKeywords": [
+          "AI creative workflow",
+          "visual reasoning",
+          "AI for 3D artists"
+        ],
+        "coverAlt": "An architectural drawing aligns with a miniature modern building on a warmly lit creative desk.",
+        "socialTitle": "GPT‑6.1 Terra: What the New Release Means for Creative Work",
+        "socialDescription": "A practical look at GPT‑6.1 Terra, the October 26 release, and the visual, writing and computer tasks worth testing in a creative workflow."
+      }
+    },
+    {
+      "slug": "claude-fable-5-1-long-horizon-ai",
+      "title": "Claude Fable 5.1: The Long-Haul AI Model Creators Should Watch",
+      "excerpt": "Claude Fable 5.1 focuses on long-running projects, stronger writing, careful problem-solving, and lower agentic costs instead of simply winning the first prompt.",
+      "category": "Singularity",
+      "cover": "assets/images/claude-fable-5-1-long-horizon-work.webp",
+      "date": "2026-09-12",
+      "publishAt": "2026-09-12T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-claude-fable-5-1-long-horizon-ai",
+      "seo": {
+        "title": "Claude Fable 5.1: The Long-Haul AI Model",
+        "description": "Claude Fable 5.1 brings stronger long-running reasoning, clearer writing, and lower agentic costs. Here is what creators should know.",
+        "targetKeyword": "Claude Fable 5.1",
+        "secondaryKeywords": [
+          "Anthropic Fable 5.1",
+          "long-horizon AI",
+          "agentic AI model"
+        ],
+        "coverAlt": "A dark creative workstation displays a long project timeline connected by glowing checkpoints.",
+        "socialTitle": "Claude Fable 5.1 Is Built for the Messy Middle of Creative Work",
+        "socialDescription": "Fable 5.1 promises stronger long-term reasoning, clearer writing, and fewer lost instructions during complicated creative projects."
+      }
+    },
+    {
+      "slug": "gpt-6-astra-creative-work",
+      "title": "GPT-6 Astra: What It Actually Changes for Creative Work",
+      "excerpt": "GPT-6 Astra promises stronger computer use, visual judgment, and long-term project awareness—but its real value may be helping creators finish complicated work.",
+      "category": "Singularity",
+      "cover": "assets/images/gpt-6-astra-creative-workflow.webp",
+      "date": "2026-09-09",
+      "publishAt": "2026-09-09T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-gpt-6-astra-creative-work",
+      "seo": {
+        "title": "GPT-6 Astra: What It Changes for Creative Work",
+        "description": "GPT-6 Astra combines computer use, visual judgment, and project continuity. Here is what the new AI model could mean for working creators.",
+        "targetKeyword": "GPT-6 Astra",
+        "secondaryKeywords": [
+          "GPT-6 creative workflow",
+          "OpenAI Astra",
+          "AI for creative work"
+        ],
+        "coverAlt": "A 3D artist works at a digital production workstation connected to a glowing AI visualization.",
+        "socialTitle": "GPT-6 Astra Could Change How Creators Finish Projects",
+        "socialDescription": "Astra is not just a smarter chatbot. Its computer use, visual judgment, and project memory could make it a serious creative-production assistant."
+      }
+    },
+    {
+      "slug": "gpt-5-6-for-creators",
+      "title": "GPT-5.6 for Creators: The Interesting Part Isn't the Benchmark Score",
+      "excerpt": "GPT-5.6 puts more emphasis on design judgment, computer use and end-to-end project work, which may matter to creators more than another chart full of benchmark numbers.",
+      "category": "AI Tips",
+      "cover": "assets/images/gpt-5-6-for-creators.webp",
+      "date": "2026-09-07",
+      "publishAt": "2026-09-07T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-gpt-5-6-for-creators",
+      "seo": {
+        "title": "GPT-5.6 for Creators: What Actually Matters",
+        "description": "GPT-5.6 for creators brings stronger design judgment, computer use and end-to-end workflows that matter more than another benchmark score.",
+        "targetKeyword": "GPT-5.6 for creators",
+        "secondaryKeywords": [
+          "GPT-5.6 design",
+          "GPT-5.6 computer use",
+          "AI creative workflows"
+        ],
+        "coverAlt": "An AI creative workspace showing GPT-5.6 moving from planning through design, visual inspection and final refinement.",
+        "socialTitle": "GPT-5.6 Is More Interesting When You Stop Looking at the Benchmarks",
+        "socialDescription": "Better design judgment, visual inspection and end-to-end tool use are the GPT-5.6 improvements creative professionals should actually watch."
+      }
+    },
+    {
+      "slug": "google-flow-ai-creative-studio",
+      "title": "Google Flow Is Becoming an AI Creative Studio, Not Just a Video Generator",
+      "excerpt": "Google Flow now combines video, images, an AI creative agent and custom-built tools inside one workspace, pushing AI filmmaking beyond simple clip generation.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/google-flow-ai-creative-studio.webp",
+      "date": "2026-09-04",
+      "publishAt": "2026-09-04T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-google-flow-ai-creative-studio",
+      "seo": {
+        "title": "Google Flow Is Becoming an AI Creative Studio",
+        "description": "Google Flow now combines AI video, project-aware agents, multimodal creation and custom Flow Tools in a growing AI creative studio.",
+        "targetKeyword": "Google Flow AI creative studio",
+        "secondaryKeywords": [
+          "Google Flow Tools",
+          "Google Flow agent",
+          "AI filmmaking workflow"
+        ],
+        "coverAlt": "A cinematic Google Flow workspace combining video shots, reference images, an AI agent and customizable creative tools.",
+        "socialTitle": "Google Flow Is Turning Into Something Much Bigger Than a Video Generator",
+        "socialDescription": "Agents, custom tools, multimodal creation and better asset management are turning Google Flow into an AI-native production workspace."
+      }
+    },
+    {
+      "slug": "elevenmusic-vocals-consistent-ai-singer",
+      "title": "ElevenMusic Vocals: Can an AI Artist Finally Sound Consistent?",
+      "excerpt": "ElevenMusic Vocals lets creators reuse the same singing voice across multiple songs, while References can guide the style and sound of an entire project.",
+      "category": "AI Music",
+      "cover": "assets/images/elevenmusic-vocals-consistent-ai-singer.webp",
+      "date": "2026-08-27",
+      "publishAt": "2026-08-27T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-elevenmusic-vocals-consistent-ai-singer",
+      "seo": {
+        "title": "ElevenMusic Vocals: Build a Consistent AI Singer",
+        "description": "ElevenMusic Vocals and References help creators maintain the same AI singer and musical identity across multiple songs and complete projects.",
+        "targetKeyword": "ElevenMusic Vocals",
+        "secondaryKeywords": [
+          "consistent AI singer",
+          "ElevenMusic References",
+          "AI music identity"
+        ],
+        "coverAlt": "A singer recording beside an ElevenMusic interface showing a saved vocal identity and reference track.",
+        "socialTitle": "Can ElevenMusic Finally Keep the Same Singer?",
+        "socialDescription": "ElevenMusic Vocals can reuse one AI singer across multiple songs, while References helps keep the surrounding musical style consistent."
+      }
+    },
+    {
+      "slug": "ai-building-worlds-siggraph-2026",
+      "title": "AI Is Learning to Build Worlds, Not Just Pictures",
+      "excerpt": "SIGGRAPH 2026 showed how world models, neural rendering, physics simulation and AI agents are moving generative AI toward interactive 3D environments.",
+      "category": "Singularity",
+      "cover": "assets/images/ai-building-worlds-siggraph-2026.webp",
+      "date": "2026-08-24",
+      "publishAt": "2026-08-24T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-ai-building-worlds-siggraph-2026",
+      "seo": {
+        "title": "AI Is Learning to Build Worlds, Not Just Pictures",
+        "description": "SIGGRAPH 2026 showed how AI world models, neural rendering, physics simulation and 3D agents are creating interactive digital environments.",
+        "targetKeyword": "AI world models",
+        "secondaryKeywords": [
+          "SIGGRAPH 2026 AI",
+          "physics-aware AI worlds",
+          "NVIDIA world simulation"
+        ],
+        "coverAlt": "An explorer overlooking an AI-generated 3D world surrounded by simulation and world-model interface elements.",
+        "socialTitle": "AI Is Learning to Build Worlds That Actually Behave",
+        "socialDescription": "SIGGRAPH 2026 showed AI moving beyond images into physics-aware environments, neural rendering and agents that work inside 3D tools."
+      }
+    },
+    {
+      "slug": "substance-painter-12-1-less-baking-cleanup",
+      "title": "Substance Painter 12.1: Less Baking Cleanup, Better Materials",
+      "excerpt": "Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that target some of the most tedious parts of texturing.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/substance-painter-12-1-less-baking-cleanup.webp",
+      "date": "2026-08-20",
+      "publishAt": "2026-08-20T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-substance-painter-12-1-less-baking-cleanup",
+      "seo": {
+        "title": "Substance Painter 12.1: Less Baking Cleanup",
+        "description": "Substance Painter 12.1 adds OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV tools that simplify texturing workflows.",
+        "targetKeyword": "Substance Painter 12.1",
+        "secondaryKeywords": [
+          "Substance Painter OpenPBR",
+          "Painter Auto Rebake",
+          "Skew Map Painting"
+        ],
+        "coverAlt": "A weathered hard-surface model displayed beside Substance Painter 12.1 material and baking controls.",
+        "socialTitle": "Substance Painter 12.1 Fixes Some Very Real Workflow Problems",
+        "socialDescription": "OpenPBR, Skew Map Painting, Auto Rebake and hard-surface Auto UV make Painter 12.1 a practical update for production artists."
+      }
+    },
+    {
+      "slug": "corgo-web-game-behind-the-scenes",
+      "title": "From Book to Browser: Bringing Corgo to Life as a Web Game",
+      "excerpt": "Corgo started as an illustrated character, but turning that world into a playable browser experience meant rethinking the art, the layouts and how kids actually search inside a scene.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/corgo-web-game-behind-the-scenes.webp",
+      "date": "2026-08-17",
+      "publishAt": "2026-08-17T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-corgo-web-game-behind-the-scenes",
+      "seo": {
+        "title": "Corgo Web Game: Bringing a Character Into Play",
+        "description": "Go behind the scenes of the Corgo web game and see how character art, hidden-object design and browser gameplay came together on JasonArts.com.",
+        "targetKeyword": "Corgo web game",
+        "secondaryKeywords": [
+          "hidden-object browser game",
+          "Corgo JasonArts",
+          "behind the scenes game design"
+        ],
+        "coverAlt": "A colorful Corgo hidden-object browser game scene with playful artwork, target items and a clean interface.",
+        "socialTitle": "From Book to Browser: How the Corgo Web Game Came Together",
+        "socialDescription": "Corgo is now live as a browser game on JasonArts.com. Here is the behind-the-scenes story of turning an illustrated character into a playful hidden-object experience."
+      }
+    },
+    {
+      "slug": "3ds-max-2027-visualization-tools",
+      "title": "3ds Max 2027: The New Tools Visualization Artists Will Actually Use",
+      "excerpt": "3ds Max 2027 adds Smart Bevel, better spline tools, Noise Plus and several workflow improvements that are much more useful than the usual feature-list marketing suggests.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/3ds-max-2027-visualization-tools.webp",
+      "date": "2026-08-15",
+      "publishAt": "2026-08-15T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-3ds-max-2027-visualization-tools",
+      "seo": {
+        "title": "3ds Max 2027: Best New Tools for Visualization",
+        "description": "See which 3ds Max 2027 features matter for visualization artists, including Smart Bevel, Noise Plus, spline improvements and Autodesk Assistant.",
+        "targetKeyword": "3ds Max 2027",
+        "secondaryKeywords": [
+          "3ds Max Smart Bevel",
+          "3ds Max Noise Plus",
+          "3ds Max visualization tools"
+        ],
+        "coverAlt": "A professional hard-surface model beside a 3ds Max 2027 interface highlighting Smart Bevel and new modeling tools.",
+        "socialTitle": "3ds Max 2027: The New Tools I'll Actually Use",
+        "socialDescription": "Smart Bevel gets the attention, but several smaller 3ds Max 2027 upgrades could make everyday visualization work noticeably faster."
+      }
+    },
+    {
+      "slug": "vray-vantage-3ds-max-realtime-viewport",
+      "title": "V-Ray + Vantage Inside 3ds Max: Real-Time Rendering Without Leaving Your Scene",
+      "excerpt": "Chaos Vantage can now run directly inside the V-Ray viewport in 3ds Max, giving artists a fully ray-traced real-time view while they build, light and animate.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/vray-vantage-3ds-max-realtime-viewport.webp",
+      "date": "2026-08-14",
+      "publishAt": "2026-08-14T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-vray-vantage-3ds-max-realtime-viewport",
+      "seo": {
+        "title": "V-Ray Vantage Inside 3ds Max: Real-Time Rendering",
+        "description": "See how V-Ray Vantage in 3ds Max brings real-time ray-traced lighting, materials and animation previews directly into the viewport.",
+        "targetKeyword": "V-Ray Vantage in 3ds Max",
+        "secondaryKeywords": [
+          "V-Ray real-time rendering",
+          "Chaos Vantage 3ds Max",
+          "V-Ray viewport rendering"
+        ],
+        "coverAlt": "A 3ds Max architectural scene displayed with real-time ray-traced V-Ray and Chaos Vantage rendering inside the viewport.",
+        "socialTitle": "V-Ray Just Made the 3ds Max Viewport Much More Interesting",
+        "socialDescription": "Chaos Vantage now runs directly inside the V-Ray viewport in 3ds Max, giving artists real-time ray-traced feedback while they build, light and animate."
+      }
+    },
+    {
+      "slug": "why-davinci-resolve-is-useful",
+      "title": "Why DaVinci Resolve Is One of the Most Useful Creative Tools You Can Learn",
+      "excerpt": "DaVinci Resolve combines editing, color, visual effects, motion graphics, audio and delivery in one application, making it useful for nearly any kind of video project.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/davinci-resolve-all-in-one-creative-tool.webp",
+      "date": "2026-08-10",
+      "publishAt": "2026-08-10T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-why-davinci-resolve-is-useful",
+      "seo": {
+        "title": "Why DaVinci Resolve Is Useful for Creative Work",
+        "description": "Learn why DaVinci Resolve is useful for editing, color grading, visual effects, audio production and complete creative video workflows.",
+        "targetKeyword": "why DaVinci Resolve is useful",
+        "secondaryKeywords": [
+          "DaVinci Resolve benefits",
+          "DaVinci Resolve for beginners",
+          "all-in-one video editing software"
+        ],
+        "coverAlt": "A DaVinci Resolve workspace displaying video editing, color grading, visual effects and audio-mixing tools.",
+        "socialTitle": "Why DaVinci Resolve Is Worth Learning",
+        "socialDescription": "Editing, color, visual effects, audio and delivery all live inside DaVinci Resolve. Here is why it remains such a useful tool for creative video work."
+      }
+    },
+    {
+      "slug": "suno-stem-separation-mixing-workflow",
+      "title": "Suno Stem Separation: Can You Actually Mix an AI Song Properly Now?",
+      "excerpt": "Suno’s updated stem separation gives producers far more control, but getting a genuinely better mix still requires knowing which split mode to use and what the exported tracks really contain.",
+      "category": "AI Music",
+      "cover": "assets/images/suno-stem-separation-mixing-workflow.webp",
+      "date": "2026-08-03",
+      "publishAt": "2026-08-03T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-suno-stem-separation-mixing-workflow",
+      "seo": {
+        "title": "Suno Stem Separation: A Practical Mixing Workflow",
+        "description": "Learn how Suno stem separation works, which split mode to choose and how to rebuild vocals, drums, bass and instruments into a stronger mix.",
+        "targetKeyword": "Suno stem separation",
+        "secondaryKeywords": [
+          "Suno Advanced Split",
+          "mixing Suno stems",
+          "AI music stem separation"
+        ],
+        "coverAlt": "A digital audio workstation displaying separated Suno vocal, drum, bass, guitar and keyboard stems beside a finished stereo mix.",
+        "socialTitle": "Can You Actually Mix a Suno Song Properly Now?",
+        "socialDescription": "Suno’s updated stem tools can split a song into vocals, drums, bass and specific instruments. Here is how I would turn those parts into a stronger final mix."
+      }
+    },
+    {
+      "slug": "kling-3-multi-shot-video-workflow",
+      "title": "Kling 3.0 Multi-Shot: Build a Scene, Not Just One Cool Clip",
+      "excerpt": "Kling 3.0 can generate a complete multi-shot sequence in one pass, but the best results still come from planning the scene like an editor instead of writing one enormous prompt.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/kling-3-multi-shot-scene-workflow.webp",
+      "date": "2026-07-31",
+      "publishAt": "2026-07-31T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-kling-3-multi-shot-video-workflow",
+      "seo": {
+        "title": "Kling 3.0 Multi-Shot: A Practical Scene Workflow",
+        "description": "Learn a practical Kling 3.0 multi-shot workflow for planning shots, maintaining character consistency, controlling timing and building complete AI video scenes.",
+        "targetKeyword": "Kling 3.0 multi-shot",
+        "secondaryKeywords": [
+          "Kling AI video workflow",
+          "Kling Custom Multi-Shot",
+          "AI video storytelling"
+        ],
+        "coverAlt": "A cinematic storyboard interface showing four connected shots generated as one Kling 3.0 multi-shot video scene.",
+        "socialTitle": "Kling 3.0 Can Build a Scene—But You Still Have to Direct It",
+        "socialDescription": "Kling 3.0 can generate multi-shot AI video with controlled timing, consistent Elements and native audio. Here is how I would structure a scene that actually tells a story."
+      }
+    },
+    {
+      "slug": "3ds-max-2027-updates-that-matter",
+      "title": "3ds Max 2027: The Updates That Actually Matter to Working Artists",
+      "excerpt": "3ds Max 2027 adds several useful modeling and workflow improvements, but a handful of features stand out as the ones working artists will actually notice.",
+      "category": "3D / Max Tips",
+      "date": "2026-07-27",
+      "publishAt": "2026-07-27T16:04:32.991Z",
+      "status": "published",
+      "cover": "assets/images/3ds-max-2027-practical-updates.webp",
+      "url": "/blog-3ds-max-2027-updates-that-matter",
+      "seo": {
+        "title": "3ds Max 2027: Updates That Matter to Artists",
+        "description": "A working artist’s look at 3ds Max 2027, including Smart Bevel, spline improvements, performance gains, color management and upgrade advice.",
+        "targetKeyword": "3ds Max 2027",
+        "secondaryKeywords": [
+          "3ds Max 2027 new features",
+          "3ds Max Smart Bevel",
+          "3ds Max upgrade guide"
+        ],
+        "coverAlt": "A 3ds Max modeling workspace displaying a hard-surface object with rounded Boolean intersections created using Smart Bevel.",
+        "socialTitle": "3ds Max 2027: Which New Features Actually Matter?",
+        "socialDescription": "3ds Max 2027 adds Smart Bevel, better spline tools and several practical workflow improvements. Here are the changes working artists should actually care about."
+      }
+    },
+    {
+      "slug": "ai-concept-art-for-3d-modeling",
+      "title": "AI Concept Art Is Not a Blueprint: Turning It Into Useful 3D Reference",
+      "excerpt": "AI can generate a great-looking concept in seconds, but turning that image into a believable 3D model requires knowing what to trust, what to rebuild and what to ignore.",
+      "category": "3D / Max Tips",
+      "cover": "assets/images/ai-concept-art-to-3d-reference.webp",
+      "date": "2026-07-24",
+      "publishAt": "2026-07-24T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-ai-concept-art-for-3d-modeling",
+      "seo": {
+        "title": "AI Concept Art for 3D Modeling: A Practical Workflow",
+        "description": "Learn how to turn AI concept art into useful 3D modeling reference by fixing scale, perspective, construction, materials and inconsistent details.",
+        "targetKeyword": "AI concept art for 3D modeling",
+        "secondaryKeywords": [
+          "AI reference images for 3D",
+          "AI-assisted 3D workflow",
+          "modeling from AI concept art"
+        ],
+        "coverAlt": "A 3D artist’s workspace showing an AI furniture concept beside a clean gray blockout and a detailed finished model.",
+        "socialTitle": "AI Concept Art Looks Great—Until You Try to Model It",
+        "socialDescription": "AI can create a convincing design in seconds, but it rarely creates a reliable blueprint. Here is how I turn generated concepts into usable 3D reference."
+      }
+    },
+    {
+      "slug": "how-i-made-sarah-ai-music-video",
+      "title": "How I Made the AI Music Video for “Sarah” by Dirty It Dies",
+      "excerpt": "A behind-the-scenes look at how I turned “Sarah” by Dirty It Dies into an emotional AI music video using visual storytelling, character consistency, motion, and editing.",
+      "category": "AI Music",
+      "cover": "assets/images/sarah-ai-music-video-cover.webp",
+      "date": "2026-07-20",
+      "publishAt": "2026-07-20T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-how-i-made-sarah-ai-music-video",
+      "seo": {
+        "title": "How I Made the AI Music Video for “Sarah”",
+        "description": "Go behind the scenes of “Sarah” by Dirty It Dies and see how AI imagery, animation, character design, and editing shaped the music video.",
+        "targetKeyword": "AI music video",
+        "secondaryKeywords": [
+          "- how to make an AI music video"
+        ],
+        "coverAlt": "Close-up of the lead singer from the “Sarah” AI music video standing on a rain-soaked city street at night.",
+        "socialTitle": "How I Made the AI Music Video for “Sarah”",
+        "socialDescription": "Behind the scenes of the character design, nighttime visuals, band performance, AI animation, and editing used to create “Sarah.”"
+      }
+    },
+    {
+      "slug": "seedream-50-the-ai-image-model-that-changes-how-we-prompt",
+      "title": "Seedream 5.0: The AI Image Model That Changes How We Prompt",
+      "excerpt": "Seedream 5.0 isn't just another image generator. Its reasoning-first approach, stronger reference handling, and editing capabilities could change how artists build images from concept to final render.",
+      "category": "AI Tips",
+      "cover": "assets/images/seedream-5-cover.webp",
+      "date": "2026-07-12",
+      "url": "/blog-seedream-50-the-ai-image-model-that-changes-how-we-prompt",
+      "publishAt": "2026-07-17T14:00:00.000Z"
+    },
+    {
+      "slug": "seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade",
+      "title": "Seedance 2.5 Is a Bigger Deal Than Another AI Video Upgrade",
+      "excerpt": "Seedance 2.5 targets longer clips, stronger reference control, and easier revisions—the exact improvements AI filmmakers actually need.",
+      "category": "AI Video / Shorts",
+      "cover": "assets/images/seedance-2-5-cover.webp",
+      "date": "2026-07-14",
+      "publishAt": "2026-07-14T14:00:00.000Z",
+      "status": "scheduled",
+      "url": "/blog-seedance-25-is-a-bigger-deal-than-another-ai-video-upgrade"
+    },
+    {
+      "slug": "rush-without-neil-peart-fort-worth-2026",
+      "title": "Rush Came Back Without Neil, but He Was Everywhere",
+      "excerpt": "Rush returned to the stage without Neil Peart behind the drums, but through the music, his voice, and the love in the room, it felt like he was everywhere.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/rush-came-back-without-neil.webp",
+      "date": "2026-07-14",
+      "publishAt": "2026-07-14T13:29:52.048Z",
+      "status": "published",
+      "url": "/blog-rush-without-neil-peart-fort-worth-2026",
+      "seo": {
+        "title": "Rush Without Neil Peart: A Night I Won’t Forget",
+        "description": "A personal reflection on seeing Rush without Neil Peart in Fort Worth, honoring his legacy, Anika Nilles and an unforgettable 2026 setlist.",
+        "targetKeyword": "Rush without Neil Peart",
+        "secondaryKeywords": [
+          "- Rush Fifty Something Tour"
+        ],
+        "coverAlt": "Geddy Lee and Alex Lifeson perform beneath blue stage lights while Anika Nilles plays drums behind them.",
+        "socialTitle": "Rush Came Back Without Neil, but He Was Everywhere",
+        "socialDescription": "Seeing Rush return without Neil Peart was joyful, difficult and unforgettable. This is what the music, the tributes and that night meant to me."
+      }
+    },
+    {
+      "slug": "how-i-built-jasonartscom-with-claude-without-losing-my-own-style",
+      "title": "How I Built JasonArts.com with Claude Without Losing My Own Style",
+      "excerpt": "I used Claude to help build JasonArts.com, but the real challenge was making sure the finished site still felt like my work instead of another generic AI template.",
+      "category": "AI Tips",
+      "cover": "assets/images/building-jasonarts-with-claude-cover.webp",
+      "date": "2026-07-12",
+      "publishAt": "2026-07-12T17:35:13.427Z",
+      "status": "published",
+      "url": "/blog-how-i-built-jasonartscom-with-claude-without-losing-my-own-style"
+    },
     {
       "slug": "whats-new-in-midjourney-v81",
       "title": "What's New in Midjourney V8.1",

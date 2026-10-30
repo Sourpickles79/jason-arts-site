@@ -88,7 +88,11 @@ export default {
 };
 
 async function handleBlogPost(request, env) {
-  const asset = await env.ASSETS.fetch(request);
+  // Inspect schedule metadata for HEAD too; an asset HEAD has no HTML to inspect.
+  const assetHeaders = new Headers(request.headers);
+  assetHeaders.delete("If-None-Match");
+  assetHeaders.delete("If-Modified-Since");
+  const asset = await env.ASSETS.fetch(new Request(request.url, { method: "GET", headers: assetHeaders }));
   if (!asset.ok) return asset;
 
   const html = await asset.text();
@@ -113,6 +117,8 @@ async function handleBlogPost(request, env) {
   const headers = new Headers(asset.headers);
   headers.delete("Content-Length");
   headers.delete("Content-Encoding");
+  headers.delete("ETag");
+  headers.delete("Last-Modified");
   return new Response(request.method === "HEAD" ? null : enhancedHtml, { status: asset.status, headers });
 }
 

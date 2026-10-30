@@ -1,0 +1,9 @@
+/* Keep the existing blog layout readable when the full navigation is crowded. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .blog-post .site-header { grid-template-columns: auto minmax(0, 1fr); }
+  .blog-post .site-header .pill { display: none; }
+  .blog-post .nav { justify-content: flex-end; gap: 14px; }
+}
+@media (max-width: 900px) {
+  .blog-post main > .section { padding-top: 230px !important; }
+}
