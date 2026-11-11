@@ -22,6 +22,7 @@
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/css/gallery-viewer.css">
+  <link rel="stylesheet" href="/assets/css/portfolio-browser.css">
 </head>
 <body>
   <header class="site-header">
@@ -68,14 +69,20 @@
     </section>
 
     <section class="section">
-      <div class="filter-bar" aria-label="Portfolio filters">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="Architecture">Architecture</button>
-        <button class="filter" data-filter="Product Visualization">Products</button>
-        <button class="filter" data-filter="Planning">Planning</button>
-        <button class="filter filter-video" data-filter="__videos__">▶ Videos</button>
-        <button class="filter filter-modeled" data-filter="__modeled__">◆ Modeling</button>
+      <div class="portfolio-tools" id="portfolioTools" hidden>
+        <label for="portfolioSearch">Find a piece</label>
+        <div class="portfolio-search-row"><input id="portfolioSearch" type="search" placeholder="Search titles and descriptions" autocomplete="off"><button type="button" id="portfolioReset" hidden>Clear filters</button></div>
       </div>
+      <div class="filter-bar" aria-label="Portfolio filters">
+        <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="Architecture" aria-pressed="false">Architecture</button>
+        <button type="button" class="filter" data-filter="Product Visualization" aria-pressed="false">Products</button>
+        <button type="button" class="filter" data-filter="Planning" aria-pressed="false">Planning</button>
+        <button type="button" class="filter filter-video" data-filter="__videos__" aria-pressed="false">▶ Videos</button>
+        <button type="button" class="filter filter-modeled" data-filter="__modeled__" aria-pressed="false">◆ Modeling</button>
+      </div>
+      <p id="portfolioResultCount" class="portfolio-result-count" role="status" aria-live="polite" hidden></p>
+      <p id="portfolioEmpty" class="portfolio-empty" hidden>No work matched those filters. Try another search or clear the filters.</p>
       <div class="portfolio-grid" id="portfolioGrid"><article class="card" data-category="Architecture" data-has-video="false" data-modeled="false"><img src="/assets/images/hero-kitchen-living.webp" alt="Interior Visualization - Architecture by Jason Arts" loading="lazy"><div class="card-body"><span class="category">Architecture</span><h3>Interior Visualization</h3><p>Clean residential interiors with balanced lighting, staging, and camera composition.</p></div></article>
 <article class="card" data-category="Product Visualization" data-has-video="false" data-modeled="false"><img src="/assets/images/genesis-gaming-desk.webp" alt="Gaming Workspace - Product Visualization by Jason Arts" loading="lazy"><div class="card-body"><span class="category">Product Visualization</span><h3>Gaming Workspace</h3><p>Color-forward lifestyle rendering for gaming furniture and consumer product storytelling.</p></div></article>
 <article class="card" data-category="Architecture" data-has-video="false" data-modeled="false"><img src="/assets/images/savannah-front.webp" alt="Exterior Elevation - Architecture by Jason Arts" loading="lazy"><div class="card-body"><span class="category">Architecture</span><h3>Exterior Elevation</h3><p>Residential exterior visualization with landscaping, lighting, and curb appeal.</p></div></article>
@@ -181,6 +188,7 @@
   <script src="assets/js/header.js"></script>
   <script src="assets/data/content.js"></script>
   <script src="script.js"></script>
+  <script src="assets/js/portfolio-browser.js"></script>
   <script src="assets/js/gallery-viewer.js"></script>
 </body>
 </html>

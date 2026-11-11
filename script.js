@@ -156,6 +156,7 @@ async function init() {
 
   document.querySelectorAll(".filter").forEach(button => {
     button.addEventListener("click", () => {
+      if (qs("#portfolioTools") && !qs("#portfolioTools").hidden) return; // Enhanced controls own portfolio filtering when available.
       document.querySelectorAll(".filter").forEach(item => item.classList.remove("active"));
       button.classList.add("active");
       const filter = button.dataset.filter;
