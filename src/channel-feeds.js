@@ -1,5 +1,5 @@
 import { videoCards, replaceShowcase, videoStructuredData } from './showcase.js';
-const CHANNELS={music:{tag:'Music'},cozy:{tag:'ASMR / Sleep'},orb:{tag:'Animated Shorts'}};
+const CHANNELS={music:{tag:'Music'},cozy:{tag:'ASMR / Sleep'},orb:{tag:'The Orb'}};
 const inflight=new Map();
 function decode(value) {
  return String(value||'').replace(/^<!\[CDATA\[([\s\S]*)\]\]>$/,'$1').replace(/&#(x[0-9a-f]+|\d+);|&(amp|lt|gt|quot|apos);/gi,(_,n,entity)=>n?String.fromCodePoint(Math.min(0x10ffff,parseInt(n[0].toLowerCase()==='x'?n.slice(1):n,n[0].toLowerCase()==='x'?16:10))):({amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"}[entity.toLowerCase()]));
@@ -14,7 +14,7 @@ export function parseRegularFeed(xml) {
 export async function channelData(key,request,env) {
  if(!CHANNELS[key])throw new Error('Unknown channel');
  const cache=typeof caches!=='undefined'?caches.default:null;
- const cacheKey=new Request('https://jasonarts.com/__channel-cache/v1/'+key);
+ const cacheKey=new Request('https://jasonarts.com/__channel-cache/v2/'+key);
  if(cache){const saved=await cache.match(cacheKey);if(saved)return saved.json();}
  if(inflight.has(key))return inflight.get(key);
  const load=(async()=>{

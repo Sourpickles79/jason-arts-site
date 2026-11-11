@@ -34,3 +34,7 @@
 .orb-map-hint { font-size: .85em; }
 @media (max-width: 850px) { .orb-world-grid { grid-template-columns: 1fr; } .orb-world-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .orb-world-card img { height: 100%; } }
 @media (max-width: 600px) { .orb-world-card, .orb-world-map { display: block; } .orb-world-card img { height: auto; } .orb-world-map-image { min-height: 0; } .orb-world-map-image img { height: auto; } }
+.orb-feed-thumb { display: block; position: relative; width: 100%; height: 100%; }
+.orb-feed-thumb > span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 56px; height: 56px; padding-left: 4px; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; background: rgba(0,0,0,.75); color: #fff; font-size: 19px; }
+.orb-feed-thumb:focus-visible { outline: 3px solid #e8b56c; outline-offset: 3px; }
+.orb-feed-thumb:hover > span { background: #d8903c; color: #111; }
