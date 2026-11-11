@@ -21,6 +21,16 @@
   <link rel="icon" href="/assets/images/favicon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    .orb-hero > img { object-position: 60% center; }
+    .orb-hero .hero-shade {
+      background: linear-gradient(90deg, rgba(2, 6, 8, .85) 0%, rgba(2, 6, 8, .45) 35%, transparent 75%), linear-gradient(0deg, rgba(7, 11, 13, .88) 0%, transparent 48%);
+    }
+    @media (max-width: 700px) {
+      .orb-hero > img { object-position: 60% center; }
+      .orb-hero .hero-shade { background: linear-gradient(0deg, rgba(7, 11, 13, .96), rgba(7, 11, 13, .42) 48%, rgba(7, 11, 13, .08) 85%); }
+    }
+  </style>
   <script id="video-jsonld" type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"VideoObject","name":"A Power He Doesn’t Understand | The Orb Official Trailer","description":"Before Chapter 6, return to where the journey began. The Orb: The Story So Far brings Chapters 1–5 together as one continuous cinematic fantasy film. A lone Traveler. A faithful horse. A mysterious Orb. A power he does not yet understand. The full film releases NOV 4TH at 5PM Central. Watch the full film: Stay through ","thumbnailUrl":"https://i2.ytimg.com/vi/u7fONBIl0mo/hqdefault.jpg","uploadDate":"2026-10-28T22:00:20+00:00","url":"https://www.youtube.com/watch?v=u7fONBIl0mo"}},{"@type":"ListItem","position":2,"item":{"@type":"VideoObject","name":"The Bloom | The Orb Chapter 4 Original Score","description":"The Bloom is an original score from The Orb: Chapter 4. This piece was created around one of the more mysterious and atmospheric moments in the chapter, with a softer cinematic sound built around discovery, wonder, and the strange beauty of the world surrounding the Traveler. A quieter piece from the growing musical wo","thumbnailUrl":"https://i4.ytimg.com/vi/WE-wt7q0lmA/hqdefault.jpg","uploadDate":"2026-10-21T22:00:03+00:00","url":"https://www.youtube.com/watch?v=WE-wt7q0lmA"}},{"@type":"ListItem","position":3,"item":{"@type":"VideoObject","name":"The Horse That Choose | The Orb Chapter 3 Original Score","description":"The Horse That Choose is an original score from The Orb: Chapter 3. This piece was created to support one of the quieter, more emotional moments in the story — the connection between the Traveler and the horse that becomes part of his journey. If you’ve been following The Orb, this is one of the musical themes tied dir","thumbnailUrl":"https://i2.ytimg.com/vi/utNbN06jjDU/hqdefault.jpg","uploadDate":"2026-10-14T22:00:26+00:00","url":"https://www.youtube.com/watch?v=utNbN06jjDU"}},{"@type":"ListItem","position":4,"item":{"@type":"VideoObject","name":"The Orb – Chapter 5: The Village That Turned Away | Cinematic Fantasy Short Film","description":"The journey continues in The Village That Turned Away — Chapter 5 of The Orb. The Traveler has crossed ruins, followed strange signs, encountered people who offered both kindness and suspicion, and carried questions he still cannot answer. But Chapter 5 marks a shift. The world of The Orb begins to open wider, the larg","thumbnailUrl":"https://i3.ytimg.com/vi/r7ZdhPFGKxY/hqdefault.jpg","uploadDate":"2026-10-07T22:00:38+00:00","url":"https://www.youtube.com/watch?v=r7ZdhPFGKxY"}},{"@type":"ListItem","position":5,"item":{"@type":"VideoObject","name":"The Village That Turned Away | The Orb Chapter 5 – Official Trailer","description":"The road has carried the Traveler somewhere new. But not everyone is willing to welcome him. The Village That Turned Away — Chapter 5 of The Orb pushes the journey deeper into Eryndor as the world begins opening and the larger story moves closer to the surface. This is the official trailer for The Orb Chapter 5. 🌑 The","thumbnailUrl":"https://i3.ytimg.com/vi/BlktRRgpnvE/hqdefault.jpg","uploadDate":"2026-09-30T22:00:34+00:00","url":"https://www.youtube.com/watch?v=BlktRRgpnvE"}},{"@type":"ListItem","position":6,"item":{"@type":"VideoObject","name":"The Bloom Redux | The Orb Chapter 4 Tense Original Score","description":"The Bloom Redux is a darker, more tense variation of The Bloom from The Orb: Chapter 4. Where the original version leans more toward wonder and discovery, this arrangement pushes the same musical idea into a more uneasy and dramatic direction. Same world. Same moment. Very different feeling. Another piece from the orig","thumbnailUrl":"https://i1.ytimg.com/vi/08Ya5T5z5gs/hqdefault.jpg","uploadDate":"2026-09-23T22:00:16+00:00","url":"https://www.youtube.com/watch?v=08Ya5T5z5gs"}},{"@type":"ListItem","position":7,"item":{"@type":"VideoObject","name":"The Orb — What Is the Orb? | Lore of The Orb","description":"For nearly two thousand years, the Orb was forgotten. Once believed to hold the power to restore what the world had lost, its story slowly faded into legend. The search ended. The ruins were abandoned. And eventually, the Orb became little more than a myth. Until a young Traveler felt something calling him toward the f","thumbnailUrl":"https://i4.ytimg.com/vi/_AvYzhE4Qi4/hqdefault.jpg","uploadDate":"2026-09-16T22:00:40+00:00","url":"https://www.youtube.com/watch?v=_AvYzhE4Qi4"}},{"@type":"ListItem","position":8,"item":{"@type":"VideoObject","name":"The Orb – Chapter 4: Unseen Bloom | Cinematic Fantasy Short Film","description":"The journey continues in Unseen Bloom — Chapter 4 of The Orb. After everything the Traveler has survived, the strange forces surrounding his journey are becoming harder to ignore. What once felt distant is beginning to take shape, and the forgotten world around him is slowly revealing that there is far more at work tha","thumbnailUrl":"https://i3.ytimg.com/vi/NMtAIUwrMfI/hqdefault.jpg","uploadDate":"2026-09-09T22:00:33+00:00","url":"https://www.youtube.com/watch?v=NMtAIUwrMfI"}}]}</script>
 </head>
 <body>
@@ -40,25 +50,8 @@
   </header>
 
   <main>
-    <section class="subhero">
-      <img alt="">
-      <noscript><img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts" class="subhero-noscript-fallback"></noscript>
-      <script>
-        (function () {
-          const SUBHERO_IMAGES = [
-            { src: "assets/images/hero-mountain.webp", alt: "Cinematic mountain landscape by Jason Arts" },
-            { src: "assets/images/hero-gaming-tv.webp", alt: "Cinematic gaming room with glowing TV by Jason Arts" },
-            { src: "assets/images/hero-dusk-house.webp", alt: "Warm dusk exterior house render by Jason Arts" }
-          ];
-          const subhero = document.currentScript.closest(".subhero");
-          if (!subhero) return;
-          const img = subhero.querySelector(":scope > img");
-          if (!img) return;
-          const pick = SUBHERO_IMAGES[Math.floor(Math.random() * SUBHERO_IMAGES.length)];
-          img.src = pick.src;
-          img.alt = pick.alt;
-        })();
-      </script>
+    <section class="subhero orb-hero">
+      <img src="assets/images/orb-ensemble-hero.webp" alt="Sean, his horse and mysterious figures from the world of The Orb" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow">The Orb Story</p>
