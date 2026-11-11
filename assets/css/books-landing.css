@@ -1,0 +1,18 @@
+.books-hero > img { object-position: 65% center; }
+.books-hero .hero-shade { background: linear-gradient(90deg,rgba(2,6,8,.9),rgba(2,6,8,.53) 40%,rgba(2,6,8,.08) 80%),linear-gradient(0deg,rgba(7,11,13,.9),transparent 46%); }
+.books-hero-cta { margin-top: 24px; }
+.books-intro { padding-bottom: 38px; }
+.books-intro h2 { font-size: clamp(32px,4vw,54px); margin: 0 0 18px; }
+.books-intro > p:not(.eyebrow) { max-width: 800px; line-height: 1.7; color: #c8c2ba; }
+.books-paths { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin-top: 35px; }
+.books-path { display: flex; align-items: center; gap: 18px; padding: 18px; background: #111719; border: 1px solid rgba(209,161,89,.23); border-radius: 8px; text-decoration: none; color: inherit; }
+.books-path img { display: block; width: clamp(80px,9vw,120px); height: auto; border-radius: 4px; }
+.books-path span { display: grid; gap: 9px; }
+.books-path strong { font-size: clamp(19px,2vw,25px); font-weight: 400; }
+.books-path small { color: #c8c2ba; line-height: 1.45; font-size: 14px; }
+.books-path b { color: #e4a851; font-size: 13px; font-weight: 700; }
+.books-path:hover { border-color: #e4a851; }
+.books-path:focus-visible { outline: 3px solid #e8b56c; outline-offset: 3px; }
+.book-feature[id] { scroll-margin-top: 100px; }
+@media (max-width: 950px) { .books-paths { grid-template-columns: 1fr; } .books-path img { width: 100px; } }
+@media (max-width: 700px) { .books-hero > img { object-position: 64% center; } .books-hero .hero-shade { background: linear-gradient(0deg,rgba(7,11,13,.97),rgba(7,11,13,.5) 52%,rgba(7,11,13,.1) 90%); } }

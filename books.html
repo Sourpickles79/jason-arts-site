@@ -21,6 +21,7 @@
   <link rel="icon" href="/assets/images/favicon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/css/books-landing.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -212,34 +213,29 @@
   </header>
 
   <main>
-    <section class="subhero">
-      <img alt="">
-      <noscript><img src="assets/images/hero-mountain.webp" alt="Cinematic mountain landscape by Jason Arts" class="subhero-noscript-fallback"></noscript>
-      <script>
-        (function () {
-          const SUBHERO_IMAGES = [
-            { src: "assets/images/hero-mountain.webp", alt: "Cinematic mountain landscape by Jason Arts" },
-            { src: "assets/images/hero-gaming-tv.webp", alt: "Cinematic gaming room with glowing TV by Jason Arts" },
-            { src: "assets/images/hero-dusk-house.webp", alt: "Warm dusk exterior house render by Jason Arts" }
-          ];
-          const subhero = document.currentScript.closest(".subhero");
-          if (!subhero) return;
-          const img = subhero.querySelector(":scope > img");
-          if (!img) return;
-          const pick = SUBHERO_IMAGES[Math.floor(Math.random() * SUBHERO_IMAGES.length)];
-          img.src = pick.src;
-          img.alt = pick.alt;
-        })();
-      </script>
+    <section class="subhero books-hero">
+      <img src="/assets/images/books-collection-hero.webp" alt="Corgo in a colorful garden beside illustrations and puzzles" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow">Books on Amazon</p>
         <h1>Books made for curiosity, creativity, and play.</h1>
         <p class="intro">Corgi search-and-find adventures for ages 3–6, animal coloring books for teens and adults, and sudoku and variety puzzles by Jason Arts Johnson. Each title links directly to Amazon.</p>
+        <a class="button primary books-hero-cta" href="#explore-books">Explore the books <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <section class="section book-page">
+    <section class="section books-intro" id="explore-books" aria-labelledby="books-intro-heading">
+      <p class="eyebrow">A book for every kind of curious mind</p>
+      <h2 id="books-intro-heading">Find your next adventure.</h2>
+      <p>From playful search-and-find adventures with Corgo to detailed coloring and puzzles for a quiet moment, explore the collection by Jason Arts Johnson. Choose a category to jump to the books below; each title links to Amazon for details and purchase.</p>
+      <div class="books-paths">
+        <a class="books-path" href="#book-B0CXX3B2XN"><img src="/assets/images/cover-ispy-corgo-pawsome.webp" alt="" loading="lazy"><span><strong>Corgo I Spy</strong><small>Search-and-find adventures · Ages 3–6</small><b>Explore Corgo →</b></span></a>
+        <a class="books-path" href="#book-B0CW2231JW"><img src="/assets/images/cover-dazzling-dachshunds.webp" alt="" loading="lazy"><span><strong>Coloring books</strong><small>Animals and imaginative scenes · Teens &amp; adults</small><b>Explore coloring →</b></span></a>
+        <a class="books-path" href="#book-B0D17HNNG2"><img src="/assets/images/cover-sudoku-travel.webp" alt="" loading="lazy"><span><strong>Puzzle books</strong><small>Sudoku and variety puzzles · Adults</small><b>Explore puzzles →</b></span></a>
+      </div>
+    </section>
+
+    <section class="section book-page" aria-label="All books">
       <div class="book-list" id="bookList"><article class="book-feature" id="book-B0CXX3B2XN"><div class="book-mockup large" style="--book-accent:#f4b24d"><div class="book-cover"><img src="/assets/images/cover-ispy-corgo-pawsome.webp" alt="I Spy with Corgo: A Pawsome Adventure cover" loading="lazy"></div></div><div class="book-feature-copy"><span class="category">Picture Book</span><h2>I Spy with Corgo: A Pawsome Adventure</h2><p>Follow Corgo the Corgi through 37 pages of vivid search-and-find scenes, from the zoo to outer space to the Wild West. Built for ages 3-6 to sharpen observation skills and spark imagination. Book 1 of The Adventures of Corgo.</p><div class="book-specs"><span>Ages 3-6</span><span>Book 1 of 2: The Adventures of Corgo</span><span>Kindle Edition &amp; Paperback</span></div><p class="rating-line"><span class="stars">★★★★★</span> 5.0 (7)</p><a class="button primary" href="https://www.amazon.com/Spy-Corgo-Pawsome-Adventure-Treasures-ebook/dp/B0CXX3B2XN" target="_blank" rel="noopener">Buy Now</a></div></article>
 <article class="book-feature flipped" id="book-B0DJTXL96Q"><div class="book-mockup large" style="--book-accent:#7fb15d"><div class="book-cover"><img src="/assets/images/cover-ispy-corgo-toy-hunt.webp" alt="I Spy with Corgo: The Big Toy Hunt cover" loading="lazy"></div></div><div class="book-feature-copy"><span class="category">Picture Book</span><h2>I Spy with Corgo: The Big Toy Hunt</h2><p>Book 2 of The Adventures of Corgo. Join Corgo from his cozy home to the bustling park on a search-and-find toy hunt built for young explorers ages 3-6.</p><div class="book-specs"><span>Ages 3-6</span><span>Book 2 of 2: The Adventures of Corgo</span><span>Kindle Edition &amp; Paperback</span></div><p class="rating-line"><span class="stars">★★★★★</span> 5.0 (2)</p><a class="button primary" href="https://www.amazon.com/Spy-Corgo-Search-Find-Explorers-ebook/dp/B0DJTXL96Q" target="_blank" rel="noopener">Buy Now</a></div></article>
 <article class="book-feature" id="book-B0CW2231JW"><div class="book-mockup large" style="--book-accent:#c97b3d"><div class="book-cover"><img src="/assets/images/cover-dazzling-dachshunds.webp" alt="Dazzling Dachshunds: A Delightful Coloring Collection cover" loading="lazy"></div></div><div class="book-feature-copy"><span class="category">Coloring Book</span><h2>Dazzling Dachshunds: A Delightful Coloring Collection</h2><p>Over 40 intricately designed dachshund illustrations, from playful puppies to regal adults, for a relaxing coloring escape. Part of the Whimsical World Coloring Adventures series.</p><div class="book-specs"><span>Teens &amp; Adults</span><span>Paperback</span><span>Coloring Book</span></div><p class="rating-line"><span class="stars">★★★★★</span> 5.0 (1)</p><a class="button primary" href="https://www.amazon.com/Dazzling-Dachshunds-Delightful-Coloring-Collection/dp/B0CW2231JW" target="_blank" rel="noopener">Buy Now</a></div></article>
