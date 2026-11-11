@@ -304,9 +304,12 @@
       </div>
       <div class="contact-panel">
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xbdnrdba" method="POST">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="_replyto" placeholder="Your email" required>
-          <textarea name="message" placeholder="What's on your mind?" required></textarea>
+          <label for="contactName">Name</label>
+          <input id="contactName" type="text" name="name" autocomplete="name" placeholder="Your name" required>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" type="email" name="_replyto" autocomplete="email" placeholder="Your email" required>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" placeholder="What's on your mind?" required></textarea>
           <button class="button primary" type="submit">Send Message</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
@@ -335,8 +338,9 @@
         const submitBtn = form.querySelector("button[type=submit]");
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
-        status.textContent = "";
+        status.textContent = "Sending your message...";
         status.className = "form-status";
+        form.setAttribute("aria-busy", "true");
         try {
           const response = await fetch(form.action, {
             method: "POST",
@@ -346,18 +350,19 @@
           if (response.ok) {
             window.dispatchEvent(new CustomEvent("ja-contact-success"));
             form.reset();
-            status.textContent = "Thanks - your message is sent. I'll get back to you soon.";
+            status.textContent = "Thanks! Your message was sent. I'll get back to you as soon as I can.";
             status.classList.add("success");
           } else {
-            status.textContent = "Something went wrong sending that. Try again, or reach out on ArtStation instead.";
+            status.textContent = "Your message couldn't be sent. Your text is still here—please try again, or reach out on ArtStation below.";
             status.classList.add("error");
           }
         } catch {
-          status.textContent = "Something went wrong sending that. Try again, or reach out on ArtStation instead.";
+          status.textContent = "Your message couldn't be sent. Your text is still here—please try again, or reach out on ArtStation below.";
           status.classList.add("error");
         } finally {
           submitBtn.disabled = false;
           submitBtn.textContent = "Send Message";
+          form.removeAttribute("aria-busy");
         }
       });
     })();

@@ -691,6 +691,12 @@ h3 { font-size: 26px; }
   gap: 12px;
   margin-bottom: 12px;
 }
+.contact-form label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: -5px;
+}
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -699,12 +705,15 @@ h3 { font-size: 26px; }
   background: #0f1519;
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 8px;
-  font: 14px/1.5 inherit;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
   box-sizing: border-box;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
   border-color: var(--accent);
 }
 .contact-form textarea {
@@ -716,6 +725,8 @@ h3 { font-size: 26px; }
   border: 0;
   cursor: pointer;
 }
+.contact-form button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.contact-form button:disabled { opacity: .7; cursor: wait; }
 .form-status {
   margin: 10px 0 0;
   font-size: 13px;
