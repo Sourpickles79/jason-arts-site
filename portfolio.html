@@ -69,10 +69,7 @@
     </section>
 
     <section class="section">
-      <div class="portfolio-tools" id="portfolioTools" hidden>
-        <label for="portfolioSearch">Find a piece</label>
-        <div class="portfolio-search-row"><input id="portfolioSearch" type="search" placeholder="Search titles and descriptions" autocomplete="off"><button type="button" id="portfolioReset" hidden>Clear filters</button></div>
-      </div>
+      <div class="portfolio-controls">
       <div class="filter-bar" aria-label="Portfolio filters">
         <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
         <button type="button" class="filter" data-filter="Architecture" aria-pressed="false">Architecture</button>
@@ -80,6 +77,11 @@
         <button type="button" class="filter" data-filter="Planning" aria-pressed="false">Planning</button>
         <button type="button" class="filter filter-video" data-filter="__videos__" aria-pressed="false">▶ Videos</button>
         <button type="button" class="filter filter-modeled" data-filter="__modeled__" aria-pressed="false">◆ Modeling</button>
+      </div>
+      <div class="portfolio-tools" id="portfolioTools" hidden>
+        <label for="portfolioSearch">Find a piece</label>
+        <div class="portfolio-search-row"><input id="portfolioSearch" type="search" placeholder="Search portfolio" autocomplete="off"><button type="button" id="portfolioReset" hidden>Clear filters</button></div>
+      </div>
       </div>
       <p id="portfolioResultCount" class="portfolio-result-count" role="status" aria-live="polite" hidden></p>
       <p id="portfolioEmpty" class="portfolio-empty" hidden>No work matched those filters. Try another search or clear the filters.</p>
