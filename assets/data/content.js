@@ -67,7 +67,7 @@ window.SITE_CONTENT = {
       "category": "Architecture",
       "image": "assets/images/poster-central-park-virtual-tour.jpg",
       "video": "assets/videos/central-park-virtual-tour.mp4",
-      "description": "Architectural visualization work by Jason for a narrated virtual tour created at MediaLab 3D Solutions, using existing building models. Tools: 3ds Max, V-Ray, Photoshop and Deadline, plus After Effects and Premiere for video."
+      "description": "Architectural visualization work by Jason for a music-only virtual tour created at MediaLab 3D Solutions, using existing building models. Tools: 3ds Max, V-Ray, Photoshop and Deadline, plus After Effects and Premiere for video."
     },
     {
       "title": "San Diego Residence",
