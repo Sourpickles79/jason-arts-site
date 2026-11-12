@@ -12,16 +12,18 @@
   <meta property="og:description" content="Websites, AI video, graphics, and 3D visuals built for businesses that want to look sharper and stand out.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jasonarts.com/creative-services">
-  <meta property="og:image" content="https://jasonarts.com/assets/images/hero-mountain.webp">
+  <meta property="og:image" content="https://jasonarts.com/assets/images/creative-services-hero.webp">
   <meta property="og:site_name" content="Jason Arts">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Creative Services | Jason Arts">
   <meta name="twitter:description" content="Custom websites, AI video, graphics, image creation, and 3D visualization for businesses and brands.">
-  <meta name="twitter:image" content="https://jasonarts.com/assets/images/hero-mountain.webp">
+  <meta name="twitter:image" content="https://jasonarts.com/assets/images/creative-services-hero.webp">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/assets/images/favicon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/css/creative-services.css">
+  <link rel="preload" as="image" href="/assets/images/creative-services-hero.webp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -68,77 +70,37 @@
 
   <main id="top">
     <section class="services-hero" aria-labelledby="servicesTitle">
+      <img class="services-hero__image" src="/assets/images/creative-services-hero.webp" alt="" fetchpriority="high">
       <div class="services-hero__content">
-        <p class="eyebrow">Creative Services for Brands & Small Businesses</p>
-        <h1 id="servicesTitle">Make your business look as capable as it really is.</h1>
-        <p class="intro">Architectural and product visualization, 3D modeling, AI video, websites and graphics—created by Jason Arts for businesses and creative teams that need polished, practical visual work.</p>
+        <p class="eyebrow">Creative services · Jason Arts</p>
+        <h1 id="servicesTitle">Big ideas deserve a <em>beautiful execution.</em></h1>
+        <p class="intro">From a first impression to a finished world, I create 3D visuals, AI-powered video, websites and graphics that bring your ideas to life.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#services">Explore Services</a>
-          <a class="button secondary" href="/#contact">Start a Project</a>
+          <a class="button primary" href="#website-concepts">Explore the work <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="/#contact">Start a project</a>
         </div>
       </div>
+      <span class="services-hero__note" aria-hidden="true">IMAGINE <span> / </span> CREATE <span> / </span> CONNECT</span>
     </section>
 
-    <section class="section" id="services">
-      <div class="section-heading">
-        <p class="eyebrow">What I Can Build</p>
-        <h2>One creative partner. More ways to show up well.</h2>
-      </div>
+    <section class="section services-intro" id="services" aria-labelledby="services-heading">
+      <div class="services-intro__heading"><p class="eyebrow">What I can build</p><h2 id="services-heading">A creative partner for the <em>whole picture.</em></h2></div>
+      <p class="services-intro__text">A compelling idea can take many forms. Whether you need a polished visual, a film, or a place to introduce your business, we can find the right way to tell your story.</p>
       <div class="service-grid">
-        <article class="service-card" data-number="01">
-          <span class="service-icon">3D</span>
-          <h3>Architectural &amp; product visualization</h3>
-          <p>Architectural rendering, furniture and product visualization, 3D modeling, and animation backed by commercial production experience. <a href="/portfolio">View the 3D portfolio</a>.</p>
-        </article>
-        <article class="service-card" data-number="02">
-          <span class="service-icon">AI Video</span>
-          <h3>AI video & motion</h3>
-          <p>AI-assisted short films, product stories, music visuals, animated concepts, and social video shaped around a clear message. <a href="/ai">Explore the AI work</a>.</p>
-        </article>
-        <article class="service-card" data-number="03">
-          <span class="service-icon">Visual Design</span>
-          <h3>Images & graphics</h3>
-          <p>Campaign art, promotional graphics, branded visuals, presentation imagery, and creative image development.</p>
-        </article>
-        <article class="service-card" data-number="04">
-          <span class="service-icon">Web</span>
-          <h3>Website design</h3>
-          <p>Focused, responsive websites for businesses that need to look professional, explain their value, and generate inquiries.</p>
-        </article>
+        <article class="service-card service-card--visual"><img src="/assets/images/chapel-collection.webp" alt="Furniture visualization in a finished interior" loading="lazy"><div class="service-card__body"><span class="service-card__number">01 / VISUALIZATION</span><h3>3D & visualization</h3><p>Architectural rendering, furniture and product visualization, modeling and animation built on commercial production experience.</p><a href="/portfolio">Explore the 3D portfolio <span aria-hidden="true">↗</span></a></div></article>
+        <article class="service-card service-card--visual"><img src="/assets/images/ai-still-02.webp" alt="The Traveler and his horse in a cinematic fantasy scene" loading="lazy"><div class="service-card__body"><span class="service-card__number">02 / MOTION</span><h3>AI video & motion</h3><p>Original short films, music visuals, product stories and animated concepts developed with AI tools and a storyteller’s eye.</p><a href="/ai">See AI films & artwork <span aria-hidden="true">↗</span></a></div></article>
+        <article class="service-card service-card--visual"><img src="/demos/bookstore/assets/hero-bookstore.webp" alt="Warm bookstore imagery from a website design concept" loading="lazy"><div class="service-card__body"><span class="service-card__number">03 / DIGITAL</span><h3>Website design</h3><p>Responsive websites with a distinct personality, clear information and an inviting path for customers to reach out.</p><a href="#website-concepts">Explore website concepts <span aria-hidden="true">↓</span></a></div></article>
+        <article class="service-card service-card--visual"><img src="/assets/images/ai-concept-03.webp" alt="Atmospheric creative environment concept artwork" loading="lazy"><div class="service-card__body"><span class="service-card__number">04 / VISUAL DESIGN</span><h3>Images & graphics</h3><p>Campaign art, promotional graphics, branded visuals and presentation imagery created around your idea.</p><a href="/#contact">Discuss a project <span aria-hidden="true">↗</span></a></div></article>
       </div>
     </section>
 
-    <section class="section" id="website-concepts">
-      <div class="section-heading">
-        <p class="eyebrow">Website Concept Gallery</p>
-        <h2>Four small-business websites you can explore now.</h2>
-      </div>
-      <p class="intro">Each fictional concept has its own visual identity, a finished homepage, and a focused second page—enough to show how a real client experience can feel without building a seven-page sample.</p>
+    <section class="section services-websites" id="website-concepts" aria-labelledby="websites-heading">
+      <div class="services-websites__heading"><div><p class="eyebrow">Website concept gallery</p><h2 id="websites-heading">A first impression they’ll <em>remember.</em></h2></div><p>Explore four fictional small-business concepts, each with its own personality and an interactive second page. Select any design to look around.</p></div>
       <div class="concept-grid">
-        <a class="concept-card" href="/demos/pizzeria/">
-          <span class="concept-status">Explore concept</span>
-          <h3>Neighborhood Pizzeria</h3>
-          <p>A warm, energetic restaurant homepage paired with a menu and ordering experience.</p>
-          <span class="concept-card__action">Open Ember &amp; Flour →</span>
-        </a>
-        <a class="concept-card" href="/demos/bookstore/">
-          <span class="concept-status">Explore concept</span>
-          <h3>Independent Bookstore</h3>
-          <p>A cozy editorial storefront with featured reads, events, and a welcoming local personality.</p>
-          <span class="concept-card__action">Open The Lantern Shelf →</span>
-        </a>
-        <a class="concept-card" href="/demos/law-office/">
-          <span class="concept-status">Explore concept</span>
-          <h3>Local Law Office</h3>
-          <p>A calm, credible professional site focused on services, trust, and consultation requests.</p>
-          <span class="concept-card__action">Open Hartwell &amp; Reed →</span>
-        </a>
-        <a class="concept-card" href="/demos/home-renovation/">
-          <span class="concept-status">Explore concept</span>
-          <h3>Home Renovation Company</h3>
-          <p>A project-driven service site featuring transformations, capabilities, and estimate inquiries.</p>
-          <span class="concept-card__action">Open Northline Renovation →</span>
-        </a>
+        <a class="concept-card concept-card--visual" href="/demos/pizzeria/" aria-label="Explore Ember and Flour pizzeria website concept"><div class="concept-card__image"><img src="/demos/pizzeria/assets/hero-pizza.webp" alt="" loading="lazy"><span class="concept-card__index">01 / 04</span><span class="concept-card__open" aria-hidden="true">↗</span></div><div class="concept-card__body"><span class="concept-card__type">RESTAURANT · WEBSITE CONCEPT</span><h3>Ember &amp; Flour</h3><p>A warm, energetic home for a neighborhood pizzeria.</p><span class="concept-card__action">Explore the concept <span aria-hidden="true">→</span></span></div></a>
+        <a class="concept-card concept-card--visual" href="/demos/bookstore/" aria-label="Explore The Lantern Shelf bookstore website concept"><div class="concept-card__image"><img src="/demos/bookstore/assets/hero-bookstore.webp" alt="" loading="lazy"><span class="concept-card__index">02 / 04</span><span class="concept-card__open" aria-hidden="true">↗</span></div><div class="concept-card__body"><span class="concept-card__type">BOOKSTORE · WEBSITE CONCEPT</span><h3>The Lantern Shelf</h3><p>A cozy, editorial space for readers and their next favorite book.</p><span class="concept-card__action">Explore the concept <span aria-hidden="true">→</span></span></div></a>
+        <a class="concept-card concept-card--visual" href="/demos/law-office/" aria-label="Explore Hartwell and Reed law office website concept"><div class="concept-card__image"><img src="/demos/law-office/assets/hero-law-office.webp" alt="" loading="lazy"><span class="concept-card__index">03 / 04</span><span class="concept-card__open" aria-hidden="true">↗</span></div><div class="concept-card__body"><span class="concept-card__type">LAW OFFICE · WEBSITE CONCEPT</span><h3>Hartwell &amp; Reed</h3><p>A calm, considered presence built around clarity and trust.</p><span class="concept-card__action">Explore the concept <span aria-hidden="true">→</span></span></div></a>
+        <a class="concept-card concept-card--visual" href="/demos/home-renovation/" aria-label="Explore Northline Renovation website concept"><div class="concept-card__image"><img src="/demos/home-renovation/assets/hero-renovation.webp" alt="" loading="lazy"><span class="concept-card__index">04 / 04</span><span class="concept-card__open" aria-hidden="true">↗</span></div><div class="concept-card__body"><span class="concept-card__type">HOME RENOVATION · WEBSITE CONCEPT</span><h3>Northline Renovation</h3><p>A project-led site that puts craftsmanship front and center.</p><span class="concept-card__action">Explore the concept <span aria-hidden="true">→</span></span></div></a>
       </div>
     </section>
 
