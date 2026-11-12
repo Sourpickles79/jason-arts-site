@@ -49,8 +49,3 @@ function channelExcerpt(value) {
 export function videoCards(videos,tag) {
  return videos.map((v,i)=>{const orb=tag==='The Orb'||tag==='Music'||tag==='ASMR / Sleep', url=`https://www.youtube.com/watch?v=${esc(v.id)}`, title=esc(v.title), image=`<img src="${esc(v.image)}" alt="${title}" loading="lazy">`;return `<article class="book-feature${i%2?' flipped':''}"><div class="book-mockup large" style="--book-accent:#1c242a"><div class="book-cover video-thumb">${orb?`<a class="orb-feed-thumb" href="${url}" target="_blank" rel="noopener" aria-label="Watch ${title} on YouTube">${image}<span aria-hidden="true">▶</span></a>`:image}</div></div><div class="book-feature-copy"><span class="category">${esc(tag)}</span><h2>${title}</h2><p>${esc(orb?channelExcerpt(v.description):v.description)}</p>${v.date?`<p class="rating-line">${esc(new Date(v.date).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'America/Chicago'}))}</p>`:''}<a class="button primary" href="${url}" target="_blank" rel="noopener">Watch on YouTube</a></div></article>`}).join('\n');
 }
-
-export function videoStructuredData(videos) {
- const data={'@context':'https://schema.org','@type':'ItemList',itemListElement:videos.map((v,i)=>({'@type':'ListItem',position:i+1,item:{'@type':'VideoObject',name:v.title,description:v.description||v.title,thumbnailUrl:v.image,uploadDate:v.date,url:v.url}}))};
- return '<script id="video-jsonld" type="application/ld+json">'+JSON.stringify(data).replace(/</g,'\\u003c')+'</script>';
-}

@@ -1,4 +1,4 @@
-import { videoCards, replaceShowcase, videoStructuredData } from './showcase.js';
+import { videoCards, replaceShowcase } from './showcase.js';
 const CHANNELS={music:{tag:'Music'},cozy:{tag:'ASMR / Sleep'},orb:{tag:'The Orb'}};
 const inflight=new Map();
 function decode(value) {
@@ -52,7 +52,6 @@ export async function handleChannelPage(request,env,key) {
   const data=await channelData(key,request,env);
   html=replaceShowcase(html,'channelVideoList',videoCards(data.videos,data.tag));
   html=html.replace(/<script id="video-jsonld" type="application\/ld\+json">[\s\S]*?<\/script>/g,'');
-  html=html.replace('</head>',videoStructuredData(data.videos)+'\n</head>');
   const notice=data.fresh?`The ${data.videos.length} most recent regular uploads from YouTube. Shorts are excluded.`:'A saved selection of regular YouTube uploads. Open the channel for the latest releases.';
   html=html.replace(/(<p class="notice" id="liveNotice"[^>]*>)[\s\S]*?<\/p>/,'$1'+notice+'</p>');
  }
