@@ -41,44 +41,44 @@ window.SITE_CONTENT = {
       "title": "Chapel Hill Collection",
       "category": "Product Visualization",
       "image": "assets/images/chapel-collection.webp",
-      "description": "Furniture collection visualized in a lifestyle setting. Jason created the scene, materials, lighting and renders using existing furniture models."
+      "description": "Furniture collection visualized in a lifestyle setting. Jason created the scene, materials, lighting and renders using existing furniture models. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
     },
     {
       "title": "Cooper Credenza",
       "category": "Product Visualization",
       "image": "assets/images/cooper-credenza.webp",
-      "description": "A lifestyle product visualization of the Cooper Credenza, with scene setup, materials, lighting and rendering by Jason using an existing furniture model."
+      "description": "A lifestyle product visualization of the Cooper Credenza, with scene setup, materials, lighting and rendering by Jason using an existing furniture model. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
     },
     {
       "title": "Quest Gaming TV Stand",
       "category": "Product Visualization",
       "image": "assets/images/quest-gaming-tv.webp",
-      "description": "A gaming furniture visualization with scene setup, materials, lighting and rendering by Jason using an existing product model."
+      "description": "A gaming furniture visualization with scene setup, materials, lighting and rendering by Jason using an existing product model. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
     },
     {
       "title": "Ashby Cabinet Bed",
       "category": "Product Visualization",
       "image": "assets/images/ashby-cabinet-bed.webp",
-      "description": "Jason modeled the cabinet bed and created the complete product visualization, including the scene, materials, lighting and final render."
+      "description": "Jason modeled the cabinet bed and created the complete product visualization, including the scene, materials, lighting and final render. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
     },
     {
       "title": "Central Park Virtual Tour",
       "category": "Architecture",
       "image": "assets/images/poster-central-park-virtual-tour.jpg",
       "video": "assets/videos/central-park-virtual-tour.mp4",
-      "description": "Architectural visualization work by Jason for a narrated virtual tour created at MediaLab 3D Solutions, using existing building models."
+      "description": "Architectural visualization work by Jason for a narrated virtual tour created at MediaLab 3D Solutions, using existing building models. Tools: 3ds Max, V-Ray, Photoshop and Deadline, plus After Effects and Premiere for video."
     },
     {
       "title": "San Diego Residence",
       "category": "Architecture",
       "image": "assets/images/arch-san-diego-residence.webp",
-      "description": "Architectural exterior visualization by Jason, including scene setup, materials, lighting and rendering using an existing building model."
+      "description": "Architectural exterior visualization by Jason, including scene setup, materials, lighting and rendering using an existing building model. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
     },
     {
       "title": "Lot 119 — Front",
       "category": "Architecture",
       "image": "assets/images/arch-lot-119-front.webp",
-      "description": "Front elevation visualization by Jason, including scene setup, materials, lighting and rendering using an existing building model."
+      "description": "Front elevation visualization by Jason, including scene setup, materials, lighting and rendering using an existing building model. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
     },
     {
       "title": "Interior Visualization",
