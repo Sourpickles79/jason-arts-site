@@ -41,3 +41,19 @@
 
 .orb-hero-cta { margin-top: 24px; }
 #orb-featured-film { scroll-margin-top: 100px; }
+
+.orb-chapters { border-top: 1px solid rgba(209,161,89,.18); }
+.orb-chapters-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; }
+.orb-chapters-heading > div { max-width:760px; }
+.orb-chapters-heading h2 { font-size:clamp(30px,3.6vw,48px); margin:0 0 14px; }
+.orb-chapters-heading p:not(.eyebrow), .orb-chapters-note { color:#c8c2ba; line-height:1.6; margin:0; }
+.orb-chapter-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.orb-chapter-link { display:grid; grid-template-columns:100px minmax(0,1fr) auto; align-items:center; gap:15px; height:100%; padding:10px; background:#111719; border:1px solid rgba(209,161,89,.2); border-radius:7px; color:#f8f3e9; text-decoration:none; }
+.orb-chapter-link:hover { border-color:#d8903c; background:#191d1c; }
+.orb-chapter-link img { width:100px; aspect-ratio:16/9; object-fit:cover; border-radius:4px; }
+.orb-chapter-link small { display:block; color:#efae58; text-transform:uppercase; letter-spacing:.1em; font-size:10px; font-weight:800; margin-bottom:6px; }
+.orb-chapter-link strong { display:block; font-size:15px; line-height:1.3; }
+.orb-chapter-play { color:#e9a04b; padding-right:5px; }
+.orb-chapters-note { margin-top:18px; font-size:14px; }
+@media (max-width:1000px) { .orb-chapter-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:650px) { .orb-chapters-heading { display:block; } .orb-chapters-heading .button { margin-top:20px; } .orb-chapter-grid { grid-template-columns:1fr; } }
