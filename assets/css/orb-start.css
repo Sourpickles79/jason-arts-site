@@ -38,3 +38,6 @@
 .orb-feed-thumb > span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 56px; height: 56px; padding-left: 4px; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; background: rgba(0,0,0,.75); color: #fff; font-size: 19px; }
 .orb-feed-thumb:focus-visible { outline: 3px solid #e8b56c; outline-offset: 3px; }
 .orb-feed-thumb:hover > span { background: #d8903c; color: #111; }
+
+.orb-hero-cta { margin-top: 24px; }
+#orb-featured-film { scroll-margin-top: 100px; }

@@ -766,7 +766,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/orb-thumb.webp",
       "url": "https://www.youtube.com/channel/UCkhYfwqh5-iq7z4yEAvUYjw",
       "date": "2026-06-20",
-      "description": "A new animated short channel built around story, atmosphere, and world-building. Replace this entry with your latest upload."
+      "description": "A cinematic fantasy series following a young Traveler and his horse through a world of mystery and discovery."
     },
     {
       "title": "Sleep Zen",
@@ -774,7 +774,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/sleepzen-thumb.webp",
       "url": "https://www.youtube.com/channel/UCccuNXRd1dJkBvxIFXrgFuw",
       "date": "2026-06-05",
-      "description": "Long-form calming scenes, ambient rooms, and restful environments. Replace this entry with your latest upload."
+      "description": "Long-form ambient scenes, from cozy fires and ocean waves to rain-soaked futuristic worlds."
     },
     {
       "title": "Original Music",
@@ -782,7 +782,7 @@ window.SITE_CONTENT = {
       "image": "assets/images/music-band-thumb.webp",
       "url": "https://www.youtube.com/@JasonArtsRecords",
       "date": "2026-05-18",
-      "description": "Original tracks and visual music experiences. Replace this entry with your latest upload."
+      "description": "Original music, lyric videos, and cinematic visual releases from Jason Arts Records."
     }
   ],
   "blogPosts": [
@@ -908,8 +908,8 @@ window.SITE_CONTENT = {
     },
     {
       "slug": "orb-story-so-far",
-      "title": "The Orb: The Story So Far — A Spoiler-Light Preview of Chapters 1–6",
-      "excerpt": "A young Traveler, an unlikely companion and a power he cannot explain: a spoiler-light introduction before the November 4 Chapters 1–6 release.",
+      "title": "The Orb: The Story So Far — Chapters 1–5 and a Glimpse of Chapter 6",
+      "excerpt": "A spoiler-light look at Chapters 1–5, with a glimpse of Chapter 6 after the end credits.",
       "category": "Behind the Scenes",
       "cover": "assets/images/blog-orb-story-so-far.webp",
       "date": "2026-11-02",
@@ -917,17 +917,17 @@ window.SITE_CONTENT = {
       "status": "scheduled",
       "url": "/blog-orb-story-so-far",
       "seo": {
-        "title": "The Orb: The Story So Far — Chapters 1–6 Preview",
-        "description": "The Orb: The Story So Far brings Chapters 1–6 together November 4. Meet the young Traveler and his horse in this spoiler-light release preview.",
+        "title": "The Orb: The Story So Far — Chapters 1–5 Preview",
+        "description": "The Orb: The Story So Far brings Chapters 1–5 together, with a glimpse of Chapter 6 after the end credits.",
         "targetKeyword": "The Orb: The Story So Far",
         "secondaryKeywords": [
-          "The Orb Chapters 1–6",
+          "The Orb Chapters 1–5",
           "original AI fantasy film",
           "Jason Arts film"
         ],
         "coverAlt": "The young Traveler in his worn brown cloak rides his dark horse through a sunlit forest beside The Orb: The Story So Far lettering.",
-        "socialTitle": "The Orb: The Story So Far — A Spoiler-Light Preview of Chapters 1–6",
-        "socialDescription": "A young Traveler, an unlikely companion and a power he cannot explain: a spoiler-light introduction before the November 4 Chapters 1–6 release."
+        "socialTitle": "The Orb: The Story So Far — Chapters 1–5 and a Glimpse of Chapter 6",
+        "socialDescription": "A spoiler-light look at Chapters 1–5, with a glimpse of Chapter 6 after the end credits."
       }
     },
     {
