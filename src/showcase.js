@@ -27,7 +27,11 @@ export async function handleShowcase(request,env) {
  let html=await response.text();
  try {
   const content=await siteContent(request,env);
-  if(html.includes('id="portfolioGrid"'))html=replaceShowcase(html,'portfolioGrid',portfolioCards(content.portfolio||[]));
+  if(html.includes('id="portfolioGrid"')) {
+   const items = content.portfolio || [];
+   const isHome = new URL(request.url).pathname === '/';
+   html=replaceShowcase(html,'portfolioGrid',portfolioCards(isHome ? items.slice(0,4) : items));
+  }
   if(html.includes('id="bookList"'))html=replaceShowcase(html,'bookList',bookCards(content.books||[]));
   if(html.includes('id="aiGrid"')){
    const r=await env.ASSETS.fetch(new Request(new URL('/assets/data/ai-work.json',request.url)));

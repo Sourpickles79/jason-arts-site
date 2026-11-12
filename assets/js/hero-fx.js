@@ -22,9 +22,10 @@
     hero.appendChild(canvas);
     const ctx = canvas.getContext("2d");
 
+    const mobile = window.matchMedia("(max-width: 760px)").matches;
     let W = 0, H = 0, dpr = 1;
     function resize() {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      dpr = Math.min(window.devicePixelRatio || 1, mobile ? 1 : 2);
       W = hero.clientWidth;
       H = hero.clientHeight;
       canvas.width = W * dpr;
@@ -75,7 +76,8 @@
     function tick(now) {
       frame = 0;
       if (!running || document.hidden) return;
-      const dt = Math.min((now - last) / 1000, 0.05);
+      if (mobile && now - last < 1000 / 30) { schedule(); return; }
+      const dt = Math.min((now - last) / 1000, 0.1);
       last = now;
 
       if (img) {
@@ -373,9 +375,8 @@
     }
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  // Let the main page become usable before starting decorative animation.
+  function startAfterLoad() { setTimeout(init, 1200); }
+  if (document.readyState === "complete") startAfterLoad();
+  else window.addEventListener("load", startAfterLoad, { once: true });
 })();

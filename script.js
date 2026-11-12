@@ -149,9 +149,10 @@ async function init() {
 
   if (qs("#portfolioGrid")) {
     const grid = qs("#portfolioGrid");
+    const items = grid.closest(".home-work") ? data.portfolio.slice(0, 4) : data.portfolio;
     const cards = [...grid.querySelectorAll(":scope > article.card")];
-    const savedCardsMatch = cards.length === data.portfolio.length && cards.every((card, index) => {
-      const item = data.portfolio[index];
+    const savedCardsMatch = cards.length === items.length && cards.every((card, index) => {
+      const item = items[index];
       const media = card.querySelector(item.video ? "video" : "img");
       const mediaPath = item.video ? card.querySelector("video source")?.getAttribute("src") : media?.getAttribute("src");
       const poster = item.video ? media?.getAttribute("poster") : null;
@@ -163,7 +164,7 @@ async function init() {
         samePath(mediaPath, item.video || item.image) && (!item.video || samePath(poster, item.image));
     });
     // The Worker normally sends current cards already; avoid rebuilding the whole gallery.
-    if (!savedCardsMatch) grid.innerHTML = data.portfolio.map(cardTemplate).join("");
+    if (!savedCardsMatch) grid.innerHTML = items.map(cardTemplate).join("");
   }
   if (qs("#filmsFeed")) {
     const order = ["Animated Shorts", "Music", "ASMR / Sleep"];
