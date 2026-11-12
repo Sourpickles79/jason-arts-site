@@ -2,7 +2,7 @@
 .services-hero { min-height: min(850px, 88vh); padding: 180px clamp(24px, 7vw, 110px) 100px; align-items: end; background: #0b0d0d; }
 .services-hero__image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: 62% center; z-index:-2; }
 .services-hero::before { opacity:1; z-index:-1; mask-image:none; background:linear-gradient(90deg,rgba(5,8,9,.95) 0%,rgba(5,8,9,.75) 38%,rgba(5,8,9,.1) 80%),linear-gradient(0deg,rgba(5,8,9,.88) 0%,transparent 38%); }
-.services-hero__content { max-width: 760px; }
+.services-hero__content { max-width: 760px; z-index: 3; }
 .services-hero h1 { max-width: 760px; font-size:clamp(48px,6.5vw,92px); line-height:1.02; letter-spacing:-.045em; }
 .services-hero h1 em,.services-intro h2 em,.services-websites h2 em { color:#e7a74d; font-family:Georgia,serif; font-weight:400; }
 .services-hero .intro { max-width: 620px; color:#ddd5ca; line-height:1.6; }

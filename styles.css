@@ -1506,3 +1506,16 @@ h3 { font-size: 26px; }
   .blog-grid { grid-template-columns: 1fr; }
   .product-link .product-preview { width: 140px; }
 }
+
+/* Keep browsing manageable while preserving the complete, searchable gallery. */
+.portfolio-more { display:flex; justify-content:center; margin-top:32px; }
+.portfolio-more [hidden], .portfolio-grid .card[hidden] { display:none; }
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid #f2bf74; outline-offset: 3px; }
+@media (min-width:901px) and (max-width:1150px) {
+  .site-header { grid-template-columns:auto 1fr auto; gap:10px; padding-inline:20px; }
+  .site-header .nav { gap:clamp(8px,1vw,14px); font-size:10px; letter-spacing:.04em; }
+  .site-header .brand small { font-size:12px; }
+  .site-header .pill { padding-inline:12px; font-size:10px; }
+}
+
+#portfolioGrid video[controls], #aiGrid video[controls] { cursor: pointer; }
