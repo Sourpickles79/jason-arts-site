@@ -22,10 +22,9 @@
     hero.appendChild(canvas);
     const ctx = canvas.getContext("2d");
 
-    const mobile = window.matchMedia("(max-width: 760px)").matches;
     let W = 0, H = 0, dpr = 1;
     function resize() {
-      dpr = Math.min(window.devicePixelRatio || 1, mobile ? 1 : 2);
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
       W = hero.clientWidth;
       H = hero.clientHeight;
       canvas.width = W * dpr;
@@ -60,24 +59,15 @@
     // ---- Main loop (shared) ----
     let last = performance.now();
     let running = true;
-    let frame = 0;
-    function schedule() {
-      if (running && !document.hidden && !frame) frame = requestAnimationFrame(tick);
-    }
     const observer = new IntersectionObserver((entries) => {
       running = entries[0].isIntersecting;
-      if (running) { last = performance.now(); schedule(); }
+      if (running) { last = performance.now(); requestAnimationFrame(tick); }
     });
     observer.observe(hero);
-    document.addEventListener("visibilitychange", () => {
-      if (!document.hidden) { last = performance.now(); schedule(); }
-    });
 
     function tick(now) {
-      frame = 0;
-      if (!running || document.hidden) return;
-      if (mobile && now - last < 1000 / 30) { schedule(); return; }
-      const dt = Math.min((now - last) / 1000, 0.1);
+      if (!running) return;
+      const dt = Math.min((now - last) / 1000, 0.05);
       last = now;
 
       if (img) {
@@ -89,9 +79,9 @@
       ctx.clearRect(0, 0, W, H);
       draw(ctx, dt, now, () => ({ W, H, mx, my, scrollShift }));
 
-      schedule();
+      requestAnimationFrame(tick);
     }
-    schedule();
+    requestAnimationFrame(tick);
 
     // ================= Rain variant (mountain/marsh scene) =================
     function buildRain() {
@@ -375,8 +365,9 @@
     }
   }
 
-  // Let the main page become usable before starting decorative animation.
-  function startAfterLoad() { setTimeout(init, 1200); }
-  if (document.readyState === "complete") startAfterLoad();
-  else window.addEventListener("load", startAfterLoad, { once: true });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
