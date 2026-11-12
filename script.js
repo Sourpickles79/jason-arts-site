@@ -148,7 +148,11 @@ async function init() {
   }
 
   if (qs("#portfolioGrid")) qs("#portfolioGrid").innerHTML = data.portfolio.map(cardTemplate).join("");
-  if (qs("#filmsFeed")) qs("#filmsFeed").innerHTML = data.videos.filter(v => v.channel !== "Music").map(channelRowTemplate).join("");
+  if (qs("#filmsFeed")) {
+    const order = ["Animated Shorts", "Music", "ASMR / Sleep"];
+    const channels = data.videos.filter(v => order.includes(v.channel)).slice().sort((a, b) => order.indexOf(a.channel) - order.indexOf(b.channel));
+    qs("#filmsFeed").innerHTML = channels.map(v => channelRowTemplate(v.channel === "Music" ? { ...v, title: "Jason Arts Records", description: "Original tracks shaped by atmosphere and storytelling, paired with visual releases that give each song a world of its own." } : v)).join("");
+  }
   if (qs("#bookGrid")) qs("#bookGrid").innerHTML = data.books.map(bookTemplate).join("");
   if (qs("#resumeLink")) qs("#resumeLink").href = data.links.artstation || "#";
   if (qs("#socialLinks")) qs("#socialLinks").innerHTML = renderSocials(data.links);
