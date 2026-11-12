@@ -14,6 +14,48 @@
     "desc": "Three shadowy figures emerge from the darkness. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/orb-trust-by-the-stream.webp",
+    "title": "Trust by the Stream",
+    "desc": "The Traveler and his horse share a quiet moment beside a forest stream. An AI story frame from The Orb by Jason Arts."
+  },
+  {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/black-sky-over-the-city.webp",
+    "title": "Black Sky: Over the City",
+    "desc": "Soldiers face an immense presence above a smoke-filled city. AI story artwork from Black Sky by Jason Arts."
+  },
+  {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/orb-village-beyond-the-trees.webp",
+    "title": "The Village Beyond the Trees",
+    "desc": "The Traveler and his horse look toward a village through the mist. An AI story frame from The Orb by Jason Arts."
+  },
+  {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/orb-light-against-the-dark.webp",
+    "title": "Light Against the Dark",
+    "desc": "A figure faces towering shadow creatures in a vast ruined hall. An AI story frame from The Orb by Jason Arts."
+  },
+  {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/black-sky-beneath-the-city.webp",
+    "title": "Black Sky: Beneath the City",
+    "desc": "An intense confrontation unfolds in a city subway station. AI story artwork from Black Sky by Jason Arts."
+  },
+  {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/orb-crossroads-at-sunset.webp",
+    "title": "Crossroads at Sunset",
+    "desc": "The Traveler and his horse reach a crossroads beneath a golden sky. An AI story frame from The Orb by Jason Arts."
+  },
+  {
     "type": "Short",
     "kind": "video",
     "src": "assets/videos/ash-flux-last-trip-to-nowhere.mp4",

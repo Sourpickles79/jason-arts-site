@@ -1519,3 +1519,7 @@ h3 { font-size: 26px; }
 }
 
 #portfolioGrid video[controls], #aiGrid video[controls] { cursor: pointer; }
+
+.portfolio-video { position: relative; }
+.portfolio-video.is-playing .play-badge { opacity: 0; }
+.portfolio-video:hover .play-badge { background: rgba(216, 144, 60, .55); border-color: var(--accent); }
