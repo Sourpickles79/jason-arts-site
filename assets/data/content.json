@@ -59,7 +59,8 @@
       "title": "Ashby Cabinet Bed",
       "category": "Product Visualization",
       "image": "assets/images/ashby-cabinet-bed.webp",
-      "description": "Jason modeled the cabinet bed and created the complete product visualization, including the scene, materials, lighting and final render. Tools: 3ds Max, V-Ray, Photoshop and Deadline."
+      "description": "Jason modeled the cabinet bed and created the complete product visualization, including the scene, materials, lighting and final render. Tools: 3ds Max, V-Ray, Photoshop and Deadline.",
+      "modeled": true
     },
     {
       "title": "Central Park Virtual Tour",
