@@ -147,7 +147,24 @@ async function init() {
     `).join("");
   }
 
-  if (qs("#portfolioGrid")) qs("#portfolioGrid").innerHTML = data.portfolio.map(cardTemplate).join("");
+  if (qs("#portfolioGrid")) {
+    const grid = qs("#portfolioGrid");
+    const cards = [...grid.querySelectorAll(":scope > article.card")];
+    const savedCardsMatch = cards.length === data.portfolio.length && cards.every((card, index) => {
+      const item = data.portfolio[index];
+      const media = card.querySelector(item.video ? "video" : "img");
+      const mediaPath = item.video ? card.querySelector("video source")?.getAttribute("src") : media?.getAttribute("src");
+      const poster = item.video ? media?.getAttribute("poster") : null;
+      const samePath = (a, b) => String(a || "").replace(/^\//, "") === String(b || "").replace(/^\//, "");
+      return card.querySelector("h3")?.textContent === item.title &&
+        card.querySelector(".card-body p")?.textContent === item.description &&
+        card.dataset.category === item.category && card.dataset.modeled === String(Boolean(item.modeled)) &&
+        card.dataset.hasVideo === String(Boolean(item.video)) &&
+        samePath(mediaPath, item.video || item.image) && (!item.video || samePath(poster, item.image));
+    });
+    // The Worker normally sends current cards already; avoid rebuilding the whole gallery.
+    if (!savedCardsMatch) grid.innerHTML = data.portfolio.map(cardTemplate).join("");
+  }
   if (qs("#filmsFeed")) {
     const order = ["Animated Shorts", "Music", "ASMR / Sleep"];
     const channels = data.videos.filter(v => order.includes(v.channel)).slice().sort((a, b) => order.indexOf(a.channel) - order.indexOf(b.channel));

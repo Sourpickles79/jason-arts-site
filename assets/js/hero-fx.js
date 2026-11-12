@@ -59,14 +59,22 @@
     // ---- Main loop (shared) ----
     let last = performance.now();
     let running = true;
+    let frame = 0;
+    function schedule() {
+      if (running && !document.hidden && !frame) frame = requestAnimationFrame(tick);
+    }
     const observer = new IntersectionObserver((entries) => {
       running = entries[0].isIntersecting;
-      if (running) { last = performance.now(); requestAnimationFrame(tick); }
+      if (running) { last = performance.now(); schedule(); }
     });
     observer.observe(hero);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) { last = performance.now(); schedule(); }
+    });
 
     function tick(now) {
-      if (!running) return;
+      frame = 0;
+      if (!running || document.hidden) return;
       const dt = Math.min((now - last) / 1000, 0.05);
       last = now;
 
@@ -79,9 +87,9 @@
       ctx.clearRect(0, 0, W, H);
       draw(ctx, dt, now, () => ({ W, H, mx, my, scrollShift }));
 
-      requestAnimationFrame(tick);
+      schedule();
     }
-    requestAnimationFrame(tick);
+    schedule();
 
     // ================= Rain variant (mountain/marsh scene) =================
     function buildRain() {
