@@ -166,6 +166,17 @@ img { display: block; max-width: 100%; }
     linear-gradient(90deg, rgba(2, 6, 8, .96) 0%, rgba(2, 6, 8, .68) 44%, rgba(2, 6, 8, .28) 100%),
     linear-gradient(0deg, var(--bg) 0%, rgba(7, 11, 13, .96) 14%, rgba(7, 11, 13, .68) 32%, rgba(7, 11, 13, .2) 50%, rgba(7, 11, 13, 0) 74%);
 }
+/* Bring every full-width hero into the page background without a hard edge. */
+.hero::after, .subhero::after, .services-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: clamp(180px, 28vh, 340px);
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(7, 11, 13, 0) 0%, rgba(7, 11, 13, .48) 52%, var(--bg) 100%);
+}
+.services-hero__content, .services-hero__note { z-index: 3; }
 .hero[data-hero-effect="tv-glow"], .hero[data-hero-effect="dusk-glow"] {
   min-height: 84vh;
 }
