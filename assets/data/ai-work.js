@@ -1,5 +1,19 @@
 window.JA_AI_ITEMS = [
   {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/ai-still-02.webp",
+    "title": "The Traveler and the Horse",
+    "desc": "The Traveler and a horse face one another in a misty landscape. An AI story frame from The Orb, created by Jason Arts using Image/2."
+  },
+  {
+    "type": "Frame",
+    "kind": "image",
+    "src": "assets/images/ai-still-09.webp",
+    "title": "Figures in the Dark",
+    "desc": "Three shadowy figures emerge from the darkness. An AI story frame from The Orb, created by Jason Arts using Image/2."
+  },
+  {
     "type": "Short",
     "kind": "video",
     "src": "assets/videos/ash-flux-last-trip-to-nowhere.mp4",
@@ -51,71 +65,57 @@ window.JA_AI_ITEMS = [
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-01.webp",
-    "title": "Act 2 — Frame 01",
-    "desc": "Original AI story-development artwork for Act 2, created by Jason Arts."
-  },
-  {
-    "type": "Frame",
-    "kind": "image",
-    "src": "assets/images/ai-still-02.webp",
-    "title": "Act 3 — Frame 02",
-    "desc": "Original AI story-development artwork for Act 3, created by Jason Arts."
+    "title": "A Quiet Night by the Fire",
+    "desc": "The Traveler rests beside a campfire beneath the night sky. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-03.webp",
-    "title": "Act 3 — Frame 03",
-    "desc": "Original AI story-development artwork for Act 3, created by Jason Arts."
+    "title": "An Offering of Trust",
+    "desc": "The Traveler reaches out to a horse in a quiet woodland clearing. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-04.webp",
-    "title": "Act 4 — Frame 04",
-    "desc": "Original AI story-development artwork for Act 4, created by Jason Arts."
+    "title": "Companions by the Fire",
+    "desc": "The Traveler and his horse share a quiet moment beside the fire. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-05.webp",
-    "title": "Act 5 — Frame 05",
-    "desc": "Original AI story-development artwork for Act 5, created by Jason Arts."
+    "title": "A Watchful Companion",
+    "desc": "The Traveler’s horse watches the road in the fading light. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-06.webp",
-    "title": "Act 5 — Frame 06",
-    "desc": "Original AI story-development artwork for Act 5, created by Jason Arts."
+    "title": "The Road at Dusk",
+    "desc": "The Traveler and his horse set out along a darkening road. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-07.webp",
-    "title": "Act 6 — Frame 07",
-    "desc": "Original AI story-development artwork for Act 6, created by Jason Arts."
+    "title": "The Road Through the Rain",
+    "desc": "The Traveler and his horse travel through a storm across open country. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-08.webp",
-    "title": "Act 6 — Frame 08",
-    "desc": "Original AI story-development artwork for Act 6, created by Jason Arts."
-  },
-  {
-    "type": "Frame",
-    "kind": "image",
-    "src": "assets/images/ai-still-09.webp",
-    "title": "Act 7 — Frame 09",
-    "desc": "Original AI story-development artwork for Act 7, created by Jason Arts."
+    "title": "Shelter from the Storm",
+    "desc": "The Traveler and his horse shelter beside a fire as rain falls outside. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Frame",
     "kind": "image",
     "src": "assets/images/ai-still-10.webp",
-    "title": "Act 7 — Frame 10",
-    "desc": "Original AI story-development artwork for Act 7, created by Jason Arts."
+    "title": "Ruins Beneath a Storm",
+    "desc": "Strange figures move through a ruined landscape beneath a stormy sky. An AI story frame from The Orb, created by Jason Arts using Image/2."
   },
   {
     "type": "Concept",

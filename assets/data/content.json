@@ -38,6 +38,49 @@
   },
   "portfolio": [
     {
+      "title": "Chapel Hill Collection",
+      "category": "Product Visualization",
+      "image": "assets/images/chapel-collection.webp",
+      "description": "Furniture collection visualized in a lifestyle setting. Jason created the scene, materials, lighting and renders using existing furniture models."
+    },
+    {
+      "title": "Cooper Credenza",
+      "category": "Product Visualization",
+      "image": "assets/images/cooper-credenza.webp",
+      "description": "A lifestyle product visualization of the Cooper Credenza, with scene setup, materials, lighting and rendering by Jason using an existing furniture model."
+    },
+    {
+      "title": "Quest Gaming TV Stand",
+      "category": "Product Visualization",
+      "image": "assets/images/quest-gaming-tv.webp",
+      "description": "A gaming furniture visualization with scene setup, materials, lighting and rendering by Jason using an existing product model."
+    },
+    {
+      "title": "Ashby Cabinet Bed",
+      "category": "Product Visualization",
+      "image": "assets/images/ashby-cabinet-bed.webp",
+      "description": "Jason modeled the cabinet bed and created the complete product visualization, including the scene, materials, lighting and final render."
+    },
+    {
+      "title": "Central Park Virtual Tour",
+      "category": "Architecture",
+      "image": "assets/images/poster-central-park-virtual-tour.jpg",
+      "video": "assets/videos/central-park-virtual-tour.mp4",
+      "description": "Architectural visualization work by Jason for a narrated virtual tour created at MediaLab 3D Solutions, using existing building models."
+    },
+    {
+      "title": "San Diego Residence",
+      "category": "Architecture",
+      "image": "assets/images/arch-san-diego-residence.webp",
+      "description": "Architectural exterior visualization by Jason, including scene setup, materials, lighting and rendering using an existing building model."
+    },
+    {
+      "title": "Lot 119 — Front",
+      "category": "Architecture",
+      "image": "assets/images/arch-lot-119-front.webp",
+      "description": "Front elevation visualization by Jason, including scene setup, materials, lighting and rendering using an existing building model."
+    },
+    {
       "title": "Interior Visualization",
       "category": "Architecture",
       "image": "assets/images/hero-kitchen-living.webp",
@@ -54,12 +97,6 @@
       "category": "Architecture",
       "image": "assets/images/savannah-front.webp",
       "description": "Residential exterior visualization with landscaping, lighting, and curb appeal."
-    },
-    {
-      "title": "Chapel Hill Collection",
-      "category": "Product Visualization",
-      "image": "assets/images/chapel-collection.webp",
-      "description": "Coordinated furniture collection rendered for lifestyle, scale, and product appeal."
     },
     {
       "title": "Bedroom Environment",
@@ -116,12 +153,6 @@
       "description": "Bright product lifestyle render with crisp architectural details."
     },
     {
-      "title": "Cooper Credenza",
-      "category": "Product Visualization",
-      "image": "assets/images/cooper-credenza.webp",
-      "description": "Furniture visualization balancing product detail with lifestyle atmosphere."
-    },
-    {
       "title": "Knox Beverage Cabinet",
       "category": "Product Visualization",
       "image": "assets/images/knox-beverage.webp",
@@ -132,18 +163,6 @@
       "category": "Product Visualization",
       "image": "assets/images/zayden-bunk.webp",
       "description": "Kids furniture rendered with scale, warmth, and lived-in room detail."
-    },
-    {
-      "title": "Quest Gaming TV Stand",
-      "category": "Product Visualization",
-      "image": "assets/images/quest-gaming-tv.webp",
-      "description": "High-energy gaming furniture visual with bold lighting and color."
-    },
-    {
-      "title": "Ashby Cabinet Bed",
-      "category": "Product Visualization",
-      "image": "assets/images/ashby-cabinet-bed.webp",
-      "description": "Functional furniture presentation showing form, room context, and usability."
     },
     {
       "title": "Finley Fireplace",
@@ -429,13 +448,6 @@
       "description": "Illustrated community site plan built for clarity and presentation."
     },
     {
-      "title": "Central Park Virtual Tour",
-      "category": "Architecture",
-      "image": "assets/images/poster-central-park-virtual-tour.jpg",
-      "video": "assets/videos/central-park-virtual-tour.mp4",
-      "description": "Narrated virtual tour visualization created during Jason's time at MediaLab 3D Solutions."
-    },
-    {
       "title": "Black Wood Cane Back Chair",
       "category": "Product Visualization",
       "image": "assets/images/pro-black-wood-cane-back-chair.webp",
@@ -493,12 +505,6 @@
       "category": "Architecture",
       "image": "assets/images/arch-building-ab-aerial.webp",
       "description": "Elevated multifamily visualization communicating building massing, circulation, parking, and rooftop organization."
-    },
-    {
-      "title": "San Diego Residence",
-      "category": "Architecture",
-      "image": "assets/images/arch-san-diego-residence.webp",
-      "description": "Bright Southern California exterior with warm stucco, tile roofing, contemporary planting, and crisp daylight."
     },
     {
       "title": "Destin Custom Home",
@@ -565,12 +571,6 @@
       "category": "Architecture",
       "image": "assets/images/arch-lot-119-aerial.webp",
       "description": "Elevated property view showing the complete home, landscape plan, pool, and surrounding site in one composition."
-    },
-    {
-      "title": "Lot 119 — Front",
-      "category": "Architecture",
-      "image": "assets/images/arch-lot-119-front.webp",
-      "description": "Front elevation visualization with refined stucco, warm wood garage doors, tropical planting, and layered massing."
     },
     {
       "title": "Cypress Key Clubhouse — Rear",
