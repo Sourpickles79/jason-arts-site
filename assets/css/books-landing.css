@@ -33,6 +33,10 @@
 .amazon-banner-button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 14px 20px; border-radius: 7px; background: #ff9900; color: #111820; text-decoration: none; font-weight: 800; line-height: 1.3; }
 .amazon-banner-button:hover { background: #ffb33e; }
 .amazon-banner-books { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-items: center; gap: clamp(4px,1vw,15px); }
-.amazon-banner-books img { display: block; width: 100%; height: auto; border-radius: 5px; }
+.amazon-banner-books img { display: block; width: 100%; height: auto; transform: scale(1.16); }
+/* Cut around the existing book photographs, preserving their original covers. */
+.amazon-banner-books img:nth-child(1) { clip-path: polygon(25.9% 11.3%, 29.4% 11%, 76.4% 14.4%, 76.4% 85.2%, 29.3% 88.2%, 25.9% 87%); }
+.amazon-banner-books img:nth-child(2) { clip-path: polygon(25% 7.9%, 29.8% 8%, 78.5% 14.3%, 78.5% 85.3%, 28.8% 91.8%, 25% 90.8%); }
+.amazon-banner-books img:nth-child(3) { clip-path: polygon(24.5% 7%, 28.4% 6.7%, 79.5% 12.8%, 79.5% 87.6%, 28.4% 92%, 24.5% 91%); }
 @media (max-width: 760px) { .amazon-banner-inner { grid-template-columns: minmax(0,1fr); gap: 20px; } .amazon-banner-books { max-width: 520px; width: 100%; } }
 @media (max-width: 420px) { .amazon-banner-button { width: 100%; text-align: center; } }
