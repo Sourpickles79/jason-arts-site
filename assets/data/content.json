@@ -801,7 +801,11 @@
         "title": "From Product Idea to Polished Visualization",
         "description": "Follow a product visualization from the first brief and blockout through materials, lighting and final review.",
         "targetKeyword": "From Product Idea to Polished Visualization",
-        "secondaryKeywords": [],
+        "secondaryKeywords": [
+          "product visualization",
+          "product rendering process",
+          "3D product design"
+        ],
         "coverAlt": "An original desk lamp displayed in a dramatic studio product visualization.",
         "socialTitle": "From Product Idea to Polished Visualization",
         "socialDescription": "Follow a product visualization from the first brief and blockout through materials, lighting and final review."
@@ -821,7 +825,11 @@
         "title": "Creating a Character Across Images and Stories",
         "description": "Develop a recognizable character through silhouette, reference images, expression and story choices.",
         "targetKeyword": "Creating a Character Across Images and Stories",
-        "secondaryKeywords": [],
+        "secondaryKeywords": [
+          "character design",
+          "character consistency",
+          "visual storytelling"
+        ],
         "coverAlt": "An original character design maquette with expression studies in a studio.",
         "socialTitle": "Creating a Character Across Images and Stories",
         "socialDescription": "Develop a recognizable character through silhouette, reference images, expression and story choices."
@@ -841,7 +849,11 @@
         "title": "What Makes a Strong 3D Portfolio Piece?",
         "description": "Present 3D work with a clear lead image, meaningful process views and an honest description of your contribution.",
         "targetKeyword": "What Makes a Strong 3D Portfolio Piece?",
-        "secondaryKeywords": [],
+        "secondaryKeywords": [
+          "3D artist portfolio",
+          "portfolio presentation",
+          "3D project breakdown"
+        ],
         "coverAlt": "A creative studio with 3D portfolio images on a screen.",
         "socialTitle": "What Makes a Strong 3D Portfolio Piece?",
         "socialDescription": "Present 3D work with a clear lead image, meaningful process views and an honest description of your contribution."
@@ -861,7 +873,11 @@
         "title": "AI References for Artists: Organizing Your Ideas",
         "description": "Organize creative references by purpose, protect approved designs and make visual decisions easier to carry across a project.",
         "targetKeyword": "AI References for Artists: Organizing Your Ideas",
-        "secondaryKeywords": [],
+        "secondaryKeywords": [
+          "AI art references",
+          "visual reference organization",
+          "creative workflow"
+        ],
         "coverAlt": "A creative workspace with visual references and sketches arranged on an artist’s desk.",
         "socialTitle": "AI References for Artists: Organizing Your Ideas",
         "socialDescription": "Organize creative references by purpose, protect approved designs and make visual decisions easier to carry across a project."
@@ -872,7 +888,7 @@
       "title": "Building a Believable World: Chapter 8 of The Orb",
       "excerpt": "A spoiler-light look at the visual references and storyboard ideas behind Chapter 8 of The Orb, now in editing.",
       "category": "Behind the Scenes",
-      "cover": "assets/images/blog-orb-chapter-8-worldbuilding.webp",
+      "cover": "assets/images/blog-orb-chapter-8-forest-shrine.webp",
       "date": "2026-11-30",
       "publishAt": "2026-11-30T09:00:00-06:00",
       "status": "scheduled",
@@ -881,8 +897,12 @@
         "title": "Building a Believable World: Chapter 8 of The Orb",
         "description": "A spoiler-light look at the visual references and storyboard ideas behind Chapter 8 of The Orb, now in editing.",
         "targetKeyword": "Building a Believable World: Chapter 8 of The Orb",
-        "secondaryKeywords": [],
-        "coverAlt": "The young Traveler looks toward a blue-lit clearing in a Chapter 8 storyboard.",
+        "secondaryKeywords": [
+          "The Orb Chapter 8",
+          "fantasy worldbuilding",
+          "visual storytelling"
+        ],
+        "coverAlt": "A column of blue light rises from a stone platform in a forest clearing.",
         "socialTitle": "Building a Believable World: Chapter 8 of The Orb",
         "socialDescription": "A spoiler-light look at the visual references and storyboard ideas behind Chapter 8 of The Orb, now in editing."
       }
@@ -901,7 +921,11 @@
         "title": "How to Choose Lighting for a 3D Scene",
         "description": "Explore key lights, fill, shadows and reflections to create readable forms and the right mood in a 3D scene.",
         "targetKeyword": "How to Choose Lighting for a 3D Scene",
-        "secondaryKeywords": [],
+        "secondaryKeywords": [
+          "3D lighting tips",
+          "studio lighting",
+          "rendering shadows"
+        ],
         "coverAlt": "A sculptural object illuminated by dramatic studio lighting.",
         "socialTitle": "How to Choose Lighting for a 3D Scene",
         "socialDescription": "Explore key lights, fill, shadows and reflections to create readable forms and the right mood in a 3D scene."
@@ -921,7 +945,11 @@
         "title": "From Sketch to Finished 3D Render",
         "description": "A practical guide to taking a 3D concept from early sketches and blockout through materials, lighting and a polished render.",
         "targetKeyword": "From Sketch to Finished 3D Render",
-        "secondaryKeywords": [],
+        "secondaryKeywords": [
+          "3D modeling workflow",
+          "3D rendering process",
+          "3D blockout"
+        ],
         "coverAlt": "A sketchbook and a 3D sculpture on an artist’s computer in a warmly lit studio.",
         "socialTitle": "From Sketch to Finished 3D Render",
         "socialDescription": "A practical guide to taking a 3D concept from early sketches and blockout through materials, lighting and a polished render."
