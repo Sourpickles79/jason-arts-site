@@ -788,6 +788,146 @@ window.SITE_CONTENT = {
   ],
   "blogPosts": [
     {
+      "slug": "product-idea-to-visualization",
+      "title": "From Product Idea to Polished Visualization",
+      "excerpt": "Follow a product visualization from the first brief and blockout through materials, lighting and final review.",
+      "category": "3D",
+      "cover": "assets/images/blog-product-idea-to-visualization.webp",
+      "date": "2026-12-14",
+      "publishAt": "2026-12-14T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-product-idea-to-visualization",
+      "seo": {
+        "title": "From Product Idea to Polished Visualization",
+        "description": "Follow a product visualization from the first brief and blockout through materials, lighting and final review.",
+        "targetKeyword": "From Product Idea to Polished Visualization",
+        "secondaryKeywords": [],
+        "coverAlt": "An original desk lamp displayed in a dramatic studio product visualization.",
+        "socialTitle": "From Product Idea to Polished Visualization",
+        "socialDescription": "Follow a product visualization from the first brief and blockout through materials, lighting and final review."
+      }
+    },
+    {
+      "slug": "character-across-images-and-stories",
+      "title": "Creating a Character Across Images and Stories",
+      "excerpt": "Develop a recognizable character through silhouette, reference images, expression and story choices.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/blog-character-across-images-and-stories.webp",
+      "date": "2026-12-10",
+      "publishAt": "2026-12-10T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-character-across-images-and-stories",
+      "seo": {
+        "title": "Creating a Character Across Images and Stories",
+        "description": "Develop a recognizable character through silhouette, reference images, expression and story choices.",
+        "targetKeyword": "Creating a Character Across Images and Stories",
+        "secondaryKeywords": [],
+        "coverAlt": "An original character design maquette with expression studies in a studio.",
+        "socialTitle": "Creating a Character Across Images and Stories",
+        "socialDescription": "Develop a recognizable character through silhouette, reference images, expression and story choices."
+      }
+    },
+    {
+      "slug": "strong-3d-portfolio-piece",
+      "title": "What Makes a Strong 3D Portfolio Piece?",
+      "excerpt": "Present 3D work with a clear lead image, meaningful process views and an honest description of your contribution.",
+      "category": "3D",
+      "cover": "assets/images/blog-strong-3d-portfolio-piece.webp",
+      "date": "2026-12-07",
+      "publishAt": "2026-12-07T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-strong-3d-portfolio-piece",
+      "seo": {
+        "title": "What Makes a Strong 3D Portfolio Piece?",
+        "description": "Present 3D work with a clear lead image, meaningful process views and an honest description of your contribution.",
+        "targetKeyword": "What Makes a Strong 3D Portfolio Piece?",
+        "secondaryKeywords": [],
+        "coverAlt": "A creative studio with 3D portfolio images on a screen.",
+        "socialTitle": "What Makes a Strong 3D Portfolio Piece?",
+        "socialDescription": "Present 3D work with a clear lead image, meaningful process views and an honest description of your contribution."
+      }
+    },
+    {
+      "slug": "organize-ai-art-references",
+      "title": "AI References for Artists: Organizing Your Ideas",
+      "excerpt": "Organize creative references by purpose, protect approved designs and make visual decisions easier to carry across a project.",
+      "category": "AI Tips",
+      "cover": "assets/images/blog-organize-ai-art-references.webp",
+      "date": "2026-12-03",
+      "publishAt": "2026-12-03T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-organize-ai-art-references",
+      "seo": {
+        "title": "AI References for Artists: Organizing Your Ideas",
+        "description": "Organize creative references by purpose, protect approved designs and make visual decisions easier to carry across a project.",
+        "targetKeyword": "AI References for Artists: Organizing Your Ideas",
+        "secondaryKeywords": [],
+        "coverAlt": "A creative workspace with visual references and sketches arranged on an artist’s desk.",
+        "socialTitle": "AI References for Artists: Organizing Your Ideas",
+        "socialDescription": "Organize creative references by purpose, protect approved designs and make visual decisions easier to carry across a project."
+      }
+    },
+    {
+      "slug": "orb-chapter-8-worldbuilding",
+      "title": "Building a Believable World: Chapter 8 of The Orb",
+      "excerpt": "A spoiler-light look at the visual references and storyboard ideas behind Chapter 8 of The Orb, now in editing.",
+      "category": "Behind the Scenes",
+      "cover": "assets/images/blog-orb-chapter-8-worldbuilding.webp",
+      "date": "2026-11-30",
+      "publishAt": "2026-11-30T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-orb-chapter-8-worldbuilding",
+      "seo": {
+        "title": "Building a Believable World: Chapter 8 of The Orb",
+        "description": "A spoiler-light look at the visual references and storyboard ideas behind Chapter 8 of The Orb, now in editing.",
+        "targetKeyword": "Building a Believable World: Chapter 8 of The Orb",
+        "secondaryKeywords": [],
+        "coverAlt": "The young Traveler looks toward a blue-lit clearing in a Chapter 8 storyboard.",
+        "socialTitle": "Building a Believable World: Chapter 8 of The Orb",
+        "socialDescription": "A spoiler-light look at the visual references and storyboard ideas behind Chapter 8 of The Orb, now in editing."
+      }
+    },
+    {
+      "slug": "lighting-for-3d-scenes",
+      "title": "How to Choose Lighting for a 3D Scene",
+      "excerpt": "Explore key lights, fill, shadows and reflections to create readable forms and the right mood in a 3D scene.",
+      "category": "3D",
+      "cover": "assets/images/blog-lighting-for-3d-scenes.webp",
+      "date": "2026-11-26",
+      "publishAt": "2026-11-26T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-lighting-for-3d-scenes",
+      "seo": {
+        "title": "How to Choose Lighting for a 3D Scene",
+        "description": "Explore key lights, fill, shadows and reflections to create readable forms and the right mood in a 3D scene.",
+        "targetKeyword": "How to Choose Lighting for a 3D Scene",
+        "secondaryKeywords": [],
+        "coverAlt": "A sculptural object illuminated by dramatic studio lighting.",
+        "socialTitle": "How to Choose Lighting for a 3D Scene",
+        "socialDescription": "Explore key lights, fill, shadows and reflections to create readable forms and the right mood in a 3D scene."
+      }
+    },
+    {
+      "slug": "sketch-to-finished-3d-render",
+      "title": "From Sketch to Finished 3D Render",
+      "excerpt": "A practical guide to taking a 3D concept from early sketches and blockout through materials, lighting and a polished render.",
+      "category": "3D",
+      "cover": "assets/images/blog-sketch-to-finished-3d-render.webp",
+      "date": "2026-11-23",
+      "publishAt": "2026-11-23T09:00:00-06:00",
+      "status": "scheduled",
+      "url": "/blog-sketch-to-finished-3d-render",
+      "seo": {
+        "title": "From Sketch to Finished 3D Render",
+        "description": "A practical guide to taking a 3D concept from early sketches and blockout through materials, lighting and a polished render.",
+        "targetKeyword": "From Sketch to Finished 3D Render",
+        "secondaryKeywords": [],
+        "coverAlt": "A sketchbook and a 3D sculpture on an artist’s computer in a warmly lit studio.",
+        "socialTitle": "From Sketch to Finished 3D Render",
+        "socialDescription": "A practical guide to taking a 3D concept from early sketches and blockout through materials, lighting and a polished render."
+      }
+    },
+    {
       "slug": "gemini-4-creative-work",
       "title": "Gemini 4: What Argon and Carbon Could Mean for Creative Work",
       "excerpt": "Separate Gemini 4 Argon from the newer Carbon announcement, then consider practical tests for briefs, continuity notes and complex creative projects.",
